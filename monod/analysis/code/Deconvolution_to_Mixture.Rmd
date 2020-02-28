@@ -1,0 +1,1231 @@
+
+---
+title: "Deconvolution Analysis to Mixture Virtual Samples- Colon Cancer Plasma (CCP)"
+author: "Shicheng Guo"
+date: "Tuesday, June 14, 2016"
+output: html_document
+---
+
+```{r}
+# option
+options(digits=4)
+library("knitr")
+library("tools")
+library("DeconRNASeq")
+library("ggplot2movies")
+names(vignetteEngine(package = 'knitr'))
+```
+
+```{r, echo=FALSE}
+AverageWithGroup<-function(data){
+  base=unlist(lapply(strsplit(colnames(data),"[.]"),function(x) x[[1]]))
+  matrix=apply(data,1,function(x) tapply(x,base,function(x) mean(x,na.rm=T)))
+  matrix<-t(matrix)
+  rownames(matrix)=rownames(data)
+  matrix<-matrix[!rowSums(!is.finite(matrix)),]
+  return(matrix)
+}
+
+Lungcancerdatapre<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|LCT|WBC|Liver|Esophagus|Kidney|Intestine|LCP",colnames(data))]
+data1_ref<-data1[,-(grep("LCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSIMethDecon(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  # QR
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+Coloncancerdatapre<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|CCT|Colon|WBC|Liver|Esophagus|Kidney|CCP",colnames(data))]
+data1_ref<-data1[,-(grep("CCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSIMethDecon(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  # QR
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+GSIMethDecon<-function(data){
+  data<-data.matrix(data)
+  group=names(table(colnames(data)))
+  index=colnames(data)
+  gsi<-gmaxgroup<-avebase<-c()
+  for(i in 1:nrow(data)){
+  gsit<-0
+  gmax<-names(which.max(tapply(as.numeric(data[i,]),index,function(x) mean(x,na.rm=T))))
+  for(j in 1:length(group)){
+    tmp<-(1-10^(mean(data[i,][which(index==group[j])],na.rm=T))/10^(mean(data[i,][which(index==gmax)],,na.rm=T)))/(length(group)-1)
+    gsit<-gsit+tmp
+  }
+  ave<-tapply(data[i,], index, function(x) mean(x,na.rm=T))
+  gmaxgroup<-c(gmaxgroup,gmax)
+  gsi<-c(gsi,gsit)
+  avebase<-rbind(avebase,ave)
+  }
+  rlt=data.frame(region=rownames(data),group=gmaxgroup,GSI=gsi,AVE=avebase)
+  rlt<-rlt[-which(rlt[,2]!="WBC" & rlt[,grep("WBC",colnames(rlt))]>0.05),]
+  return(rlt)
+}
+
+
+cibersortFilePrep<-function(data1_ref,rlt,prefix){
+  signature.output<-paste(prefix,".signature.inp.txt",sep="")
+  mixture.output<-paste(prefix,".mixture.inp.txt",sep="")
+  label.output<-paste(prefix,".lab.inp.txt",sep="")
+  signaturesCibersort<-data1_ref[match(rlt[,1],rownames(data1_ref)),]
+  write.table(signaturesCibersort,file=signature.output,col.names=NA,row.names=T,sep="\t",quote=F)
+  write.table(DeconData.tmp,file=mixture.output,sep="\t",row.names=T,col.names=NA,quote=F)
+  base=unlist(lapply(strsplit(colnames(signaturesCibersort),"[.]"),function(x) x[[1]]))
+  label<-matrix(2,nrow=length(unique(base)),ncol=ncol(signaturesCibersort))
+  rownames(label)=unique(base)
+  for(i in 1:nrow(label)){
+  label[i,grep(unique(base)[i],colnames(signaturesCibersort))]<-1
+  }
+  colnames(label)=colnames(signaturesCibersort)
+  write.table(label,file=label.output,sep="\t",row.names=T,col.names=NA,quote=F)
+  dim(DeconData.tmp)
+  dim(signaturesCibersort)
+  dim(label)
+  rownames(DeconData.tmp)==rownames(signaturesCibersort)
+  print("Cibersort input successfully created")
+  print(paste("Cibersort Signature input:",signature.output,sep=" "))
+  print(paste("Cibersort Mixture input:",mixture.output,sep=" "))
+  print(paste("Cibersort label input:",label.output,sep=" "))
+}
+
+RandomSamplingMean<-function(data,number=round(ncol(data)/2)){
+  rlt<-c()
+  for(i in 1:ncol(data)){
+  VirtualSample<-rowMeans(data[,sample(1:ncol(data),number)],na.rm=T)  
+  rlt<-cbind(rlt,VirtualSample)
+  }
+  rlt
+}
+
+
+LungcancerdatawithoutCTpre<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|WBC|Liver|Esophagus|Kidney|Intestine|LCP",colnames(data))]
+data1_ref<-data1[,-(grep("LCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  # QR
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+LungcancerdataprewithNCP<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|NCP|Liver|Esophagus|Kidney|Intestine|LCP",colnames(data))]
+data1_ref<-data1[,-(grep("LCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  # QR
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+ColoncancerdataprewithNCP<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|NCP|Liver|Esophagus|Kidney|Intestine|CCP",colnames(data))]
+data1_ref<-data1[,-(grep("CCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  # QR
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+
+NormalLungdatapre<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|WBC|Liver|Esophagus|Kidney|Intestine",colnames(data))]
+data1_ref<-data1[,-(grep("Lung",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  # QR
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+Normalkidneydatapre<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|WBC|Liver|Esophagus|Kidney|Intestine",colnames(data))]
+data1_ref<-data1[,-(grep("Kidney",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  # QR
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+NormalHeartdatapre<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|WBC|Liver|Esophagus|Kidney|Intestine",colnames(data))]
+data1_ref<-data1[,-(grep("Heart",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  # QR
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+Coloncancerdatapre<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|CCT|WBC|Liver|Esophagus|Kidney|Intestine|CCP",colnames(data))]
+data1_ref<-data1[,-(grep("CCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  # QR
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+ColoncancerdatawithoutCTpre<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|WBC|Liver|Esophagus|Kidney|Intestine|CCP",colnames(data))]
+data1_ref<-data1[,-(grep("CCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  # QR
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+SpareDeconColonCancerPlasmaPre<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+colnames(data)[grep("Brain|Stomach|Lung|Heart|Liver|Esophagus|Kidney|Intestine",colnames(data))]<-"OTH"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|CCT|WBC|Liver|Esophagus|Kidney|Intestine|CCP|OTH",colnames(data))]
+data1_ref<-data1[,-(grep("CCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  # QR
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+
+SpareDeconLungCancerPlasmaPre<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC|Heart|Intestine|Stomach|Colon|Liver|Esophagus|Kidney",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+colnames(data)[grep("Brain|Stomach|Colon|Liver|Esophagus|Kidney",colnames(data))]<-"OTH"
+data1<-data[,grep("Brain|Stomach|Lung|Colon|LCT|WBC|Liver|Esophagus|Kidney|Intestine|LCP|OTH",colnames(data))]
+data1_ref<-data1[,-(grep("LCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref) 
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+NormalPlasmaDatawithoutheartlungPre<-function(){
+rlt<-list()
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("STL001LG-01|CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC|Intestine",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+colnames(data)[grep("Brain|Stomach|Heart|Liver|Esophagus|Kidney|Intestine",colnames(data))]<-"OTH"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|WBC|Liver|Esophagus|Kidney|Intestine|NCP|OTH",colnames(data))]
+data1_ref<-data1[,-(grep("NCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+signatures<-AverageWithGroup(data1_ref)  
+rlt$GSI<-gsi
+rlt$data<-data1
+rlt$ref<-data1_ref
+rlt$signature<-signatures
+return(rlt)
+}
+
+TopGSIByCategory<-function(gsi,top=20){
+GSIRlt<-c()
+rank<-c(rep(top,length(group)))
+for (i in 1:length(group)){
+  subset=gsi[which(gsi$group==group[i]),]
+  subset=subset[order(subset[,3],decreasing=T)[1:rank[i]],]
+  GSIRlt<-rbind(GSIRlt,subset)
+}
+return(GSIRlt)
+}
+
+
+DataExtractionTrim<-function(data){
+data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|CCT|WBC|Liver|Esophagus|Kidney|Intestine|CCP",colnames(data))]
+return(data1)
+}
+
+FigurePrepareSimulation<-function(){
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="coloncancer-deconvolution.simultaion-2.pdf")
+save.image(file="Colon-Deconvolution.RData")
+}
+
+FigurePrepareRealData<-function(deconv){
+library("ggplot2")
+deconv<-Rlt$out.all
+data.frame(ref=colnames(deconv),cont=colMeans(deconv))
+Fig<-data.frame(deconv$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="coloncancer-deconvolution.simultaion-2.pdf")
+save.image(file="Colon-Deconvolution.RData")
+}
+
+ci95<-function(x){
+  x<-data.frame(x)
+  out<-c()
+  for(i in 1:ncol(x)){
+  error <- qt(0.975,df=length(x[,i])-1)*sd(x[,i])/sqrt(length(x[,i]))
+  m<-round(mean(x[,i]),4)
+  d<-round(mean(x[,i])-error,4)
+  u<-round(mean(x[,i])+error,4)
+  rlt<-paste("mean=",m, ", 95%CI:",d,"-",u,sep="")
+  out<-cbind(out,rlt)
+  }
+  return(out)
+}
+
+
+```
+
+
+Dr. Zhang ask me to do the deconvolution analysis to synthesized virtual sample. I try to mix the samples between WB and normal tissue and cancer primary tissues and then do the deconvolution analysis. 
+
+Mixture cancer tissues with WB and CCT
+
+```{r,echo=FALSE}
+
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data1<-DataExtractionTrim(data)
+head(data1)
+data1_ref<-data1[,-(grep("CCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+# prepare signatures
+signatures<-AverageWithGroup(data1_ref)  # QR
+# tissue specific MHL selectin
+topgsi<-TopGSIByCategory(gsi,top=100)
+# build virtual samples
+VirtualMatrix<-c()
+for(F1 in seq(0,1,by=0.05)){
+VirtualSample<-F1/2*(signatures[,grep("CCT",colnames(signatures))])+F1/2*(signatures[,grep("Colon",colnames(signatures))])+(1-F1)*(signatures[,grep("WB",colnames(signatures))])
+VirtualMatrix<-cbind(VirtualMatrix,VirtualSample)
+}
+VirtualMatrix<-data.frame(VirtualMatrix)
+colnames(VirtualMatrix)=paste("VM",seq(0,1,by=0.05),sep="")
+VirtualMatrix
+# Deconvolution-Cibersort file preparation
+cibersortFilePrep(data1_ref,rlt,prefix="colon.tsi100")
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures)
+DeconData.tmp<-DeconData[match(topgsi[,1],rownames(DeconData)),]
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VM",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VM",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+Rlt2<-Rlt$out.all
+output<-data.frame(CCTInput=seq(0,1,by=0.05),Rlt2)
+write.table(output,file="Realdata-simulation.deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+```
+
+Colon cancer plasma deconvolution
+```{r}
+Colon<-Coloncancerdatapre()
+data1=Colon$data
+data1_ref=Colon$ref
+signatures<-AverageWithGroup(data1_ref)  
+topgsi<-TopGSIByCategory(Colon$GSI,top=50)
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("CCP",colnames(data1))]))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),]
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+head(NewVirtualMatrix)
+head(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+write.table(Rlt$out.all,file="Realdata-Colon.deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+save.image(file="colon.cancer.updateGSI.RData")
+# Figure parepartion
+
+
+```
+
+Lung cancer plasma deconvolution:
+```{r}
+Lung<-Lungcancerdatapre()
+data1=Lung$data
+data1_ref=Lung$ref
+signatures<-AverageWithGroup(data1_ref)  
+topgsi<-TopGSIByCategory(Lung$GSI,top=20)
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("LCP",colnames(data1))]))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),]
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+head(NewVirtualMatrix)
+head(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+Rlt
+write.table(Rlt$out.all,file="Realdata-Lung.deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="Lungcancer-deconvolution.simultaion-2.pdf")
+save.image(file="Lung-Deconvolution.RData")
+```
+Lung normal deconvolution:
+```{r}
+Lung<-NormalLungdatapre()
+data1=Lung$data
+data1_ref=Lung$ref
+signatures<-AverageWithGroup(data1_ref)  
+topgsi<-TopGSIByCategory(Lung$GSI,top=1000)
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("Lung",colnames(data1))],2))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),]
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+head(NewVirtualMatrix)
+head(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+
+colMeans(Rlt$out.all)
+
+write.table(Rlt$out.all,file="Realdata-Lung.deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="Lungcancer-deconvolution.simultaion-2.pdf")
+save.image(file="Lung-Deconvolution.RData")
+```
+kidney normal deconvolution:
+```{r}
+kidney<-Normalkidneydatapre()
+data1=kidney$data
+data1_ref=kidney$ref
+signatures<-AverageWithGroup(data1_ref)  
+topgsi<-TopGSIByCategory(Lung$GSI,top=100)
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("Kidney",colnames(data1))],2))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),]
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+head(NewVirtualMatrix)
+head(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+colMeans(Rlt$out.all)
+
+
+write.table(Rlt$out.all,file="Realdata-Lung.deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="Lungcancer-deconvolution.simultaion-2.pdf")
+save.image(file="Lung-Deconvolution.RData")
+```
+Heart normal deconvolution:
+```{r}
+kidney<-NormalHeartdatapre()
+data1=kidney$data
+data1_ref=kidney$ref
+signatures<-AverageWithGroup(data1_ref)  
+topgsi<-TopGSIByCategory(Lung$GSI,top=100)
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("Heart",colnames(data1))],2))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),]
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+head(NewVirtualMatrix)
+head(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+colMeans(Rlt$out.all)
+
+
+write.table(Rlt$out.all,file="Realdata-Lung.deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="Lungcancer-deconvolution.simultaion-2.pdf")
+save.image(file="Lung-Deconvolution.RData")
+```
+
+
+Normal plasma deconvolution
+```{r}
+Normal<-NormalPlasmaDataPre()
+Normal<-rlt()
+data1=Normal$data
+data1_ref=Normal$ref
+signatures<-AverageWithGroup(data1_ref)  
+topgsi<-TopGSIByCategory(Normal$GSI,top=20)
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("NCP",colnames(data1))]))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-na.omit(DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),])
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+head(NewVirtualMatrix)
+head(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+write.table(Rlt$out.all,file="NormalPlasma-DeconvolutionwithLungHeart.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+save.image(file="NormalPlasma-DeconvolutionwithLungHeart.RData")
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="coloncancer-deconvolution.simultaion-2.pdf")
+
+```
+
+How about de-convolution of colon cancer plasma only with primary colon normal, cancer tissue, WBC and other total tissues.
+```{r}
+Normal<-SpareDeconColonCancerPlasmaPre()
+data1=Normal$data
+data1_ref=Normal$ref
+signatures<-AverageWithGroup(data1_ref)  
+topgsi<-TopGSIByCategory(Normal$GSI,top=30)
+head(Normal$GSI)
+
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("CCP",colnames(data1))]))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-na.omit(DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),])
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+head(NewVirtualMatrix)
+head(NewSignatures)
+dim(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+colMeans(Rlt$out.all)
+save.image(file="coloncancer-sparse-deconvolution.RData")
+write.table(Rlt$out.all,file="coloncancer-sparse-deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+ci95(Rlt$out.all)
+colondev<-Rlt$out.all
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="coloncancer-sparse-deconvolution.Reult.pdf")
+
+```
+
+How about de-convolution of LUNG cancer plasma only with primary colon normal, cancer tissue, WBC and other total tissues.
+```{r}
+Normal<-SpareDeconLungCancerPlasmaPre()
+data1=Normal$data
+data1_ref=Normal$ref
+signatures<-AverageWithGroup(data1_ref)
+tmp<-c()
+for(jj in seq(5,100,by=5)){
+topgsi<-TopGSIByCategory(Normal$GSI,top=jj)
+head(Normal$GSI)
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("LCP",colnames(data1))]))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-na.omit(DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),])
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+#head(NewVirtualMatrix)
+#head(NewSignatures)
+dim(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+colMeans(Rlt$out.all)
+tmp<-rbind(tmp,colMeans(Rlt$out.all))
+}
+
+lungdev<-Rlt$out.all
+ci95(lungdev)
+save.image(file="Lungcancer-sparse-deconvolution.RData")
+write.table(Rlt$out.all,file="Lungcancer-sparse-deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="coloncancer-sparse-deconvolution.Reult.pdf")
+
+```
+
+
+How about de-convolution of colon cancer plasma only with normal plasma as reference
+```{r}
+Normal<-LungcancerdataprewithNCP()
+data1=Normal$data
+data1_ref=Normal$ref
+signatures<-AverageWithGroup(data1_ref)  
+
+topgsi<-TopGSIByCategory(Normal$GSI,top=30)
+head(Normal$GSI)
+
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("LCP",colnames(data1))]))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-na.omit(DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),])
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+#head(NewVirtualMatrix)
+#head(NewSignatures)
+dim(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+colMeans(Rlt$out.all)
+
+
+write.table(Rlt$out.all,file="Realdata-Normal.deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+save.image(file="coloncancer-sparse-deconvolution.RData")
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="coloncancer-sparse-deconvolution.Reult.pdf")
+
+```
+
+
+How about de-convolution of colon cancer plasma only with normal plasma as reference
+```{r}
+Normal<-ColoncancerdataprewithNCP()
+data1=Normal$data
+data1_ref=Normal$ref
+signatures<-AverageWithGroup(data1_ref)  
+
+topgsi<-TopGSIByCategory(Normal$GSI,top=30)
+head(Normal$GSI)
+
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("CCP",colnames(data1))]))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-na.omit(DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),])
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+#head(NewVirtualMatrix)
+#head(NewSignatures)
+dim(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+colMeans(Rlt$out.all)
+
+
+write.table(Rlt$out.all,file="Realdata-Normal.deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+save.image(file="coloncancer-sparse-deconvolution.RData")
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="coloncancer-sparse-deconvolution.Reult.pdf")
+
+```
+
+How about de-convolution of lung cancer plasma only with only normal tissue (exclude cancer tissue)
+```{r}
+Normal<-LungcancerdatawithoutCTpre()
+data1=Normal$data
+data1_ref=Normal$ref
+signatures<-AverageWithGroup(data1_ref)  
+
+topgsi<-TopGSIByCategory(Normal$GSI,top=30)
+head(Normal$GSI)
+
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("LCP",colnames(data1))]))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-na.omit(DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),])
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+#head(NewVirtualMatrix)
+#head(NewSignatures)
+head(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+colMeans(Rlt$out.all)
+
+
+write.table(Rlt$out.all,file="Realdata-Normal.deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+save.image(file="coloncancer-sparse-deconvolution.RData")
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="coloncancer-sparse-deconvolution.Reult.pdf")
+
+```
+
+
+
+
+How about de-convolution of colon cancer plasma only with only normal tissue (exclude cancer tissue)
+```{r}
+Normal<-ColoncancerdatawithoutCTpre()
+data1=Normal$data
+data1_ref=Normal$ref
+signatures<-AverageWithGroup(data1_ref)  
+
+topgsi<-TopGSIByCategory(Normal$GSI,top=30)
+head(Normal$GSI)
+
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("CCP",colnames(data1))]))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-na.omit(DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),])
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+#head(NewVirtualMatrix)
+#head(NewSignatures)
+dim(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+colMeans(Rlt$out.all)
+
+
+write.table(Rlt$out.all,file="Realdata-Normal.deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+save.image(file="coloncancer-sparse-deconvolution.RData")
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="coloncancer-sparse-deconvolution.Reult.pdf")
+
+```
+
+
+How about de-convolution of normal plasma only with only normal tissue (exclude cancer tissue)
+```{r}
+Normal<-ColoncancerdatawithoutCTpre()
+data1=Normal$data
+data1_ref=Normal$ref
+signatures<-AverageWithGroup(data1_ref)  
+
+topgsi<-TopGSIByCategory(Normal$GSI,top=30)
+head(Normal$GSI)
+
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("CCP",colnames(data1))]))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-na.omit(DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),])
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+#head(NewVirtualMatrix)
+#head(NewSignatures)
+dim(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+colMeans(Rlt$out.all)
+
+
+write.table(Rlt$out.all,file="Realdata-Normal.deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+plot(output[,1],output[,3])
+lines(x = c(0,1), y = c(0,1))
+output
+save.image(file="coloncancer-sparse-deconvolution.RData")
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="coloncancer-sparse-deconvolution.Reult.pdf")
+
+```
+
+How about de-convolution of normal plasma only with only normal tissue (exclude cancer tissue) and merge other tissues as OTH
+```{r}
+Normal<-NormalPlasmaDatawithoutheartlungPre()
+data1=Normal$data
+data1_ref=Normal$ref
+signatures<-AverageWithGroup(data1_ref)  
+
+topgsi<-TopGSIByCategory(Normal$GSI,top=30)
+head(Normal$GSI)
+
+VirtualMatrix<-data.frame(RandomSamplingMean(data1[,grep("NCP",colnames(data1))]))
+VirtualMatrix<-VirtualMatrix[-which(! is.finite(rowSums(VirtualMatrix))),]
+head(VirtualMatrix)
+# Deconvolution-QR
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-na.omit(DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),])
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+#head(NewVirtualMatrix)
+#head(NewSignatures)
+dim(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+colMeans(Rlt$out.all)
+write.table(Rlt$out.all,file="Normal-OTH-sparse-deconvolution.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+save.image(file="Normal-OTH-sparse-deconvolution.RData")
+
+# Figure parepartion
+library("ggplot2")
+Fig<-data.frame(seq(0,1,by=0.05),Rlt$out.all[,grep("CCT",colnames(Rlt$out.all))],Rlt$out.all[,grep("WB",colnames(Rlt$out.all))])
+colnames(Fig)<-c("Simulated","CCT","WB")
+Fig<-100*Fig
+c <- ggplot(Fig, aes(Simulated,CCT))
+c <- c + xlab("Simulated contribution (%)")+ylab("Predicted contribution (%)")
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + stat_smooth(se = TRUE,n=10,size=1.5) + geom_point(size=3)
+c <- c + theme_bw()
+c <- c + theme(axis.text=element_text(size=10), axis.title=element_text(size=14,face="bold"))
+ggsave(c,file="coloncancer-sparse-deconvolution.Reult.pdf")
+
+```

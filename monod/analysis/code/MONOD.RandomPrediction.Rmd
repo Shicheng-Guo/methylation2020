@@ -1,0 +1,143 @@
+---
+title: "Prediction based on Random Forest Model"
+author: "Shicheng Guo"
+date: "Monday, February 01, 2016"
+output: html_document
+---
+
+Random Forest Prediction
+
+pre-load function is as the following:
+```{r}
+RawNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[2]
+  NaRaw<-which(apply(data,1,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,1,function(x) all(x==0))==T)
+  NaRAW<-c(NaRaw,zero)
+  if(length(NaRAW)>0){
+    dat<-data[-NaRAW,]
+  }else{
+    dat<-data;
+  }
+  dat
+} 
+
+gsi<-function(data){
+  gsi<-c()
+  gmaxgroup<-c()
+  rowname<-c()
+  for(i in 1:nrow(data)){
+    xdata<-t(na.omit(t(data[i,])))
+    if(length(xdata)>2){
+    group=names(table(colnames(xdata)))
+    index=colnames(xdata)
+    gsit<-0
+    gmax<-names(which.max(tapply(as.numeric(xdata),index,function(x) mean(x,na.rm=T))))
+    for(j in 1:length(group)){
+      tmp<-(1-10^(mean(xdata[which(index==group[j])],na.rm=T))/10^(mean(xdata[which(index==gmax)],na.rm=T)))/(length(group)-1)
+      gsit<-gsit+tmp
+    }
+    gmaxgroup<-c(gmaxgroup,gmax)
+    gsi<-c(gsi,gsit)
+    rowname<-c(rowname,rownames(xdata))
+  }
+  }  
+  rlt=data.frame(region=rowname,group=gmaxgroup,GSI=gsi)
+  return(rlt)
+}
+
+```
+
+```{r}
+
+
+setwd("/home/shg047/monod/predict/phase2")
+files=list.files(pattern="STL*|N37*|WB.*")
+saminfo<-read.table("/home/shg047/monod/predict/phase2/hapinfo/trainSaminfo.txt",head=T)
+data=read.table("mHL.phase2.txt",head=T,row.names=1,sep="\t",as.is=T,check.names=F)
+
+trainData<-data[,match(saminfo[,1],colnames(data))]
+colnames(trainData)=saminfo[,2]
+NewtrainData<-data.frame(cbind(data.matrix(t(trainData)),group=colnames(trainData)))
+NewtrainData$group
+
+testName<-colnames(data)[grep("CRC|LC|NC[.]P",colnames(data))]
+x1<-lapply(testName,function(x) unlist(strsplit(x,"[.]"))[1])
+x2<-lapply(testName,function(x) unlist(strsplit(x,"[.]"))[2])
+x3<-lapply(testName,function(x) unlist(strsplit(x,"[.]"))[3])
+group<-paste(x1,x2,sep=".")
+
+testData<-data[,grep("CRC|LC|NC[.]P",colnames(data))]
+colnames(testData)=group
+NewtestData<-data.frame(cbind(data.matrix(t(testData)),group=colnames(testData)))
+NewtestData$group
+
+Xdata<-cbind(trainData,testData)
+colnames(Xdata)
+colnames(Xdata)=unlist(lapply(colnames(Xdata),function(x) gsub("CRC.P","Colon",x)))
+colnames(Xdata)=unlist(lapply(colnames(Xdata),function(x) gsub("LC.P","Lung",x)))
+colnames(Xdata)=unlist(lapply(colnames(Xdata),function(x) gsub("NC.P","WB",x)))
+GSI<-gsi(Xdata)
+save(GSI,file="GSI.phase2.whole.RData")
+
+newData<-rbind(NewtrainData,NewtestData)
+colnames(newData)=colnames(NewtrainData)
+save(newData,file="mHL.pahse2.RData")
+
+GSI<-gsi(trainData)
+save(GSI,file="GSI.phase2.RData")
+
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\result\\predict")
+load("GSI.phase2.RData")
+pdf("gsi.hist.pdf")
+hist(GSI$GSI,breaks=100,xlim=c(0,1),ylim=c(0,40000),xlab="Group Specificity Index",col="blue",main="Histogram of Group Specificity Index", cex.axis=0.9)
+dev.off()
+
+pdf("gsi.group.number.pdf")
+barplot(table(GSI$group),xlab="Group",col="blue",main="Number of tissue Specificity regions",cex.names=0.8)
+dev.off()
+
+tab<-names(table(GSI$group))
+newvar<-c()
+for(i in 1:length(tab)){
+a<-subset(GSI,group==tab[i])
+b<-a[order(a[,3],decreasing=T)[1:200],]
+newvar<-rbind(newvar,b)
+}
+
+newData1<-newData[,match(unlist(lapply(newvar$region,function(x) gsub("[:-]",".",x))),colnames(newData))]
+newData2<-cbind(newData1,group=c(as.character(NewtrainData$group),as.character(NewtestData$group)))
+save(newData2,file="newData2.RData")
+
+data=trainData
+
+setwd("/home/shg047/monod/predict/phase2")
+load("/home/shg047/monod/predict/phase2/mHL.pahse2.RData")
+
+newData2$group
+
+library(rpart)
+Data<-newData2
+iris.rp <-rpart(group ~ . ,                           # formula: . means all
+                data =Data,    # data frame
+                method = "class",                     # classification tree
+                parms = list(split = "information"),  # use entropy/deviance
+                maxsurrogate = 0,                     # since no missing values
+                cp = 0,                               # no size penalty
+                minsplit = 5,                         # Nodes of size 5 (or 
+                                                      # more) can be split,
+                minbucket = 1,                        # provided each sub-node
+                                                      # contains at least 2 obs.
+                 )
+
+summary(iris.rp)
+
+pdf("test.tree.pdf")
+plot(iris.rp, uniform=TRUE, compress=TRUE,margin = .2,cex=0.5)
+text(iris.rp, use.n=TRUE, all = TRUE,fancy = TRUE,cex=0.5)
+dev.off()
+
+pred.rp <- predict(iris.rp,newdata = newData2[29:95,],type = "class")
+pred.rp
+
+```

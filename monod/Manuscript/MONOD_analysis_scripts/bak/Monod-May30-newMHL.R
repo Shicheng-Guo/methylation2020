@@ -1,0 +1,7 @@
+setwd("/media/Home_Raid1/shg047/NAS1/monod/mhl/0530")
+data<-read.table("WGBS.getHaplo.mhl.mhbs",head=T,row.names=1,sep="\t",as.is=T,check.names = F)
+save(data,file="data.RData")
+load("data.RData")
+colnames(data)
+data<-rename2(data)
+table(colnames(data))

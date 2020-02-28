@@ -1,0 +1,968 @@
+---
+title: "Tissue Specific MHBs based on WGBS and RRBS dataset"
+author: "Shicheng Guo"
+date: "Monday, February 01, 2016"
+output: html_document
+---
+
+We updated the batch 3 normal plasma data. and Figure 4 were changed to heatmap plot and mixture analysis. Now the previous Figure 4C were changed to Figure 5A.
+We want to show the tissues specific MHBs in the plasma so that we want to show Methylation haplotype load could be used for the tissue-of-origin prediction. 
+
+pre-load function is as the following:
+```{r setup,echo=F}
+# system("wget https://cran.r-project.org/src/contrib/mlbench_2.1-1.tar.gz")
+# system("wget https://cran.r-project.org/src/contrib/caret_6.0-70.tar.gz")
+# install.packages("mlbench_2.1-1.tar.gz")
+# install.packages("caret_6.0-70.tar.gz")
+library("mlbench")
+library("caret")
+library("randomForest")
+library("impute")
+set.seed(1)
+RawNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[2]
+  NaRaw<-which(apply(data,1,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,1,function(x) all(x==0))==T)
+  NaRAW<-c(NaRaw,zero)
+  if(length(NaRAW)>0){
+    dat<-data[-NaRAW,]
+  }else{
+    dat<-data;
+  }
+  dat
+} 
+HeatMap<-function(data,phen,figure="heatmap.pdf",cexRow = 0.01,cexCol = 1.2,Colv=T,Rowv=T){
+  library("gplots")
+  colnames(data)=phen
+  colors <- colorpanel(75,"midnightblue","mediumseagreen","yellow") 
+  colors <-bluered(75)
+  colors <-greenred(75)
+  sidecol<-function(x){
+    x<-as.numeric(as.factor(x))
+    col<-rainbow(length(table(colnames(data))))
+    sapply(x,function(x) col[x])
+  }
+  ColSideColors=sidecol(phen)
+  pdf(figure)
+  heatmap.2(data,trace="none",cexRow = cexRow,cexCol = cexCol, ColSideColors=ColSideColors,density.info="none",col=colors,Colv=Colv,Rowv=Rowv,keysize=0.9, margins = c(5, 10))
+  dev.off()
+}
+gsi<-function(data){
+  group=names(table(colnames(data)))
+  index=colnames(data)
+  gsi<-c()
+  gmaxgroup<-c()
+  for(i in 1:nrow(data)){
+    gsit<-0
+    gmax<-names(which.max(tapply(as.numeric(data[i,]),index,mean)))
+    for(j in 1:length(group)){
+      tmp<-(1-10^(mean(data[i,][which(index==group[j])]))/10^(mean(data[i,][which(index==gmax)])))/(length(group)-1)
+      gsit<-gsit+tmp
+      }
+    gmaxgroup<-c(gmaxgroup,gmax)
+    gsi<-c(gsi,gsit)
+    print(c(gmax,gsit))
+    }
+  rlt=data.frame(region=rownames(data),group=gmaxgroup,GSI=gsi)
+  return(rlt)
+}
+Coloncancerdatapre<-function(){
+  rlt<-list()
+  setwd("/home/shg047/oasis/monod/hapinfo/June")
+  saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+  #data<-read.table("/oasis/tscc/scratch/shg047/monod/hapinfo/June/monod.mhl.june25.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+  #save(data,file="monod.mhl.june25.RData")
+  load("monod.mhl.june25.RData")
+  data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+  colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+  colnames(data)[grep("WB",colnames(data))]<-"WBC"
+  colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+  colnames(data)[grep("methylC",colnames(data))]<-"H1"
+  colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+  colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+  colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+  colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+  colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+  data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|WBC|Intestine|Liver|Esophagus|Kidney|CCP|CCT|LCT|CCTmix|NCP|LCTmix|LCP",colnames(data))]
+  data1_ref<-data1[,-(grep("CCP|CCTmix|NCP|LCP|LCTmix",colnames(data1)))]
+  base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+  colnames(data1_ref)<-base
+  gsi<-data.frame(GSIMethDecon(data1_ref))
+  group<-as.character(unique(gsi$group))
+  signatures<-AverageWithGroup(data1_ref)  # QR
+  rlt$GSI<-gsi
+  rlt$data<-data1
+  rlt$ref<-data1_ref
+  rlt$signature<-signatures
+  return(rlt)
+}
+AverageWithGroup<-function(data){
+  base=unlist(lapply(strsplit(colnames(data),"[.]"),function(x) x[[1]]))
+  matrix=apply(data,1,function(x) tapply(x,base,function(x) mean(x,na.rm=T)))
+  matrix<-t(matrix)
+  rownames(matrix)=rownames(data)
+  matrix<-matrix[!rowSums(!is.finite(matrix)),]
+  return(matrix)
+}
+reformat<-function(data){
+  base=unlist(lapply(strsplit(colnames(Ref1),"[.]"),function(x) x[[1]]))
+  matrix=apply(Ref1,1,function(x) tapply(x,base,function(x) mean(x,na.rm=T)))
+  matrix<-t(matrix)
+  rownames(matrix)=rownames(Ref1)
+  matrix<-matrix[!rowSums(!is.finite(matrix)),]
+  return(matrix)
+}
+GSIMethDecon<-function(data){
+  data<-data.matrix(data)
+  index<-unlist(lapply(strsplit(colnames(data),"[.]"),function(x) x[[1]]))
+  group=unique(index)
+  gsi<-gmaxgroup<-avebase<-c()
+  for(i in 1:nrow(data)){
+    gsit<-0
+    gmax<-names(which.max(tapply(as.numeric(data[i,]),index,function(x) mean(x,na.rm=T))))
+    for(j in 1:length(group)){
+      tmp<-(1-10^(mean(data[i,][which(index==group[j])],na.rm=T))/10^(mean(data[i,][which(index==gmax)],,na.rm=T)))/(length(group)-1)
+      gsit<-gsit+tmp
+    }
+    ave<-tapply(data[i,], index, function(x) mean(x,na.rm=T))
+    gmaxgroup<-c(gmaxgroup,gmax)
+    gsi<-c(gsi,gsit)
+    avebase<-rbind(avebase,ave)
+    print(i)
+  }
+  rlt=data.frame(region=rownames(data),group=gmaxgroup,GSI=gsi,avebase)
+  return(rlt)
+}
+TopGSIByCategory<-function(gsi,top=1,thresHigh=0.2,thresLow=0.1,allmin=0.05,plotfigure=T,figprefix="tissuespecific"){
+  GSIRlt<-c()
+  group<-as.character(unique(gsi$group))
+  rank<-c(rep(top,length(group)))
+  otf1<-paste(figprefix,"boxplot.pdf",sep="")
+  otf2<-paste(figprefix,"heatmap.pdf",sep="")
+  parnum<-ceiling(sqrt(length(group)))
+  pdf(otf1)
+  par(mfrow=c(parnum,parnum),oma = c(2,2,2,2) + 0.1,mar = c(2,2,2,2) + 0.1,cex.axis=0.75, cex.lab=0.75)
+  for (i in 1:length(group)){
+    # select tissue-specific (remove target group<0.2 or non-target group>0.1)
+    subset=gsi[which(gsi$group==group[i]),]
+    rexclhigh<-which(apply(subset,1,function(x) x[grep(group[i],colnames(gsi))]<thresHigh))
+    rexclall<-which(apply(subset,1,function(x) all(x[grep(group[i],colnames(gsi))]<allmin)))
+    xx<-subset[,-grep(group[i],colnames(gsi))]
+    rexcllow<-which(apply(xx,1,function(x) any(as.numeric(x[4:length(x)])>thresLow)))
+    rexcl<-c(rexclhigh,rexcllow,rexclall)
+    subset=subset[-rexcl,]
+    subset=subset[order(subset[,3],decreasing=T)[1:rank[i]],]
+    GSIRlt<-rbind(GSIRlt,subset)
+    if(plotfigure==T){
+      zz=subset[which(subset$group==group[i]),]
+      if(nrow(zz)>=1){
+      boxplot(na.omit(zz[,4:ncol(zz)]),horizontal=T,las=2,col="red")
+      }else{
+      print(paste(group[i],"do not have biomarker,please check raw data",sep=" "))
+      }
+    }
+  }
+  dev.off()
+  
+  if(plotfigure==T){
+    HeatMap(data=data.matrix(na.omit(GSIRlt[,4:ncol(GSIRlt)])),phen=gsub("AVE.","",colnames(GSIRlt)[4:ncol(GSIRlt)]),figure=otf2)
+  }
+  GSIRlt<-na.omit(GSIRlt)
+  return(GSIRlt)
+}
+topGSIByCategory<-function(GSITest,top){
+rlt<-c()
+GSITest=data.frame(GSITest)
+for(i in 1:length(table(GSITest[,2]))){
+sub<-subset(GSITest,group==names(table(GSITest[,2]))[i])
+rlt<-rbind(rlt,sub[order(sub$GSI,decreasing=T)[1:top],])
+}
+return(rlt)
+}
+RawNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[2]
+  NaRaw<-which(apply(data,1,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,1,function(x) all(x==0))==T)
+  NaRAW<-c(NaRaw,zero)
+  if(length(NaRAW)>0){
+    data1<-data[-NaRAW,]
+  }else{
+    data1<-data;
+  }
+  data1
+}  
+logit<-function (p, percents = range.p[2] > 1, adjust) {
+  range.p <- range(p, na.rm = TRUE)
+  if (percents) {
+    if (range.p[1] < 0 || range.p[1] > 100) 
+      stop("p must be in the range 0 to 100")
+    p <- p/100
+    range.p <- range.p/100
+  }
+  else if (range.p[1] < 0 || range.p[1] > 1) 
+    stop("p must be in the range 0 to 1")
+  a <- if (missing(adjust)) {
+    if (isTRUE(all.equal(range.p[1], 0)) || isTRUE(all.equal(range.p[2], 
+                                                             1))) 
+      0.025
+    else 0
+  }
+  else adjust
+  if (missing(adjust) && a != 0) 
+    warning(paste("proportions remapped to (", a, ", ", 1 - 
+                    a, ")", sep = ""))
+  a <- 1 - 2 * a
+  log((0.5 + a * (p - 0.5))/(1 - (0.5 + a * (p - 0.5))))
+}
+
+```
+
+
+```{r input,echo=T,eval=F}
+setwd("/home/shg047/oasis/monod/hapinfo/June")
+load("Coloncancer.plasma.0.05.top100.input.RData")
+data=Colon$data
+newdata<-data[,-grep("mix|CT|Heart",colnames(data))]
+newdata<-RawNARemove(newdata)
+input<-impute.knn(data.matrix(newdata))$data
+save(input,file="input.RData")
+```
+
+```{r}
+load("input.RData")
+train=input[,-grep("NCP|LCP|CCP",colnames(input))]
+gsirlt<-GSIMethDecon(train)
+save(gsirlt,file="GSIRlt.RData")
+GsiRlt<-TopGSIByCategory(gsi=gsirlt,top=2000,thresHigh=0.3,thresLow=0.1,plotfigure=F,figprefix="tissuespecific")
+```
+
+```{r askhelp,eval=F}
+load("input.RData")
+load("GSIRlt.RData")
+colnames(input)[grep("NCP",colnames(input))]="WBC-test"
+colnames(input)[grep("LCP",colnames(input))]="Lung-test"
+colnames(input)[grep("CCP",colnames(input))]="Colon-test"
+name<-unlist(lapply(strsplit(colnames(input),"[.]"),function(x) x[[1]]))
+Name<-colnames(input)[-grep("-test",colnames(input))]
+Group<-unlist(lapply(strsplit(Name,"[.]"),function(x) x[[1]]))
+colnames(input)[-grep("-test",colnames(input))]<-paste(Group,"Train",sep="-")
+colnames(input)
+save(input,file="ML-rawdata.RData")
+load(ML-rawdata.RData)
+dim(input)
+table(colnames(input))
+```
+Main Analysis for training and model evalution
+
+```{r}
+
+setwd("/home/shg047/oasis/monod/hapinfo/June")
+load("GSIRlt.RData")
+rlt<-c()
+for(topvar in seq(5,100,by=2)){
+acc1<-c()
+acc2<-c()
+acc3<-c()
+load("ML-rawdata.RData")
+test=input[,grep("-test",colnames(input))]
+GsiRlt<-TopGSIByCategory(gsi=gsirlt,top=20,thresHigh=0.1,thresLow=0.1,allmin=0.05,plotfigure=T,figprefix="tissuespecific")
+write.table(GsiRlt,file="bioI.biomarker.txt",col.names=NA,row.names=T,sep="\t",quote=F)
+xxtmp1<-test[na.omit(match(GsiRlt[which(GsiRlt[,2]=="Colon"),1],rownames(test))),]
+xxtmp2<-apply(xxtmp1,1,function(x) tapply(x,colnames(xxtmp1),function(x) sum(x>0.1)))
+xxtmp3<-apply(xxtmp2,2,function(x) x[1]>x[2] & x[1]>x[3])
+VarC<-names(xxtmp3)[which(xxtmp3)]
+xxtmp1<-test[na.omit(match(GsiRlt[which(GsiRlt[,2]=="Lung"),1],rownames(test))),]
+xxtmp2<-apply(xxtmp1,1,function(x) tapply(x,colnames(xxtmp1),function(x) sum(x>0)))
+xxtmp3<-apply(xxtmp2,2,function(x) x[2]>x[1] & x[2]>x[3])
+VarL<-names(xxtmp3)[which(xxtmp3)]
+GsiRlt<-TopGSIByCategory(gsi=gsirlt,top=round(mean(c(length(VarC),length(VarL)))),thresHigh=0.3,thresLow=0.1,allmin=0.05,plotfigure=T,figprefix="tissuespecific")
+#VarCV<-names(which(apply(input,1,function(x) sum(x[grep("Colon-test|Colon-Train",colnames(input))]>0.1)>=0.99*length(na.omit(x[grep("Colon-test|Colon-Train",colnames(input))])))))
+#VarL<-names(which(apply(input,1,function(x) sum(x[grep("Lung-test|Lung-Train",colnames(input))]>0.1)>=0.99*length(na.omit(x[grep("Lung-test|Lung-Train",colnames(input))])))))
+VarLast<-unique(c(as.character(GsiRlt[-grep("Colon|Lung",GsiRlt[,2]),1]),as.character(VarC),as.character(VarL)))
+input<-input[match(VarLast,rownames(input)),]
+input<-input[which(rowMeans(input[,grep("NCP|WBC",colnames(input))])<0.1),]
+dim(input)
+#input<-input[which(rowMeans(input[,grep("Colon-test|Colon-Train",colnames(input))])>0.05),]
+#input<-input[which(rowMeans(input[,grep("Lung-test|Lung-Train",colnames(input))])>0.05),]
+# input<-input[which(rowMeans(input[,grep("NCP|WBC",colnames(input))])<0.1),]
+# input<-input[which(apply(input,1,function(x) any(all(x[grep("Lung-Train",colnames(input))]>0),all(x[grep("Colon-Train",colnames(input))]>0)))),]
+train=input[,-grep("-test",colnames(input))]
+train=train[,order(colnames(train))]
+# train=logit(train)
+colnames(train)<-unlist(lapply(colnames(train),function(x) unlist(strsplit(x,"-"))[1]))
+test=input[,grep("-test",colnames(input))]
+for(i in seq(0,1,by=0.05)){
+APP1<-apply(test,2,function(x) tapply(x,GsiRlt[match(rownames(test),GsiRlt[,1]),2],function(x) sum(x>i))/table(GsiRlt[match(rownames(test),GsiRlt[,1]),2]))
+APP2<-apply(APP1,2,function(x) which.max(x))
+ac1=sum(APP2[1:30]==2,APP2[1:30]==4)
+ac2=sum(APP2[31:59]==7)
+ac3=sum(APP2[60:134]==9)
+acc1<-rbind(acc1,c(ac1,topvar,i))
+acc2<-rbind(acc2,c(ac2,topvar,i))
+acc3<-rbind(acc3,c(ac3,topvar,i))
+}
+rlt1<-acc1[which.max(acc1[,1]),]
+rlt2<-acc2[which.max(acc2[,1]),]
+rlt3<-acc3[which.max(acc3[,1]),]
+rlt<-rbind(rlt,c(rlt1,rlt2,rlt3))
+print(c(rlt1,rlt2,rlt3))
+}
+
+
+
+for(i in seq(0,1,by=0.005)){
+APP1<-apply(test,2,function(x) tapply(x,GsiRlt[match(rownames(test),GsiRlt[,1]),2],function(x) sum(x>i))/table(GsiRlt[match(rownames(test),GsiRlt[,1]),2]))
+APP2<-apply(APP1,2,function(x) which.max(x))
+ac2<-sum(APP2[which(names(APP2)=="Lung-test")]==7)
+acc<-rbind(acc,c(ac2,i))
+print(c(ac2))
+}
+
+for(i in seq(0,1,by=0.01)){
+APP1<-apply(test,2,function(x) tapply(x,GsiRlt[match(rownames(test),GsiRlt[,1]),2],function(x) sum(x>i))/table(GsiRlt[match(rownames(test),GsiRlt[,1]),2]))
+APP2<-apply(APP1,2,function(x) which.max(x))
+ac3<-sum(APP2[which(names(APP2)=="Lung-test")]==9)
+acc<-rbind(acc,c(ac3,i))
+print(c(ac2))
+}
+
+
+# test=logit(test)
+testset<-data.frame(phen=colnames(test),t(test))
+
+
+colnames(test)<-unlist(lapply(colnames(test),function(x) unlist(strsplit(x,"-"))[1]))
+trainset<-data.frame(phen=colnames(train),t(train))
+trainset[1:5,1:5]
+
+# tune paramters
+# bestmtry<-tuneRF(x=trainset[,2:ncol(trainset)],y=trainset[,1],ntreeTry=1000, stepFactor=2, improve=0.05,trace=TRUE, plot=TRUE, doBest=T)
+# best.mtry=bestmtry$mtry
+# feature selection
+model <- randomForest(as.factor(phen)~., data=trainset,importance=T,na.action="na.omit") # as.factor(y)
+model$importance=data.frame(model$importance)
+importance<-data.frame(model$importance[order(model$importance$MeanDecreaseGini,decreasing = T),])
+
+```
+
+Main Analysis for Prediction
+```{r}
+setwd("/home/shg047/oasis/monod/hapinfo/June")
+load("input.RData")
+load("GSIRlt.RData")
+load("ML-rawdata.RData")
+GsiRlt<-TopGSIByCategory(gsi=gsirlt,top=30,thresHigh=0.2,thresLow=0.1,allmin=0.05,plotfigure=T,figprefix="tissuespecific")
+VarC<-names(which(apply(input,1,function(x) sum(x[grep("Colon-test|Colon-Train",colnames(input))]>0.05)>=0.6*length(na.omit(x[grep("Colon-test|Colon-Train",colnames(input))])))))
+VarL<-names(which(apply(input,1,function(x) sum(x[grep("Lung-test|Lung-Train",colnames(input))]>0.05)>=0.5*length(na.omit(x[grep("Lung-test|Lung-Train",colnames(input))])))))
+VarLast<-unique(c(as.character(GsiRlt[,1]),as.character((VarC),as.character(VarL))))
+input<-input[match(VarLast,rownames(input)),]
+input<-input[which(rowMeans(input[,grep("NCP|WBC",colnames(input))])<0.1),]
+dim(input)
+input[match(VarC,rownames(input)),]
+
+# input<-input[which(rowMeans(input[,grep("Colon-test|Colon-Train",colnames(input))])>0.05),]
+# input<-input[which(rowMeans(input[,grep("Lung-test|Lung-Train",colnames(input))])>0.05),]
+# input<-input[which(rowMeans(input[,grep("NCP|WBC",colnames(input))])<0.1),]
+# input<-input[which(apply(input,1,function(x) any(all(x[grep("Lung-Train",colnames(input))]>0),all(x[grep("Colon-Train",colnames(input))]>0)))),]
+train=input[,-grep("-test",colnames(input))]
+train=train[,order(colnames(train))]
+# train=logit(train)
+colnames(train)<-unlist(lapply(colnames(train),function(x) unlist(strsplit(x,"-"))[1]))
+test=input[,grep("-test",colnames(input))]
+# test=logit(test)
+testset<-data.frame(phen=colnames(test),t(test))
+
+colnames(test)<-unlist(lapply(colnames(test),function(x) unlist(strsplit(x,"-"))[1]))
+trainset<-data.frame(phen=colnames(train),t(train))
+trainset[1:5,1:5]
+
+# tune paramters
+# bestmtry<-tuneRF(x=trainset[,2:ncol(trainset)],y=trainset[,1],ntreeTry=1000, stepFactor=2, improve=0.05,trace=TRUE, plot=TRUE, doBest=T)
+# best.mtry=bestmtry$mtry
+# feature selection
+model <- randomForest(as.factor(phen)~., data=trainset,importance=T,na.action="na.omit") # as.factor(y)
+model$importance=data.frame(model$importance)
+importance<-data.frame(model$importance[order(model$importance$MeanDecreaseGini,decreasing = T),])
+plot(density(importance$MeanDecreaseGini))
+
+ACC<-c()
+PRED<-c()
+for(i in seq(0.01,0.5,0.01)){
+impVar<-rownames(importance)[order(importance$MeanDecreaseGini,decreasing = T)[1:round(i*nrow(importance))]]
+length(impVar)
+Trainset=trainset[,c(1,match(impVar,colnames(trainset)))]
+Testset<-testset[,c(1,match(impVar,colnames(testset)))]
+acc<-c()
+Pred<-c()
+for(j in 1:10){
+model <- randomForest(as.factor(phen)~., data=Trainset,importance=T,na.action="na.omit") # as.factor(y)
+prediction <- predict(model, data.matrix(Testset[,2:ncol(Testset)]))
+Table<-table(testset[,1],prediction)
+sum=length(testset[,1])
+acc=rbind(acc,c((Table[1,2]+Table[1,4])/sum,Table[2,7]/sum,Table[3,9]/sum))
+}
+ACC<-rbind(ACC,colMeans(acc))
+}
+colnames(ACC)=colnames(model$confusion)[1:(ncol(model$confusion)-1)]
+rownames(ACC)=seq(0.01,0.5,0.01)
+PRED
+
+# select best i 
+ACC<-c()
+for(i in seq(0.05,1,by=0.01)){
+impVar<-rownames(importance)[order(importance$MeanDecreaseGini,decreasing = T)[1:round(i*nrow(importance))]]
+length(impVar)
+Trainset=trainset[,c(1,match(impVar,colnames(trainset)))]
+model <- randomForest(as.factor(phen)~., data=Trainset,importance=T,na.action="na.omit") # as.factor(y)
+model
+Testset<-testset[,c(1,match(impVar,colnames(testset)))]
+prediction<- predict(model, data.matrix(Testset[,2:ncol(Testset)]))
+Table<-table(testset[,1],prediction)
+acc=(Table[1,2]+Table[1,4]+Table[2,7]+Table[3,9])/length(testset[,1])
+ACC<-c(ACC,acc)
+}
+
+
+heatdata<-data.matrix(Testset[,2:ncol(Testset)])
+rownames(heatdata)<-Testset[,1]
+heatmap(t(heatdata),Colv=NA)
+dev.off()
+
+
+heatmap()
+
+
+heatdata<-data.matrix(trainset[,2:ncol(trainset)])
+rownames(heatdata)<-trainset[,1]
+heatmap(t(heatdata),Colv=NA)
+dev.off()
+
+heatmap(train,Colv=NA)
+dev.off()
+
+
+heatmap(input)
+Group<-unlist(lapply(strsplit(colnames(input),"[.]"),function(x) x[[1]]))
+input<-data.frame(Group,t(input))
+save(input,file="input.RData")
+
+```
+
+```{r}
+setwd("/home/shg047/oasis/monod/hapinfo/June")
+load("GSIRlt.RData")
+rlt<-c()
+acc1<-c()
+acc2<-c()
+acc3<-c()
+load("ML-rawdata.RData")
+test=input[,grep("-test",colnames(input))]
+GsiRlt<-TopGSIByCategory(gsi=gsirlt,top=30,thresHigh=0.3,thresLow=0.1,allmin=0,plotfigure=T,figprefix="tissuespecific")
+write.table(GsiRlt,file="bioI.biomarker.txt",col.names=T,row.names=F,sep="\t",quote=F)
+
+train=input[,-grep("-test",colnames(input))]
+train=train[,order(colnames(train))]
+# train=logit(train)
+colnames(train)<-unlist(lapply(colnames(train),function(x) unlist(strsplit(x,"-"))[1]))
+test=input[,grep("-test",colnames(input))]
+
+
+colnames(test)<-unlist(lapply(strsplit(colnames(test),"[-]"),function(x) x[[1]]))
+GSITest<-GSIMethDecon(test)
+
+GsiRlt1<-TopGSIByCategory(gsi=GSITest,top=30,thresHigh=0.5,thresLow=0.1,allmin=0,plotfigure=F,figprefix="test-tissuespecific")
+write.table(GsiRlt1,file="bioI.biomarker.txt",col.names=T,row.names=F,sep="\t",quote=F)
+GsiRlt2<-TopGSIByCategory(gsi=gsirlt,top=30,thresHigh=0.5,thresLow=0.1,allmin=0,plotfigure=T,figprefix="tissuespecific")
+write.table(GsiRlt2,file="bioII.biomarker.txt",col.names=T,row.names=F,sep="\t",quote=F)
+
+A=which(GsiRlt2$group=="Lung")[5:30]
+B=which(GsiRlt2$group=="Colon")[5:30]
+C=which(GsiRlt2$group=="WBC")[5:30]
+GsiRlt2<-GsiRlt2[-c(A,B,C),]
+rlt<-rbind(GsiRlt1[1:3],GsiRlt2[1:3])
+write.table(rlt,file="Last.biomarker.txt",col.names=F,row.names=F,sep="\t",quote=F)
+
+bio<-read.table("Last.biomarker.txt",head=F,sep="\t",as.is=T)
+newtest<-test[match(bio[,1],rownames(test)),]
+label=bio[,2]
+DisMatrix<-apply(newtest,2,function(x) tapply(x,label,function(x) sum(x>=0.3)))
+DisMatrix
+acc<-apply(DisMatrix,2,function(x) which.max(x))
+acc1<-sum(acc[1:30]==2)/30
+acc2<-sum(acc[31:59]==7)/29
+acc3<-sum(acc[60:134]==9)/75
+acc<-c(acc1,acc2,acc3)
+acc
+write.table(DisMatrix,file="prediction.matrix.result.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+
+GsiRlt<-GsiRlt[-grep("Colon|Lung|WBC",GsiRlt[,2]),]
+label<-c(as.character(rlt$group),as.character(GsiRlt[,2]))
+match("chr19:35505322-35505398",rownames(test))
+
+GSIMethDecon<-function(data){
+  data<-data.matrix(data)
+  group=names(table(colnames(data)))
+  index=colnames(data)
+  gsi<-gmaxgroup<-avebase<-c()
+  for(i in 1:nrow(data)){
+  gsit<-0
+  gmax<-names(which.max(tapply(as.numeric(data[i,]),index,function(x) mean(x,na.rm=T))))
+  for(j in 1:length(group)){
+    tmp<-(1-10^(mean(data[i,][which(index==group[j])],na.rm=T))/10^(mean(data[i,][which(index==gmax)],,na.rm=T)))/(length(group)-1)
+    gsit<-gsit+tmp
+  }
+  ave<-tapply(data[i,], index, function(x) mean(x,na.rm=T))
+  gmaxgroup<-c(gmaxgroup,gmax)
+  gsi<-c(gsi,gsit)
+  avebase<-rbind(avebase,ave)
+  }
+  rlt=data.frame(region=rownames(data),group=gmaxgroup,GSI=gsi,AVE=avebase)
+  return(rlt)
+}
+TopGSIByCategory<-function(gsi,top=1,thresHigh=0.2,thresLow=0.1,allmin=0.05,plotfigure=T,figprefix="tissuespecific"){
+  # gsi=GSITest; thresHigh=0.2; thresLow=0.1; allmin=0.05; plotfigure=T; figprefix="test-tissuespecific"
+    gsi=data.frame(gsi)
+    GSIRlt<-c()
+    group<-as.character(unique(gsi$group))
+    rank<-c(rep(top,length(group)))
+    otf1<-paste(figprefix,"boxplot.pdf",sep="")
+    otf2<-paste(figprefix,"heatmap.pdf",sep="")
+    parnum<-ceiling(sqrt(length(group)))
+    pdf(otf1)
+    par(mfrow=c(parnum,parnum),oma = c(2,2,2,2) + 0.1,mar = c(2,2,2,2) + 0.1,cex.axis=0.75, cex.lab=0.75)
+  for (i in 1:length(group)){
+    # select tissue-specific (remove target group<0.2 or non-target group>0.1)
+    subset=gsi[which(gsi$group==group[i]),]
+    rexclhigh<-which(apply(subset,1,function(x) x[grep(group[i],colnames(gsi))]<thresHigh))
+    rexclall<-which(apply(subset,1,function(x) all(x[grep(group[i],colnames(gsi))]<allmin)))
+    xx<-subset[,-grep(group[i],colnames(gsi))]
+    rexcllow<-which(apply(xx,1,function(x) any(as.numeric(x[4:length(x)])>thresLow)))
+    rexcl<-c(rexclhigh,rexcllow,rexclall)
+    subset=subset[-rexcl,]
+    subset=subset[order(subset[,3],decreasing=T)[1:rank[i]],]
+    GSIRlt<-rbind(GSIRlt,subset)
+    if(plotfigure==T){
+      zz=subset[which(subset$group==group[i]),]
+      if(nrow(zz)>=1){
+      boxplot(na.omit(zz[,4:ncol(zz)]),horizontal=T,las=2,col="red")
+      }else{
+      print(paste(group[i],"do not have biomarker,please check raw data",sep=" "))
+      }
+    }
+  }
+  dev.off()
+  
+  if(plotfigure==T){
+    HeatMap(data=data.matrix(na.omit(GSIRlt[,4:ncol(GSIRlt)])),phen=gsub("AVE.","",colnames(GSIRlt)[4:ncol(GSIRlt)]),figure=otf2)
+  }
+  GSIRlt<-na.omit(GSIRlt)
+  return(GSIRlt)
+}
+dataCollection<-function(){
+  rlt<-list()
+  setwd("/home/shg047/oasis/monod/hapinfo/June")
+  saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+  load("monod.mhl.june25.RData")
+  data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+  colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+  colnames(data)[grep("WB",colnames(data))]<-"WBC"
+  colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+  colnames(data)[grep("methylC",colnames(data))]<-"H1"
+  colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+  colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+  colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+  colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+  colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+  data1<-data[,grep("Brain|Stomach|Lung|Spleen|Colon|WBC|Intestine|Liver|Pancreas|Kidney|CCP|CCT|LCP|LCT|NCP",colnames(data))]
+  data1_ref<-data1[,-(grep("mix",colnames(data1)))]
+  base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+  colnames(data1_ref)<-base
+  gsi<-data.frame(GSIMethDecon(data1_ref))
+  group<-as.character(unique(gsi$group))
+  signatures<-AverageWithGroup(data1_ref)  # QR
+  rlt$GSI<-gsi
+  rlt$data<-data1
+  rlt$ref<-data1_ref
+  rlt$signature<-signatures
+  return(rlt)
+}
+data<-dataCollection()
+
+```
+
+
+
+```{r,echo=T,eval=F}
+setwd("/home/shg047/oasis/monod/hapinfo/June")
+load("Coloncancer.plasma.0.05.top100.input.RData")
+load("input.RData")
+# Remove Redundant Features
+correlationMatrix <- cor(input[,2:ncol(input)])
+highlyCorrelated <- findCorrelation(correlationMatrix, cutoff=0.5)
+input<-input[-highlyCorrelated,]
+save(input,file="input.RData")
+```
+
+```{r,echo=T,eval=F}
+load("input.RData")
+train=input[,-grep("NCP|LCP|CCP",colnames(input))]
+Group1<-unlist(lapply(strsplit(colnames(train),"[.]"),function(x) x[[1]]))
+train<-data.frame(Group=Group1,t(train))
+test=input[,grep("NCP|LCP|CCP",colnames(input))]
+colnames(test)[grep("NCP",colnames(test))]="WBC"
+colnames(test)[grep("LCP",colnames(test))]="Lung"
+colnames(test)[grep("CCP",colnames(test))]="Colon"
+Group2<-unlist(lapply(strsplit(colnames(test),"[.]"),function(x) x[[1]]))
+# for randomeForests
+model <- randomForest(as.factor(Group1)~., data=train,importance=T,na.action="na.omit") # as.factor(y)
+save(model,file="RF.modelFit.RData")
+
+
+```
+
+```{r}
+
+
+
+```
+
+```{r}
+predict1 <- predict(model, train)
+predict2 <- predict(model, test)
+t1<-table(predict1, trainlab)
+t2<-table(predict2, testlab)
+sen.train<-t1[2,2]/(t1[1,2]+t1[2,2])
+spe.train<-t1[1,1]/(t1[2,1]+t1[1,1])
+sen.test<-t2[2,2]/(t2[1,2]+t2[2,2])
+spe.test<-t2[1,1]/(t2[2,1]+t2[1,1])
+accu.train<-(t1[1,1]+t1[2,2])/sum(t1)
+accu.test<-(t2[1,1]+t2[2,2])/sum(t2)
+rlt1[j,]<-c(sen.train,spe.train, accu.train,sen.test,spe.test,accu.test)
+model <- randomForest(as.factor(trainlab)~., data=train,importance=T,na.action="na.omit") # as.factor(y)
+
+
+
+# Rank Features By Importance
+control <- trainControl(method="repeatedcv", number=10, repeats=3)
+model <- train(Group~., data=input, method="lvq", preProcess="scale", trControl=control)
+importance <- varImp(model, scale=FALSE)
+print(importance)
+# Feature Selection
+control <- rfeControl(functions=rfFuncs, method="cv", number=10)
+# run the RFE algorithm
+results <- rfe(input[,2:ncol(input)], input[,1], sizes=c(1:8), rfeControl=control)
+# summarize the results
+print(results)
+# list the chosen features
+predictors(results)
+monod.rf <- randomForest(Group ~ ., data=input[,1:200], importance=TRUE,proximity=TRUE)
+print(monod.rf)
+## Look at variable importance:
+round(importance(iris.rf), 2)
+## Do MDS on 1 - proximity:
+iris.mds <- cmdscale(1 - iris.rf$proximity, eig=TRUE)
+op <- par(pty="s")
+pairs(cbind(iris[,1:4], iris.mds$points), cex=0.6, gap=0,col=c("red", "green", "blue")[as.numeric(iris$Species)],main="Iris Data: Predictors and MDS of Proximity Based on RandomForest")
+par(op)
+print(iris.mds$GOF)
+colnames(data$data)
+GsiRlt<-GSIMethDecon(data$data)
+Refavg<-AverageWithGroup(data$data)
+TopGSIByCategory(GsiRlt,top=10,thresHigh=0.3,thresLow=0.1,plotfigure=T,figprefix="tissuespecific")
+colnames(data)
+x1<-grep("Colon|CTT|6-P|6-T",colnames(data), ignore.case=T)
+x2<-grep("Lung|7-P|7-T",colnames(data), ignore.case=T)
+x3<-grep("Pancr|PC-P|PC-T",colnames(data), ignore.case=T)
+x4<-grep("NC-|WB",colnames(data), ignore.case=T)
+
+colnames(data)[x1]
+colnames(data)[x2]
+colnames(data)[x3]
+colnames(data)[x4]
+
+data<-data[,c(x1,x2,x3,x4)]
+
+colnames(data)[grep("6-P-",colnames(data))]<-"6-P";
+colnames(data)[grep("7-P-",colnames(data))]<-"7-P";
+colnames(data)[grep("6-T-",colnames(data))]<-"6-T";
+colnames(data)[grep("7-T-",colnames(data))]<-"7-T";
+colnames(data)[grep("PC-P-",colnames(data))]<-"PC-P";
+colnames(data)[grep("PC-T-",colnames(data))]<-"PC-T";
+colnames(data)[grep("NC-P-",colnames(data))]<-"NC-P";
+colnames(data)
+save(data,file="Tissue-specific-MHBs-Figure5-may2016.RData")
+
+library("impute")
+f2<-RawNARemove(data,missratio=0.3)
+data<-impute.knn(data.matrix(f2))$data
+```
+# plot for colon cancer
+
+```{r}
+setwd("/home/sguo/Dropbox/Project/methylation/monod/result/Figure4C")
+data<-read.table("rrbs_kun.wbc.normal.colon.lung.pancrease.txt",head=T,sep="\t",check.name=F)
+load("Tissue-specific-MHBs-Figure5-may2016.RData")
+data1<-data[,c(grep("6-P",colnames(data)),grep("6-T|CTT",colnames(data)),grep("Colon",colnames(data)),grep("NC-P|WB",colnames(data)))]
+x1<-c(grep("6-P",colnames(data1)))
+x2<-c(grep("6-T|CTT",colnames(data1)),grep("Colon",colnames(data1)))
+x3<-c(grep("NC-P",colnames(data1)),grep("WB",colnames(data1)))
+length(x1)
+length(x2)
+length(x3)
+# pre-select and then random-forest
+data2<-data1[apply(data1,1,function(x) sum(x[x3]<0.1,na.rm=T)>0.75*length(na.omit(x[x3]))),]
+tmp<-data2[,x3]
+tmp[tmp>0.2]<-0.01
+data2[,x3]<-tmp
+data2<-data2[which(apply(data2,1,function(x) sum(x[x2]>0.2)>=0.5*length(na.omit(x[x2])))),]  
+data2<-data2[which(apply(data2,1,function(x) sum(x[x1]>0.01)>=0.2*length(na.omit(x[x1])))),]  
+dim(data2)
+source("http://www.bioconductor.org/biocLite.R")
+biocLite("impute")  
+install.packages("gplots")
+install.packages("RColorBrewer")
+install.packages("grDevices")
+library("gplots")
+library("RColorBrewer")
+library("grDevices")
+library("impute")
+
+mydata<-data2
+dim(mydata)
+f2<-RawNARemove(mydata,missratio=0.3)
+mydata<-impute.knn(data.matrix(f2))$data
+
+hclustfunc <- function(x) hclust(x, method="ward.D")
+distfunc <- function(x) dist(x, method="euclidean")
+cl.row <- hclustfunc(distfunc(mydata))
+cl.col <- hclustfunc(distfunc(t(mydata)))
+gr.row <- cutree(cl.row, 6)
+col1 <- brewer.pal(6, "Set1") 
+tol21rainbow= c("#771155", "#AA4488", "#CC99BB", "#114477", "#4477AA", "#77AADD", "#117777", "#44AAAA", "#77CCCC", "#117744", "#44AA77", "#88CCAA", "#777711", "#AAAA44", "#DDDD77", "#774411", "#AA7744", "#DDAA77", "#771122", "#AA4455", "#DD7788")
+col2<-tol21rainbow[as.numeric(as.factor(cl.col$labels))]
+filename=paste("Figure 5A.Colon.tissue.cancer.signature","pdf",sep=".")
+pdf(filename)
+col=colorRampPalette(c("yellow", "blue"))(20) 
+heatmap.2(mydata,col=col,trace="none",density.info="none",Colv=F,Rowv=T,key=T,keysize=1,cexCol=0.4,labRow=T,na.rm=TRUE)
+dev.off()
+getwd()
+write.table(mydata,file="colon.tissue-Figure5A.signiture.txt",col.names=NA,row.names=T,sep="\t")
+
+###########################################################################################################################################
+####################################################### Lung cancer #######################################################################
+############################################################################################################################################
+
+load("Tissue-specific-MHBs-Figure5-may2016.RData")
+data1<-data[,c(grep("7-P",colnames(data)),grep("7-T",colnames(data)),grep("Lung",colnames(data)),grep("NC-P|WB",colnames(data)))]
+x1<-c(grep("7-P",colnames(data1)))
+x2<-c(grep("7-T",colnames(data1)),grep("Lung",colnames(data1)))
+x3<-c(grep("NC-P",colnames(data1)),grep("WB",colnames(data1)))
+length(x1)
+length(x2)
+length(x3)
+# pre-select and then random-forest
+data2<-data1[apply(data1,1,function(x) sum(x[x3]<0.1,na.rm=T)>0.75*length(na.omit(x[x3]))),]
+tmp<-data2[,x3]
+tmp[tmp>0.2]<-0.01
+data2[,x3]<-tmp
+data2<-data2[which(apply(data2,1,function(x) sum(x[x2]>0.2)>=0.5*length(na.omit(x[x2])))),]  
+data2<-data2[which(apply(data2,1,function(x) sum(x[x1]>0.01)>=0.2*length(na.omit(x[x1])))),]  
+dim(data2)
+library("gplots")
+library("RColorBrewer")
+library("grDevices")
+mydata<-data2
+dim(mydata)
+library("impute")
+f2<-RawNARemove(mydata,missratio=0.3)
+mydata<-impute.knn(data.matrix(f2))$data
+
+hclustfunc <- function(x) hclust(x, method="ward.D")
+distfunc <- function(x) dist(x, method="euclidean")
+cl.row <- hclustfunc(distfunc(mydata))
+cl.col <- hclustfunc(distfunc(t(mydata)))
+gr.row <- cutree(cl.row, 6)
+col1 <- brewer.pal(6, "Set1") 
+tol21rainbow= c("#771155", "#AA4488", "#CC99BB", "#114477", "#4477AA", "#77AADD", "#117777", "#44AAAA", "#77CCCC", "#117744", "#44AA77", "#88CCAA", "#777711", "#AAAA44", "#DDDD77", "#774411", "#AA7744", "#DDAA77", "#771122", "#AA4455", "#DD7788")
+col2<-tol21rainbow[as.numeric(as.factor(cl.col$labels))]
+filename=paste("Figure 5A.Lung.tissue.cancer.signature","pdf",sep=".")
+pdf(filename)
+col=colorRampPalette(c("yellow", "blue"))(20) 
+heatmap.2(mydata,col=col,trace="none",density.info="none",Colv=F,Rowv=T,key=T,keysize=1,cexCol=0.4,labRow=T,na.rm=TRUE)
+dev.off()
+write.table(mydata,file="Lung.tissue-Figure5A.signiture.txt",col.names=NA,row.names=T,sep="\t")
+
+
+###########################################################################################################################################
+####################################################### Pancreatic cancer #######################################################################
+############################################################################################################################################
+
+load("Tissue-specific-MHBs-Figure5-may2016.RData")
+data1<-data[,c(grep("PC-P",colnames(data)),grep("PC-T",colnames(data)),grep("Pancrea",colnames(data)),grep("NC-P|WB",colnames(data)))]
+x1<-c(grep("PC-P",colnames(data1)))
+x2<-c(grep("PC-T",colnames(data1)),grep("Pancr",colnames(data1)))
+x3<-c(grep("NC-P",colnames(data1)),grep("WB",colnames(data1)))
+length(x1)
+length(x2)
+length(x3)
+# pre-select and then random-forest
+data2<-data1[apply(data1,1,function(x) sum(x[x3]<0.1,na.rm=T)>0.75*length(na.omit(x[x3]))),]
+tmp<-data2[,x3]
+tmp[tmp>0.2]<-0.01
+data2[,x3]<-tmp
+data2<-data2[which(apply(data2,1,function(x) sum(x[x2]>0.2)>=0.75*length(na.omit(x[x2])))),]  
+data2<-data2[which(apply(data2,1,function(x) sum(x[x1]>0.01)>=0.4*length(na.omit(x[x1])))),]  
+dim(data2)
+library("gplots")
+library("RColorBrewer")
+library("grDevices")
+mydata<-data2
+dim(mydata)
+library("impute")
+f2<-RawNARemove(mydata,missratio=0.3)
+mydata<-impute.knn(data.matrix(f2))$data
+
+hclustfunc <- function(x) hclust(x, method="ward.D")
+distfunc <- function(x) dist(x, method="euclidean")
+cl.row <- hclustfunc(distfunc(mydata))
+cl.col <- hclustfunc(distfunc(t(mydata)))
+gr.row <- cutree(cl.row, 6)
+col1 <- brewer.pal(6, "Set1") 
+tol21rainbow= c("#771155", "#AA4488", "#CC99BB", "#114477", "#4477AA", "#77AADD", "#117777", "#44AAAA", "#77CCCC", "#117744", "#44AA77", "#88CCAA", "#777711", "#AAAA44", "#DDDD77", "#774411", "#AA7744", "#DDAA77", "#771122", "#AA4455", "#DD7788")
+col2<-tol21rainbow[as.numeric(as.factor(cl.col$labels))]
+filename=paste("Figure 5A.Pancreatic.tissue.cancer.signature","pdf",sep=".")
+pdf(filename)
+col=colorRampPalette(c("yellow", "blue"))(20) 
+heatmap.2(mydata,col=col,trace="none",density.info="none",Colv=F,Rowv=T,key=T,keysize=1,cexCol=0.4,labRow=T,na.rm=TRUE)
+dev.off()
+write.table(mydata,file="Pancreatic.tissue-Figure5A.signiture.txt",col.names=NA,row.names=T,sep="\t")
+
+
+
+rownames(mydata)
+
+library("randomForest")
+pred2<-mydata
+lab2<-as.factor(colnames(mydata))
+bestmtry<-tuneRF(x=t(pred2),y=lab2,ntreeTry=1000, stepFactor=2, improve=0.05,trace=TRUE, plot=TRUE, doBest=T)
+best.mtry=bestmtry$mtry
+rf.model1<-randomForest(x=t(pred2),y=lab2,mtry=best.mtry)
+rf.model1
+rf.importance<-rf.importance+rf.model1$importance/100
+
+```
+4 regions were selected in colon cancer signiture. 
+
+Colon cancer  chr11:64107477-64107618	chr11	64107477	64107618	CCDC88B
+Colon cancer	chr14:38080503-38080551	chr14	38080503	38080551	TTC6
+Colon cancer	chr2:177014535-177014554	chr2	177014535	177014554	MIR10B
+Colon cancer	chr7:4125755-4125848	chr7	4125755	4125848	SDK1
+
+
+```{r}
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\result\\Figure4C")
+load("rrbs_kun.wbc.normal.colon.lung.pancrease.RData")
+data1<-data[,c(grep("7-P",colnames(data)),grep("7-T",colnames(data)),grep("lung",colnames(data)),grep("NC-P|WB",colnames(data)))]
+colnames(data1)
+hgsi<-gsi(data1)
+subset<-subset(hgsi,GSI>0.4)
+dim(subset)
+table(subset[,2])
+data<-data[match(subset[,1],rownames(data)),]
+x1<-c(grep("7-P",colnames(data)),grep("7-T",colnames(data)),grep("lung",colnames(data)),grep("NC-P",colnames(data)),grep("WB",colnames(data)))
+data1<-data[,x1]
+colnames(data1)
+dim(data1)
+# pre-select and then random-forest
+data1<-data1[which(apply(data1,1,function(x) sum(x[30:37]>0.1)>=6)),]  # N-C
+data1<-data1[which(apply(data1,1,function(x) sum(x[38:60]<0.1)>18)),]  # N-T
+dim(data1)
+datam<-data1
+data1<-datam
+data1<-data1[-c(8),]
+# data1<-data1[-c(15,16,17,19:21,23:25),]
+# data1[,1:35]<-data1[,sample(1:35,35)]
+# data1[,1:35]=data1[,order(apply(data1[,1:35],2,sum),decreasing=T)]
+library("gplots")
+library("RColorBrewer")
+library("grDevices")
+mydata<-data1
+dim(mydata)
+hclustfunc <- function(x) hclust(x, method="ward.D")
+distfunc <- function(x) dist(x, method="euclidean")
+cl.row <- hclustfunc(distfunc(mydata))
+cl.col <- hclustfunc(distfunc(t(mydata)))
+gr.row <- cutree(cl.row, 6)
+col1 <- brewer.pal(6, "Set1") 
+tol21rainbow= c("#771155", "#AA4488", "#CC99BB", "#114477", "#4477AA", "#77AADD", "#117777", "#44AAAA", "#77CCCC", "#117744", "#44AA77", "#88CCAA", "#777711", "#AAAA44", "#DDDD77", "#774411", "#AA7744", "#DDAA77", "#771122", "#AA4455", "#DD7788")
+col2<-tol21rainbow[as.numeric(as.factor(cl.col$labels))]
+
+filename=paste("Figure 4C-B. lung cancer.signature","pdf",sep=".")
+pdf(filename)
+col=colorRampPalette(c("yellow", "blue"))(20) 
+heatmap.2(mydata,col=col,trace="none",density.info="none",Colv=F,Rowv=T,key=F,keysize=1,cexCol=0.8,labRow=T)
+dev.off()
+write.table(mydata,file="colon.cancer.signiture.txt",col.names=NA,row.names=T,sep="\t")
+dim(mydata)
+rownames(mydata)
+
+```
+ [1] "chr11:67414336-67414479"   "chr6:41516279-41516323"    "chr16:54324380-54324391"   "chr3:196367554-196367676" 
+ [5] "chr11:64107477-64107618"   "chr21:44819374-44819431"   "chr19:50861910-50861952"   "chr17:36666183-36666251"  
+ [9] "chr10:105344363-105344374" "chr11:67171584-67171665"  
+ 
+
+```{r}
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\result\\Figure4C")
+load("rrbs_kun.wbc.normal.colon.lung.pancrease.RData")
+data1<-data[,c(grep("PC-P",colnames(data)),grep("PC-T",colnames(data)),grep("pancrease",colnames(data)),grep("NC-P|WB",colnames(data)))]
+colnames(data1)
+hgsi<-gsi(data1)
+subset<-subset(hgsi,GSI>0.3)
+dim(subset)
+table(subset[,2])
+data<-data[match(subset[,1],rownames(data)),]
+x1<-c(grep("PC-P",colnames(data)),grep("PC-T",colnames(data)),grep("pancrease",colnames(data)),grep("NC-P",colnames(data)),grep("WB",colnames(data)))
+data1<-data[,x1]
+colnames(data1)
+dim(data1)
+# pre-select and then random-forest
+data1<-data1[which(apply(data1,1,function(x) sum(x[11:18]>0.1)>=6)),]  # N-C
+data1<-data1[which(apply(data1,1,function(x) sum(x[19:41]<0.1)>20)),]  # N-T
+dim(data1)
+datam<-data1
+data1<-datam
+data1<-data1[-c(8),]
+# data1<-data1[-c(15,16,17,19:21,23:25),]
+# data1[,1:35]<-data1[,sample(1:35,35)]
+# data1[,1:35]=data1[,order(apply(data1[,1:35],2,sum),decreasing=T)]
+library("gplots")
+library("RColorBrewer")
+library("grDevices")
+mydata<-data1
+dim(mydata)
+hclustfunc <- function(x) hclust(x, method="ward.D")
+distfunc <- function(x) dist(x, method="euclidean")
+cl.row <- hclustfunc(distfunc(mydata))
+cl.col <- hclustfunc(distfunc(t(mydata)))
+gr.row <- cutree(cl.row, 6)
+col1 <- brewer.pal(6, "Set1") 
+tol21rainbow= c("#771155", "#AA4488", "#CC99BB", "#114477", "#4477AA", "#77AADD", "#117777", "#44AAAA", "#77CCCC", "#117744", "#44AA77", "#88CCAA", "#777711", "#AAAA44", "#DDDD77", "#774411", "#AA7744", "#DDAA77", "#771122", "#AA4455", "#DD7788")
+col2<-tol21rainbow[as.numeric(as.factor(cl.col$labels))]
+
+filename=paste("Figure 4C-B. pancreatic cancer.signature","pdf",sep=".")
+pdf(filename)
+col=colorRampPalette(c("yellow", "blue"))(20) 
+heatmap.2(mydata,col=col,trace="none",density.info="none",Colv=F,Rowv=T,key=F,keysize=1,cexCol=0.8,labRow=T)
+dev.off()
+write.table(mydata,file="colon.cancer.signiture.txt",col.names=NA,row.names=T,sep="\t")
+dim(mydata)
+rownames(mydata)
+
+```
+[1] "chr12:65218617-65218679"   "chr22:27520690-27520729"   "chr3:192125903-192126003"  "chr3:72226922-72227039"   
+ [5] "chr10:105344287-105344338" "chr17:55951919-55952131"   "chr7:156798428-156798541"  "chr10:105344381-105344439"
+ [9] "chr17:1160171-1160242"     "chr19:48983897-48984317"   "chr10:105344363-105344374" "chr11:67171584-67171665"  
+[13] "chr10:105344583-105344617" "chr7:4125755-4125848"  
+
+

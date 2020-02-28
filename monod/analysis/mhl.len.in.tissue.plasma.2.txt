@@ -1,0 +1,17 @@
+Table. Significant difference of the length of MHL between tissues and plasmas					
+	length.of.MHL.in.tissue	length.of.MHL.in.plasma	foldchange	delta(bp)	P-value
+6-P-1	138	164	1.19	26	1.43E-25
+6-P-2	149	154	1.03	5	0.043421757
+6-P-3	146	159	1.09	13	1.69E-09
+6-P-4	136	157	1.15	21	3.10E-19
+6-P-5	135	166	1.23	31	6.94E-32
+7-P-1	138	159	1.15	21	3.36E-23
+7-P-2	137	169	1.23	32	5.64E-32
+7-P-3	137	167	1.22	30	1.74E-31
+7-P-4	139	158	1.14	19	1.63E-18
+7-P-5	132	177	1.34	45	5.71E-66
+PC-P-1	131	171	1.31	40	1.86E-45
+PC-P-2	133	161	1.21	28	6.73E-37
+PC-P-4	127	167	1.31	40	1.61E-62
+PC-P-6	132	176	1.33	44	3.05E-66
+PC-P-7	128	171	1.34	43	3.75E-63

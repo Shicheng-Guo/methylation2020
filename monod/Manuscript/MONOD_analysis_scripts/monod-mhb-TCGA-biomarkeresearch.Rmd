@@ -1,0 +1,281 @@
+---
+title: "Colon and Lung Biomarker from TCGA project and MONOD Project"
+author: "Shicheng Guo"
+date: "June 1, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(devtools)
+#install_github("Shicheng-Guo/newmonod",force = TRUE)
+install.packages("/media/Home_Raid1/shg047/software/monod_1.6.tar.gz")
+library("monod")
+library("stringr")
+```
+
+## Preparation
+
+### install R package: monod
+library(devtools)
+
+install_github("Shicheng-Guo/newmonod",force = TRUE)
+
+library("monod")
+
+### Data: genome-miner:
+1. WGBS: **/media/Home_Raid1/shg047/NAS1/monod/mhl/0530/WGBS.getHaplo.mhl.mhbs.Guo.txt**
+2. RRBS:**/media/Home_Raid1/shg047/NAS1/monod/mhl/0530/RRBS.getHaplo.mhl.mhbs.Guo.txt**
+3. TCGA: **/media/NAS3_volume2/shg047/HM450/TCGA/Data/PancancerMethMatrix_March2016.RData**
+4. TCGA: **/media/NAS3_volume2/shg047/HM450/TCGA/Data/PancancerMethSaminfoOct2016.txt**
+
+We have notice that the markeres for colon and lung is not quite specific. 
+
+### Plan 1: Check the CpGs methylation levels in Colon and Lung Specific MHB/MHL markers
+Read WGBS data:
+```{r readWGBS}
+setwd("/media/Home_Raid1/shg047/NAS1/monod/mhl/0530")
+data1<-read.table("/media/NAS1/shg047/monod/mhl/0530/WGBS.getHaplo.mhl.mhbs.Guo.txt",head=T,row.names=1,sep="\t",check.names = F)
+data1<-rename2(data1)
+sort(table(colnames(data1)))
+Data1<-data1[,grep("Brain|Colon|Intestine|Kidney|Liver|Lung|Pancreas|Spleen|Stomach|WBC",colnames(data1))] 
+colnames(Data1)<-unlist(lapply(colnames(Data1),function(x) unlist(strsplit(x,"[.]"))[1]))
+table(colnames(Data1))
+```
+Read RRBS data:
+```{r readRRBS}
+data2<-read.table("/media/NAS1/shg047/monod/mhl/0530/RRBS.getHaplo.mhl.mhbs.Guo.txt",head=T,row.names=1,sep="\t",check.names = F)
+sort(table(colnames(data2)))
+Data2<-data2[,grep(".7P|X7.P|LC-P|.6P|X6.P|CCP|CRC-P|NC-P|NCP|NP",colnames(data2))]  
+```
+Read TCGA 450K data:
+```{r read450K}
+load("/media/NAS3_volume2/shg047/HM450/TCGA/Data/PancancerMethMatrix_March2016.RData")
+see(data)
+data450k<-data
+```
+Overlap between MHB and 450K array.
+```{r Overalap}
+cgoverlap<-bed2cg(cor2bed(rownames(Data1)))
+head(cgoverlap)
+
+```
+okay, we have `nrow(cgoverlap)` probes located in MHB regions. 
+
+Now, let's check how many colon and lung specific MHL markers are hypermethylated. 
+```{r}
+load("/media/Home_Raid1/shg047/NAS1/monod/mhl/0530/gsirlt.mhl.may30.RData")
+head(gsirlt)
+gsirlt_colon<-gsirlt[which(unlist(lapply(gsirlt$group,function(x) length(grep("Colon",x))>0))),]
+gsirlt_lung<-gsirlt[which(unlist(lapply(gsirlt$group,function(x) length(grep("Lung",x))>0))),]
+```
+All the CpG probes (450K) located in MHB regions are as the following:
+```{r}
+cpglist_colon<-bed2cg(cor2bed(gsirlt_colon$region))
+cpglist_lung<-bed2cg(cor2bed(gsirlt_lung$region))
+dim(cpglist_colon)
+dim(cpglist_lung)
+```
+Okay, now check the methylation leveles for these CpGs in the corresponding cancer and normal samples. First trim and rename 450K dataset and be clear the sampleid, sampletype and colon type.
+```{r}
+tcgacancertype<-function(filename){
+cancertype<-unlist(lapply(filename,function(x) unlist(strsplit(x,"_|.Human"))[2]))
+return(cancertype)
+}
+
+tcgasampleid<-function(filename){
+  id<-as.array(str_extract(filename,"TCGA.[0-9|a-z|A-Z]*.[0-9|a-z|A-Z]*.[0-9]*"))
+  id<-gsub("[.]","-",id)
+  return(id)
+}
+
+tcgasampletype<-function(filename){
+id<-as.array(str_extract(filename,"TCGA.[0-9|a-z|A-Z]*.[0-9|a-z|A-Z]*.[0-9]*"))
+sampletype<- substr(id,14,15)
+return(sampletype)
+}
+
+cancertype<-tcgacancertype(colnames(data450k))
+sampletype<-tcgasampletype(colnames(data450k))
+sampleid<-tcgasampleid(colnames(data450k))
+table(cancertype)
+table(sampletype)
+print(paste("Note: 01 is cancer while 11 is normal"))
+head(sampleid)
+```
+1. For colon cancer, to check the methylation status of the CpG probes located in MHB.
+```{r}
+tcga_colon1<-data450k[match(cpglist_colon$V8,rownames(data450k)),cancertype=="COAD"]
+tcga_colon2<-data450k[match(cpglist_colon$V8,rownames(data450k)),cancertype=="COAD" & sampletype=="01"]
+tcga_colon3<-data450k[match(cpglist_colon$V8,rownames(data450k)),cancertype=="COAD" & sampletype=="11"]
+dim(tcga_colon1)
+dim(tcga_colon2)
+dim(tcga_colon3)
+see(tcga_colon1)
+par(mfrow=c(1,3))
+
+cc1<-apply(tcga_colon1,1,function(x) mean(x,na.rm=T))
+cc2<-apply(tcga_colon2,1,function(x) mean(x,na.rm=T))
+cc3<-apply(tcga_colon3,1,function(x) mean(x,na.rm=T))
+boxplot(na.omit(unlist(cc1)),main="All Colon: Cancer+Normal")
+boxplot(na.omit(unlist(cc2)),main="All Colon: Cancer")
+boxplot(na.omit(unlist(cc3)),main="All Colon: Normal")
+sum(na.omit(unlist(cc1>0.3)))/nrow(tcga_colon1)
+sum(na.omit(unlist(cc2>0.3)))/nrow(tcga_colon2)
+sum(na.omit(unlist(cc3>0.3)))/nrow(tcga_colon3)
+```
+Okay, we can notice that only 43% WGBS GSI markers have beta>0.3 in 450K dataset (cancer+normal). 
+What's worse, only 27% WGBS GSI markers have beta>0.3 in 450K dataset (only in normal). 
+
+2. For lung cancer, to check the methylation status of the CpG probes located in MHB.
+```{r}
+tcga_lung1<-data450k[,cancertype=="LUAD"|cancertype=="LUSC"]                       # for all lung
+tcga_lung2<-data450k[,(cancertype=="LUAD"|cancertype=="LUSC") & sampletype=="01"]  # for lung cancer
+tcga_lung3<-data450k[,(cancertype=="LUAD"|cancertype=="LUSC") & sampletype=="11"]  # for lung normal
+
+dim(tcga_lung1)
+dim(tcga_lung2)
+dim(tcga_lung3)
+see(tcga_lung1)
+par(mfrow=c(1,3))
+lc1<-apply(tcga_lung1,1,function(x) mean(x,na.rm=T))
+lc2<-apply(tcga_lung2,1,function(x) mean(x,na.rm=T))
+lc3<-apply(tcga_lung3,1,function(x) mean(x,na.rm=T))
+boxplot(na.omit(unlist(lc1)),main="All Colon: Cancer+Normal")
+boxplot(na.omit(unlist(lc2)),main="All Colon: Cancer")
+boxplot(na.omit(unlist(lc3)),main="All Colon: Normal")
+sum(na.omit(unlist(cc1>0.3)))/nrow(tcga_lung1)
+sum(na.omit(unlist(cc2>0.3)))/nrow(tcga_lung2)
+sum(na.omit(unlist(cc3>0.3)))/nrow(tcga_lung3)
+```
+Okay, for lung tissue, it look better than colon. we can notice that only 60% WGBS GSI markers have beta>0.3 in 450K dataset (cancer+normal). 
+we can find 56% WGBS GSI lung-markers have beta>0.3 in 450K dataset (only in normal). 
+
+
+3. Can we have higher plasma mapping ratio with validate biomarkers. Now update the biomarkers. remove the colon and lung markers which are < 0.3 in TCGA dataset.
+```{r}
+colonremove<-cgoverlap[na.omit(match(names(which(cc1<0.3)),cgoverlap$V8)),]$V4
+lungremove<-cgoverlap[na.omit(match(names(which(lc1<0.3)),cgoverlap$V8)),]$V4
+remove<-unique(c(match(colonremove,gsirlt[,1]),match(lungremove,gsirlt[,1])))
+Gsirlt<-gsirlt[-remove,]
+```
+Okay. 112369/147881 were left and 35512 non-specific/false positive colon and lung cancer biomarkers were removed. 
+
+4, Do the tissue-of-origin prediction again.
+```{r}
+gsirlt1<-subset(Gsirlt,refMax>0.3 & GSI>0.65)  # refMax=c(0.3-0.6), GSI=c(0.5-0.7)
+gsirlt1$group<-as.character(gsirlt1$group)
+bio<-gsi2bio(gsirlt1)
+
+# predict solid tissue(normals)
+rlt1<-prediction1(Data1,bio,tt=0.6)  
+rlt1$prediction
+sum(rlt1$prediction==names(rlt1$prediction))/length(rlt1$prediction)
+```
+It's cool. solid normal tissue mapping accuray is still 93.47826%, only one Colon was predicted to "Intestine". Go on, to check the plasma data prediction. 
+
+```{r}
+np<-Data2[,grep("NC-P|NCP|NP",colnames(Data2))]  
+train<-sample(1:75,45)
+ncp<-np[,train]
+nncp<-np[,(1:75)[-train]]
+ccp<-Data2[,unique(grep(".6P|X6.P|CCP|CRC-P",colnames(Data2)))]  
+lcp<-Data2[,unique(grep(".7P|X7.P|LC-P",colnames(Data2)))] 
+
+rlt1<-ZscorePredictionPlasma1(nncp,ncp,bio,tt=0.001)    # tt is threshold to binary the MHL matrix, lcp: colon cancer plasma, ncp: normal plasma trainning dataset
+rlt2<-ZscorePredictionPlasma1(ccp,ncp,bio,tt=0.001)     # tt is threshold to binary the MHL matrix, ccp: colon cancer plasma, ncp: normal plasma trainning dataset
+rlt3<-ZscorePredictionPlasma1(lcp,ncp,bio,tt=0.001)     # tt is threshold to binary the MHL matrix, ccp: colon cancer plasma, ncp: normal plasma trainning dataset
+rlt2$testcounts 
+rlt2$nprscore[1:10,1:3]
+rlt2$ccprscore[1:10,1:3]
+```
+heatmap to show the number, Z-score and P-values  normal plasma
+
+
+```{r}
+#label: unnamed-chunk-9
+#Quitting from lines 195-198 (monod-mhb-TCGA-biomarkeresearch.Rmd)
+#Error in plot.new() : figure margins too large
+pdf("heatmap-np.pdf")
+HeatMap(rlt1$testcounts)
+HeatMap(rlt1$ccprscore)
+HeatMap(-log(pnorm(-abs(rlt1$ccprscore)),10))
+dev.off()
+```
+heatmap to show the number, Z-score and P-values for colon cancer plasma
+```{r}
+pdf("heatmap-ccp.pdf")
+HeatMap(rlt2$testcounts)
+HeatMap(rlt2$ccprscore)
+HeatMap(-log(pnorm(-abs(rlt2$ccprscore)),10))
+dev.off()
+```
+heatmap to show the number, Z-score and P-values for lung cancer plasma
+```{r}
+pdf("heatmap-lcp.pdf")
+HeatMap(rlt3$testcounts)
+HeatMap(rlt3$ccprscore)
+HeatMap(-log(pnorm(-abs(rlt3$ccprscore)),10))
+dev.off()
+```
+
+```{r}
+pvalue1<-pnorm(-abs(rlt1$ccprscore))
+pvalue2<-pnorm(-abs(rlt2$ccprscore))
+pvalue3<-pnorm(-abs(rlt3$ccprscore))
+prin1<-sum(unlist(apply(pvalue1,2,function(x) rownames(rlt1$score)[which(x<0.01)]))=="WBC")
+prin2<-sum(unlist(apply(pvalue2,2,function(x) rownames(rlt1$score)[which(x<0.01)]))=="Colon")
+prin3<-sum(unlist(apply(pvalue3,2,function(x) rownames(rlt2$score)[which(x<0.01)]))=="Lung")
+prin1
+prin2
+```
+optimization to check is there any acceptable result
+```{r}
+for(i in seq(0,0.3,by=0.01)){
+rlt1<-ZscorePredictionPlasma1(nncp,ncp,bio,tt=i)    # tt is threshold to binary the MHL matrix, lcp: colon cancer plasma, ncp: normal plasma 
+rlt2<-ZscorePredictionPlasma1(ccp,ncp,bio,tt=i)     # tt is threshold to binary the MHL matrix, ccp: colon cancer plasma, ncp: normal plasma 
+rlt3<-ZscorePredictionPlasma1(lcp,ncp,bio,tt=i)     # tt is threshold to binary the MHL matrix, ccp: colon cancer plasma, ncp: normal plasma 
+pvalue1<-pnorm(-abs(rlt1$ccprscore))
+pvalue2<-pnorm(-abs(rlt2$ccprscore))
+pvalue3<-pnorm(-abs(rlt3$ccprscore))
+prin1<-sum(unlist(apply(pvalue1,2,function(x) length(grep("WBC",rownames(rlt1$score)[which(x<0.01)]))>1)))
+prin2<-sum(unlist(apply(pvalue2,2,function(x) length(grep("Colon",rownames(rlt2$score)[which(x<0.01)]))>1)))
+prin3<-sum(unlist(apply(pvalue3,2,function(x) length(grep("Lung",rownames(rlt3$score)[which(x<0.01)]))>1)))
+print(c(i,prin1,prin2,prin3))
+}
+```
+### Plan 2: Identify lung cancer and colon specific markers with 450K array and then apply these markers/regions as colon and lung specific marker to do plasma prediction??
+
+
+
+
+
+
+### Plan 3: How about pancreatic cancer since this biomarker is more specific and if it is works, at least, we proof this idea or apporach is good. 
+Data1<-Data1[na.omit(match(rownames(Data2),rownames(Data1))),]
+Data2<-Data2[na.omit(match(rownames(Data1),rownames(Data2))),]
+
+
+DeconData<-data.frame(VirtualMatrix,signatures[match(rownames(VirtualMatrix),rownames(signatures)),])
+DeconData.tmp<-DeconData[na.omit(match(topgsi[,1],rownames(DeconData))),]
+VirtualMatrix=data.frame(DeconData.tmp[,grep("VirtualSample",colnames(DeconData))])
+Signatures=data.frame(DeconData.tmp[,-grep("VirtualSample",colnames(DeconData))])
+library(car)
+NewVirtualMatrix=logit(VirtualMatrix)
+NewSignatures=logit(Signatures)
+head(NewVirtualMatrix)
+head(NewSignatures)
+Rlt<-DeconRNASeq(NewVirtualMatrix,NewSignatures,checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+
+
+
+
+
+
+
+
+
+
+
+
+

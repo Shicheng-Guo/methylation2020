@@ -1,0 +1,23 @@
+Methylation Haplotype Analysis User Guide
+
+Methylation Haplotype Analysis starts from the BAM files. BS-seq or RRBS sequencing data are recommend to be aligned by BisReadMapper [1] or Bismark [2]. 
+Quality trim (Trim-galore), adaptor trim (Trim-galore, Cutadapt or Cleanadaptors), pair-end sequencing stitch (COPE) and any other preliminary processing should be conducted according to the sequencing strategy of the authors. Our custom Perl script could extract haplotype information (haploinfo) and another Perl script could provide the calculation of methylation haplotype load (mhl). Some other script such as LD (R2) calculation is also provided which take haploinfo file as the input. All the script will be updated continuously. Any question or suggestion, please don't hesitate to email Dr. Kun Zhang < kzhang@bioeng.ucsd.edu > or Shicheng Guo <scguo@ucsd.edu>
+
+1, Bam files to methylation haploinfo files
+
+
+
+2, haploinfo files to methylation haplotype load matrix
+
+
+
+3, Linkage disequlibrium inferring (R2)
+
+
+
+
+
+1.	Diep, D., et al., Library-free methylation sequencing with bisulfite padlock probes. Nat Methods, 2012. 9(3): p. 270-2.
+2.	Krueger, F. and S.R. Andrews, Bismark: a flexible aligner and methylation caller for Bisulfite-Seq applications. Bioinformatics, 2011. 27(11): p. 1571-2.
+
+

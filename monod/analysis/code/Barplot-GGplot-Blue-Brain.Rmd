@@ -1,0 +1,87 @@
+---
+title: "Barplot for High-throughput Brian Expression Dataset"
+author: "Shicheng Guo"
+date: "July 15, 2016"
+output: html_document
+---
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+library("Seurat")
+library("ggplot2")
+barplotReAxis<-function(mp){
+mp<-c(0,mp)
+np<-c()
+end<-length(mp)-1
+for(i in 1:end){
+  np.tmp<-(mp[i]+mp[i+1])/2
+  np<-c(np,np.tmp)
+}
+np<-round(np)
+names(np)=names(mp)[2:length(mp)]
+return(np)
+}
+```
+```{r loaddata,echo=T}
+load("C:\\Users\\shicheng\\Downloads\\Barplot_Workspace.RData")
+cell.labels <- substr(colnames(nbt.data),0,7)
+cell.labels<-unlist(lapply(rownames(t.nbt.data),function(x) unlist(strsplit(x,"_"))[1]))
+group.labels<-unlist(lapply(strsplit(cell.labels,split="BA"),function(x) x[[1]]))
+input<-data.frame(GEX=t.nbt.data[,1],cell.labels=cell.labels,group.labels=group.labels)
+input<-input[order(input$cell.labels),]
+quantile(input$GEX)
+par(mar=c(3,3,2,4))
+barplot(input$GEX,border=input$cell.labels)
+legend("topright",legend=unique(input$group.labels),lty=rep(1,length(unique(input$group.labels))),col=as.numeric(as.factor(unique(input$group.labels))),bty="n",cex=0.5)
+t.nbt.data<-t(nbt.data)
+cell.labels <- substr(colnames(nbt.data),0,7)
+cell.labels<-unlist(lapply(rownames(t.nbt.data),function(x) unlist(strsplit(x,"_"))[1]))
+sort(table(cell.labels))
+sort(table(group.labels))
+sum(table(cell.labels)>30)
+table(cell.labels)[table(cell.labels)>30]
+
+In1<-c("In1BA10","In1BA8","In1BA21","In1BA22","In1BA41","In1BA17")
+In2<-c("In2BA10","In2BA8","In2BA21","In2BA22","In2BA41","In2BA17")
+In3<-c("In3BA10","In3BA8","In3BA21","In3BA22","In3BA41","In3BA17")
+In4<-c("In4BA10","In4BA8","In4BA21","In4BA22","In4BA41","In4BA17")
+In5<-c("In5BA10","In5BA8","In5BA21","In5BA22","In5BA41","In5BA17")
+In6<-c("In6BA10","In6BA8","In6BA21","In6BA22","In6BA41","In6BA17")
+In7<-c("In7BA10","In7BA8","In7BA21","In7BA22","In7BA41","In7BA17")
+In8<-c("In8BA10","In8BA8","In8BA21","In8BA22","In8BA41","In8BA17")
+Ex1<-c("Ex1BA10","Ex1BA8","Ex1BA21","Ex1BA22","Ex1BA41","Ex1BA17")
+Ex2<-c("Ex2BA10","Ex2BA8","Ex2BA21","Ex2BA22","Ex2BA41","Ex2BA17")
+Ex3<-c("Ex3BA10","Ex3BA8","Ex3BA21","Ex3BA22","Ex3BA41","Ex3BA17")
+Ex4<-c("Ex4BA10","Ex4BA8","Ex4BA21","Ex4BA22","Ex4BA41","Ex4BA17")
+Ex5<-c("Ex5BA10","Ex5BA8","Ex5BA21","Ex5BA22","Ex5BA41","Ex5BA17")
+Ex6<-c("Ex6BA10","Ex6BA8","Ex6BA21","Ex6BA22","Ex6BA41","Ex6BA17")
+Ex7<-c("Ex7BA10","Ex7BA8","Ex7BA21","Ex7BA22","Ex7BA41","Ex7BA17")
+Ex8<-c("Ex8BA10","Ex8BA8","Ex8BA21","Ex8BA22","Ex8BA41","Ex8BA17")
+groups <- factor(cell.labels,levels=c(In1,In2,In3,In4,In5,In6,In7,In8,Ex1,Ex2,Ex3,Ex4,Ex5,Ex6,Ex7,Ex8))
+NewGroup<-names(sort(table(groups),decreasing=T))[1:30]
+bar.len<-c(cumsum(table(groups)))
+newaxis<-barplotReAxis(bar.len)
+nbt.data<-data.frame(nbt.data)
+nGenes <- nrow(nbt.data)
+coverage <- colSums(nbt.data)/nGenes
+ord <- order(groups)
+```
+fig.width=8
+```{r plot1,fig.width=8}
+bar.positions <- barplot(coverage[ord],border=groups[ord],xaxt='n',ylab="Counts per gene",beside=T,space=10)
+axis(side=1,at=c(bar.positions[newaxis[match(NewGroup,names(newaxis))]]),labels=NewGroup,tick=FALSE,las=2,cex.axis=0.7)
+```
+
+fig.width=16
+```{r plot2,fig.width=16}
+png("result.show.png",width=800)
+bar.positions <- barplot(coverage[ord],border=groups[ord],xaxt='n',ylab="Counts per gene",beside=T,space=10)
+axis(side=1,at=c(bar.positions[newaxis[match(NewGroup,names(newaxis))]]),labels=NewGroup,tick=FALSE,las=2,cex.axis=0.7)
+dev.off()
+```
+fig.width=64
+```{r plot3,fig.width=64}
+bar.positions <- barplot(coverage[ord],border=groups[ord],xaxt='n',ylab="Counts per gene",beside=T,space=10)
+axis(side=1,at=c(bar.positions[newaxis[match(NewGroup,names(newaxis))]]),labels=NewGroup,tick=FALSE,las=2,cex.axis=0.7)
+```
+

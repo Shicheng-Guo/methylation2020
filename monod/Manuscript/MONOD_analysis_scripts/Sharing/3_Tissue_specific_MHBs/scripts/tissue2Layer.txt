@@ -1,0 +1,24 @@
+Tissue	Layer
+CCT	CT
+H1	H1
+LCT	CT
+WB	Mesoderm
+WBC	Mesoderm
+Bladder	Endoderm
+Brain	Ectoderm
+Colon	Endoderm
+Esophagus	Endoderm
+Fat cell	Mesoderm
+Gastric	Endoderm
+Heart	Mesoderm
+Intestine	Endoderm
+Kidney	Mesoderm
+Liver	Endoderm
+Lung	Endoderm
+muscle	Mesoderm
+Ovary	Mesoderm
+Pancreas	Endoderm
+Spleen	Mesoderm
+Stomach	Endoderm
+Thymus	Endoderm
+Vessel	Mesoderm

@@ -1,0 +1,381 @@
+---
+title: "MHL in Plasma MONOD Project Discovery (Figure 4A)"
+author: "Shicheng Guo"
+date: "Wednesday, March 30, 2016"
+output: html_document
+---
+
+```{r}
+
+ggbarplot<-function(data){
+library("ggplot2")
+newdata<-data.frame(value=as.numeric(data.matrix(data)),Group=rep(colnames(data),each=nrow(data)))
+myData <- aggregate(newdata$value,by =list(type=newdata$Group),
+                    FUN = function(x) c(mean = mean(x,na.rm=T),
+                                        sd = sd(x,na.rm=T),
+                                        sem=sd(x,na.rm=T)/sqrt(length(na.omit(x))),
+                                        min=min(x,na.rm=T),
+                                        max=max(x,na.rm=T),
+                                        median=median(x,na.rm=T),
+                                        me=qt(1-0.05/2,df=length(na.omit(x))*sd(x,na.rm=T)/sqrt(length(na.omit(x)))))
+)
+myData <- do.call(data.frame, myData)
+colnames(myData)=c("type","mean","sd","sem","min","max","median","me")
+ggplot<-ggplot(myData, aes(x =type, y = mean)) +
+  geom_bar(position = position_dodge(), stat="identity", fill="blue",width=0.8) +
+  geom_errorbar(aes(ymin=mean-sem, ymax=mean+sem),size=1.0) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank())+
+  coord_flip()+
+  theme(axis.text=element_text(size=10),axis.title=element_text(),axis.text.y = element_text(hjust=0))
+return(ggplot)
+}
+
+ggboxplot<-function(data){
+library("ggplot2")
+newdata<-data.frame(value=as.numeric(data.matrix(data)),Group=rep(colnames(data),each=nrow(data)))
+ggplot<-ggplot(newdata, aes(factor(Group),value)) +
+  geom_boxplot(aes(fill = factor(Group)),outlier.shape=NA)+
+  coord_flip()+
+  theme(axis.text=element_text(size=10),axis.title=element_text(),axis.text.y = element_text(hjust=0),legend.position="none")
+return(ggplot)
+}
+
+```
+
+
+```{r}
+data<-read.table("monod.mhl.List1.march30.txt",head=T,row.names=1,sep="\t",check.names=F)
+save(data,file="MONOD-Apr6.MHL.RData")
+
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\analysis\\MHL-March30-2016")
+load("MONOD-Apr6.MHL.RData")
+sum(is.na(data))/(nrow(data)*ncol(data))
+# re-group/collect the samples #colon cancer
+Group<-colnames(data)
+# Group[grep("CTR|NC-|Pregn",Group)]<-"NP"
+Group[grep("NC-",Group)]<-"NP-Kun"
+Group[grep("CTR|Pregn",Group)]<-"NP-Dennis"
+Group[grep("6-P-",Group)]<-"CCP"
+Group[grep("6-T-|HCT116|Colon_Tumor_Primary|CTT-|metastasis_colon|tumor_colon",Group)]<-"CCT"
+Group[grep("normal_colon|N37-Colon|SG-01",Group)]<-"NCT"
+
+Group[grep("7-P-",Group)]<-"LCP"
+Group[grep("7-T-|adenocarcinoma_lung|tumor_lung",Group)]<-"LCT"
+Group[grep("LG-01|N37-Lung|normal_lung",Group)]<-"NLT"
+
+Group[grep("PC-P-",Group)]<-"PCP"
+Group[grep("PC-T-",Group)]<-"PCT"
+Group[grep("PA-01|N37-Pancreas",Group)]<-"NPT"
+
+Group[grep("WB",Group)]<-"WB"
+
+Group[grep("STL|N37-|methylC-|NLT|NPT",Group)]<-"HNT"
+# Group[grep("STL|N37-|methylC-|WB|NCT|NPT",Group)]<-"HNT"
+# Group[grep("STL|N37-|methylC-|WB|NCT|NLT",Group)]<-"HNT"
+newdata<-data
+colnames(newdata)<-Group
+newdata<-data.frame(newdata,check.names=F)
+table(colnames(newdata))
+```
+# check the distribution for all the samples (2 normal plasma were removed because the MHL were not quite similar with other samples??)
+```{r}
+DataMatrix=data
+MatrixDataSummary<-function(DataMatrix){
+DataMatrix<-data.matrix(DataMatrix)
+DataMatrix<-data.frame(value=as.numeric(DataMatrix),Group=rep(colnames(DataMatrix),each=nrow(DataMatrix)))
+myData <- aggregate(DataMatrix$value,by =list(type=DataMatrix$Group),
+                    FUN = function(x) c(mean = mean(x,na.rm=T), 
+                                        sd = sd(x,na.rm=T),
+                                        sem=sd(x,na.rm=T)/sqrt(length(na.omit(x))),
+                                        me=qt(1-0.05/2,df=length(na.omit(x))*sd(x,na.rm=T)/sqrt(length(na.omit(x))))),
+)
+myData <- do.call(data.frame, myData)
+colnames(myData)=c("type","mean","sd","sem","me")
+myData
+}
+Summary<-MatrixDataSummary(data)
+write.table(Summary,file="MatrixDataSummary.MONOD.txt",sep="\t",col.names=NA,row.names=T,quote=F)
+```
+
+107 regions were selected with the very common fitler in colon plasma datasat: Mean(CT)>0.3 & Mean(NP)<0.1
+```{r}
+# YY<-grep("NP|CCP|CCT|NCT",Group)
+# YY<-grep("NP-Kun|CCP|CCT|NCT",Group)
+YY<-grep("NP-Kun|CCP|CCT|NCT|HNT|WB",Group)
+Newdata<-newdata[,YY]
+colnames(Newdata)
+
+idx<-sapply(colnames(Newdata),function(x) unlist(strsplit(x,"[.]"))[1])
+colnames(Newdata)<-idx
+Newdata<-data.matrix(Newdata)
+head(Newdata)
+colnames(Newdata)
+dim(Newdata)
+Newdata<-Newdata[,c(grep("WB",colnames(Newdata)),grep("HNT",colnames(Newdata)),grep("NCT",colnames(Newdata)),grep("NP-Kun",colnames(Newdata)),grep("CCT",colnames(Newdata)),grep("CCP",colnames(Newdata)))]
+colnames(Newdata)
+table(colnames(Newdata))
+dim(Newdata)
+
+target1.colon<-which(apply(Newdata,1,function(x) mean(x[grep("HNT",colnames(Newdata))],na.rm=T)<0.1 && mean(x[grep("CCT",colnames(Newdata))],na.rm=T)>0.3 && mean(x[grep("NP",colnames(Newdata))],na.rm=T)))  # Cancer tissue > 0 and normal plasma =0
+length(target1.colon)
+Newdata2=Newdata[target1.colon,]
+#write.table(NewData,file="Supplementary-colon.cancer.tissue.hyper.txt",col.names=NA,row.names=T,quote=F,sep="\t")
+
+colonData=Newdata2
+dim(colonData)
+colnames(colonData)
+NewData<-data.frame(value=as.numeric(colonData),Group=rep(colnames(colonData),each=nrow(colonData)))
+t.test(NewData[which(NewData$Group=="CCP"),1],NewData[which(NewData$Group=="NP-Kun"),1],na.rm=T)
+
+head(NewData)
+myData <- aggregate(NewData$value,by =list(type=NewData$Group),
+                    FUN = function(x) c(mean = mean(x,na.rm=T), 
+                                        sd = sd(x,na.rm=T),
+                                        sem=sd(x,na.rm=T)/sqrt(length(na.omit(x))),
+                                        me=qt(1-0.05/2,df=length(na.omit(x))*sd(x,na.rm=T)/sqrt(length(na.omit(x)))))
+)
+myData <- do.call(data.frame, myData)
+colnames(myData)=c("type","mean","sd","sem","me")
+head(myData)
+
+
+library("ggplot2")
+# pdf("colon.cancer.mhl.plasma.groups.107.pdf")
+ylab="Average MHL"
+xlab="Group"
+title="Average MHL in different Groups"
+myData <- within(myData,type <- factor(type,levels=c("NP-Kun","HNT","NCT","CCT","CCP")))
+ggplot(myData, aes(x =type, y = mean)) +  
+  geom_bar(position = position_dodge(), stat="identity", fill="blue",width=0.9) + 
+  geom_errorbar(aes(ymin=mean-sem, ymax=mean+sem),size=1.0) +
+  ggtitle(title) + 
+  theme_bw() +
+  theme(panel.grid.major = element_blank())+
+  xlab(xlab) +
+  ylab(ylab)+
+  theme(axis.text=element_text(size=10),axis.title=element_text(size=10),axis.text.y = element_text(hjust=0))
+
+dev.off()
+
+```
+
+Lung cancer analysis;
+```{r}
+# YY<-grep("NP|CCP|CCT|NCT|WB|ONT",Group)
+# YY<-grep("NP|CCP|CCT|NCT",Group)
+YY<-grep("NP-Kun|LCP|LCT|NCT",Group)
+table(Group)
+YY<-grep("NP-Kun|LCP|LCT|NLT",Group)
+newdata<-newdata[,YY]
+idx<-sapply(colnames(newdata),function(x) unlist(strsplit(x,"[.]"))[1])
+colnames(newdata)<-idx
+newdata<-data.matrix(newdata)
+head(newdata)
+table(colnames(newdata))
+dim(newdata)
+Newdata<-newdata[,c(grep("NLT",colnames(newdata)),grep("NP-Kun",colnames(newdata)),grep("LCT",colnames(newdata)),grep("LCP",colnames(newdata)))]
+colnames(Newdata)
+dim(Newdata)
+target1.colon<-which(apply(Newdata,1,function(x) mean(x[grep("NP-Kun",colnames(Newdata))],na.rm=T)<0.1 && mean(x[grep("NLT",colnames(Newdata))],na.rm=T)<0.1 && mean(x[grep("LCT",colnames(Newdata))],na.rm=T)>0.2))  # Cancer tissue > 0 and normal plasma =0
+
+
+# YY<-grep("NP|CCP|CCT|NCT",Group)
+# YY<-grep("NP-Kun|CCP|CCT|NCT",Group)
+YY<-grep("NP-Kun|LCP|LCT|HNT",Group)
+Newdata<-newdata[,YY]
+colnames(Newdata)
+
+idx<-sapply(colnames(Newdata),function(x) unlist(strsplit(x,"[.]"))[1])
+colnames(Newdata)<-idx
+Newdata<-data.matrix(Newdata)
+head(Newdata)
+colnames(Newdata)
+dim(Newdata)
+Newdata<-Newdata[,c(grep("HNT",colnames(Newdata)),grep("NP-Kun",colnames(Newdata)),grep("LCT",colnames(Newdata)),grep("LCP",colnames(Newdata)))]
+colnames(Newdata)
+dim(Newdata)
+target1.colon<-which(apply(Newdata,1,function(x) mean(x[grep("HNT",colnames(Newdata))],na.rm=T)<0.1 && mean(x[grep("LCT",colnames(Newdata))],na.rm=T)>0.2))  # Cancer tissue > 0 and normal plasma =0
+length(target1.colon)
+Newdata2=Newdata[target1.colon,]
+# write.table(NewData,file="Lung.cancer.tissue.hyper.txt",col.names=NA,row.names=T,quote=F,sep="\t")
+
+colonData=Newdata2
+dim(colonData)
+colnames(colonData)
+NewData<-data.frame(value=as.numeric(colonData),Group=rep(colnames(colonData),each=nrow(colonData)))
+t.test(NewData[which(NewData$Group=="LCP"),1],NewData[which(NewData$Group=="NP-Kun"),1],na.rm=T)
+
+myData <- aggregate(NewData$value,by =list(type=NewData$Group),
+                    FUN = function(x) c(mean = mean(x,na.rm=T), 
+                                        sd = sd(x,na.rm=T),
+                                        sem=sd(x,na.rm=T)/sqrt(length(na.omit(x))),
+                                        me=qt(1-0.05/2,df=length(na.omit(x))*sd(x,na.rm=T)/sqrt(length(na.omit(x)))))
+)
+myData <- do.call(data.frame, myData)
+colnames(myData)=c("type","mean","sd","sem","me")
+head(myData)
+
+library("ggplot2")
+# pdf("Lung.cancer.mhl.plasma.groups.107.pdf")
+ylab="Average MHL"
+xlab="Group"
+title="Average MHL in different Groups"
+myData <- within(myData,type <- factor(type,levels=c("NP-Kun","HNT","LCT","LCP")))
+
+ggplot(myData, aes(x =type, y = mean)) +  
+  geom_bar(position = position_dodge(), stat="identity", fill="blue",width=0.9) + 
+  geom_errorbar(aes(ymin=mean-2*sem, ymax=mean+2*sem),size=1.0) +
+  ggtitle(title) + 
+  theme_bw() +
+  theme(panel.grid.major = element_blank())+
+  xlab(xlab) +
+  ylab(ylab)+
+  theme(axis.text=element_text(size=10),axis.title=element_text(size=10),axis.text.y = element_text(hjust=0))
+
+dev.off()
+
+
+```
+
+91 regions were selected with basic filter: M(PCT)>0.4 and M(NP)<0.05
+```{r}
+
+# YY<-grep("NP|CCP|CCT|NCT",Group)
+# YY<-grep("NP-Kun|CCP|CCT|NCT",Group)
+YY<-grep("NP-Kun|PCP|PCT|HNT",Group)
+Newdata<-newdata[,YY]
+colnames(Newdata)
+
+idx<-sapply(colnames(Newdata),function(x) unlist(strsplit(x,"[.]"))[1])
+colnames(Newdata)<-idx
+Newdata<-data.matrix(Newdata)
+head(Newdata)
+colnames(Newdata)
+dim(Newdata)
+Newdata<-Newdata[,c(grep("HNT",colnames(Newdata)),grep("NP-Kun",colnames(Newdata)),grep("PCT",colnames(Newdata)),grep("PCP",colnames(Newdata)))]
+colnames(Newdata)
+dim(Newdata)
+target1.colon<-which(apply(Newdata,1,function(x) mean(x[grep("HNT",colnames(Newdata))],na.rm=T)<0.05 && mean(x[grep("PCT",colnames(Newdata))],na.rm=T)>0.2))  # Cancer tissue > 0 and normal plasma =0
+length(target1.colon)
+Newdata2=Newdata[target1.colon,]
+# write.table(NewData,file="Lung.cancer.tissue.hyper.txt",col.names=NA,row.names=T,quote=F,sep="\t")
+
+colonData=Newdata2
+dim(colonData)
+colnames(colonData)
+NewData<-data.frame(value=as.numeric(colonData),Group=rep(colnames(colonData),each=nrow(colonData)))
+t.test(NewData[which(NewData$Group=="PCP"),1],NewData[which(NewData$Group=="NP-Kun"),1],na.rm=T)
+
+myData <- aggregate(NewData$value,by =list(type=NewData$Group),
+                    FUN = function(x) c(mean = mean(x,na.rm=T), 
+                                        sd = sd(x,na.rm=T),
+                                        sem=sd(x,na.rm=T)/sqrt(length(na.omit(x))),
+                                        me=qt(1-0.05/2,df=length(na.omit(x))*sd(x,na.rm=T)/sqrt(length(na.omit(x)))))
+)
+myData <- do.call(data.frame, myData)
+colnames(myData)=c("type","mean","sd","sem","me")
+head(myData)
+
+library("ggplot2")
+# pdf("Lung.cancer.mhl.plasma.groups.107.pdf")
+ylab="Average MHL"
+xlab="Group"
+title="Average MHL in different Groups"
+myData <- within(myData,type <- factor(type,levels=c("NP-Kun","HNT","PCT","PCP")))
+
+ggplot(myData, aes(x =type, y = mean)) +  
+  geom_bar(position = position_dodge(), stat="identity", fill="blue",width=0.9) + 
+  geom_errorbar(aes(ymin=mean-sem, ymax=mean+sem),size=1.0) +
+  ggtitle(title) + 
+  theme_bw() +
+  theme(panel.grid.major = element_blank())+
+  xlab(xlab) +
+  ylab(ylab)+
+  theme(axis.text=element_text(size=10),axis.title=element_text(size=10),axis.text.y = element_text(hjust=0))
+
+dev.off()
+```
+
+
+
+```{r}
+rlt<-apply(newdata,1,function(x) tapply(x,idx,function(x) quantile(x,0.75,na.rm=T)))
+save(rlt,file="MONOD-march30.MHL.median.by.idx.RData")
+# feature selection # 1: CT> CP/NT and NT,NP,ONT<0.1
+target<-c()
+for(i in 1:ncol(rlt)){
+  order=order(rlt[,i],decreasing=T)
+  if(order==c(2,1,3,4,5,6) ||order==c(2,3,1,4,5,6)){
+    if(rlt[2,i]>0.1 & rlt[4,i]<0.05 & rlt[5,i]<0.05 & rlt[6,i]<0.05 & ! all(is.na(rlt[2,i])) & ! all(is.na(rlt[4,i])) & ! all(is.na(rlt[5,i])) & ! all(is.na(rlt[6,i]))){
+      print (i)
+      target<-c(target,i)
+    }
+  } 
+}
+newdataGGplot<-newdata[match(colnames(rlt)[target],rownames(newdata)),]
+length(target)
+unique(colnames(newdataGGplot))
+
+ggbarplot(newdataGGplot)
+ggboxplot(newdataGGplot)
+
+```
+
+
+```{r}
+# feature selection # 2: CT>0.2 and NP<0.05 and WB<0.05
+# rlt<-apply(newdata,1,function(x) tapply(x,idx,function(x) mean(x,na.rm=T)))
+target<-c()
+for(i in 1:ncol(rlt)){
+  if(! all(is.na(rlt[2,i])) & ! all(is.na(rlt[4,i])) & ! all(is.na(rlt[6,i])) & rlt[2,i]>0.2 & rlt[4,i]<0.1 & rlt[6,i]<0.1){
+    print (i)
+    target<-c(target,i)
+  } 
+}
+
+# feature selection # 2: CT>0.5 and WB<0.1
+# rlt<-apply(newdata,1,function(x) tapply(x,idx,function(x) mean(x,na.rm=T)))
+target<-c()
+for(i in 1:ncol(rlt)){
+  if(! all(is.na(rlt[3,i])) & ! all(is.na(rlt[4,i])) & ! all(is.na(rlt[5,i])) & ! all(is.na(rlt[6,i])) & rlt[3,i]>0.5 & rlt[4,i]<0.1 & rlt[5,i]<0.1 & rlt[6,i]<0.1){
+    print (i)
+    target<-c(target,i)
+  } 
+}
+length(target)
+# ggplot for boxplot
+newdataGGplot<-newdata[match(colnames(rlt)[target],rownames(newdata)),]
+ggbarplot(newdataGGplot)
+ggboxplot(newdataGGplot)
+
+library("gplots")
+newdataGGplot<-t(newdataGGplot)
+heatmap.2(newdataGGplot,
+           col = colorpanel(100,"red","yellow","green"),
+           margins = c(12, 22),
+           trace = "none", 
+           xlab = "Comparison",
+           lhei = c(2, 8),
+           scale = c("none"),
+           symbreaks = min(newdataGGplot, na.rm=TRUE),
+           na.color="blue",
+           cexRow = 0.5, cexCol = 0.7,
+           main = "DE genes", 
+           dendrogram = "both", 
+           Colv = T,
+           Rowv=T
+           )
+
+write.table(newdataGGplot,file="monond-colon-plasma.txt",col.names=NA,row.names=T,sep="\t",quote=F)
+```
+
+
+```{r, echo=FALSE}
+
+
+
+
+
+
+```

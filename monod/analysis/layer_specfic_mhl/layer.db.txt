@@ -1,0 +1,37 @@
+Colon	Endoterm
+Brain	Ectoderm
+Heart	Mesoderm
+Liver	Endoterm
+Lung	Endoterm
+Pancreas	Endoterm
+Intestine	Endoterm
+muscle	Mesoderm
+Stomach	Endoterm
+Bladder	Endoterm
+Fat cell	Mesoderm
+Gastric	Endoterm
+Spleen	Mesoderm
+Thymus	Endoterm
+Kidney	Mesoderm
+Vessel	Mesoderm
+Esophagus	Endoderm
+Ovary	Mesoderm﻿
+Colon	Endoterm
+Brain	Ectoderm
+Heart	Mesoderm
+Liver	Endoterm
+Lung	Endoterm
+Pancreas	Endoterm
+Intestine	Endoterm
+muscle	Mesoderm
+Stomach	Endoterm
+Bladder	Endoterm
+Fat cell	Mesoderm
+Gastric	Endoterm
+Spleen	Mesoderm
+Thymus	Endoterm
+Kidney	Mesoderm
+Vessel	Mesoderm
+Esophagus	Endoderm
+Ovary	Mesoderm﻿
+

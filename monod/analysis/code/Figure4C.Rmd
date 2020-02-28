@@ -1,0 +1,254 @@
+---
+title: "tissueplasma.Rmd"
+author: "Shicheng Guo"
+date: "Monday, February 01, 2016"
+output: html_document
+---
+Update Figure 4C. 
+
+
+pre-load function is as the following:
+```{r}
+RawNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[2]
+  NaRaw<-which(apply(data,1,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,1,function(x) all(x==0))==T)
+  NaRAW<-c(NaRaw,zero)
+  if(length(NaRAW)>0){
+    dat<-data[-NaRAW,]
+  }else{
+    dat<-data;
+  }
+  dat
+} 
+
+gsi<-function(data){
+  group=names(table(colnames(data)))
+  index=colnames(data)
+  gsi<-c()
+  gmaxgroup<-c()
+  for(i in 1:nrow(data)){
+    gsit<-0
+    gmax<-names(which.max(tapply(as.numeric(data[i,]),index,mean)))
+    for(j in 1:length(group)){
+      tmp<-(1-10^(mean(data[i,][which(index==group[j])]))/10^(mean(data[i,][which(index==gmax)])))/(length(group)-1)
+      gsit<-gsit+tmp
+      }
+    gmaxgroup<-c(gmaxgroup,gmax)
+    gsi<-c(gsi,gsit)
+    print(c(gmax,gsit))
+    }
+  rlt=data.frame(region=rownames(data),group=gmaxgroup,GSI=gsi)
+  return(rlt)
+}
+
+```
+
+
+```{r}
+data1<-read.table("/home/shg047/monod/rrbs_kun/rrbs.kun.mhl.na.impute.txt",head=T,as.is=T, check.name=F)
+colnames(data1)<-gsub("RRBS-6P","6-P-",colnames(data1))
+colnames(data1)<-gsub("RRBS-7P","7-P-",colnames(data1))
+data1<-data1[,-(31:34)]
+
+data2<-read.table("/home/shg047/monod/nov/WGBS_methHap_load_matrix_16Oct2015.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+colnames(data2)
+data2<-data2[,c(13,31,56,18,26,39,19,41,51,59:61),]
+colnames(data2)<-c(rep("colon",3),rep("lung",3),rep("pancrease",3),rep("WB",3))
+
+srn<-rownames(data1)[rownames(data1) %in% rownames(data2)]
+newdata1<-data1[match(srn,rownames(data1)),]
+newdata2<-data2[match(srn,rownames(data2)),]
+
+data<-cbind(newdata1,newdata2)
+
+library("impute")
+f2<-RawNARemove(data,missratio=0.3)
+data<-impute.knn(data.matrix(f2))$data
+
+colnames(data)[grep("6-P",colnames(data))]<-"6-P";
+colnames(data)[grep("7-P",colnames(data))]<-"7-P";
+colnames(data)[grep("6-T",colnames(data))]<-"6-T";
+colnames(data)[grep("7-T",colnames(data))]<-"7-T";
+colnames(data)[grep("PC-P",colnames(data))]<-"PC-P";
+colnames(data)[grep("PC-T",colnames(data))]<-"PC-T";
+colnames(data)[grep("NC-P",colnames(data))]<-"NC-P";
+colnames(data)
+save(data,file="rrbs_kun.wbc.normal.colon.lung.pancrease.RData")
+```
+# plot for colon cancer
+
+```{r}
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\result\\Figure4C")
+# data<-read.table("rrbs_kun.wbc.normal.colon.lung.pancrease.txt",head=T,sep="\t",check.name=F)
+load("rrbs_kun.wbc.normal.colon.lung.pancrease.RData")
+data1<-data[,c(grep("6-P",colnames(data)),grep("6-T",colnames(data)),grep("colon",colnames(data)),grep("NC-P|WB",colnames(data)))]
+colnames(data1)
+hgsi<-gsi(data1)
+subset<-subset(hgsi,GSI>0.5)
+dim(subset)
+table(subset[,2])
+data<-data[match(subset[,1],rownames(data)),]
+x1<-c(grep("6-P",colnames(data)),grep("6-T",colnames(data)),grep("colon",colnames(data)),grep("NC-P",colnames(data)),grep("WB",colnames(data)))
+data1<-data[,x1]
+colnames(data1)
+# pre-select and then random-forest
+data1<-data1[which(apply(data1,1,function(x) sum(x[31:38]>0.1)>=6)),]  # N-C
+data1<-data1[which(apply(data1,1,function(x) sum(x[39:61]<0.1)>18)),]  # N-T
+dim(data1)
+datam<-data1
+data1<-datam
+data1<-data1[-c(4:6),]
+# data1<-data1[-c(15,16,17,19:21,23:25),]
+# data1[,1:35]<-data1[,sample(1:35,35)]
+# data1[,1:35]=data1[,order(apply(data1[,1:35],2,sum),decreasing=T)]
+library("gplots")
+library("RColorBrewer")
+library("grDevices")
+mydata<-data1
+dim(mydata)
+hclustfunc <- function(x) hclust(x, method="ward.D")
+distfunc <- function(x) dist(x, method="euclidean")
+cl.row <- hclustfunc(distfunc(mydata))
+cl.col <- hclustfunc(distfunc(t(mydata)))
+gr.row <- cutree(cl.row, 6)
+col1 <- brewer.pal(6, "Set1") 
+tol21rainbow= c("#771155", "#AA4488", "#CC99BB", "#114477", "#4477AA", "#77AADD", "#117777", "#44AAAA", "#77CCCC", "#117744", "#44AA77", "#88CCAA", "#777711", "#AAAA44", "#DDDD77", "#774411", "#AA7744", "#DDAA77", "#771122", "#AA4455", "#DD7788")
+col2<-tol21rainbow[as.numeric(as.factor(cl.col$labels))]
+
+filename=paste("Figure 4C. Colon cancer.signature","pdf",sep=".")
+pdf(filename)
+col=colorRampPalette(c("yellow", "blue"))(20) 
+heatmap.2(mydata,col=col,trace="none",density.info="none",Colv=F,Rowv=T,key=T,keysize=1,cexCol=0.8,labRow=T)
+dev.off()
+write.table(mydata,file="colon.cancer.signiture.txt",col.names=NA,row.names=T,sep="\t")
+dim(mydata)
+rownames(mydata)
+
+library("randomForest")
+pred2<-mydata
+lab2<-as.factor(colnames(mydata))
+bestmtry<-tuneRF(x=t(pred2),y=lab2,ntreeTry=1000, stepFactor=2, improve=0.05,trace=TRUE, plot=TRUE, doBest=T)
+best.mtry=bestmtry$mtry
+rf.model1<-randomForest(x=t(pred2),y=lab2,mtry=best.mtry)
+rf.model1
+rf.importance<-rf.importance+rf.model1$importance/100
+
+
+
+```
+4 regions were selected in colon cancer signiture. 
+
+Colon cancer  chr11:64107477-64107618	chr11	64107477	64107618	CCDC88B
+Colon cancer	chr14:38080503-38080551	chr14	38080503	38080551	TTC6
+Colon cancer	chr2:177014535-177014554	chr2	177014535	177014554	MIR10B
+Colon cancer	chr7:4125755-4125848	chr7	4125755	4125848	SDK1
+
+
+```{r}
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\result\\Figure4C")
+load("rrbs_kun.wbc.normal.colon.lung.pancrease.RData")
+data1<-data[,c(grep("7-P",colnames(data)),grep("7-T",colnames(data)),grep("lung",colnames(data)),grep("NC-P|WB",colnames(data)))]
+colnames(data1)
+hgsi<-gsi(data1)
+subset<-subset(hgsi,GSI>0.4)
+dim(subset)
+table(subset[,2])
+data<-data[match(subset[,1],rownames(data)),]
+x1<-c(grep("7-P",colnames(data)),grep("7-T",colnames(data)),grep("lung",colnames(data)),grep("NC-P",colnames(data)),grep("WB",colnames(data)))
+data1<-data[,x1]
+colnames(data1)
+dim(data1)
+# pre-select and then random-forest
+data1<-data1[which(apply(data1,1,function(x) sum(x[30:37]>0.1)>=6)),]  # N-C
+data1<-data1[which(apply(data1,1,function(x) sum(x[38:60]<0.1)>18)),]  # N-T
+dim(data1)
+datam<-data1
+data1<-datam
+data1<-data1[-c(8),]
+# data1<-data1[-c(15,16,17,19:21,23:25),]
+# data1[,1:35]<-data1[,sample(1:35,35)]
+# data1[,1:35]=data1[,order(apply(data1[,1:35],2,sum),decreasing=T)]
+library("gplots")
+library("RColorBrewer")
+library("grDevices")
+mydata<-data1
+dim(mydata)
+hclustfunc <- function(x) hclust(x, method="ward.D")
+distfunc <- function(x) dist(x, method="euclidean")
+cl.row <- hclustfunc(distfunc(mydata))
+cl.col <- hclustfunc(distfunc(t(mydata)))
+gr.row <- cutree(cl.row, 6)
+col1 <- brewer.pal(6, "Set1") 
+tol21rainbow= c("#771155", "#AA4488", "#CC99BB", "#114477", "#4477AA", "#77AADD", "#117777", "#44AAAA", "#77CCCC", "#117744", "#44AA77", "#88CCAA", "#777711", "#AAAA44", "#DDDD77", "#774411", "#AA7744", "#DDAA77", "#771122", "#AA4455", "#DD7788")
+col2<-tol21rainbow[as.numeric(as.factor(cl.col$labels))]
+
+filename=paste("Figure 4C-B. lung cancer.signature","pdf",sep=".")
+pdf(filename)
+col=colorRampPalette(c("yellow", "blue"))(20) 
+heatmap.2(mydata,col=col,trace="none",density.info="none",Colv=F,Rowv=T,key=F,keysize=1,cexCol=0.8,labRow=T)
+dev.off()
+write.table(mydata,file="colon.cancer.signiture.txt",col.names=NA,row.names=T,sep="\t")
+dim(mydata)
+rownames(mydata)
+
+```
+ [1] "chr11:67414336-67414479"   "chr6:41516279-41516323"    "chr16:54324380-54324391"   "chr3:196367554-196367676" 
+ [5] "chr11:64107477-64107618"   "chr21:44819374-44819431"   "chr19:50861910-50861952"   "chr17:36666183-36666251"  
+ [9] "chr10:105344363-105344374" "chr11:67171584-67171665"  
+ 
+
+```{r}
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\result\\Figure4C")
+load("rrbs_kun.wbc.normal.colon.lung.pancrease.RData")
+data1<-data[,c(grep("PC-P",colnames(data)),grep("PC-T",colnames(data)),grep("pancrease",colnames(data)),grep("NC-P|WB",colnames(data)))]
+colnames(data1)
+hgsi<-gsi(data1)
+subset<-subset(hgsi,GSI>0.3)
+dim(subset)
+table(subset[,2])
+data<-data[match(subset[,1],rownames(data)),]
+x1<-c(grep("PC-P",colnames(data)),grep("PC-T",colnames(data)),grep("pancrease",colnames(data)),grep("NC-P",colnames(data)),grep("WB",colnames(data)))
+data1<-data[,x1]
+colnames(data1)
+dim(data1)
+# pre-select and then random-forest
+data1<-data1[which(apply(data1,1,function(x) sum(x[11:18]>0.1)>=6)),]  # N-C
+data1<-data1[which(apply(data1,1,function(x) sum(x[19:41]<0.1)>20)),]  # N-T
+dim(data1)
+datam<-data1
+data1<-datam
+data1<-data1[-c(8),]
+# data1<-data1[-c(15,16,17,19:21,23:25),]
+# data1[,1:35]<-data1[,sample(1:35,35)]
+# data1[,1:35]=data1[,order(apply(data1[,1:35],2,sum),decreasing=T)]
+library("gplots")
+library("RColorBrewer")
+library("grDevices")
+mydata<-data1
+dim(mydata)
+hclustfunc <- function(x) hclust(x, method="ward.D")
+distfunc <- function(x) dist(x, method="euclidean")
+cl.row <- hclustfunc(distfunc(mydata))
+cl.col <- hclustfunc(distfunc(t(mydata)))
+gr.row <- cutree(cl.row, 6)
+col1 <- brewer.pal(6, "Set1") 
+tol21rainbow= c("#771155", "#AA4488", "#CC99BB", "#114477", "#4477AA", "#77AADD", "#117777", "#44AAAA", "#77CCCC", "#117744", "#44AA77", "#88CCAA", "#777711", "#AAAA44", "#DDDD77", "#774411", "#AA7744", "#DDAA77", "#771122", "#AA4455", "#DD7788")
+col2<-tol21rainbow[as.numeric(as.factor(cl.col$labels))]
+
+filename=paste("Figure 4C-B. pancreatic cancer.signature","pdf",sep=".")
+pdf(filename)
+col=colorRampPalette(c("yellow", "blue"))(20) 
+heatmap.2(mydata,col=col,trace="none",density.info="none",Colv=F,Rowv=T,key=F,keysize=1,cexCol=0.8,labRow=T)
+dev.off()
+write.table(mydata,file="colon.cancer.signiture.txt",col.names=NA,row.names=T,sep="\t")
+dim(mydata)
+rownames(mydata)
+
+```
+[1] "chr12:65218617-65218679"   "chr22:27520690-27520729"   "chr3:192125903-192126003"  "chr3:72226922-72227039"   
+ [5] "chr10:105344287-105344338" "chr17:55951919-55952131"   "chr7:156798428-156798541"  "chr10:105344381-105344439"
+ [9] "chr17:1160171-1160242"     "chr19:48983897-48984317"   "chr10:105344363-105344374" "chr11:67171584-67171665"  
+[13] "chr10:105344583-105344617" "chr7:4125755-4125848"  
+
+

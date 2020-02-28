@@ -1,0 +1,19 @@
+"Var1"	"Freq"
+"1"	"Bladder"	55
+"2"	"Brain"	302
+"3"	"Colon"	41
+"4"	"Esophagus"	16
+"5"	"Fat cell"	8
+"6"	"Gastric"	21
+"7"	"Heart"	3
+"8"	"Intestine"	50
+"9"	"Kidney"	41
+"10"	"Liver"	745
+"11"	"Lung"	28
+"12"	"muscle"	37
+"13"	"Ovary"	88
+"14"	"Pancreas"	182
+"15"	"Spleen"	168
+"16"	"Stomach"	164
+"17"	"Thymus"	1022
+"18"	"Vessel"	102

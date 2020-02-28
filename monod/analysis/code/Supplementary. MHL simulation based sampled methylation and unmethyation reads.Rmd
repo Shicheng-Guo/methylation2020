@@ -1,0 +1,171 @@
+---
+title: "Simulation Analysis to MHL based on Sampled methylation and unmethylation reads"
+author: "Shicheng Guo"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output: html_document
+fontsize: 6pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Idea about the deconvolution based on MHL
+
+In my previous report, if I mix MHL between WBC and CCT with different recombination, the deconvolution effect is quite good. However, in the reality, it is not mixture of MHL but mixture of haplotype. Here, I want to observe the change of the MHL with the different propotion of the "CCCC" reads in the plasma samples population ("TTTT") in 1% to 100%. In the beginning, we have worried that the haplotype mixture will not provide linear change to MHL, the influence to the deconvolution will be huge. and I want to find a function to transfer this non-linear/generalized linear to linear change so that deconvolution can conducted with the transform data. 
+
+In order to make all the analysis reproducible, I start to use Rmd to do the analysis from now on. It will be easy to repeat the analysis anytime, anywhere and by anybody. By pandoc, we can transfer Rmd to MediaWiki format and upload to Wikimedia easily. 
+
+
+### Simulation analysis by mixture of 4-C-Haplotype
+```{r,echo=F}
+hap_comb_tmp<-function(hapinfo.single){
+  # hap_com.single is a character of haplotype, such as "TCTCTT"
+  hap_com.single<-c()
+  for(i in 1:nchar(hapinfo.single)){
+    for(j in i:(nchar(hapinfo.single))){
+      hap_com.single<-c(hap_com.single,(substr(hapinfo.single,i,j)))
+    } 
+  }
+  return(hap_com.single)
+}
+
+hap_comb<-function(hapinfo){
+  # haplotype is array of observed methylation haplotype and return
+  hap_comb<-unlist(lapply(hapinfo,hap_comb_tmp))
+  return(hap_comb)
+}
+
+mhl<-function(hap_comb_array){
+  mhl_value<-c()
+  hap_comb_array<-unlist(hap_comb_array)
+  meth_hap=lapply(lapply(hap_comb_array,function(x) unique(unlist(strsplit(x,"")))),function(x) paste(x,collapse=""))=="C"
+  unmeth_hap=lapply(lapply(hap_comb_array,function(x) unique(unlist(strsplit(x,"")))),function(x) paste(x,collapse=""))=="T"
+  hap_comb_array<-c(hap_comb_array[meth_hap],hap_comb_array[unmeth_hap])
+  for(i in unique(nchar(hap_comb_array))){
+    input_tmp<-which(nchar(hap_comb_array)==i)  
+    nmeth<-length(grep("C",hap_comb_array[input_tmp]))
+    nunmeth<-length(grep("T",hap_comb_array[input_tmp]))
+    mhl_value<-c(mhl_value,i*nmeth/(nunmeth+nmeth))
+  }
+  mhl_value<-sum(mhl_value)/sum(unique(nchar(hap_comb_array)))
+  return(mhl_value)
+}
+
+mf<-function(hapinfo){
+  mf_value<-c()
+  hap_comb_array<-unlist(hapinfo)
+  meth_hap=unlist(lapply(hap_comb_array,function(x) unlist(strsplit(x,""))))
+  nmeth<-length(grep("C",meth_hap))
+  nunmeth<-length(grep("T",meth_hap))
+  mf_value<-nmeth/(nunmeth+nmeth)
+  return(mf_value)
+}
+bspplot<-function(Matrix){
+par(mar=c(3,3,1,5))
+N=4
+K=20
+Matrix<-matrix(sample(c(sample(0,K,replace=T),1),N*K,replace=T),K,N)
+Matrix[1:5,]<-1
+col=colorRampPalette(c("white", "red"))(20)
+circle=c(1,19)
+plot(x=nrow(Matrix),y=ncol(Matrix),type="n",xlab="",ylab="",xlim=c(0,ncol(Matrix)+1),ylim=c(0,nrow(Matrix)+1))
+for(i in 1:ncol(Matrix)){
+  for(j in 1:nrow(Matrix)){
+    points(i,j,col=1,pch=circle[Matrix[j,i]+1],cex=1)
+  }
+}
+}
+mhlRlt<-c()
+mfRlt<-c()
+for(K in seq(0,100,1)){
+hapinfo<-c(rep("CCCC",K),rep("TTTT",100-K))
+mhlrlt<-mhl(hap_comb(unique(hapinfo)))
+mfrlt<-mf(hapinfo)
+mhlRlt<-c(mhlRlt,mhlrlt)
+mfRlt<-c(mfRlt,mfrlt)
+}
+PROPC=seq(0,100,1)
+PROPT=100-seq(0,100,1)
+amC=mfRlt
+MHL=mhlRlt
+xtable=data.frame(PROPC,PROPT,amC,MHL)
+```
+This figure show the principle, how to mix the CCT haplotype (black) with WBC haplotype (white) by different propotion. 
+```{r haplotypeMixture,echo=F,fig.width=6, fig.height=2.5}
+bspplot()
+```
+Relationship between MHL and 5mC.We can obsever the relationship between haplotype distribution, MHL and 5mC with the following table
+```{r,echo=F}
+xtable
+```
+And you can check the Figur as the following:
+
+```{r MFvsMHL,echo=F,fig.width=6, fig.height=4}
+par(mar=c(1,3,1,3))
+plot(mhlRlt,type="n",ylab="MHL or 5mC Levels")
+lines(mhlRlt,type="o",col="red")
+lines(mfRlt,type="o",col="blue")
+legend("topleft",legend=c("MF","MHL"),col=c("blue","red"),lty=1,bty = "n")
+```
+
+Our MHL metric is difficult to be used in deconvolution, since the value is none linear or generalzied linear increasement as the propotion of the methylated haplotypes. 
+
+### Real data analysis by mixture of haplotype
+```{r,echo=F}
+load("C:\\Users\\shicheng\\Downloads\\Coloncancer.plasma.0.05.top100.input.RData")
+data=Colon$data
+cctMix=data[,grep("CCTmix",colnames(data))]
+cctMix=cctMix[,c(1:2,10,3:9,11:ncol(cctMix))]
+idx<-unlist(lapply(strsplit(colnames(cctMix),"[.]"),function(x) x[[2]]))
+y<-as.numeric(cctMix[1,])
+```
+for the real mixture data, some regions will have linear change and majority them are chaotic. I have tried many ways to find a function to transfer them as a generalized linear way. However, it seems it is hard to do that since in the definition of the MHL, there is a unique operation for the haplotype therefore the relatiohsip will be unexpectable.  
+```{r,echo=F}
+par(mfrow=c(2,2),mar=c(1,3,3,3))
+plot(as.numeric(cctMix[5,])~idx,xlab="Proportion of CCT haplotype in the plasma (%)",ylab="MHL")
+plot(as.numeric(cctMix[6,])~idx,xlab="Proportion of CCT haplotype in the plasma (%)",ylab="MHL")
+plot(as.numeric(cctMix[7,])~idx,xlab="Proportion of CCT haplotype in the plasma (%)",ylab="MHL")
+plot(as.numeric(cctMix[8,])~idx,xlab="Proportion of CCT haplotype in the plasma (%)",ylab="MHL")
+plot(as.numeric(cctMix[9,])~idx,xlab="Proportion of CCT haplotype in the plasma (%)",ylab="MHL")
+plot(as.numeric(cctMix[10,])~idx,xlab="Proportion of CCT haplotype in the plasma (%)",ylab="MHL")
+plot(as.numeric(cctMix[11,])~idx,xlab="Proportion of CCT haplotype in the plasma (%)",ylab="MHL")
+plot(as.numeric(colMeans(cctMix,na.rm = T))~idx,xlab="Proportion of CCT haplotype in the plasma (%)",ylab="MHL")
+```
+### Conclusion
+
+Again, really data result also show our MHL metric is difficult to be used in deconvolution, since the value is none linear or generalzied linear increasement as the propotion of the methylated haplotypes. 
+
+
+Now, we are thinking how about only use the regions which have linear relationship. 
+```{r}
+sel<-c()
+R<-c()
+cctMix<-na.omit(cctMix)
+dim(cctMix)
+for(i in 1:nrow(cctMix)){
+  fit<-summary(lm(as.numeric(cctMix[i,])~as.numeric(idx)))
+  R2<-fit$r.squared
+  R<-c(R,R2)
+  if( ! is.na(R2) & R2>0.7){
+  sel<-c(sel,i)
+  }  
+}
+newdata=cctMix[sel,]
+dataR<-data.frame(newdata,R2=R)
+save(dataR,file="DataR2.RData")
+head(dataR)
+```
+
+```{r}
+hist(R,main="Histogram of R2")
+
+```
+
+### suffix
+```{r,eval=F,echo=T}
+library("knitr")
+library("rmarkdown")
+rmarkdown::render('DeconvolutionMixture.Rmd')
+pandoc("DeconvolutionMixture.md",format="MediaWiki")
+```

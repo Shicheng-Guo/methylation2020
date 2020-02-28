@@ -1,0 +1,10 @@
+Regulation of T cell differentiation	7.30E-03
+T cell activation	7.60E-03
+Leukocyte differentiation	8.60E-03
+Hemopoiesis	8.50E-03
+Regulation of lymphocyte differentiation	1.20E-02
+Hemopoietic or lymphoid organ development	1.20E-02
+T cell differentiation	1.30E-02
+Immune system development	1.60E-02
+Lymphocyte activation	3.30E-02
+Lymphocyte differentiation	4.10E-02

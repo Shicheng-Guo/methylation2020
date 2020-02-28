@@ -1,0 +1,52 @@
+
+rename<-function(data){
+  saminfo<-read.table("/media/NAS1/shg047/monod/hapinfo/N37Salk.saminfo",sep="\t")
+  head(saminfo)
+  colnames(data)<-gsub(".allchrs.rmdup.bam.mhbs","",colnames(data))
+  colnames(data)<-gsub(".allchrs.sorted.clipped.bam.mhbs","",colnames(data))
+  colnames(data)[grep("age|new|centenarian",colnames(data))]<-"WBC"
+  colnames(data)[grep("X7.T",colnames(data))]<-"LCT"
+  colnames(data)[grep("X6.T",colnames(data))]<-"CCT"
+  colnames(data)[grep("methylC-seq_h1",colnames(data))]<-"H1"
+  colnames(data)[grep("normal_lung",colnames(data))]<-"Lung"
+  colnames(data)[grep("normal_prostate",colnames(data))]<-"Prostate"
+  colnames(data)[grep("normal_brain",colnames(data))]<-"Brain"
+  colnames(data)[grep("normal_colon|Colon_Primary_Normal",colnames(data))]<-"Colon"
+  colnames(data)[grep("normal_breast",colnames(data))]<-"Breast"
+  colnames(data)[grep("normal_liver",colnames(data))]<-"Liver"
+  colnames(data)[grep("normal_CD19",colnames(data))]<-"WBC"
+  colnames(data)[grep("Frontal_cortex_normal",colnames(data))]<-"Brain"
+  colnames(data)[grep("fetal_heart_cells",colnames(data))]<-"Heart"
+  colnames(data)[grep("SRX381710_normal_placenta|fPlacenta_cells",colnames(data))]<-"Placenta"
+  colnames(data)[grep("adult_CD*",colnames(data))]<-"WBC"
+  colnames(data)[grep("fAdrenal_cells",colnames(data))]<-"Adrenal"
+  colnames(data)[grep("fThymus_cells",colnames(data))]<-"Thymus"
+  colnames(data)[grep("fMuscle_Leg__cells|Muscle_Trunk__cells",colnames(data))]<-"Muscle"
+  colnames(data)[grep("fThymus_cells",colnames(data))]<-"Thymus"
+  colnames(data)[grep("fStomach_cells",colnames(data))]<-"Stomach"
+  colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+  colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+  colnames(data)[grep("Indx",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("Indx",colnames(data))],saminfo[,1]),2])
+  colnames(data)[grep("X6.P|RRBS.6P",colnames(data))]<-"CCP"
+  colnames(data)[grep("X7.P|RRBS.7P",colnames(data))]<-"LCP"
+  colnames(data)[grep("X7.P|RRBS.7P",colnames(data))]<-"LCP"
+  colnames(data)[grep("BS-seq-P1-N|BS-seq-P2-N",colnames(data))]<-"Kidney"
+  colnames(data)[grep("BS-seq-P1-T|BS-seq-P2-T",colnames(data))]<-"PKIRCT"
+  colnames(data)[grep("tumor_liver",colnames(data))]<-"PLIHCT"
+  colnames(data)[grep("tumor_glioblastoma|tumor_neuroblastoma",colnames(data))]<-"PGBMT"
+  colnames(data)[grep("CD19_cells",colnames(data))]<-"WBC"
+  colnames(data)[grep("Colon_Tumor_Primary|SRX381569_tumor_colon",colnames(data))]<-"PCOADT"
+  colnames(data)[grep("SRX381621_tumor_breast",colnames(data))]<-"PBRCAT"
+  colnames(data)[grep("tumor_prostate",colnames(data))]<-"PPRADT"
+  colnames(data)[grep("SRX381722_small_cell_tumor_lung|SRX381719_squamous_cell_tumor_lung|SRX381716_adenocarcinoma_lung",colnames(data))]<-"PLCT"
+  return(data)
+}
+
+
+setwd("/media/Home_Raid1/shg047/NAS1/monod/mhl/0530")
+data<-read.table("WGBS.getHaplo.mhl.mhbs",head=T,row.names=1,sep="\t",as.is=T,check.names = F)
+save(data,file="data.RData")
+load("data.RData")
+colnames(data)
+data<-rename(data)
+colnames(data)

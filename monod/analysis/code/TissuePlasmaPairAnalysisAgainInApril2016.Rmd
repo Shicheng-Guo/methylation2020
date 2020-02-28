@@ -1,0 +1,228 @@
+---
+title: "MHL in Paired Solid sample and Plasma"
+author: "Shicheng Guo"
+date: "Saturday, April 09, 2016"
+output: html_document
+---
+
+Here,I try to analysis the paired solid tissues and plasma tissue again.
+
+load function first. 
+```{r}
+ggbarplot<-function(data){
+library("ggplot2")
+newdata<-data.frame(value=as.numeric(data.matrix(data)),Group=rep(colnames(data),each=nrow(data)))
+myData <- aggregate(newdata$value,by =list(type=newdata$Group),
+                    FUN = function(x) c(mean = mean(x,na.rm=T),
+                                        sd = sd(x,na.rm=T),
+                                        sem=sd(x,na.rm=T)/sqrt(length(na.omit(x))),
+                                        min=min(x,na.rm=T),
+                                        max=max(x,na.rm=T),
+                                        median=median(x,na.rm=T),
+                                        me=qt(1-0.05/2,df=length(na.omit(x))*sd(x,na.rm=T)/sqrt(length(na.omit(x)))))
+)
+myData <- do.call(data.frame, myData)
+colnames(myData)=c("type","mean","sd","sem","min","max","median","me")
+ggplot<-ggplot(myData, aes(x =type, y = mean)) +
+  geom_bar(position = position_dodge(), stat="identity", fill="blue",width=0.8) +
+  geom_errorbar(aes(ymin=mean-sem, ymax=mean+sem),size=1.0) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank())+
+  coord_flip()+
+  theme(axis.text=element_text(size=10),axis.title=element_text(),axis.text.y = element_text(hjust=0))
+return(ggplot)
+}
+
+
+
+ggboxplot<-function(data){
+library("ggplot2")
+newdata<-data.frame(value=as.numeric(data.matrix(data)),Group=rep(colnames(data),each=nrow(data)))
+ggplot<-ggplot(newdata, aes(factor(Group),value)) +
+  geom_boxplot(aes(fill = factor(Group)),outlier.shape=16)+
+  coord_flip()+
+  theme(axis.text=element_text(size=10),axis.title=element_text(),axis.text.y = element_text(hjust=0),legend.position="none")
+return(ggplot)
+}
+
+
+
+
+```
+
+```{r}
+setwd("/home/shg047/oasis/monod/mhl")
+# data<-read.table("monod.mhl.List1.April6.txt",head=T,sep="\t",as.is=T,row.names=1,check.names=F)
+load("MONOD-Apr6.MHL.RData")
+colnames(data)<-gsub("RRBS-6P","6-P-",colnames(data))
+colnames(data)<-gsub("RRBS-7P","7-P-",colnames(data))
+colnames(data)[grep("NC-P",colnames(data))]
+
+incl1<-c(grep("6-T-|7-T-",colnames(data)))
+dataT<-data[,incl1]
+colnames(dataT)
+
+x1<-colnames(data)[grep("NC-P",colnames(data))]
+x2<-paste("6-P-",1:5,sep="")
+x3<-paste("6-T-",1:5,sep="")
+x4<-paste("7-P-",1:5,sep="")
+x5<-paste("7-T-",1:5,sep="")
+
+dataNP<-data[,match(x1,colnames(data))]
+dataCP<-data[,match(c(x2,x4),colnames(data))]
+dataCT<-data[,match(c(x3,x5),colnames(data))]
+
+dim(dataNP)
+dim(dataCP)
+dim(dataCT)
+
+
+rlt<-c()
+for(i in 1:nrow(data)){
+  j=1
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,j]>0.1)*(dataCT[i,j]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+subset1<-subset(rlt,rlt[,1]==0 & rlt[,2]==1)
+
+rlt<-c()
+for(i in 1:nrow(data)){
+  j=2
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,j]>0.1)*(dataCT[i,j]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+subset2<-subset(rlt,rlt[,1]==0 & rlt[,2]==1)
+
+rlt<-c()
+for(i in 1:nrow(data)){
+  j=3
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,j]>0.1)*(dataCT[i,j]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+subset3<-subset(rlt,rlt[,1]==0 & rlt[,2]==1)
+
+rlt<-c()
+for(i in 1:nrow(data)){
+  j=4
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,j]>0.1)*(dataCT[i,j]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+subset4<-subset(rlt,rlt[,1]==0 & rlt[,2]==1)
+
+rlt<-c()
+for(i in 1:nrow(data)){
+  j=5
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,j]>0.1)*(dataCT[i,j]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+subset5<-subset(rlt,rlt[,1]==0 & rlt[,2]==1)
+
+subset1
+subset2
+subset3
+subset4
+subset5
+
+
+```
+merge cancer tissue, cancer plasma and normal plasma
+```{r}
+newdata<-data.frame(dataCT,dataCP,dataNP,check.names=F)
+newdata<-newdata[,order(colnames(newdata))]
+head(newdata)
+
+RawNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[2]
+  NaRaw<-which(apply(data,1,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,1,function(x) all(x==0))==T)
+  NaRAW<-c(NaRaw,zero)
+  if(length(NaRAW)>0){
+    dat<-data[-NaRAW,]
+  }else{
+    dat<-data;
+  }
+  dat
+} 
+
+ColNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[1]
+  NaCol<-which(apply(data,2,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,2,function(x) all(x==0))==T)
+  NaCOL<-c(NaCol,zero)
+  if(length(NaCOL)>0){
+    dat<-data[,-NaCOL]
+  }else{
+    dat<-data;
+  }
+  dat
+}   
+
+
+newdata<-RawNARemove(newdata)
+Newdata<-t(newdata)
+d <- dist(Newdata, method = "euclidean") # distance matrix
+fit <- hclust(d, method="ward.D2") 
+plot(fit,col="blue")
+dev.off()
+
+
+
+Newdata<-t(newdata)
+library(pvclust)
+fit <- pvclust(Newdata, method.hclust="ward",method.dist="euclidean")
+plot(fit) # dendogram with p values
+pvrect(fit, alpha=.95) # add rectangles around groups highly supported by the data
+
+Group<-colnames(newdata)
+Group[grep("6-P",Group)]<-"6-P"
+Group[grep("6-T",Group)]<-"6-T"
+Group[grep("7-P",Group)]<-"7-P"
+Group[grep("7-T",Group)]<-"7-T"
+Group[grep("NC-P",Group)]<-"NC-P"
+Group
+colnames(newdata)<-Group
+ggbarplot(newdata)
+ggboxplot(newdata)
+
+```
+
+check the clust to whole plamsa samples
+```{r}
+
+load("MONOD-Apr6.MHL.RData")
+colnames(data)<-gsub("RRBS-6P","6-P-",colnames(data))
+colnames(data)<-gsub("RRBS-7P","7-P-",colnames(data))
+colnames(data)[grep("NC-P",colnames(data))]
+newdata<-data[,c(grep("6-P|6-T-|7-P-|7-T|NC-P",colnames(data)))]
+newdata<-RawNARemove(newdata)
+pdf("heatmap.monod.plasma.pdf")
+heatmap(data.matrix(newdata[1:200,]),labRow=NA,na.rm=T,col=rainbow(20))
+dev.off()
+
+library(gplots)
+
+dim(newdata)
+colnames(newdata)
+ggboxplot(newdata)
+
+
+Newdata<-t(newdata)
+d <- dist(Newdata, method = "euclidean") # distance matrix
+fit <- hclust(d, method="ward.D2") 
+plot(fit,col="blue")
+dev.off()
+
+
+
+```
+

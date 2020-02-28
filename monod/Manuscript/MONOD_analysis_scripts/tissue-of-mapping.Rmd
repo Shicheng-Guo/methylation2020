@@ -1,0 +1,147 @@
+---
+title: "Tissue-of-origin mapping in MONOD"
+author: "Shicheng Guo"
+date: "June 1, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Preparation
+
+### install R package: monod
+library(devtools)
+
+install_github("Shicheng-Guo/newmonod",force = TRUE)
+
+library("monod")
+
+### Data: WGBS, RRBS (in genome-miner) are saved in **/media/Home_Raid1/shg047/NAS1/monod/mhl/0530**
+
+Now, set the working directory, read the WGBS data and rename the sample id with **rename2** function. In dinh's raw mhl file, rowname is like this way: chr2:9484495:95859485. it is not easy to do overlap with rbedtools, therefore, I change it to chr2:9484495-95859485 and then save it as **WGBS.getHaplo.mhl.mhbs.Guo.txt**. 
+```{r monod}
+library("monod")
+setwd("/media/Home_Raid1/shg047/NAS1/monod/mhl/0530")
+data<-read.table("/media/NAS1/shg047/monod/mhl/0530/WGBS.getHaplo.mhl.mhbs.Guo.txt",head=T,row.names=1,sep="\t",check.names = F)
+data<-rename2(data)
+```
+check all the WGBS samples
+```{r samplesize}
+sort(table(colnames(data)))
+```
+We only need 10 kinds of tissue to build our reference, including: **Brain|Colon|Intestine|Kidney|Liver|Lung|Pancreas|Spleen|Stomach|WBC**. therefore, we select the samples belonging to these categories and check the samples size for each categories. 
+```{r selectsampleweneed}
+Data<-data[,grep("Brain|Colon|Intestine|Kidney|Liver|Lung|Pancreas|Spleen|Stomach|WBC",colnames(data))] 
+colnames(Data)<-unlist(lapply(colnames(Data),function(x) unlist(strsplit(x,"[.]"))[1]))
+table(colnames(Data))
+```
+Then we can calculate the GSI values and assign the regions/markers to different reference/tissue/categories. In the first version, we assign any region to only one category, however, in the present version, one genomic region might be assign to mulitple categories when it is hyper-MHL in multiple regions(MHL>0.3). 
+```{r pressure, echo=FALSE}
+#gsirlt<-gsi(Data)
+#save(gsirlt,file="gsirlt.mhl.may30.RData")
+```
+GSI calculation procedure is quite time-consuming (20 min for 147,888), I have already created the GSI, therefore, if you don't change the paramteres or method, you can use GSI result from me. it is save in **gsirlt.mhl.may30.RData**. As the below, you can find the format of GSI: MHB, Tissue Group, GSI, max-MHL-in-Reference, MHL for each tissue.
+```{r checkgsirlt}
+load("/media/Home_Raid1/shg047/NAS1/monod/mhl/0530/gsirlt.mhl.may30.RData")
+head(gsirlt)
+```
+Then we can select certain number of GSI, with ** refMax** and **GSI**. refMax is the minimum values for the MHL to be required to be consider as certain tissue-specific threshold, ranging from 0-1. GSI reflect the tissue-specificity, ranging from 0-1. 
+Then we change gsi format to **bio** format which can be applied for further analysis (bedgraph format). 
+```{r gsirlt2bio}
+gsirlt1<-subset(gsirlt,refMax>0.3 & GSI>0.65)  # refMax=c(0.3-0.6), GSI=c(0.5-0.7)
+gsirlt1$group<-as.character(gsirlt1$group)
+bio<-gsi2bio(gsirlt1)
+```
+Since we have build tissue-specific markers, if you want to do tissue type prediction, just to calculate the maximum like, tt is the threshold to be applied to binary the MHL matrix, any values between 0.3 and 0.6 usually can provide quite high accuracy (~90%) with my previous validation by two indenpendent dataset:  
+```{r predictsolidtissue}
+rlt1<-prediction1(Data,bio,tt=0.3)  
+rlt1$prediction
+sum(rlt1$prediction==names(rlt1$prediction))/length(rlt1$prediction)
+```
+How about the prediction to all the MHL matrix samples. here, we counts the numbers of tissue-specific markers for each tissue, and then compare the number with the backgournd distribution of the biomarkers. In our first version, each regions only is assigned to one kind of category therefore we can count the number and then check which one have maximum value. However, now, our marker can be assigned to mulitple tissue, therefore, background distribution should be considerred. the maximum enriched category/tissue will be assigned to such tissue. 
+```{r}
+rlt2<-prediction1(data,bio,tt=0.3)              # tissue=c(0.3-0.6)
+rlt2$prediction
+```
+check the heatmap with above GSI-MHL markers, **bio** is markes, **Data** is our WGBS reference samples
+```{r heatmapwgbs}
+input<-data.matrix(Data[na.omit(match(rownames(bio),rownames(Data))),])
+heatmap(input,cexRow=0.5,cexCol=0.5,output="Performance-of-markers-applied-in-plasma-tissue-of-mapping-in-tissue.pdf")
+```
+
+Okay, now come to next step, make prediction to RRBS data with above WBGS-biomarkers. We have 75 normal plasma, and here, we can take 45 as training set and 30 as test set. 
+```{r readRRBSdata}
+rrbsdata<-read.table("/media/NAS1/shg047/monod/mhl/0530/RRBS.getHaplo.mhl.mhbs.Guo.txt",head=T,row.names=1,sep="\t",check.names = F)
+np<-rrbsdata[,grep("NC-P|NCP|NP",colnames(rrbsdata))]  
+train<-sample(1:75,45)
+ncp<-np[,train]
+nncp<-np[,(1:75)[-train]]
+ccp<-rrbsdata[,unique(grep(".6P|X6.P|CCP|CRC-P",colnames(rrbsdata)))]  
+lcp<-rrbsdata[,unique(grep(".7P|X7.P|LC-P",colnames(rrbsdata)))] 
+```
+Okay, now let's check the prediction result. We use the distribution of tissue-specific-marker in normal plasma as the background distribution and then with Z-score from test samples(CCP and LCP),  (#NO.TSMarker - Mean(background))/(sd(background)/(n))
+```{r predictionplan}
+rlt1<-ZscorePredictionPlasma1(nncp,ncp,bio,tt=0.001)    # tt is threshold to binary the MHL matrix, lcp: colon cancer plasma, ncp: normal plasma trainning dataset
+rlt2<-ZscorePredictionPlasma1(ccp,ncp,bio,tt=0.001)     # tt is threshold to binary the MHL matrix, ccp: colon cancer plasma, ncp: normal plasma trainning dataset
+rlt3<-ZscorePredictionPlasma1(nncp,ncp,bio,tt=0.001)    # tt is threshold to binary the MHL matrix, ccp: colon cancer plasma, ncp: normal plasma trainning dataset
+rlt1$score[1:10,1:3]
+rlt2$score[1:10,1:3]
+rlt3$score[1:10,1:3]
+prin1<-sum(unlist(apply(rlt1$score,2,function(x) rownames(rlt1$score)[which.max(x)]))=="Colon")
+prin2<-sum(unlist(apply(rlt2$score,2,function(x) rownames(rlt2$score)[which.max(x)]))=="Lung")
+prin3<-sum(unlist(apply(rlt3$score,2,function(x) rownames(rlt3$score)[which.max(x)]))=="WBC")
+prin1
+prin2
+prin3
+```
+I have tried different threshold, all the prediction are quite bad. Cannot figure out why this will happened. but obviously, in the normal plasma, large number colon and lung background are there. therefore, I am thinking can I remove all the WBC singals and then detect which solid tissue marker are remaining. except WBC markers, I expect there will be lung and colon markers are enriched in lung and colon cancer plasma.
+
+Let us check the Z-score heatmap for these biomarker in all the samples. Since the figure margins too large, the heatmap can not be shown in html,please check the pdf files in this folder. **heatmap-mhl-marker-for-10-tissue.pdf**
+```{r}
+pdf("heatmap-mhl-marker-for-10-tissue.pdf")
+heatmaprlt<-HeatMap(rlt1$score)
+heatmaprlt<-HeatMap(t(rlt1$score))
+heatmaprlt<-HeatMap(rlt2$score)
+heatmaprlt<-HeatMap(t(rlt2$score))
+heatmaprlt<-HeatMap(rlt3$score)
+heatmaprlt<-HeatMap(t(rlt3$score))
+dev.off()
+```
+I notice that colon, lung and WBC are shared large number common hyermethyalted regions compared with othter tissues.
+
+Okay, how about removing WBC and Spleen markers from our reference marker list. udpate reference:**Brain|Colon|Intestine|Kidney|Liver|Lung|Pancreas|Stomach**.
+```{r}
+load("gsirlt.mhl.may30.RData")
+gsirlt<-gsirlt[-which(unlist(lapply(gsirlt$group,function(x) length(grep("WBC|Spleen",x))>0))),]
+gsirlt1<-subset(gsirlt,refMax>0.3 & GSI>0.5)  # refMax=c(0.3-0.6), GSI=c(0.5-0.7)
+gsirlt1$group<-as.character(gsirlt1$group)
+bio<-gsi2bio(gsirlt1)
+```
+Okay, now, we have 8 reference left. select RRBS data again. 
+```{r}
+np<-rrbsdata[,grep("NC-P|NCP|NP",colnames(rrbsdata))]  
+train<-sample(1:75,45)
+ncp<-np[,train]
+nncp<-np[,(1:75)[-train]]
+ccp<-rrbsdata[,unique(grep(".6P|X6.P|CCP|CRC-P",colnames(rrbsdata)))]  
+lcp<-rrbsdata[,unique(grep(".7P|X7.P|LC-P",colnames(rrbsdata)))] 
+```
+Now, we can try to detect colon and lung markers in colon and lung cancer plasmas. **tt** is the only one parameter to be optimized, since tissue fragments are only 10%-30% in plasma, therefore, tt can be set between 0.001-0.3.
+(tt is threshold to binary the MHL matrix, lcp: colon cancer plasma, ncp: normal plasma trainning dataset)
+```{r}
+for(i in seq(0,0.09,by=0.01)){
+rlt1<-ZscorePredictionPlasma2(nncp,ncp,bio,tt=i)   
+rlt2<-ZscorePredictionPlasma2(ccp,ncp,bio,tt=i)
+prin1<-sum(unlist(apply(rlt1$score,2,function(x) rownames(rlt1$score)[which.max(x)]))=="Colon")
+prin2<-sum(unlist(apply(rlt2$score,2,function(x) rownames(rlt1$score)[which.max(x)]))=="Lung")
+print(c(i,prin1,prin2))
+}
+```
+With this way you can find, max(19) colon and max(30) lung can be predicted as colon and lung. with **refMax**, **GSI** and **tt** opitmization, you can find better result. However, it is not we want. another thing is with this method, we can not prediction normal plasma, since in the normal plasma, you can also assign certain tissue to them. I think I need do more work on the colon, lung markers. 
+
+
+
+
+

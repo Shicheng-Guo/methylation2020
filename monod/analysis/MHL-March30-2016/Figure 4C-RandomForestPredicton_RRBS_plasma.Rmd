@@ -1,0 +1,163 @@
+---
+  title: "Differential Analysis to MHL in plasma"
+author: "Shicheng Guo"
+date: "Wednesday, March 30, 2016"
+output: html_document
+---
+
+
+```{r}
+
+ggbarplot<-function(data){
+  library("ggplot2")
+  newdata<-data.frame(value=as.numeric(data.matrix(data)),Group=rep(colnames(data),each=nrow(data)))
+  myData <- aggregate(newdata$value,by =list(type=newdata$Group),
+                      FUN = function(x) c(mean = mean(x,na.rm=T),
+                                          sd = sd(x,na.rm=T),
+                                          sem=sd(x,na.rm=T)/sqrt(length(na.omit(x))),
+                                          min=min(x,na.rm=T),
+                                          max=max(x,na.rm=T),
+                                          median=median(x,na.rm=T),
+                                          me=qt(1-0.05/2,df=length(na.omit(x))*sd(x,na.rm=T)/sqrt(length(na.omit(x)))))
+  )
+  myData <- do.call(data.frame, myData)
+  colnames(myData)=c("type","mean","sd","sem","min","max","median","me")
+  ggplot<-ggplot(myData, aes(x =type, y = mean)) +
+    geom_bar(position = position_dodge(), stat="identity", fill="blue",width=0.8) +
+    geom_errorbar(aes(ymin=mean-sem, ymax=mean+sem),size=1.0) +
+    theme_bw() +
+    theme(panel.grid.major = element_blank())+
+    coord_flip()+
+    theme(axis.text=element_text(size=10),axis.title=element_text(),axis.text.y = element_text(hjust=0))
+  return(ggplot)
+}
+
+ggboxplot<-function(data){
+  library("ggplot2")
+  newdata<-data.frame(value=as.numeric(data.matrix(data)),Group=rep(colnames(data),each=nrow(data)))
+  ggplot<-ggplot(newdata, aes(factor(Group),value)) +
+    geom_boxplot(aes(fill = factor(Group)),outlier.shape=NA)+
+    coord_flip()+
+    theme(axis.text=element_text(size=10),axis.title=element_text(),axis.text.y = element_text(hjust=0),legend.position="none")
+  return(ggplot)
+}
+
+
+ColNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[1]
+  NaCol<-which(apply(data,2,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,2,function(x) all(x==0))==T)
+  NaCOL<-c(NaCol,zero)
+  if(length(NaCOL)>0){
+    data1<-data[,-NaCOL]
+  }else{
+    data1<-data;
+  }
+  data1
+}   
+
+
+```
+
+
+```{r}
+data<-read.table("monod.mhl.List1.march30.txt",head=T,row.names=1,sep="\t",check.names=F)
+save(data,file="MONOD-march30.MHL.RData")
+
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\analysis\\MHL-March30-2016")
+load("MONOD-Apr6.MHL.RData")
+sum(is.na(data))/(nrow(data)*ncol(data))
+# re-group/collect the samples #colon cancer
+Group<-colnames(data)
+# Group[grep("CTR|NC-|Pregn",Group)]<-"NP"
+Group[grep("NC-",Group)]<-"NP-Kun"
+Group[grep("CTR|Pregn",Group)]<-"NP-Dennis"
+Group[grep("6-P-",Group)]<-"CCP"
+Group[grep("6-T-|HCT116|Colon_Tumor_Primary|CTT-|metastasis_colon|tumor_colon",Group)]<-"CCT"
+Group[grep("normal_colon|N37-Colon|SG-01",Group)]<-"NCT"
+
+Group[grep("7-P-",Group)]<-"LCP"
+Group[grep("7-T-|adenocarcinoma_lung|tumor_lung",Group)]<-"LCT"
+Group[grep("LG-01|N37-Lung|normal_lung",Group)]<-"NLT"
+
+Group[grep("PC-P-",Group)]<-"PCP"
+Group[grep("PC-T-",Group)]<-"PCT"
+Group[grep("PA-01|N37-Pancreas",Group)]<-"NPT"
+
+Group[grep("WB-",Group)]<-"WB"
+Group[grep("STL|N37-|methylC-",Group)]<-"ONT"
+newdata<-data
+colnames(newdata)<-Group
+newdata<-data.frame(newdata,check.names=F)
+```
+
+```{r}
+YY<-grep("NP-Kun|PCP|LCP|CCP",Group)
+library("randomForest")
+newdata<-newdata[,YY]
+idx<-sapply(colnames(newdata),function(x) unlist(strsplit(x,"[.]"))[1])
+colnames(newdata)<-idx
+newdata<-data.matrix(newdata)
+head(newdata)
+colnames(newdata)
+dim(newdata)
+Newdata<-newdata[,c(grep("NP-Kun",colnames(newdata)),grep("CCP",colnames(newdata)),grep("LCP",colnames(newdata)),grep("PCP",colnames(newdata)))]
+table(colnames(Newdata))
+dim(Newdata)
+
+
+mydata<-RawNARemove(Newdata)
+mydata<-ColNARemove(mydata)
+library("impute")
+mydata<-impute.knn(mydata)$data
+dim(mydata)
+
+pred2<-mydata
+lab2<-as.factor(colnames(mydata))
+
+bestmtry<-tuneRF(x=t(pred2),y=lab2,ntreeTry=500, stepFactor=2, improve=0.05,trace=TRUE, plot=TRUE, doBest=T)
+best.mtry=bestmtry$mtry
+rf.model1<-randomForest(x=t(pred2),y=lab2,mtry=best.mtry)
+Varimportant<-rf.model1$importance
+Varimportant<-Varimportant[order(Varimportant[,1],decreasing=T),]
+head(Varimportant)
+write.table(Varimportant,file="randomForest.important.varable.txt",col.names=NA,row.names=T,sep="\t",quote=F)
+save(rf.model1,file="randomForest.RRBS.RData")
+
+
+
+
+
+
+dim(colonData)
+colnames(colonData)
+NewData<-data.frame(value=as.numeric(colonData),Group=rep(colnames(colonData),each=nrow(colonData)))
+myData <- aggregate(NewData$value,by =list(type=NewData$Group),
+                    FUN = function(x) c(mean = mean(x,na.rm=T), 
+                                        sd = sd(x,na.rm=T),
+                                        sem=sd(x,na.rm=T)/sqrt(length(na.omit(x))),
+                                        me=qt(1-0.05/2,df=length(na.omit(x))*sd(x,na.rm=T)/sqrt(length(na.omit(x)))))
+)
+myData <- do.call(data.frame, myData)
+colnames(myData)=c("type","mean","sd","sem","me")
+head(myData)
+
+library("ggplot2")
+pdf("colon.cancer.mhl.plasma.groups.107.pdf")
+ylab="Average MHL"
+xlab="Group"
+title="Average MHL in different Groups"
+myData <- within(myData,type <- factor(type,levels=c("NP-Kun","NCT","CCT","CCP")))
+ggplot(myData, aes(x =type, y = mean)) +  
+  geom_bar(position = position_dodge(), stat="identity", fill="blue",width=0.9) + 
+  geom_errorbar(aes(ymin=mean-sem, ymax=mean+sem),size=1.0) +
+  ggtitle(title) + 
+  theme_bw() +
+  theme(panel.grid.major = element_blank())+
+  xlab(xlab) +
+  ylab(ylab)+
+  theme(axis.text=element_text(size=10),axis.title=element_text(size=10),axis.text.y = element_text(hjust=0))
+
+dev.off()
+
+```

@@ -1,0 +1,67 @@
+#!/usr/bin/perl  -w
+#Should disable buffering of STDOUT
+#Usage:
+#getSite4methylfreq8bed.pl SampleList [bedFile/NA] [outPutFile]
+#this script is suit for the new style methylFreq files (Walson and Crick Chain Seperation)
+
+use strict;
+#use Statistics::Descriptive;
+
+if(!$ARGV[0]){
+        print "\nUsage:\n";
+        print "getSite4methylfreq8bed.pl SampleList [bedFile/NA] [outPutFile]\n";
+        print "\n[Note]: This script is used to find CpG site from methylFreq files within bedFile regions\n";
+        print "[methylFreq file Format]: each site should have context either CG, CHG, or CHH.\n[Example]: chr1\t123462\t[C|W]\t3\tCG\tC\t2\tT\t4\n";
+        print "[BedFile]: file for the CpG regions, such as chr1:28400349-28401349\n";
+        print "[contact]: Written by Dinh, Modified by Shicheng\n";
+        print "[version]: Oct/5/2015\n";
+        exit 0;
+}
+$| = 1;
+
+my %cpgSites;
+
+my $SampleList=$ARGV[0] if($ARGV[0]) || die "Please set sample list file name!\n";
+my $bedFile=$ARGV[1] if($ARGV[1])    || die "Please set bed file name!\n";
+my $outPutFile=$ARGV[2] if($ARGV[2]) || die "Please set output file name!\n";
+
+open IN1, $bedFile;
+my @bedRegions=<IN1>;
+close(IN1);
+
+open IN2, $SampleList;
+my (@SampleList,@fileList);
+while(<IN2>){
+	chomp;
+	my ($sam,$file)=split /\t/;
+	push(@SampleList,$sam);
+	push(@fileList,$file);
+}
+close(IN2);
+
+
+foreach my $methylFile(@fileList){
+	print "$methylFile is on the way...\n";
+	open IN3, $methylFile|| die "can't open $methylFile\n";
+	while(<IN3>){
+	chomp;
+  	my ($chr,$pos,undef)=split /\t/;
+  	my $target="$chr:$pos";
+  	$cpgSites{$target}="$chr\t$pos\n";
+	}
+	close(IN3);
+}
+
+open OUT,">$outPutFile";
+
+foreach my $bedRegion(@bedRegions){
+	my ($chr1,$start1,$end1)=split/[:|-]/,$bedRegion; 		
+	foreach my $target(sort keys %cpgSites){
+	my ($chr,$pos,undef)=split /\t/,$cpgSites{$target};
+	if($chr eq $chr1 && $pos<$end1 && $pos>=$start1){
+		print OUT "$target\n";	
+		}
+	}	
+}
+  	
+  	

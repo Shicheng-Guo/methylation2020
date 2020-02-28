@@ -1,0 +1,24 @@
+---
+title: "MHL-Check"
+author: "Shicheng Guo"
+date: "Wednesday, April 06, 2016"
+output: html_document
+---
+
+
+
+```{r}
+load("MONOD-march30.MHL.RData")
+data3<-data
+data<-read.table("monod.mhl.List1.April6.txt",head=T,row.names=1,sep="\t",as.is=T)
+data<-data4
+save(data,file="MONOD-Apr6.MHL.RData")
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -1,0 +1,50 @@
+---
+title: "Imputation of missing values for methylation dataset"
+author: "Shicheng Guo"
+date: "July 13, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+strspli
+? tapply
+
+```
+
+## Motivation
+
+
+[http://www.analyticsvidhya.com/blog/2016/03/tutorial-powerful-packages-imputing-missing-values/]
+
+## Method
+*MICE
+*Amelia
+*missForest
+*Hmisc
+*mi
+
+
+## Implement 
+
+
+
+## Result
+
+
+
+## Conclusion
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

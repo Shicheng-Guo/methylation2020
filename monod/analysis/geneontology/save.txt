@@ -1,0 +1,15 @@
+Chordate embryonic development	1.70E-03
+Embryonic development ending in birth	1.80E-03
+Lung development	2.30E-03
+Respiratory tube development	2.50E-03
+Respiratory system development	2.90E-03
+Liver development	8.70E-03
+Embryonic organ development	1.10E-02
+Placenta development	1.10E-02
+Muscle organ development	1.80E-02
+Tube development	2.00E-02
+Skeletal system development	5.20E-02
+Embryonic placenta development	6.20E-02
+In utero embryonic development	8.00E-02
+Pancreas development	8.90E-02
+Gut development	9.20E-02

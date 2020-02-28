@@ -1,0 +1,160 @@
+---
+title: "Plasma Batch III dataset Analysis"
+author: "Shicheng Guo"
+date: "Tuesday, May 10, 2016"
+output: html_document
+---
+
+Dinh conducted the plasma DNA extraction and RRBS library. I obtained the data at May 10th 2016. After I get the data (Bam), I calculated the hapinfo and MHL matrix. 
+
+79 Bam files, 10 CRC plasma, 10 LC plasma, 10 PC plasma and 49 NC plasma.
+
+```{r}
+setwd("/home/shg047/oasis/monod/Batch3Plasma/hapinfo")
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\analysis\\batch3plasma")
+data=read.table("batch3MHL.txt",head=T,sep="\t",as.is=T,check.names=F,row.names=1)
+colnames(data)=unlist(strsplit(colnames(data),split="[.]"))[seq(1,4*ncol(data),by=4)]
+length(grep("LC",colnames(data)))
+length(grep("LC",colnames(data)))
+length(grep("NC",colnames(data)))
+length(grep("PC",colnames(data)))
+data=data[,order(colnames(data))]
+```
+Summary 1: Distrbution
+```{r}
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\analysis\\batch3plasma")
+pdf("BoxPlot.Data.pdf")
+boxplot(data,horizontal=T,cex=0.5,las=2,outline=F,cex.lab=0.5,cex.axis=0.55,col="red")
+dev.off()
+
+# interesting, how about compare the batch1,2 and batch 3 MHL??
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\analysis\\MHL-March30-2016")
+load("MONOD-Apr6.MHL.RData")
+data=data[,grep("-P-|-T-",colnames(data))]
+data=data[,order(colnames(data))]
+pdf("BoxPlot.Data.pdf")
+boxplot(data,horizontal=T,cex=0.5,las=2,outline=F,cex.lab=0.3,cex.axis=0.6,col="red")
+dev.off()
+
+
+
+
+
+```
+With the comparison, we can find the distribution of plasma data were similar between batch 1, 2 and 3 on the level of MHL. 
+
+
+Aim 1: validate the cancer dna fragment concentration
+```{r}
+
+heatmap<-HeatMap(Newdata2)
+rlt<-DataSummary(Newdata2)
+dist<-dist((Newdata2))
+hclust<-hclust(dist)
+k=5
+cut<-cutree(hclust,k=k)
+xx<-cut[match(rownames(Newdata2)[heatmap$rowInd],names(cut))]
+yy<-unique(xx)
+# sample size in each subgroup
+zz<-table(xx)[match(yy,names(table(xx)))]
+stdcurve<-read.table("colon.std.curve.txt",head=T,sep="\t",as.is=T,check.names=F,row.names=1)
+
+
+NewData<-data[match(names(xx[which(xx %in% c(1))]),rownames(data)),]
+dim(NewData)
+head(colnames(NewData))
+
+  G1<-grep("CRC",colnames(NewData))
+  G2<-grep("NC",colnames(NewData))
+  GG1<-colMeans(NewData,na.rm=T)[G1]
+  GG2<-colMeans(NewData,na.rm=T)[G2]
+
+findConcentration<-function(x,y){
+  rlt<-round(rnorm(1,32,4)); # detection limitation (0.001%)
+  for(i in 2:length(y)){
+    if(x<y[i-1] & x>y[i]){
+      rlt<-i
+      break
+    }
+  }
+  return(rlt)
+}
+
+rlt1<-lapply(GG1,function(x) findConcentration(x,stdcurve$mhl))
+rlt2<-lapply(GG2,function(x) findConcentration(x,stdcurve$mhl))
+
+CP=xx1[unlist(rlt1)]
+NP=xx1[unlist(rlt2)]
+NP<-data.frame(NP,'NP')
+CP<-data.frame(CP,'CP')
+colnames(NP)=colnames(CP)=c("MHL","Idx")
+box<-rbind(NP,CP)
+
+# p <- ggplot(box, aes(factor(Idx),MHL))
+p <- ggplot(NP, aes(factor(Idx),MHL))
+p<- p+ geom_boxplot(aes(fill = factor(Idx)))
+p<- p+geom_point(position = position_jitter(width = 0.7))
+p<-p+theme_bw()
+p<-p+ theme(panel.background = element_blank())
+p<-p+ theme(panel.grid.major = element_blank())
+p<-p+ theme(panel.grid.minor = element_blank())
+p
+box
+
+
+
+```
+
+
+
+
+```{r}
+
+data=read.table("batch3AMF.txt",head=T,sep="\t",as.is=T,check.names=F,row.names=1)
+colnames(data)=unlist(strsplit(colnames(data),split="[.]"))[seq(1,4*ncol(data),by=4)]
+length(grep("LC",colnames(data)))
+length(grep("LC",colnames(data)))
+length(grep("NC",colnames(data)))
+length(grep("PC",colnames(data)))
+data=data[,order(colnames(data))]
+pdf("BoxPlot.AMF-batch3.Data.pdf")
+boxplot(data,horizontal=T,cex=0.5,las=2,outline=F,cex.lab=0.3,cex.axis=0.6,col="red")
+dev.off()
+
+
+
+
+
+```{r,echo=FALSE}
+DataSummary<-function(data){
+  rlt<-list()
+  NewData<-data.frame(value=as.numeric(data),Group=rep(colnames(data),each=nrow(data)))
+  ttest<-t.test(NewData[grep("CP",NewData$Group),1],NewData[grep("Kun",NewData$Group),1],na.rm=T)
+  myData <- aggregate(NewData$value,by =list(type=NewData$Group),
+                      FUN = function(x) c(mean = mean(x,na.rm=T), 
+                                          sd = sd(x,na.rm=T),
+                                          sem=sd(x,na.rm=T)/sqrt(length(na.omit(x))),
+                                          me=qt(1-0.05/2,df=length(na.omit(x))*sd(x,na.rm=T)/sqrt(length(na.omit(x)))))
+  )
+  myData <- do.call(data.frame, myData)
+  colnames(myData)=c("type","mean","sd","sem","me")
+  rlt$ttest<-ttest
+  rlt$myData<-myData
+  return(rlt)
+}
+
+barplotplasma<-function(myData){
+    library("ggplot2")
+    ggplot(myData, aes(x =type, y = mean)) +  
+    geom_bar(position = position_dodge(), stat="identity", fill="blue",width=0.9) + 
+    geom_errorbar(aes(ymin=mean-sem, ymax=mean+sem),size=1.0) +
+    ggtitle(title) + 
+    theme_bw() +
+    theme(panel.grid.major = element_blank())+
+    xlab(xlab) +
+    ylab(ylab)+
+    theme(axis.text=element_text(size=10),axis.title=element_text(size=10),axis.text.y = element_text(hjust=0))
+}
+
+
+```

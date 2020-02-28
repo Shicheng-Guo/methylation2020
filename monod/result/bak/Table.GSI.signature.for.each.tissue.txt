@@ -1,0 +1,18 @@
+Tissue	Sample Size	No	Layer
+Bladder	1	292	Endoterm
+Brain	2	34	Ectoderm
+Colon	3	78	Endoterm
+Esophagus	2	79	Endoderm
+Fat cell	2	15	Endoterm
+Heart	6	19	Mesoderm
+Intestine	4	92	Endoterm
+Kidney	2	186	Mesoderm
+Liver	2	306	Endoterm
+Lung	3	26	Endoterm
+muscle	4	160	Mesoderm
+Ovary	1	584	Mesoderm
+Pancreas	3	559	Endoterm
+Spleen	3	487	Mesoderm
+Stomach	4	52	Endoterm
+Thymus	1	2671	Endoterm
+Vessel	2	626	Mesoderm

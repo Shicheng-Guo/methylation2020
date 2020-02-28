@@ -1,0 +1,1 @@
+LOC	CpG	HapType	Bladder	Brain	Colon	Esophagus	Intestine	Kidney	Liver	Lung	PC-P-3	Pancreas	Stomach

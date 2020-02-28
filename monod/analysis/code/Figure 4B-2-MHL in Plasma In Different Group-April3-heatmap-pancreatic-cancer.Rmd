@@ -1,0 +1,211 @@
+---
+title: "Figure 4B-2(Table. For lung Cancer)"
+author: "Shicheng Guo"
+date: "Wednesday, April 06, 2016"
+output: html_document
+---
+
+After I finished the signficant differential MHL screening between cancer plamsa and normal plasma in 3 different cancer samples (colon,lung and pancreastic cancer), I prepared a heatmap for the most signficant regions (<200 regions), however, 1) Dr. Zhang want to see the whole differential MHL regions. 2) We need to remove the samples whose missing value were very high. 3). please check why such kinds of samples have so much missing value ratio? 
+
+First load some relevant functions:
+```{r}
+
+ggbarplot<-function(data){
+library("ggplot2")
+newdata<-data.frame(value=as.numeric(data.matrix(data)),Group=rep(colnames(data),each=nrow(data)))
+myData <- aggregate(newdata$value,by =list(type=newdata$Group),
+                    FUN = function(x) c(mean = mean(x,na.rm=T),
+                                        sd = sd(x,na.rm=T),
+                                        sem=sd(x,na.rm=T)/sqrt(length(na.omit(x))),
+                                        min=min(x,na.rm=T),
+                                        max=max(x,na.rm=T),
+                                        median=median(x,na.rm=T),
+                                        me=qt(1-0.05/2,df=length(na.omit(x))*sd(x,na.rm=T)/sqrt(length(na.omit(x)))))
+)
+myData <- do.call(data.frame, myData)
+colnames(myData)=c("type","mean","sd","sem","min","max","median","me")
+ggplot<-ggplot(myData, aes(x =type, y = mean)) +
+  geom_bar(position = position_dodge(), stat="identity", fill="blue",width=0.8) +
+  geom_errorbar(aes(ymin=mean-sem, ymax=mean+sem),size=1.0) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank())+
+  coord_flip()+
+  theme(axis.text=element_text(size=10),axis.title=element_text(),axis.text.y = element_text(hjust=0))
+return(ggplot)
+}
+
+ggboxplot<-function(data){
+library("ggplot2")
+newdata<-data.frame(value=as.numeric(data.matrix(data)),Group=rep(colnames(data),each=nrow(data)))
+ggplot<-ggplot(newdata, aes(factor(Group),value)) +
+  geom_boxplot(aes(fill = factor(Group)),outlier.shape=NA)+
+  coord_flip()+
+  theme(axis.text=element_text(size=10),axis.title=element_text(),axis.text.y = element_text(hjust=0),legend.position="none")
+return(ggplot)
+}
+
+ColNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[1]
+  NaCol<-which(apply(data,2,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,2,function(x) all(x==0))==T)
+  NaCOL<-c(NaCol,zero)
+  if(length(NaCOL)>0){
+    dat<-data[,-NaCOL]
+  }else{
+    dat<-data;
+  }
+  dat
+}   
+
+RawNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[2]
+  NaRaw<-which(apply(data,1,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,1,function(x) all(x==0))==T)
+  NaRAW<-c(NaRaw,zero)
+  if(length(NaRAW)>0){
+    dat<-data[-NaRAW,]
+  }else{
+    dat<-data;
+  }
+  dat
+} 
+
+ttestFunction<-function(data,x1,x2){
+  data=data+matrix(rnorm(length(data),0.000001,0.000001),nrow(data),ncol(data))
+  output<-matrix(NA,dim(data)[1],4)
+  for(i in 1:dim(data)[1]){
+    out<-data.frame()
+    if(all(! any(all(is.na(data[i,x1])),length(na.omit(data[i,x1]))<2,length(na.omit(data[i,x2]))<2,all(is.na(data[i,x2]))),sum(is.na(data[i,]))<0.5*length(data[i,]))){ 
+      tmp1<-try(t.test(as.numeric(data[i,x1]),as.numeric(data[i,x2]), na.action=na.omit))
+      output[i,1]<-tmp1$p.value
+      output[i,2]<-as.numeric((mean(as.numeric(data[i,x1]),na.rm=T)-mean(as.numeric(data[i,x2]),na.rm=T)))
+      output[i,3]<-mean(as.numeric(data[i,x1]),na.rm=T)
+      output[i,4]<-mean(as.numeric(data[i,x2]),na.rm=T)
+      # print(i)
+    }
+  }
+  
+  rownames(output)=rownames(data)
+  P.Adj<-p.adjust(output[,1],method="fdr")
+  out<-data.frame(output[,1],P.Adj,output[,2:4])
+  out<-na.omit(out)
+  colnames(out)=c("Pvalue","FDR","Delta","MG1","MG2")
+  return(out)
+}
+```
+
+First load the data and reformat the dataframe.
+```{r}
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\monod\\analysis\\MHL-March30-2016")
+load("MONOD-Apr6.MHL.RData")
+
+## Miss Value Statistic
+sum(is.na(data))/(nrow(data)*ncol(data))
+na<-apply(data,2,function(x) sum(is.na(x)))
+sort(na)
+barplot(sort(na),horiz=T,las=1,cex.names=0.25,col="blue")
+write.table(sort(na),file="missing.value.table.txt",sep="\t")
+
+
+## re-group/collect the samples #colon cancer
+Group<-colnames(data)
+# Group[grep("CTR|NC-|Pregn",Group)]<-"NP"
+Group[grep("NC-",Group)]<-"NP-Kun"
+Group[grep("CTR|Pregn",Group)]<-"NP-Dennis"
+Group[grep("6-P-",Group)]<-"CCP"
+Group[grep("6-T-|HCT116|Colon_Tumor_Primary|CTT-|metastasis_colon|tumor_colon",Group)]<-"CCT"
+Group[grep("normal_colon|N37-Colon|SG-01",Group)]<-"NCT"
+
+Group[grep("7-P-",Group)]<-"LCP"
+Group[grep("7-T-|adenocarcinoma_lung|tumor_lung",Group)]<-"LCT"
+Group[grep("LG-01|N37-Lung|normal_lung",Group)]<-"NLT"
+
+Group[grep("PC-P-",Group)]<-"PCP"
+Group[grep("PC-T-",Group)]<-"PCT"
+Group[grep("PA-01|N37-Pancreas",Group)]<-"NPT"
+
+Group[grep("WB-",Group)]<-"WB"
+Group[grep("STL|N37-|methylC-",Group)]<-"ONT"
+newdata<-data
+colnames(newdata)<-Group
+newdata<-data.frame(newdata,check.names=F)
+```
+
+For pancreatic cancer
+```{r}
+YY<-grep("NP-Kun|PCP",Group)
+Newdata<-newdata[,YY]
+colnames(Newdata)
+idx<-sapply(colnames(Newdata),function(x) unlist(strsplit(x,"[.]"))[1])
+colnames(Newdata)<-idx
+Newdata<-data.matrix(Newdata)
+head(Newdata)
+colnames(Newdata)
+dim(Newdata)
+Newdata<-Newdata[,c(grep("PCP",colnames(Newdata)),grep("NP-Kun",colnames(Newdata)))]
+table(colnames(Newdata))
+dim(Newdata)
+colnames(Newdata)
+
+## Signficant Detection without remove missing values
+x1<-grep("PCP",colnames(Newdata))
+x2<-grep("NP-Kun",colnames(Newdata))
+Rlt<-ttestFunction(Newdata,x1,x2)
+head(Rlt)
+dim(Rlt)
+
+# low rigorous D-MHL
+Rlt<-data.frame(Rlt)
+sig<-subset(Rlt,Pvalue<0.05)
+dim(sig)
+
+sig<-subset(Rlt,FDR<0.05)
+dim(sig)
+
+# high rigorous D-MHL
+sig<-subset(Rlt,FDR<0.05 & abs(Delta)>0.3)
+dim(sig)
+
+## Signficant Detection with removing missing values
+Newdata<-RawNARemove(Newdata)
+dim(Newdata)
+Newdata<-ColNARemove(Newdata)
+dim(Newdata)
+x1<-grep("CCP",colnames(Newdata))
+x2<-grep("NP-Kun",colnames(Newdata))
+colnames(Newdata)
+Rlt<-ttestFunction(Newdata,x1,x2)
+head(Rlt)
+dim(Rlt)
+
+# sig<-subset(Rlt,P.FDR<0.05 & (as.numeric(as.character(Delta))< -0.1|as.numeric(as.character(Delta))>0.5))
+sig<-subset(Rlt,P.FDR<0.05)
+dim(sig)
+sig<-subset(Rlt,P.FDR<0.05 & (as.numeric(as.character(Delta))< -0.1|as.numeric(as.character(Delta))>0.5))
+dim(sig)
+write.table(sig,file="pancreatic.cancer.plasma.vs.normal.plasma.significant.txt",col.names=NA,row.names=T,sep="\t",quote=F)
+
+# Heatmap for all signficant differential biomarkers(with missing value)
+tmp<-Newdata[match(rownames(sig),rownames(Newdata)),]
+head(tmp)
+colnames(tmp)
+table(colnames(tmp))
+colnames(tmp)<-c(rep("PCP",length(grep("PCP",colnames(tmp)))),rep("NP",length(grep("NP-Kun",colnames(tmp)))))
+
+## heatmap plot for colon cancer
+library("gplots")
+colors <- colorpanel(75,"midnightblue","mediumseagreen","yellow") 
+colors <-bluered(75)
+sidecol<-function(x){
+  x<-as.numeric(as.factor(x))
+  col<-rainbow(length(table(colnames(tmp))))
+  sapply(x,function(x) col[x])
+}
+ColSideColors=sidecol(colnames(tmp))
+pdf("Supplementary.pancreatic.sig.all.heatmap.pdf")
+heatmap.2(tmp,trace="none",cexRow = 0.5,cexCol = 0.7, ColSideColors=ColSideColors,density.info="none",col=colors,Colv=F,keysize=0.9, margins = c(5, 10))
+dev.off()
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

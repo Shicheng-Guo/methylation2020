@@ -1,0 +1,21 @@
+# Required
+scripts_dir="/home/ddiep/scripts/BisReadMapper/src"
+samtools="/home/ddiep/softwares/samtools-0.1.18/samtools"
+bamUtils="bam"
+cpg_list="/media/3TB_AG/bisHg19/hg19_lambda.cpg.positions.txt"
+ref_fai="/media/3TB_AG/bisHg19/hg19.fa.fai"
+ref_fa="/media/3TB_AG/bisHg19/hg19.fa"
+
+# for mapping
+template_fwd="/media/3TB_AG/bisHg19/hg19_lambda.bis.CT"
+template_rev="/media/3TB_AG/bisHg19/hg19_lambda.bis.GA"
+mapper="/home/ddiep/softwares/bwa-0.7.5a/bwa"
+trimgalore="/home/ddiep/softwares/trim_galore_latest/trim_galore"
+
+# for snp calling
+samtools_snp="/home/ddiep/softwares/samtools-0.1.8/samtools"
+snp_list="NA"
+ref_dbsnp="/media/3TB_AG/bisHg19/snp134_snv.txt"
+
+# for targeted sequencing
+target_bed="NA"

@@ -1,0 +1,539 @@
+---
+title: "Tissue Specific MHBs based on WGBS and RRBS dataset"
+author: "Shicheng Guo"
+date: "Monday, February 01, 2016"
+output: html_document
+---
+  
+  We updated the batch 3 normal plasma data. and Figure 4 were changed to heatmap plot and mixture analysis. Now the previous Figure 4C were changed to Figure 5A.
+We want to show the tissues specific MHBs in the plasma so that we want to show Methylation haplotype load could be used for the tissue-of-origin prediction. 
+
+pre-load function is as the following:
+```{r setup,echo=F}
+# system("wget https://cran.r-project.org/src/contrib/mlbench_2.1-1.tar.gz")
+# system("wget https://cran.r-project.org/src/contrib/caret_6.0-70.tar.gz")
+# install.packages("mlbench_2.1-1.tar.gz")
+# install.packages("caret_6.0-70.tar.gz")
+library("mlbench")
+library("caret")
+library("randomForest")
+library("impute")
+set.seed(1)
+RowNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[2]
+  NaRaw<-which(apply(data,1,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,1,function(x) all(x==0))==T)
+  NaRAW<-c(NaRaw,zero)
+  if(length(NaRAW)>0){
+    dat<-data[-NaRAW,]
+  }else{
+    dat<-data;
+  }
+  dat
+} 
+HeatMap<-function(data,phen,figure="heatmap.pdf",cexRow = 0.01,cexCol = 1.2,Colv=T,Rowv=T){
+  library("gplots")
+  colnames(data)=phen
+  colors <- colorpanel(75,"midnightblue","mediumseagreen","yellow") 
+  colors <-bluered(75)
+  colors <-greenred(75)
+  sidecol<-function(x){
+    x<-as.numeric(as.factor(x))
+    col<-rainbow(length(table(colnames(data))))
+    sapply(x,function(x) col[x])
+  }
+  ColSideColors=sidecol(phen)
+  pdf(figure)
+  heatmap.2(data,trace="none",cexRow = cexRow,cexCol = cexCol, ColSideColors=ColSideColors,density.info="none",col=colors,Colv=Colv,Rowv=Rowv,keysize=0.9, margins = c(5, 10))
+  dev.off()
+}
+gsi<-function(data){
+  group=names(table(colnames(data)))
+  index=colnames(data)
+  gsi<-c()
+  gmaxgroup<-c()
+  for(i in 1:nrow(data)){
+    gsit<-0
+    gmax<-names(which.max(tapply(as.numeric(data[i,]),index,mean)))
+    for(j in 1:length(group)){
+      tmp<-(1-10^(mean(data[i,][which(index==group[j])]))/10^(mean(data[i,][which(index==gmax)])))/(length(group)-1)
+      gsit<-gsit+tmp
+    }
+    gmaxgroup<-c(gmaxgroup,gmax)
+    gsi<-c(gsi,gsit)
+    print(c(gmax,gsit))
+  }
+  rlt=data.frame(region=rownames(data),group=gmaxgroup,GSI=gsi)
+  return(rlt)
+}
+Coloncancerdatapre<-function(){
+  rlt<-list()
+  setwd("/home/shg047/oasis/monod/hapinfo/June")
+  saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+  #data<-read.table("/oasis/tscc/scratch/shg047/monod/hapinfo/June/monod.mhl.june25.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+  #save(data,file="monod.mhl.june25.RData")
+  load("monod.mhl.june25.RData")
+  data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+  colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+  colnames(data)[grep("WB",colnames(data))]<-"WBC"
+  colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+  colnames(data)[grep("methylC",colnames(data))]<-"H1"
+  colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+  colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+  colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+  colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+  colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+  data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|WBC|Intestine|Liver|Esophagus|Kidney|CCP|CCT|LCT|CCTmix|NCP|LCTmix|LCP",colnames(data))]
+  data1_ref<-data1[,-(grep("CCP|CCTmix|NCP|LCP|LCTmix",colnames(data1)))]
+  base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+  colnames(data1_ref)<-base
+  gsi<-data.frame(GSIMethDecon(data1_ref))
+  group<-as.character(unique(gsi$group))
+  signatures<-AverageWithGroup(data1_ref)  # QR
+  rlt$GSI<-gsi
+  rlt$data<-data1
+  rlt$ref<-data1_ref
+  rlt$signature<-signatures
+  return(rlt)
+}
+AverageWithGroup<-function(data){
+  base=unlist(lapply(strsplit(colnames(data),"[.]"),function(x) x[[1]]))
+  matrix=apply(data,1,function(x) tapply(x,base,function(x) mean(x,na.rm=T)))
+  matrix<-t(matrix)
+  rownames(matrix)=rownames(data)
+  matrix<-matrix[!rowSums(!is.finite(matrix)),]
+  return(matrix)
+}
+reformat<-function(data){
+  base=unlist(lapply(strsplit(colnames(Ref1),"[.]"),function(x) x[[1]]))
+  matrix=apply(Ref1,1,function(x) tapply(x,base,function(x) mean(x,na.rm=T)))
+  matrix<-t(matrix)
+  rownames(matrix)=rownames(Ref1)
+  matrix<-matrix[!rowSums(!is.finite(matrix)),]
+  return(matrix)
+}
+topGSIByCategory<-function(GSITest,top){
+  rlt<-c()
+  GSITest=data.frame(GSITest)
+  for(i in 1:length(table(GSITest[,2]))){
+    sub<-subset(GSITest,group==names(table(GSITest[,2]))[i])
+    rlt<-rbind(rlt,sub[order(sub$GSI,decreasing=T)[1:top],])
+  }
+  return(rlt)
+}
+RandomGSIByCategory<-function(GSITest,top){
+  rlt<-c()
+  GSITest=data.frame(GSITest)
+  for(i in 1:length(table(GSITest[,2]))){
+    sub<-subset(GSITest,group==names(table(GSITest[,2]))[i])
+    samplefeature<-unique(sample(1:nrow(sub),top,replace=T))
+    rlt<-rbind(rlt,sub[order(sub$GSI,decreasing=T)[samplefeature],])
+  }
+  return(rlt)
+}
+RawNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[2]
+  NaRaw<-which(apply(data,1,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,1,function(x) all(x==0))==T)
+  NaRAW<-c(NaRaw,zero)
+  if(length(NaRAW)>0){
+    data1<-data[-NaRAW,]
+  }else{
+    data1<-data;
+  }
+  data1
+}  
+logit<-function (p, percents = range.p[2] > 1, adjust) {
+  range.p <- range(p, na.rm = TRUE)
+  if (percents) {
+    if (range.p[1] < 0 || range.p[1] > 100) 
+      stop("p must be in the range 0 to 100")
+    p <- p/100
+    range.p <- range.p/100
+  }
+  else if (range.p[1] < 0 || range.p[1] > 1) 
+    stop("p must be in the range 0 to 1")
+  a <- if (missing(adjust)) {
+    if (isTRUE(all.equal(range.p[1], 0)) || isTRUE(all.equal(range.p[2], 
+                                                             1))) 
+      0.025
+    else 0
+  }
+  else adjust
+  if (missing(adjust) && a != 0) 
+    warning(paste("proportions remapped to (", a, ", ", 1 - 
+                    a, ")", sep = ""))
+  a <- 1 - 2 * a
+  log((0.5 + a * (p - 0.5))/(1 - (0.5 + a * (p - 0.5))))
+}
+GSIMethDecon<-function(data){
+  data<-data.matrix(data)
+  group=names(table(colnames(data)))
+  index=colnames(data)
+  gsi<-gmaxgroup<-avebase<-c()
+  for(i in 1:nrow(data)){
+    gsit<-0
+    gmax<-names(which.max(tapply(as.numeric(data[i,]),index,function(x) mean(x,na.rm=T))))
+    for(j in 1:length(group)){
+      tmp<-(1-10^(mean(data[i,][which(index==group[j])],na.rm=T))/10^(mean(data[i,][which(index==gmax)],,na.rm=T)))/(length(group)-1)
+      gsit<-gsit+tmp
+    }
+    ave<-tapply(data[i,], index, function(x) mean(x,na.rm=T))
+    gmaxgroup<-c(gmaxgroup,gmax)
+    gsi<-c(gsi,gsit)
+    avebase<-rbind(avebase,ave)
+  }
+  rlt=data.frame(region=rownames(data),group=gmaxgroup,GSI=gsi,AVE=avebase)
+  return(rlt)
+}
+TopGSIByCategory<-function(gsi,top=1,thresHigh=0.2,thresLow=0.1,allmin=0.05,plotfigure=T,figprefix="tissuespecific"){
+  # gsi=GSITest; thresHigh=0.2; thresLow=0.1; allmin=0.05; plotfigure=T; figprefix="test-tissuespecific"
+  gsi=data.frame(gsi)
+  GSIRlt<-c()
+  group<-as.character(unique(gsi$group))
+  rank<-c(rep(top,length(group)))
+  otf1<-paste(figprefix,"boxplot.pdf",sep="")
+  otf2<-paste(figprefix,"heatmap.pdf",sep="")
+  parnum<-ceiling(sqrt(length(group)))
+  pdf(otf1)
+  par(mfrow=c(parnum,parnum),oma = c(2,2,2,2) + 0.1,mar = c(2,2,2,2) + 0.1,cex.axis=0.75, cex.lab=0.75)
+  for (i in 1:length(group)){
+    # select tissue-specific (remove target group<0.2 or non-target group>0.1)
+    subset=gsi[which(gsi$group==group[i]),]
+    rexclhigh<-which(apply(subset,1,function(x) x[grep(group[i],colnames(gsi))]<thresHigh))
+    rexclall<-which(apply(subset,1,function(x) all(x[grep(group[i],colnames(gsi))]<allmin)))
+    xx<-subset[,-grep(group[i],colnames(gsi))]
+    rexcllow<-which(apply(xx,1,function(x) any(as.numeric(x[4:length(x)])>thresLow)))
+    rexcl<-c(rexclhigh,rexcllow,rexclall)
+    subset=subset[-rexcl,]
+    subset=subset[order(subset[,3],decreasing=T)[1:rank[i]],]
+    GSIRlt<-rbind(GSIRlt,subset)
+    if(plotfigure==T){
+      zz=subset[which(subset$group==group[i]),]
+      if(nrow(zz)>=1){
+        boxplot(na.omit(zz[,4:ncol(zz)]),horizontal=T,las=2,col="red")
+      }else{
+        print(paste(group[i],"do not have biomarker,please check raw data",sep=" "))
+      }
+    }
+  }
+  dev.off()
+  
+  if(plotfigure==T){
+    HeatMap(data=data.matrix(na.omit(GSIRlt[,4:ncol(GSIRlt)])),phen=gsub("AVE.","",colnames(GSIRlt)[4:ncol(GSIRlt)]),figure=otf2)
+  }
+  GSIRlt<-na.omit(GSIRlt)
+  return(GSIRlt)
+}
+dataCollection<-function(){
+  rlt<-list()
+  setwd("/home/shg047/oasis/monod/hapinfo/June")
+  saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+  load("monod.mhl.june25.RData")
+  data<-data[,-grep("CTT-|PC-P|PC-T",colnames(data))]
+  colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+  colnames(data)[grep("WB",colnames(data))]<-"WBC"
+  colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+  colnames(data)[grep("methylC",colnames(data))]<-"H1"
+  colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+  colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+  colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+  colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+  colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+  data<-data[,grep("Brain|Stomach|Lung|Spleen|Colon|WBC|Intestine|Liver|Pancreas|Kidney|CCP|CCT|LCP|LCT|NCP",colnames(data))]
+  return(data)
+}
+ColNARemove<-function(data,missratio=0.3){
+  threshold<-(missratio)*dim(data)[1]
+  NaCol<-which(apply(data,2,function(x) sum(is.na(x))>threshold))
+  zero<-which(apply(data,2,function(x) all(x==0))==T)
+  NaCOL<-c(NaCol,zero)
+  if(length(NaCOL)>0){
+    data1<-data[,-NaCOL]
+  }else{
+    data1<-data;
+  }
+  data1
+}
+```
+newinput<-data[,grep("6-P-|7-P-|NC-P",colnames(data))]
+
+```{r input,echo=T,eval=F}
+setwd("/home/shg047/oasis/monod/hapinfo/June")
+Rawdata<-dataCollection()
+save(Rawdata,file="RawData.RData")
+```
+```{r}
+newdata<-Rawdata[,-grep("mix|CT",colnames(Rawdata))]
+newdata<-RawNARemove(newdata)
+newdata<-ColNARemove(newdata)
+
+library("impute")
+input<-impute.knn(data.matrix(newdata))$data
+save(input,file="input.RData")
+```
+
+```{r}
+# load("input.RData")
+colnames(input)[grep("NCP",colnames(input))]="WBC-test"
+colnames(input)[grep("LCP",colnames(input))]="Lung-test"
+colnames(input)[grep("CCP",colnames(input))]="Colon-test"
+train=input[,-grep("-test",colnames(input))]
+test=input[,grep("-test",colnames(input))]
+colnames(train)<-unlist(lapply(strsplit(colnames(train),"[.]"),function(x) x[[1]]))
+colnames(test)<-unlist(lapply(strsplit(colnames(test),"[-]"),function(x) x[[1]]))
+gsirlt1<-GSIMethDecon(train)
+gsirlt2<-GSIMethDecon(test)
+save.image(file="monod.image-1.RData")
+```
+
+```{r}
+load("input.RData")
+load("monod.image-1.RData")
+GsiRlt1<-TopGSIByCategory(gsi=gsirlt1,top=30,thresHigh=0.5,thresLow=0.1,allmin=0,plotfigure=F,figprefix="test-tissuespecific")
+write.table(GsiRlt1,file="bioI.biomarker.txt",col.names=T,row.names=F,sep="\t",quote=F)
+GsiRlt2<-TopGSIByCategory(gsi=gsirlt2,top=55,thresHigh=0.5,thresLow=0.1,allmin=0,plotfigure=F,figprefix="test-tissuespecific")
+write.table(GsiRlt2,file="bioII.biomarker.txt",col.names=T,row.names=F,sep="\t",quote=F)
+A=which(GsiRlt2$group=="Lung")[5:30]
+B=which(GsiRlt2$group=="Colon")[5:30]
+C=which(GsiRlt2$group=="WBC")[5:30]
+GsiRlt2<-GsiRlt2[-c(A,B,C),]
+rlt<-rbind(GsiRlt1[1:3],GsiRlt2[1:3])
+write.table(rlt,file="Last.biomarker.txt",col.names=F,row.names=F,sep="\t",quote=F)
+
+bio<-read.table("Last.biomarker.txt",head=F,sep="\t",as.is=T)
+newtest<-test[match(bio[,1],rownames(test)),]
+label=bio[,2]
+DisMatrix<-apply(newtest,2,function(x) tapply(x,label,function(x) sum(x>=0.3)))
+DisMatrix
+acc<-apply(DisMatrix,2,function(x) which.max(x))
+acc1<-sum(acc[1:30]==2)/30
+acc2<-sum(acc[31:59]==7)/29
+acc3<-sum(acc[60:134]==9)/75
+ACC<-c(acc1,acc2,acc3)
+ACC
+write.table(DisMatrix,file="prediction.matrix.result.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+save.image(file="monod.image-2.RData")
+```
+
+```{r}
+load("input.RData")
+load("monod.image-1.RData")
+# feature selection: same directory principle
+x1<-paste(gsirlt1[,1],gsirlt1[,2],sep=".")
+x2<-paste(gsirlt2[,1],gsirlt2[,2],sep=".")
+x<-c(x1,x2)
+y<-names(table(x)[which(table(x)==2)])
+region=unique(unlist(lapply(strsplit(y,"[.]"),function(x) x[[1]])))
+gSirlt2<-gsirlt2[match(region,gsirlt2[,1]),]  # test
+GsiRlt1<-TopGSIByCategory(gsi=gsirlt1,top=300,thresHigh=0.3,thresLow=0.1,allmin=0,plotfigure=F,figprefix="test-tissuespecific")
+GsiRlt2<-TopGSIByCategory(gsi=gSirlt2,top=10,thresHigh=0.3,thresLow=0.1,allmin=0,plotfigure=F,figprefix="test-tissuespecific")
+
+GsiRlt1<-GsiRlt1[order(GsiRlt1[,3],decreasing=F),]
+A=which(GsiRlt1$group=="Lung")[1:300]
+B=which(GsiRlt1$group=="Colon")[1:300]
+C=which(GsiRlt1$group=="WBC")[1:300]
+GsiRlt1<-GsiRlt1[-c(A,B,C),]
+rlt<-rbind(GsiRlt1[1:3],GsiRlt2[1:3])
+rlt<-unique(rlt)
+write.table(rlt,file="HumanTissueGSI-2.txt",sep="\t",quote=F,col.names=T,row.names=F)
+bio<-rlt
+
+# for train data
+load("input.RData")
+colnames(input)[grep("NCP",colnames(input))]="WBC-test"
+colnames(input)[grep("LCP",colnames(input))]="Lung-test"
+colnames(input)[grep("CCP",colnames(input))]="Colon-test"
+train=input[,-grep("-test",colnames(input))]
+test=input[,grep("-test",colnames(input))]
+colnames(train)<-unlist(lapply(strsplit(colnames(train),"[.]"),function(x) x[[1]]))
+colnames(test)<-unlist(lapply(strsplit(colnames(test),"[-]"),function(x) x[[1]]))
+
+bio<-read.table("HumanTissueGSI-2.txt",head=T,sep="\t",as.is=T)
+colnames(bio)<-c("ID","group","GSI")
+bio<-topGSIByCategory(bio,top=30)
+colnames(bio)<-c("ID","group","GSI")
+label=bio[,2]
+
+newtrain<-train[match(bio[,1],rownames(train)),]
+newtrain=newtrain[,order(colnames(newtrain))]
+label=bio[,2]
+ACCU<-c()
+for(i in seq(0,0.5,0.01)){
+DisMatrix<-apply(newtrain,2,function(x) tapply(x,label,function(x) sum(x>=i)))
+DisMatrix
+acc<-apply(DisMatrix,2,function(x) which.max(x))
+LEN<-table(colnames(newtrain))
+LOC<-c(0,cumsum(table(colnames(newtrain))))
+ACC<-c()
+for(j in 1:(length(LEN))){
+ACC1<-sum(acc[(LOC[j]+1):LOC[j+1]]==j)/LEN[j]
+ACC<-c(ACC,ACC1)
+}
+ACCU<-cbind(ACCU,ACC)
+}
+colnames(ACCU)<-seq(0,0.5,0.01)
+ACCU
+
+# for test data (5-fold cross validation)
+set.seed(666)
+fold1 <- cut(sample(seq(1,30),30),breaks=5,labels=FALSE)
+fold2 <- cut(sample(seq(1,29),29),breaks=5,labels=FALSE)
+fold3 <- cut(sample(seq(1,75),75),breaks=5,labels=FALSE)
+newtest<-test[match(bio[,1],rownames(test)),]
+fold<-c(fold1,fold2,fold3)
+traintest<-newtest[,which(fold !=i)]
+rlt<-c()
+for(i in 1:5){
+  ACC<-c()
+  for(j in seq(40,300,20)){
+    ACC1<-c()
+    for(k in seq(0,0.4,0.05)){
+      bio<-read.table("HumanTissueGSI-2.txt",head=T,sep="\t",as.is=T)
+      colnames(bio)<-c("ID","group","GSI")
+      bio<-topGSIByCategory(bio,top=j)
+      label=bio[,2]
+      newtest<-test[match(bio[,1],rownames(test)),]
+      fold<-c(fold1,fold2,fold3)
+      traintest<-newtest[,which(fold !=i)]
+      DisMatrix<-apply(traintest,2,function(x) tapply(x,label,function(x) sum(x>=k)))
+      DisMatrix
+      acc<-apply(DisMatrix,2,function(x) which.max(x))
+      acc1<-sum(acc[grep("Colon",names(acc))]==2)/length(grep("Colon",names(acc)))
+      acc2<-sum(acc[grep("Lung",names(acc))]==6)/length(grep("Lung",names(acc)))
+      acc3<-sum(acc[grep("WBC",names(acc))]==10)/length(grep("WBC",names(acc)))
+      ACCC<-c(j,k,acc1,acc2,acc3)
+      ACC1<-rbind(ACC1,ACCC)
+    }
+      ACC<-rbind(ACC,ACC1)
+  }
+      ACC<-ACC[which(ACC[,5]>ACC[,4] & ACC[,5]>ACC[,3]),]
+      parameter<-ACC[which.max(rowSums(ACC[,3:5])),]
+      parameter.feature<-parameter[1]
+      parameter.thres<-parameter[2]
+      bio<-read.table("HumanTissueGSI-2.txt",head=T,sep="\t",as.is=T)
+      colnames(bio)<-c("ID","group","GSI")
+      bio<-topGSIByCategory(bio,top=parameter.feature)
+      label=bio[,2]
+      newtest<-test[match(bio[,1],rownames(test)),]
+      testtest<-newtest[,which(fold ==i)]
+      DisMatrix<-apply(testtest,2,function(x) tapply(x,label,function(x) sum(x>=parameter.thres)))
+      DisMatrix
+      acc<-apply(DisMatrix,2,function(x) which.max(x))
+      acc1<-sum(acc[grep("Colon",names(acc))]==2)/length(grep("Colon",names(acc)))
+      acc2<-sum(acc[grep("Lung",names(acc))]==6)/length(grep("Lung",names(acc)))
+      acc3<-sum(acc[grep("WBC",names(acc))]==10)/length(grep("WBC",names(acc)))
+      ACC.test<-c(parameter[1:5],acc1,acc2,acc3)
+      print(ACC.test)
+      rlt<-rbind(rlt,ACC.test)
+}
+
+rlt
+
+write.table(rlt,file="CrossValidation-5Fold.Accuray.result.txt",sep="\t",quote=F,col.names=T,row.names=F)
+
+# for one-time test
+  ACC<-c()
+  for(j in c(160)){
+    ACC1<-c()
+    for(k in c(0.3)){
+      bio<-read.table("HumanTissueGSI-2.txt",head=T,sep="\t",as.is=T)
+      colnames(bio)<-c("ID","group","GSI")
+      bio<-topGSIByCategory(bio,top=j)
+      label=bio[,2]
+      newtest<-test[match(bio[,1],rownames(test)),]
+      fold<-c(fold1,fold2,fold3)
+      traintest<-newtest
+      DisMatrix<-apply(traintest,2,function(x) tapply(x,label,function(x) sum(x>=k)))
+      DisMatrix
+      acc<-apply(DisMatrix,2,function(x) which.max(x))
+      acc1<-sum(acc[grep("Colon",names(acc))]==2)/length(grep("Colon",names(acc)))
+      acc2<-sum(acc[grep("Lung",names(acc))]==6)/length(grep("Lung",names(acc)))
+      acc3<-sum(acc[grep("WBC",names(acc))]==10)/length(grep("WBC",names(acc)))
+      ACCC<-c(j,k,acc1,acc2,acc3)
+      ACC1<-rbind(ACC1,ACCC)
+    }
+      ACC<-rbind(ACC,ACC1)
+  }
+  colnames(ACC)=c('NF',"cutoff","CRC","LC","NP")
+  ACC
+  
+  newoutput<-data.frame(names(acc),rownames(DisMatrix)[as.numeric(acc)])
+      
+  write.table(newoutput,file="prediction.rlt.txt",col.names=NA,row.names=T,quote=F,sep="\t")
+
+      ACC[which(ACC[,4]>0.8 & ACC[,5]>0.9),]  # 160: it is not  100% the best since we need the specificity should high (accuray for normal)
+      
+      write.table(ACC,file="NoneCrossValidation.Accuray.result.txt",sep="\t",quote=F,col.names=T,row.names=F)
+
+rltt<-rbind(rlt[,3:5],rlt[,6:8])
+apply(rltt,2,function(x) ci95(x))
+
+
+# for one-time test and introduce ROC
+  ACC<-c()
+  for(j in c(160)){
+    ACC1<-c()
+    ACC2<-c()
+    ACC3<-c()
+    accmatrix<-c()
+    for(k in seq(0,0.4,0.01)){
+      bio<-read.table("HumanTissueGSI-2.txt",head=T,sep="\t",as.is=T)
+      colnames(bio)<-c("ID","group","GSI")
+      bio<-topGSIByCategory(bio,top=j)
+      label=bio[,2]
+      newtest<-test[match(bio[,1],rownames(test)),]
+      fold<-c(fold1,fold2,fold3)
+      traintest<-newtest
+      DisMatrix<-apply(traintest,2,function(x) tapply(x,label,function(x) sum(x>=k)))
+      DisMatrix
+      acc<-apply(DisMatrix,2,function(x) which.max(x))
+      acc1<-sum(acc[grep("Colon",names(acc))]==2)/length(grep("Colon",names(acc)))
+      fpr1<-(sum(acc[grep("Lung",names(acc))]==2)+sum(acc[grep("WBC",names(acc))]==2))/length(c(grep("Lung",names(acc)),grep("WBC",names(acc))))
+      acc2<-sum(acc[grep("Lung",names(acc))]==6)/length(grep("Lung",names(acc)))
+      fpr2<-(sum(acc[grep("Colon",names(acc))]==2)+sum(acc[grep("WBC",names(acc))]==2))/length(c(grep("Colon",names(acc)),grep("WBC",names(acc))))
+      acc3<-sum(acc[grep("WBC",names(acc))]==10)/length(grep("WBC",names(acc)))
+      fpr3<-(sum(acc[grep("Lung",names(acc))]==2)+sum(acc[grep("Colon",names(acc))]==2))/length(c(grep("Lung",names(acc)),grep("Colon",names(acc))))
+      ACCC1<-c(j,k,acc1,fpr1)
+      ACCC2<-c(j,k,acc1,fpr2)
+      ACCC3<-c(j,k,acc1,fpr3)
+
+      ACC1<-rbind(ACC1,ACCC1)
+      ACC2<-rbind(ACC1,ACCC2)
+      ACC3<-rbind(ACC1,ACCC3)
+      accmatrix<-rbind(acc,accmatrix)
+    }
+  }
+  rownames(accmatrix)=seq(0,0.4,0.01)
+  rr1<-table(accmatrix[,grep("Colon",colnames(accmatrix))])/(29*length(seq(0,0.4,0.01)))
+  rr2<-table(accmatrix[,grep("Lung",colnames(accmatrix))])/(29*length(seq(0,0.4,0.01)))
+  rr3<-table(accmatrix[,grep("WBC",colnames(accmatrix))])/(75*length(seq(0,0.4,0.01)))
+
+  rrlt<-cbind(rr1,rr2,rr3)
+  rownames(rrlt)=rownames(DisMatrix)[as.numeric(rownames(rrlt))]
+  colnames(rrlt)<-c("CRC","LC","WBC")
+  write.table(rrlt,file="Prediction.confusionmatrix.result.txt",sep="\t",quote=F,col.names=NA,row.names=T)
+
+        write.table(ACC1,file="NoneCrossValidation.ROC.Colon.result.txt",sep="\t",quote=F,col.names=T,row.names=F)
+
+      colnames(ACC)=c('NF',"cutoff","CRC","LC","NP")
+      write.table(ACC,file="NoneCrossValidation.ROC.result.txt",sep="\t",quote=F,col.names=T,row.names=F)
+
+      ACC[which(ACC[,4]>0.8 & ACC[,5]>0.9),]  # 160: it is not  100% the best since we need the specificity should high (accuray for normal)
+      
+y1<-c(0.84,0.89,0.92)
+y2<-c(0.77,0.86,0.88)
+(y1[1]*25+y2[1]*5)/30
+(y1[2]*24+y2[2]*5)/29
+(y1[3]*60+y2[3]*15)/75
+
+75/5
+```
+
+
+
+
+
+
+
+

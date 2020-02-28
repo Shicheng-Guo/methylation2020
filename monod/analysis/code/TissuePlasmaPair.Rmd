@@ -1,0 +1,153 @@
+
+## rrbs dataset
+```{r}
+data<-read.table("/home/shg047/work/monod/rrbs_kun/rrbs.kun.mhl.txt",head=T,sep="\t",as.is=T,row.names=1,check.names=F)
+colnames(data)<-gsub("RRBS-6P","6-P-",colnames(data))
+colnames(data)<-gsub("RRBS-7P","7-P-",colnames(data))
+
+colnames(data)[grep("NC-P",colnames(data))]
+
+incl1<-c(grep("6-T-|7-T-",colnames(data)))
+dataT<-data[,incl1]
+colnames(dataT)
+
+x1<-colnames(data)[grep("NC-P",colnames(data))]
+x2<-paste("6-P-",1:5,sep="")
+x3<-paste("6-T-",1:5,sep="")
+x4<-paste("7-P-",1:5,sep="")
+x5<-paste("7-T-",1:5,sep="")
+
+dataNP<-data[,match(x1,colnames(data))]
+dataCP<-data[,match(c(x2,x4),colnames(data))]
+dataCT<-data[,match(c(x3,x5),colnames(data))]
+
+dim(dataNP)
+dim(dataCP)
+dim(dataCT)
+
+
+rlt<-c()
+for(i in 1:nrow(data)){
+  j=1
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,j]>0.1)*(dataCT[i,j]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+subset1<-subset(rlt,rlt[,1]==0 & rlt[,2]==1)
+
+rlt<-c()
+for(i in 1:nrow(data)){
+  j=2
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,j]>0.1)*(dataCT[i,j]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+subset2<-subset(rlt,rlt[,1]==0 & rlt[,2]==1)
+
+rlt<-c()
+for(i in 1:nrow(data)){
+  j=3
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,j]>0.1)*(dataCT[i,j]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+subset3<-subset(rlt,rlt[,1]==0 & rlt[,2]==1)
+
+rlt<-c()
+for(i in 1:nrow(data)){
+  j=4
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,j]>0.1)*(dataCT[i,j]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+subset4<-subset(rlt,rlt[,1]==0 & rlt[,2]==1)
+
+rlt<-c()
+for(i in 1:nrow(data)){
+  j=5
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,j]>0.1)*(dataCT[i,j]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+subset5<-subset(rlt,rlt[,1]==0 & rlt[,2]==1)
+
+subset1
+subset2
+subset3
+subset4
+subset5
+
+
+```
+plan 2: {6-P,6-T and NC-P} or {7-P,7-T and NC-P}
+```{r}
+data<-read.table("/home/shg047/work/monod/rrbs_kun/rrbs.kun.mhl.txt",head=T,sep="\t",as.is=T,row.names=1,check.names=F)
+colnames(data)<-gsub("RRBS-6P","6-P-",colnames(data))
+colnames(data)<-gsub("RRBS-7P","7-P-",colnames(data))
+colnames(data)[grep("NC-P",colnames(data))]
+incl1<-c(grep("6-T-|7-T-",colnames(data)))
+dataT<-data[,incl1]
+colnames(dataT)
+
+cat 6-P-1.hapInfo.txt 6-P-1.hapInfo.txt 6-P-1.hapInfo.txt 6-P-1.hapInfo.txt 6-P-1.hapInfo.txt > 6P.txt
+cat 6-T-1.hapInfo.txt 6-T-1.hapInfo.txt 6-T-1.hapInfo.txt 6-T-1.hapInfo.txt 6-T-1.hapInfo.txt > 6T.txt
+cat 6-P-1.hapInfo.txt 6-P-1.hapInfo.txt 6-P-1.hapInfo.txt 6-P-1.hapInfo.txt 6-P-1.hapInfo.txt > 7P.txt
+cat 7-T-1.hapInfo.txt 7-T-1.hapInfo.txt 7-T-1.hapInfo.txt 7-T-1.hapInfo.txt 7-T-1.hapInfo.txt > 7T.txt
+
+x1<-colnames(data)[grep("NC-P",colnames(data))]
+x2<-paste("6-P-",1:5,sep="")
+x3<-paste("6-T-",1:5,sep="")
+x4<-paste("7-P-",1:5,sep="")
+x5<-paste("7-T-",1:5,sep="")
+
+# case 1: 6-P, 6-T, NC-P
+dataNP<-data[,match(x1,colnames(data))]
+dataCP<-data[,match(c(x2),colnames(data))]
+dataCT<-data[,match(c(x3),colnames(data))]
+dim(dataNP)
+dim(dataCP)
+dim(dataCT)
+rlt<-c()
+for(i in 1:nrow(data)){
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,]>0.1)*(dataCT[i,]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+max(rlt[,2])
+subset<-subset(rlt,rlt[,1]<5 & rlt[,2]>3)
+dim(subset)
+head(subset)
+# case 2: 7-P, 7-T, NC-P
+dataNP<-data[,match(x1,colnames(data))]
+dataCP<-data[,match(c(x2),colnames(data))]
+dataCT<-data[,match(c(x3),colnames(data))]
+dim(dataNP)
+dim(dataCP)
+dim(dataCT)
+rlt<-c()
+for(i in 1:nrow(data)){
+  a1<-sum(dataNP[i,]>0.02,na.rm=T) 
+  a2<-sum(((dataCP[i,]>0.1)*(dataCT[i,]>0.1)),na.rm=T)
+  rlt<-rbind(rlt,c(a1,a2))
+}
+rownames(rlt)<-rownames(data)
+max(rlt[,2])
+subset<-subset(rlt,rlt[,1]<5 & rlt[,2]>3)
+dim(subset)
+head(subset)
+```
+this idea failed, such kinds of haplotype is hard to identified. 
+
+```{r}
+data<-read.table("/home/shg047/work/monod/rrbs_kun/rrbs.kun.mhl.txt",head=T,sep="\t",as.is=T,row.names=1,check.names=F)
+colnames(data)
+pdf("hist.pdf")
+hist(data[,1])
+dev.off()
+```

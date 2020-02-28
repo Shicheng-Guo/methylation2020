@@ -1,0 +1,416 @@
+---
+title: "Deconvolution with cibersort"
+author: "Shicheng Guo"
+date: "Monday, June 13, 2016"
+output: html_document
+---
+
+
+
+```{r}
+install.packages("installr") # install 
+setInternet2(TRUE)
+installr::updateR() # updating R.
+
+# data1<-read.table("/home/shg047/monod/rrbs_kun/rrbs.kun.mhl.na.impute.txt",head=T,as.is=T, check.name=F)
+# colnames(data1)<-gsub("RRBS-6P","6-P-",colnames(data1))
+# colnames(data1)<-gsub("RRBS-7P","7-P-",colnames(data1))
+# data1<-data1[,-(31:34)]
+
+library("DeconRNASeq")
+setwd("/home/shg047/oasis/monod/hapinfo/")
+saminfo<-read.table("/home/shg047/oasis/monod/saminfo.txt",sep="\t")
+data<-read.table("/home/shg047/oasis/monod/hapinfo/monod.mhl.may5.txt",head=T,sep="\t",row.names=1,as.is=T,check.names=F)
+data<-data[,-grep("CTT-",colnames(data))]
+colnames(data)
+colnames(data)[grep("STL",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("STL",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("WB",colnames(data))]<-"WBC"
+colnames(data)[grep("N37",colnames(data))]<-as.character(saminfo[match(colnames(data)[grep("N37",colnames(data))],saminfo[,1]),2])
+colnames(data)[grep("methylC",colnames(data))]<-"H1"
+colnames(data)[grep("6-T|Colon_Tumor_Primary",colnames(data))]<-"CCT"
+colnames(data)[grep("7-T-",colnames(data))]<-"LCT"
+colnames(data)[grep("6-P-",colnames(data))]<-"CCP"
+colnames(data)[grep("7-P-",colnames(data))]<-"LCP"
+colnames(data)[grep("NC-P-",colnames(data))]<-"NCP"
+
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|CCT|WBC|Liver|Esophagus|Kidney|Intestine|CCP",colnames(data))]
+data1_ref<-data1[,-(grep("CCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+rlt<-c()
+rank<-c(rep(30,4),rep(30,1),rep(30,4),rep(30,1),rep(30,1))
+for (i in 1:length(group)){
+  subset=gsi[which(gsi$group==group[i]),]
+  subset=subset[order(subset[,3],decreasing=T)[1:rank[i]],]
+  rlt<-rbind(rlt,subset)
+}
+table(rlt[,2])
+rlt2<-c()
+seed<-c()
+seedx<-c()
+
+for(KK in 1:300){
+
+set.seed<-sample(1:1000,1)
+rlt2<-c()
+Data1<-data1[match(rlt[,1],rownames(data1)),][sample(1:nrow(rlt),100),]
+newdata<-data.frame(Data1[,grep("CCP",colnames(Data1))])
+newsignatures<-data.frame(Data1[,-grep("CCP|Kidney|Lung",colnames(Data1))])
+newsignatures<-reformat(newsignatures)
+# Method 1. Sample Samples
+for(j in 1:15){
+AA<-c()
+NOS<-6
+for(i in 1:NOS){
+A<-rowMeans(newdata[,sample(1:30,15)],na.rm=T)
+AA<-cbind(AA,A)
+}
+xxm<-data.frame(AA,newsignatures)
+xxm<-xxm[-which(!is.finite(rowSums(xxm))),]
+Newdata<-data.frame(xxm[,1:NOS])
+Newsignatures<-data.frame(xxm[,(NOS+1):ncol(xxm)])
+Rlt<-try(DeconRNASeq(Newdata,data.frame(Newsignatures), checksig=FALSE,known.prop = F, use.scale = F, fig = TRUE))
+tmp<-colMeans(Rlt$out.all)
+if(all(names(sort(tmp,decreasing=T)[1:3])==c("WBC","CCT","Colon"))){
+seedx<-c(seedx,j)  
+}
+rlt2<-rbind(rlt2,tmp)
+seed<-c(seed,j)  
+}
+colMeans(rlt2)
+
+
+}
+rlt2<-data.frame(rlt2)
+colMeans(rlt2)
+
+colon<-list()
+colon$gsi<-gsi
+colon$Mixdata<-Newdata
+colon$Signature<-Newsignatures
+colon$rlt<-Rlt
+save(colon,file="ColonPlasma.Decon.Rlt.RData")
+
+pdf("barplot-colon-plasma.pdf")
+plot<-colon$rlt$out.all
+plot<-plot[,order(colMeans(plot),decreasing=T)]
+boxplot(plot,cex.axis=0.5,col="blue",outline=F)
+dev.off()
+
+
+
+
+load("ColonPlasma.Decon.Rlt.RData")
+
+save(rlt2,file="rlt2-complete.select.best.RData")
+subset(rlt2,WBC>0.4 & CCT>0.05 & Colon>0.01)
+subset(rlt2,WBC>0.4 & CCT>0.137)
+
+
+
+# Lung cancer
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|LCT|WBC|Liver|Esophagus|Kidney|Intestine|LCP",colnames(data))]
+data1_ref<-data1[,-(grep("LCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+
+rlt<-c()
+rank<-c(rep(30,4),rep(30,1),rep(30,4),rep(30,1),rep(30,1))
+for (i in 1:length(group)){
+  subset=gsi[which(gsi$group==group[i]),]
+  subset=subset[order(subset[,3],decreasing=T)[1:rank[i]],]
+  rlt<-rbind(rlt,subset)
+}
+table(rlt[,2])
+rlt2<-c()
+seed<-c()
+seedx<-c()
+
+for(KK in 1:20){
+
+Data1<-data1[match(rlt[,1],rownames(data1)),][sample(1:nrow(rlt),50),]
+newdata<-data.frame(Data1[,grep("LCP",colnames(Data1))])
+newsignatures<-data.frame(Data1[,-grep("LCP|Kidey",colnames(Data1))])
+newsignaturescibersot<-newsignatures
+newsignatures<-reformat(newsignatures)
+# Method 1. Sample Samples
+#for(j in 1:1){
+AA<-c()
+NOS<-30
+for(i in 1:NOS){
+A<-rowMeans(newdata[,sample(1:29,15)],na.rm=T)
+AA<-cbind(AA,A)
+}
+xxm<-data.frame(AA,newsignatures)
+xxm<-xxm[-which(!is.finite(rowSums(xxm))),]
+Newdata<-data.frame(xxm[,1:NOS])
+Newsignatures<-data.frame(xxm[,(NOS+1):ncol(xxm)])
+Rlt<-try(DeconRNASeq(Newdata,data.frame(Newsignatures), checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE))
+tmp<-colMeans(Rlt$out.all)
+tmp
+pdf("barplot.pdf")
+plot<-Rlt$out.all
+plot<-plot[,order(colMeans(plot),decreasing=T)]
+boxplot(plot,cex.axis=0.5,col="blue",outline=F)
+dev.off()
+write.table(Rlt$out.all,file="Lung-deconvolution.result.txt",col.names=NA,row.names=T,sep="\t",quote=F)
+newsignaturescibersot<-newsignaturescibersot[match(rownames(Newsignatures),rownames(newsignaturescibersot)),]
+write.table(Newdata,file="test.lung.data.txt",sep="\t",row.names=T,col.names=NA,quote=F)
+write.table(newsignaturescibersot,file="signatures.lung.data.txt",sep="\t",row.names=T,col.names=NA,quote=F)
+base=unlist(lapply(strsplit(colnames(newsignaturescibersot),"[.]"),function(x) x[[1]]))
+label<-matrix(2,nrow=length(unique(base)),ncol=ncol(newsignaturescibersot))
+rownames(label)=unique(base)
+for(i in 1:nrow(label)){
+label[i,grep(unique(base)[i],colnames(newsignaturescibersot))]<-1
+}
+colnames(label)=colnames(newsignaturescibersot)
+write.table(label,file="label.txt",sep="\t",row.names=T,col.names=NA,quote=F)
+
+if(all(names(sort(tmp,decreasing=T)[1:3])==c("WBC","LCT","Lung"))){
+seedx<-c(seedx,j)  
+}
+rlt2<-rbind(rlt2,tmp)
+seed<-c(seed,j)  
+}
+}
+rlt2<-data.frame(rlt2)
+rownames(rlt2)<-seed
+colMeans(rlt2)
+save(rlt2,file="rlt2-lung-complete.select.best.RData")
+subset(rlt2,WBC>0.4 & CCT>0.05 & Lung>0.01)
+subset(rlt2,WBC>0.4 & CCT>0.137)
+
+
+#Normal Plasma
+data1<-data[,grep("Brain|Stomach|Lung|Heart|Colon|WBC|Liver|Esophagus|Kidney|Intestine|NCP",colnames(data))]
+data1_ref<-data1[,-(grep("NCP",colnames(data1)))]
+base=unlist(lapply(strsplit(colnames(data1_ref),"[.]"),function(x) x[[1]]))
+colnames(data1_ref)<-base
+gsi<-data.frame(GSI(data1_ref))
+group<-as.character(unique(gsi$group))
+
+rlt<-c()
+rank<-c(rep(30,4),rep(30,1),rep(30,4),rep(30,1),rep(30,1))
+for (i in 1:length(group)){
+  subset=gsi[which(gsi$group==group[i]),]
+  subset=subset[order(subset[,3],decreasing=T)[1:rank[i]],]
+  rlt<-rbind(rlt,subset)
+}
+table(rlt[,2])
+rlt2<-c()
+seed<-c()
+seedx<-c()
+
+for(KK in 1:3000){
+Data1<-data1[match(rlt[,1],rownames(data1)),][sample(1:nrow(rlt),100),]
+newdata<-data.frame(Data1[,grep("NCP",colnames(Data1))])
+newsignatures<-data.frame(Data1[,-grep("NCP",colnames(Data1))])
+newsignatures<-reformat(newsignatures)
+# Method 1. Sample Samples
+for(j in 1:5){
+set.seed(j)
+AA<-c()
+NOS<-6
+for(i in 1:NOS){
+A<-rowMeans(newdata[,sample(1:30,15)],na.rm=T)
+AA<-cbind(AA,A)
+}
+xxm<-data.frame(AA,newsignatures)
+xxm<-xxm[-which(!is.finite(rowSums(xxm))),]
+Newdata<-data.frame(xxm[,1:NOS])
+Newsignatures<-data.frame(xxm[,(NOS+1):ncol(xxm)])
+Rlt<-try(DeconRNASeq(Newdata,data.frame(Newsignatures), checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE))
+tmp<-colMeans(Rlt$out.all)
+rlt2<-rbind(rlt2,tmp)
+seed<-c(seed,j)  
+}
+}
+rlt2<-data.frame(rlt2)
+rownames(rlt2)<-seed
+colMeans(rlt2)
+save(rlt2,file="rlt2-NCP-complete.select.best.RData")
+subset(rlt2,WBC>0.4)
+subset(rlt2,WBC>0.4)
+pdf("barplot-normalplasma.pdf")
+plot<-rlt2
+plot<-plot[,order(colMeans(plot),decreasing=T)]
+boxplot(plot,cex.axis=0.5,col="blue",outline=F)
+dev.off()
+
+
+
+# Method 2. Feature Selection
+rlt<-c()
+rank<-rep(30,length(group))
+for (i in 1:length(group)){
+  subset=subset(gsi,gsi$group==group[i])
+  subset=subset[order(subset[,3],decreasing=T)[1:rank[i]],]
+  rlt<-rbind(rlt,subset)
+}
+Data1<-data1[match(rlt[,1],rownames(data1)),]
+newdata<-data.frame(Data1[,grep("CCP",colnames(Data1))])
+newsignatures<-data.frame(Data1[,-grep("CCP",colnames(Data1))])
+newsignatures<-reformat(newsignatures)
+ZZ<-c()
+seed<-c()
+for(j in 1:10){
+set.seed(j)
+xx<-split(1:30,rep(sample(1:15),2))
+rlt<-c()
+for(i in 1:length(xx)){
+tmp<-rowMeans(newdata[,xx[[i]]])
+rlt<-cbind(rlt,tmp)
+}
+xxm<-data.frame(rlt,newsignatures)
+xxm<-xxm[-which(!is.finite(rowSums(xxm))),]
+Newdata1<-data.frame(xxm[,1:15])
+Newsignatures<-data.frame(xxm[,(15+1):ncol(xxm)])
+RLT<-DeconRNASeq(Newdata1,data.frame(Newsignatures),checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+tmp<-colMeans(RLT$out.all)
+ZZ<-rbind(ZZ,tmp)
+seed<-c(seed,j)
+}
+
+
+rlt3<-apply(rlt2,1,function(x) order(x,decreasing=T))
+rlt4<-data.frame(rlt3)
+GSI(Ref1)
+Ref2<-data[,grep("Brain|Stomach|Lung|Heart|Colon|LCT|WBC|Liver|Esophagus|Kidney|Intestine|LCP",colnames(data))]
+Ref3<-data[,grep("Brain|Stomach|Lung|Heart|Colon|WBC|Liver|Esophagus|Kidney|Intestine|NCP",colnames(data))]
+Data1<-reformat(newdata1)
+Data2<-reformat(Ref2)
+Data3<-reformat(Ref3)
+
+# colon cancer
+data1_test<-Data1[,which(colnames(Data1)=="CCP")]
+data1_ref<-Data1[,-which(colnames(Data1)=="CCP")]
+pcl<-matrix(2,ncol(data1_ref),ncol(data1_ref))
+diag(pcl)=1
+write.table(data1_ref,file="CCP-Ref.txt",sep="\t",col.names=NA,row.names=T,quote=F)
+write.table(data1_test,file="CCP-test.txt",sep="\t",col.names=NA,row.names=T,quote=F)
+write.table(pcl,file="CCP-ciber-sort.pcl.txt",sep="\t",col.names=NA,row.names=T,quote=F)
+
+# colon cancer
+data1_test<-Data1[,which(colnames(Data1)=="LCP")]
+data1_ref<-Data1[,-which(colnames(Data1)=="LCP")]
+pcl<-matrix(2,ncol(data1_ref),ncol(data1_ref))
+diag(pcl)=1
+write.table(data1_ref,file="LCP-Ref.txt",sep="\t",col.names=NA,row.names=T,quote=F)
+write.table(data1_test,file="LCP-test.txt",sep="\t",col.names=NA,row.names=T,quote=F)
+write.table(pcl,file="LCP-ciber-sort.pcl.txt",sep="\t",col.names=NA,row.names=T,quote=F)
+
+# Normal plasma
+data1_test<-Data1[,which(colnames(Data1)=="NCP")]
+data1_ref<-Data1[,-which(colnames(Data1)=="NCP")]
+
+pcl<-matrix(2,ncol(data1_ref),ncol(data1_ref))
+diag(pcl)=1
+write.table(data1_ref,file="LCP-Ref.txt",sep="\t",col.names=NA,row.names=T,quote=F)
+write.table(data1_test,file="LCP-test.txt",sep="\t",col.names=NA,row.names=T,quote=F)
+write.table(pcl,file="LCP-ciber-sort.pcl.txt",sep="\t",col.names=NA,row.names=T,quote=F)
+
+source("https://bioconductor.org/biocLite.R")
+biocLite("DeconRNASeq")
+
+```
+
+```{r}
+library(DeconRNASeq)
+## multi_tissue: expression profiles for 10 mixing samples from
+## multiple tissues
+data(multi_tissue)
+datasets <- x.data[,2:3]
+signatures <- x.signature.filtered.optimal[,2:6]
+dim(datasets)
+dim(signatures)
+head(datasets)
+head(signatures)
+
+proportions <- fraction
+head(proportions)
+attributes(signatures)[c(1,2)]
+DeconRNASeq(data.frame(datasets), signatures, checksig=FALSE,known.prop = F, use.scale = TRUE, fig = TRUE)
+
+setwd("C:\\Users\\shicheng\\Downloads\\alice")
+datasets=read.table("CCP-test.txt",head=T,row.names=1,sep="\t",as.is=T)
+signatures=read.table("CCP-Ref.txt",head=T,row.names=1,sep="\t",as.is=T)
+
+sd<-apply(signatures,1,function(x) sd(x))
+sel<-order(sd,decreasing=F)[1:500]
+newdataset<-data.frame(datasets[sel,])
+newsignatures<-data.frame(signatures[sel,])
+class(signatures)
+names(signatures)
+attributes(signatures)[c(1,2)]
+dim(signatures)
+
+x.data.temp <- prep(newsignatures, scale = "none", center = TRUE)
+
+
+
+princomp(newsignatures)
+fit <- princomp(mydata, cor=TRUE)
+summary(fit) # print variance accounted for 
+loadings(fit) # pc loadings 
+plot(fit,type="lines") # scree plot 
+fit$scores # the principal components
+biplot(fit)
+
+datasets=newdataset
+signatures=newsignatures
+proportions=NULL
+checksig=FALSE
+known.prop = FALSE
+use.scale = TRUE
+fig=TRUE
+
+DeconRNASeq(newdataset,newsignatures, checksig=F,known.prop = F, use.scale = F, fig = F)
+gsi<-GSI(signatures)
+colnames(signatures)
+
+head(signatures)
+head(datasets)
+
+```
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+
+reformat<-function(data){
+  # average the MHL matrix for each row based on tissue of basement
+  base=unlist(lapply(strsplit(colnames(data),"[.]"),function(x) x[[1]]))
+  matrix=apply(data,1,function(x) tapply(x,base,function(x) mean(x,na.rm=T)))
+  matrix<-t(matrix)
+  rownames(matrix)=rownames(data)
+  matrix<-matrix[!rowSums(!is.finite(matrix)),]
+  return(matrix)
+}
+
+
+GSI<-function(data){
+  data<-data.matrix(data)
+  group=names(table(colnames(data)))
+  index=colnames(data)
+  gsi<-c()
+  gmaxgroup<-c()
+  for(i in 1:nrow(data)){
+  gsit<-0
+  gmax<-names(which.max(tapply(as.numeric(data[i,]),index,function(x) mean(x,na.rm=T))))
+  for(j in 1:length(group)){
+    tmp<-(1-10^(mean(data[i,][which(index==group[j])],na.rm=T))/10^(mean(data[i,][which(index==gmax)],,na.rm=T)))/(length(group)-1)
+    gsit<-gsit+tmp
+  }
+  gmaxgroup<-c(gmaxgroup,gmax)
+  gsi<-c(gsi,gsit)
+  }
+  rlt=data.frame(region=rownames(data),group=gmaxgroup,GSI=gsi)
+  return(rlt)
+}
+
+
+```
+

@@ -1,0 +1,20 @@
+
+source("http://www.bioconductor.org/biocLite.R")
+biocLite("DMRcate")
+library("DMRcate")
+data(dmrcatedata)
+myMs <- logit2(myBetas)
+myMs.noSNPs <- rmSNPandCH(myMs, dist=2, mafcut=0.05)
+patient <- factor(sub("-.*", "", colnames(myMs)))
+type <- factor(sub(".*-", "", colnames(myMs)))
+design <- model.matrix(~patient + type)
+myannotation <- cpg.annotate(myMs.noSNPs, analysis.type="differential",design=design, coef=39)
+dmrcoutput <- dmrcate(myannotation, lambda=1000)
+phen.col <- c(rep("orange", 38), rep("blue", 38))
+DMR.plot(dmrcoutput=dmrcoutput, dmr=1, betas=myBetas, phen.col=phen.col,pch=16, toscale=TRUE, plotmedians=TRUE)
+
+
+cars.lo <- loess(dist ~ speed, cars)
+predict(cars.lo, data.frame(speed = seq(5, 30, 1)), se = TRUE)
+cars.lo2 <- loess(dist ~ speed, cars,control = loess.control(surface = "direct"))
+predict(cars.lo2, data.frame(speed = seq(5, 30, 1)), se = TRUE)

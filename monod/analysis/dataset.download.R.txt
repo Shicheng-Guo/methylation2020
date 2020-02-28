@@ -1,0 +1,25 @@
+library("GEOquery")
+GSE53045 <- getGEO("GSE53045",destdir="/home/sguo/monod/data/geo")
+save(GSE53045, file="GSE53045_matrix.Rdata")
+
+GSE32148 <- getGEO("GSE32148",destdir="/home/sguo/monod/data/geo")
+save(GSE32148, file="GSE32148_matrix.Rdata")
+
+GSE35069 <- getGEO("GSE35069",destdir="/home/sguo/monod/data/geo")
+save(GSE35069, file="GSE35069_matrix.Rdata")
+
+GSE36054 <- getGEO("GSE36054",destdir="/home/sguo/monod/data/geo")
+save(GSE36054, file="GSE36054_matrix.Rdata")
+
+GSE36064 <- getGEO("GSE36064",destdir="/home/sguo/monod/data/geo")
+save(GSE36064, file="GSE36064_matrix.Rdata")
+
+GSE41169 <- getGEO("GSE41169",destdir="/home/sguo/monod/data/geo")
+save(GSE41169, file="GSE41169_matrix.Rdata")
+
+GSE44132 <- getGEO("GSE44132",destdir="/home/sguo/monod/data/geo")
+save(GSE44132, file="GSE44132_matrix.Rdata")
+
+GSE42861 <- getGEO("GSE42861",destdir="/home/sguo/monod/data/geo")
+save(GSE42861, file="GSE42861_matrix.Rdata")
+

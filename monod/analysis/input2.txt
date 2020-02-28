@@ -1,0 +1,11 @@
+	Mean	Sd
+Brain	1	0.5
+Colon	3	1.5
+Intestine	1.5	0.75
+Kidney	7.5	3.75
+Liver	2.5	1.25
+Lung	40	20
+Pancreas	2.5	1.25
+Spleen	3	1.5
+Stomach	4	1
+WBC	6	3
