@@ -1,0 +1,6 @@
+library("survival")
+library("survminer")
+write.table(lung,file="Lung.Survival.txt",sep="\t",quote=F)
+fit <- survfit(Surv(time,status)~ sex, data = lung)
+class(fit)
+ggsurvplot(fit, data = lung)

@@ -1,0 +1,18 @@
+setwd("//mcrfnas2/bigdata/Genetic/Projects/shg047/methylation/chol/16B1212A-1")
+library(Rtsne)  
+library("ggplot2")  
+library("readxl")
+data= read_excel("methylation.xlsx",sheet = 2)
+data= as.data.frame(data)
+rowname<-apply(data.frame(data$Target,as.character(data$GenomePosition)),1,function(x) gsub(" ","",paste(x[1],x[2],sep="")))
+head(data)
+methdata<-data.matrix(data[,c(7:180)])
+head(methdata)
+rownames(methdata)<-rowname
+genesymbol= unlist(lapply(data$Target, function(x) strsplit(as.character(x),"_")[[1]][1]))
+# even number is control while odd number is case
+rlt<-Rtsne(t(na.omit(methdata)))
+input<-data.frame(x = rlt$Y[,1], y = rlt$Y[,2], col = as.numeric(colnames(methdata)) %% 2 +2, ID=colnames(methdata))
+plot(input[,1:2],pch=16,cex=1.5,col=input$col,xlab="Dimention 1",ylab="Dimention 2")
+text(x=input$x-0.25,y=input$y,labels=colnames(methdata),cex=0.85)
+legend("bottomright",legend=c("CHOL","NORMAL"),pch=16,col=c(2,3),bty="n",cex=1.5)

@@ -1,0 +1,36 @@
+---
+title: "CHOL Biomarker Selection"
+author: "Shicheng Guo"
+date: "October 17, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("Rcpp")
+```
+
+## Method and Materials
+
+
+
+```{r cars}
+# 
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\CHOE")
+saminfo<-read.table("gdc_manifest.2016-10-17T15-30-06.079111.tsv",head=T)
+head(saminfo)
+library("stringr")
+idv<-unique(as.array(str_extract(saminfo$filename,"TCGA-[0-9|a-z|A-Z]*-[0-9|a-z|A-Z]*-[0-9]*")))
+type<-substr(idv,14,15)
+table(type)
+barplot(table(type))
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
