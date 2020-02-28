@@ -1,0 +1,2 @@
+	BumphunterDMR.seqnames	BumphunterDMR.start	BumphunterDMR.end	BumphunterDMR.width	BumphunterDMR.strand	BumphunterDMR.value	BumphunterDMR.area	BumphunterDMR.cluster	BumphunterDMR.indexStart	BumphunterDMR.indexEnd	BumphunterDMR.L	BumphunterDMR.clusterL	BumphunterDMR.p.value	BumphunterDMR.fwer	BumphunterDMR.p.valueArea	BumphunterDMR.fwerArea
+DMR_1	chr20	13975853	13976218	365	*	-0.136361540540007	1.49997694594008	256006	189459	189469	11	13	0.0112821629589922	0.136	0.0244069954435808	0.216

@@ -1,0 +1,2 @@
+	seqnames	start	end	width	strand	value	area	cluster	indexStart	indexEnd	L	clusterL	p.value	fwer	p.valueArea	fwerArea
+DMR_1	chr3	194969372	194969372	0	*	-1.36659974074995	1.36659974074995	208414	331955	331955	1	10	0.000210384322655298	0.128	0.0356972693352474	0.46
