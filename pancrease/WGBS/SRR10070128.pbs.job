@@ -1,0 +1,8 @@
+#PBS -N SRR10070128.pbs
+#PBS -l nodes=1:ppn=1
+#PBS -M Guo.shicheng@marshfieldresearch.org
+#PBS -m abe
+#PBS -o /gpfs/home/guosa/hpc/methylation/pancrease/WGBS/temp/
+#PBS -e /gpfs/home/guosa/hpc/methylation/pancrease/WGBS/temp/
+cd /gpfs/home/guosa/hpc/methylation/pancrease/WGBS
+SRR10070128.pbs

@@ -1,0 +1,10 @@
+#!/bin/csh
+#PBS -q shortq
+#PBS -l nodes=1:ppn=1
+#PBS -o SRR10070129_2.fastq.log
+#PBS -e SRR10070129_2.fastq.err
+#PBS -V
+#PBS -M Guo.Shicheng@marshfieldresearch.org
+#PBS -m abe
+cd /mnt/bigdata/Genetic/Projects/shg047/methylation/pancrease/WGBS
+gzip SRR10070129_2.fastq

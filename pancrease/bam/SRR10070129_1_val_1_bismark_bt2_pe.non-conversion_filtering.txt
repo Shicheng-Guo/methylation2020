@@ -1,0 +1,4 @@
+Analysed read pairs (paired-end) in file >> ../bam/SRR10070129_1_val_1_bismark_bt2_pe.bam <<  in total:	26570868
+Sequences removed because of apparent non-bisulfite conversion (at least 3 non-CG calls in one of the reads):	51785 (0.2%)
+
+filter_non_conversion completed in 0d 1h 46m 58s

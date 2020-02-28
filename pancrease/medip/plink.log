@@ -1,0 +1,12 @@
+PLINK v1.90p 64-bit (21 Feb 2018)
+Options in effect:
+  --score
+
+Hostname: login
+Working directory: /mnt/bigdata/Genetic/Projects/shg047/methylation/pancrease/medip
+Start time: Tue Nov  5 20:10:01 2019
+
+Error: Missing --score parameter.
+For more information, try 'plink --help [flag name]' or 'plink --help | more'.
+
+End time: Tue Nov  5 20:10:01 2019
