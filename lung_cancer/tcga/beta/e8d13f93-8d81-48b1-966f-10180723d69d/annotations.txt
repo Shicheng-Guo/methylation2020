@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+3a9dce2d-0088-5ce2-9d8a-8af8399e491d	11717	case	bd3bf142-7c14-4538-8a76-3c6e140fa01a	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy SCC of the L cheek.  No systemic chemotherapy or radiation.

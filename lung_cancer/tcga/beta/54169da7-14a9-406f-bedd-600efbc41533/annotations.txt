@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+e0f698f9-3bab-5b62-9329-488a58a48cda	11954	case	b256e065-c681-4f82-8b68-a8ef7c413791	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	Pt with synchronous COAD.

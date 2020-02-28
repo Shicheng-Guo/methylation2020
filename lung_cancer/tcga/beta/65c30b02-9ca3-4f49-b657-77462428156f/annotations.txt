@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+fef92597-63c1-5a82-b856-8af1660cdec2	11943	case	ffb83f21-06d9-4e52-a2d0-e85c13f4037f	History of acceptable prior treatment related to a prior/other malignancy	Notification	2012-11-10T00:00:00	Approved	Prior malignancy  prostate cancer, treated with hormone therapy and locoregional radiation.
+a49b7276-b360-5867-9a75-59350b737740	1188	case	ffb83f21-06d9-4e52-a2d0-e85c13f4037f	Prior malignancy	Notification	2011-01-09T00:00:00	Approved	[intgen.org]: Subject has Hx of prior malignancy

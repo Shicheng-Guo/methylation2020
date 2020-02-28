@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+be6422b9-a985-50c8-86bf-c49f70eec4af	11743	case	8e41153b-9faf-45c3-8397-8a428ef5c0d5	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy L KIRC. No systemic chemotherapy or radiation.

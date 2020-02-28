@@ -1,0 +1,14 @@
+group	author	sampletype	age	stage1	stage2	genderatio	event.e	n.e	event.c	n.c	methods	aim	Multipletarget	controldesign	year	Ad2Sc	smoking	author2	author3	race
+3	"Haroun et al (2014, Egypt)"	Tissue	53	0.178571429	0.571428571	0.714285714	15	28	1	28	qMSP	Non-Diagnosis	Multi	hom	2014	1.777777778	2.111111111	Haroun(Egypt)	Haroun	NA
+9	"Li et al (2014, China)"	Non-tissue	53.15	0.267857143	0.392857143	NA	19	56	0	56	MSP	Non-Diagnosis	Multi	heter	2014	0.586206897	NA	Li-2014(China)	Li (b)	Asian
+8	"Li et al (2010, China)"	Non-tissue	55.03	NA	NA	0.710526316	42	123	0	105	MSP	Non-Diagnosis	Single	heter	2010	0.602941176	1	Li-2010(China)	Li (a)	Asian
+12	"Zhang et al (2011, China)"	Tissue	59	0.320512821	0.743589744	0.743589744	1	40	1	40	MSP	Diagnosis	Multi	hom	2011	0.833333333	1.689655172	Zhang(China)	Zhang	Asian
+2	"Fischer et al (2007, Germany)"	Non-tissue	60.9	0	0	0.652173913	43	92	0	7	MSP	Non-Diagnosis	Multi	heter	2007	1.714285714	NA	Fischer(Germany)	Fischer	European
+13	"Zochbauer et al (2001, Multy-country)"	Tissue	61	0.570093458	0.76635514	0.710280374	40	107	9	104	MSP	Non-Diagnosis	Single	hom	2001	1.046511628	10.88888889	Zochbauer-Muller(Multy-country)	Zochbauer-Muller	European
+6	"Kim.D et al (2007, Korea)"	Tissue	63	0.565656566	0.747474747	0.808080808	34	99	17	99	MSP	Non-Diagnosis	Multi	hom	2007	0.62295082	3.95	Kim.D(Korea)	Kim.D	Asian
+10	"Verri et al (2009, Multi-country)"	Tissue	63.9	0.646239554	NA	0.838440111	84	229	68	208	MSP	Non-Diagnosis	Single	hom	2009	1.109090909	20.75	Verri(Multi-country)	Verri	European
+11	"Yanagawa et al (2007, Japan)"	Tissue	68.1	0.673267327	0.742574257	0.712871287	34	101	7	101	MSP	Non-Diagnosis	Multi	hom	2007	1.58974359	2.607142857	Yanagawa(Japan)	Yanagawa	Asian
+4	"Hsu et al (2007, Taiwan)"	Tissue	69	NA	0.650793651	0.714285714	22	57	9	63	qMSP	Diagnosis	Multi	hom	2007	0.759259259	1.947368421	Hsu(Taiwan)	Hsu	Asian
+1	"Fraipont et al (2005, France)"	Non-tissue	NA	NA	NA	NA	6	16	18	56	MSP	Diagnosis	Multi	heter	2005	NA	NA	Fraipont(France)	Fraipont	European
+5	"Hsu et al (2007, Taiwan)"	Non-tissue	NA	NA	0.650793651	0.707070707	18	57	7	35	qMSP	Diagnosis	Multi	heter	2007	0.759259259	1.4	Hsu(Taiwan)	Hsu	Asian
+7	"Kim.H et al (2004, Korea)"	Non-tissue	NA	0.590909091	1	0.66509434	19	85	36	127	MSP	Diagnosis	Multi	heter	2004	0.720930233	NA	Kim.H(Korea)	Kim.H	Asian

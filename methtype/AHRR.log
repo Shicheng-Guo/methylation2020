@@ -1,0 +1,30 @@
+PLINK v1.90p 64-bit (21 Feb 2018)
+Options in effect:
+  --bfile /home/guosa/hpc/db/hg19/1000Genome/chr5
+  --chr 5
+  --freq
+  --from-bp 317989
+  --out /home/guosa/hpc/methylation/methtype/AHRR
+  --recode fastphase
+  --to-bp 325025
+
+Hostname: chg1-lc
+Working directory: /mnt/bigdata/Genetic/Projects/shg047/methylation/methtype
+Start time: Sat Sep  1 19:19:15 2018
+
+Random number seed: 1535847555
+387577 MB RAM detected; reserving 193788 MB for main workspace.
+29 out of 760298 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to /home/guosa/hpc/methylation/methtype/AHRR.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+--freq: Allele frequencies (founders only) written to
+/home/guosa/hpc/methylation/methtype/AHRR.frq .
+29 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+/home/guosa/hpc/methylation/methtype/AHRR.chr-5.recode.phase.inp created.
+--recode fastphase complete.
+
+End time: Sat Sep  1 19:19:15 2018

@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+09ea7f16-a4f0-54a6-9677-d0a41f95abe5	11881	case	369f14c4-2191-4962-a309-3e23ddc4e5fc	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy of breast, cervix, and uterus. No systemic chemotherapy or radiation.

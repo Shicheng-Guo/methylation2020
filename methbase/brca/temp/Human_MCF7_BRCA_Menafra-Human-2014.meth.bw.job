@@ -1,0 +1,8 @@
+#PBS -N Human_MCF7_BRCA_Menafra-Human-2014.meth.bw
+#PBS -l nodes=1:ppn=1
+#PBS -M Guo.shicheng@marshfieldresearch.org
+#PBS -m abe
+#PBS -o /gpfs/home/guosa/hpc/methylation/methbase/brca/temp/
+#PBS -e /gpfs/home/guosa/hpc/methylation/methbase/brca/temp/
+cd /gpfs/home/guosa/hpc/methylation/methbase/brca
+bigWigToWig Human_MCF7_BRCA_Menafra-Human-2014.meth.bw Human_MCF7_BRCA_Menafra-Human-2014.meth.bw.wig

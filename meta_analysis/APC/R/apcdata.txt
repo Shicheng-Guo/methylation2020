@@ -1,0 +1,19 @@
+group	author	sampletype	age	stage1	stage2	genderatio	event.e	n.e	event.c	n.c	methods	aim	Multipletarget	controldesign	year	Ad2Sc	primer	primer2	author2	author3
+1	Zhang et al (2011,China)	tissue	59	32.05	74.36	0.7435897436	44	78	10	78	MSP	Diagnose	Multiple	hom	2011	0.83	set1	set1	Zhang(China)	Zhang
+2	Wang et al (2008, China)	tissue				0.6071428571	19	28	1	12	qMSP	Diagnose	Multiple	heter	2008	2.14	NA	NA	Wang(China)	Wang
+3	Jin et al (2009, Japan)	tissue	66.7			0.7083333333	27	72	22	63	qMSP	Non-diagnose	Multiple	heter	2009	1.87	set2	set2	Jin(Japan)	Jin
+4	Feng et al (2008, USA)	tissue	64.3	42.86	78	0.5306122449	26	49	21	49	qMSP	Diagnose	Multiple	hom	2008	1.43	set2	set2	Feng(USA)	Feng
+5	Brabender et al (2001, USA)	tissue	63.3	49.45	70	0.7582417582	86	91	80	91	qMSP	Non-diagnose	Single	hom	2001	0.77	set2	set2	Brabender(USA)	Brabender
+6	Virmani et al (2001, USA)	tissue					22	48	0	18	MSP	Diagnose	Multiple	heter	2001	NA	NA	set1	Virmani(USA)	Virmani
+7	Yanagawa et al (2003, Japan)	tissue	67.3	66.67	74.67	0.72	28	75	36	75	MSP	Diagnose	Multiple	hom	2003	1.48	NA	NA	Yanagawa(Japan)	Yanagawa
+8	Topaloglu et al (2004, USA)	tissue		54.84	83.87		17	31	2	26	qMSP	Diagnose	Multiple	heter	2004	3	NA	NA	Topaloglu(USA)	Topaloglu
+9	Kim et al (2007, Korea)	tissue	63	56.57	74	0.8101265823	48	99	33	99	MSP	Non-diagnose	Multiple	hom	2007	0.62	set1	set1	Kim(Korea)	Kim
+10	Vallbohmer et al (2006, USA)	tissue	63	49.45	70	0.7582417582	86	91	80	99	qMSP	Non-diagnose	Multiple	hom	2006	0.77	set2	set2	Vallbohmer(USA)	Vallbohmer
+11	Lin et al (2009, China)	tissue	61.13	100	100	0.6451612903	49	124	2	26	MSP	Diagnose	Multiple	heter	2009	1.84	set1	set1	Lin(China)	Lin
+12	Shivapurkar et al (2007, USA)	tissue					35	40	23	40	qMSP	Diagnose	Multiple	heter	2007	1.22	set1	set1	Shivapurkar(USA)	Shivapurkar
+13	Suzuki et al (2006, Japan)	tissue	64	34		0.6734693878	53	150	3	60	MSP	Non-diagnose	Multiple	heter	2006	NA	set1	set1	Suzuki(Japan)	Suzuki
+14	Zhang et al (2011, China)	serum			100		54	110	5	50	MSP	Diagnose	Multiple	heter	2011	NA	NA	set1	Zhang(China)	Zhang
+15	Pan et al (2009,China)	serum	53			0.6538461538	40	78	0	31	qMSP	Diagnose	Single	heter	2009	NA	NA	NA	Pan(China)	Pan
+16	Begum et al (2011, USA)	serum	65		76	0.5263157895	12	76	3	30	qMSP	Diagnose	Multiple	heter	2011	NA	NA	set2	Begum(USA)	Begum
+17	Rykova et al (2004, Russia)	serum					3	9	0	16	MSP	Diagnose	Multiple	heter	2004	NA	NA	set1	Rykova(Russia)	Rykova
+18	Usadel et al (2002, USA)	serum	64.2				42	89	0	50	qMSP	Diagnose	Single	heter	2002	NA	NA	set2	Usadel(USA)	Usadel

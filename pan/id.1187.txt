@@ -1,0 +1,1188 @@
+bcr_patient_barcode	therapy_types	drug_name	measure_of_response	days_to_drug_therapy_start	days_to_drug_therapy_end	therapy_ongoing
+TCGA-AJ-A23N	Chemotherapy	Carboplatin	Clinical Progressive Disease	89	NA	NO
+TCGA-A5-A7WK	Chemotherapy	Carboplatin	Complete Response	84	205	NO
+TCGA-PG-A7D5	Chemotherapy	Carboplatin/Paclitaxel	Complete Response	60	192	NO
+TCGA-BG-A0VT	Chemotherapy	Carboplatin	Complete Response	79	208	NO
+TCGA-FI-A2EX	Chemotherapy	Carboplatinum	Complete Response	38	150	NO
+TCGA-AJ-A3OL	Chemotherapy	Carboplatin	Complete Response	96	186	NO
+TCGA-5S-A9Q8	Chemotherapy	Carboplatin	Complete Response	33	138	NO
+TCGA-EO-A2CG	Chemotherapy	Carboplatin	Complete Response	114	243	NO
+TCGA-QS-A5YQ	Chemotherapy	cisplatin	Complete Response	65	93	NO
+TCGA-EY-A3L3	Chemotherapy	Taxol	Complete Response	119	231	NO
+TCGA-EY-A54A	Chemotherapy	Carboplatin	Complete Response	49	259	NO
+TCGA-AJ-A2QL	Chemotherapy	Cisplatin	Complete Response	110	NA	NO
+TCGA-AJ-A3I9	Chemotherapy	Carboplatin	Clinical Progressive Disease	379	456	NO
+TCGA-AJ-A2QM	Chemotherapy	Carboplatin	Complete Response	46	NA	NO
+TCGA-B5-A1MS	Chemotherapy	Gemcitabine	Clinical Progressive Disease	2916	2985	NO
+TCGA-FI-A2F8	Chemotherapy	cisplatin	Complete Response	36	141	NO
+TCGA-FI-A2D4	Chemotherapy	carboplatinum	Partial Response	47	167	NO
+TCGA-QS-A8F1	Chemotherapy	Carboplatin	Clinical Progressive Disease	62	62	NO
+TCGA-AJ-A3BI	Chemotherapy	Paclitaxel	Complete Response	399	NA	NO
+TCGA-AJ-A3OK	Chemotherapy	Carboplatin	Complete Response	71	134	NO
+TCGA-BG-A2L7	Chemotherapy	Carboplatin	Complete Response	85	189	NO
+TCGA-K6-A3WQ	Chemotherapy	Doxil	Clinical Progressive Disease	351	NA	NO
+TCGA-AJ-A3QS	Chemotherapy	Cisplatin	Complete Response	114	174	NO
+TCGA-AP-A5FX	Chemotherapy	Carboplatin	Complete Response	84	190	NO
+TCGA-D1-A3JQ	Chemotherapy	Cisplatin	Complete Response	67	173	NO
+TCGA-FI-A2D5	Chemotherapy	Carboplatinum	Clinical Progressive Disease	133	245	NO
+TCGA-EY-A4KR	Chemotherapy	Carboplatin	Clinical Progressive Disease	46	179	NO
+TCGA-EO-A22X	Chemotherapy	Carboplatin	Complete Response	NA	205	NO
+TCGA-AJ-A3BF	Chemotherapy	Taxol	Complete Response	75	251	NO
+TCGA-FI-A2EW	Chemotherapy	Carboplatinum	Complete Response	69	179	NO
+TCGA-AX-A2HC	Chemotherapy	Paclitaxel	Complete Response	121	NA	NO
+TCGA-D1-A3DA	Chemotherapy	Carboplatin	Complete Response	50	197	NO
+TCGA-EY-A2ON	Chemotherapy	Taxol	Clinical Progressive Disease	63	236	NO
+TCGA-EO-A1Y5	Chemotherapy	Carboplatin	Complete Response	NA	NA	
+TCGA-FI-A2CY	Chemotherapy	Carboplatinum	Complete Response	51	171	NO
+TCGA-A5-A3LP	Chemotherapy	Carboplatin	Complete Response	106	166	NO
+TCGA-JU-AAVI	Chemotherapy	Cisplatin	Partial Response	82	109	NO
+TCGA-EY-A3QX	Chemotherapy	Taxol	Complete Response	66	187	NO
+TCGA-DI-A2QY	Chemotherapy	Paclitaxel	Complete Response	92	239	NO
+TCGA-A5-AB3J	Chemotherapy	Carboplatin	Complete Response	63	112	NO
+TCGA-FI-A2D2	Chemotherapy	carboplatinum	Complete Response	87	191	NO
+TCGA-AJ-A23M	Chemotherapy		Stable Disease	92	NA	NO
+TCGA-EO-A1Y7	Chemotherapy	PORTEC3-radiation alone	Stable Disease	911	1031	NO
+TCGA-BG-A0VZ	Chemotherapy	Cisplatin	Complete Response	103	175	NO
+TCGA-FI-A2EY	Chemotherapy	Carboplatinum	Complete Response	27	172	NO
+TCGA-2E-A9G8	Chemotherapy	Taxol	Complete Response	488	580	NO
+TCGA-BG-A2AE	Chemotherapy	Carboplatin	Complete Response	99	209	NO
+TCGA-AJ-A3BG	Chemotherapy	Carboplatin	Complete Response	67	247	NO
+TCGA-BG-A3PP	Chemotherapy	Taxol	Complete Response	74	186	NO
+TCGA-AJ-A3EK	Chemotherapy	Carboplatin	Complete Response	126	166	NO
+TCGA-A5-A1OH	Chemotherapy	Carboplatin	Complete Response	251	321	NO
+TCGA-AJ-A3NF	Chemotherapy	Chemo, NOS	Complete Response	192	253	NO
+TCGA-13-A5FT	Chemotherapy	Cisplatin	Complete Response	49	111	NO
+TCGA-5X-AA5U	Chemotherapy	Taxotere	Complete Response	66	178	NO
+TCGA-WR-A838	Chemotherapy	Carboplatin	Clinical Progressive Disease	30	92	NO
+TCGA-OY-A56Q	Chemotherapy	Taxol	Complete Response	23	128	NO
+TCGA-55-6981	Chemotherapy	Chemo, NOS	Complete Response	25	NA	NO
+TCGA-86-8054	Chemotherapy	Paclitaxel	Complete Response	65	136	NO
+TCGA-50-5936	Chemotherapy	TAXOL	Clinical Progressive Disease	188	257	NO
+TCGA-53-7624	Chemotherapy	Irinotecan	Clinical Progressive Disease	924	966	NO
+TCGA-55-7910	Chemotherapy	Cisplatin	Complete Response	253	NA	NO
+TCGA-86-8280	Chemotherapy	Cisplatin	Complete Response	16	129	NO
+TCGA-86-7954	Chemotherapy	Carboplatin	Complete Response	55	81	NO
+TCGA-55-A48Z	Chemotherapy	Cisplatin	Stable Disease	58	202	NO
+TCGA-55-8505	Chemotherapy	Cisplatin	Complete Response	96	159	NO
+TCGA-86-8669	Chemotherapy	Cisplatin	Complete Response	854	938	NO
+TCGA-05-5428	Chemotherapy	Cisplatin	Complete Response	62	153	NO
+TCGA-86-7701	Chemotherapy	Etoposide	Complete Response	27	207	NO
+TCGA-55-6979	Chemotherapy	Carboplatin	Clinical Progressive Disease	57	149	NO
+TCGA-50-5066	Chemotherapy	Carboplatin	Stable Disease	508	567	NO
+TCGA-05-4384	Chemotherapy	Cisplatin	Clinical Progressive Disease	61	153	NO
+TCGA-62-A46Y	Chemotherapy	Cisplatin	Complete Response	74	256	NO
+TCGA-91-6848	Chemotherapy	Cisplatin	Complete Response	91	154	NO
+TCGA-93-A4JN	Chemotherapy	Carboplatin	Stable Disease	410	697	NO
+TCGA-53-7626	Chemotherapy	Cisplatin	Clinical Progressive Disease	NA	NA	NO
+TCGA-50-5051	Chemotherapy	Carboplatin	Partial Response	62	123	NO
+TCGA-55-A48Y	Chemotherapy	Carboplatin	Complete Response	91	163	NO
+TCGA-86-A4JF	Chemotherapy		Complete Response	31	171	NO
+TCGA-55-7574	Chemotherapy	Topotecan	Partial Response	478	631	NO
+TCGA-95-A4VP	Chemotherapy	Carboplatin	Stable Disease	63	126	NO
+TCGA-J2-8194	Chemotherapy	Carboplatin	Clinical Progressive Disease	546	584	NO
+TCGA-71-6725	Chemotherapy	Cisplatin	Clinical Progressive Disease	107	127	NO
+TCGA-69-A59K	Chemotherapy	cisplatin	Stable Disease	72	135	NO
+TCGA-73-A9RS	Chemotherapy	carboplatin	Clinical Progressive Disease	130	186	NO
+TCGA-55-6970	Chemotherapy	Cisplatin	Stable Disease	89	117	NO
+TCGA-53-7813	Chemotherapy	carboplatin	Stable Disease	62	146	NO
+TCGA-MP-A4TF	Chemotherapy	Navelbine	Partial Response	48	151	NO
+TCGA-55-A48X	Chemotherapy	Carboplatin	Complete Response	66	160	NO
+TCGA-L9-A743	Chemotherapy	TAXOTERE	Complete Response	120	193	NO
+TCGA-93-A4JP	Chemotherapy	Carboplatin	Partial Response	17	101	NO
+TCGA-86-8075	Chemotherapy	Etoposide	Complete Response	201	364	NO
+TCGA-55-7995	Chemotherapy	Carboplatin	Complete Response	483	525	NO
+TCGA-55-6983	Chemotherapy	Chemo, NOS	Complete Response	142	365	NO
+TCGA-L9-A7SV	Chemotherapy	cisplatin	Complete Response	41	104	NO
+TCGA-64-5781	Chemotherapy	Cisplatin	Complete Response	131	215	NO
+TCGA-50-5933	Chemotherapy	Carboplatin	Complete Response	189	210	NO
+TCGA-86-7711	Chemotherapy	Cisplatin	Complete Response	37	181	NO
+TCGA-97-8547	Chemotherapy	Taxol	Complete Response	47	111	NO
+TCGA-62-A471	Chemotherapy	Cisplatin	Complete Response	41	115	NO
+TCGA-55-6982	Chemotherapy	Gemzar	Clinical Progressive Disease	397	NA	NO
+TCGA-55-7283	Chemotherapy	Carboplatin	Partial Response	83	386	NO
+TCGA-49-AAR2	Chemotherapy	TAXOL	Complete Response	85	123	NO
+TCGA-MP-A4TC	Chemotherapy	Cisplatin	Complete Response	25	25	NO
+TCGA-55-7914	Chemotherapy	Carboplatin	Clinical Progressive Disease	27	132	NO
+TCGA-50-5068	Chemotherapy	Taxol	Clinical Progressive Disease	99	140	NO
+TCGA-55-8615	Chemotherapy	Carboplatin	Clinical Progressive Disease	89	NA	NO
+TCGA-55-7994	Chemotherapy	Carboplatin	Complete Response	56	121	NO
+TCGA-69-7973	Chemotherapy	Cisplatin	Complete Response	91	132	NO
+TCGA-97-8176	Chemotherapy	CARBOplatin	Partial Response	77	161	NO
+TCGA-64-5778	Chemotherapy	Tarceva	Clinical Progressive Disease	1174	NA	YES
+TCGA-50-5072	Chemotherapy	Carboplatin	Clinical Progressive Disease	121	182	NO
+TCGA-64-5815	Chemotherapy	Gemcitabine	Complete Response	83	132	NO
+TCGA-55-7576	Chemotherapy	Alimta	Complete Response	104	168	NO
+TCGA-50-5941	Chemotherapy	Cisplatin	Complete Response	NA	NA	NO
+TCGA-50-6595	Chemotherapy	Carboplatin	Clinical Progressive Disease	123	162	NO
+TCGA-55-7227	Chemotherapy	Carboplatin	Stable Disease	289	409	NO
+TCGA-44-8117	Chemotherapy	Cisplatin	Complete Response	113	176	NO
+TCGA-62-8398	Chemotherapy	Carboplatin	Complete Response	41	113	NO
+TCGA-86-8278	Chemotherapy	Etoposide	Stable Disease	29	156	NO
+TCGA-50-6590	Chemotherapy	Paclitaxel	Complete Response	92	189	NO
+TCGA-50-5930	Chemotherapy	Taxotere	Clinical Progressive Disease	85	146	NO
+TCGA-55-7815	Chemotherapy	Chemo, NOS	Clinical Progressive Disease	493	585	NO
+TCGA-55-8205	Chemotherapy	Carboplatin	Complete Response	93	154	NO
+TCGA-G6-A8L6	Chemotherapy	Sutent	Stable Disease	73	211	NO
+TCGA-55-6984	Chemotherapy	Chemo, Multi-Agent, NOS	Complete Response	65	NA	NO
+TCGA-50-5055	Chemotherapy	Not specified	Clinical Progressive Disease	31	153	NO
+TCGA-A2-A3XZ	Chemotherapy	Carboplatin	Complete Response	97	202	NO
+TCGA-LD-A74U	Chemotherapy	Taxotere	Stable Disease	52	301	NO
+TCGA-A2-A3XW	Chemotherapy	Adriamyicin	Complete Response	69	139	NO
+TCGA-BH-A8G0	Chemotherapy	Taxotere	Complete Response	155	267	NO
+TCGA-LL-A440	Chemotherapy	CYTOXAN	Complete Response	60	123	NO
+TCGA-A2-A4S2	Chemotherapy	Adriamycin	Complete Response	47	96	NO
+TCGA-OL-A5RZ	Chemotherapy	Doxorubicin	Complete Response	239	331	NO
+TCGA-BH-A0DI	Chemotherapy	Adriamycin	Complete Response	131	194	NO
+TCGA-A8-A08O	Chemotherapy	Docetaxel	Clinical Progressive Disease	31	121	NO
+TCGA-LL-A73Z	Chemotherapy	Adriamycin	Clinical Progressive Disease	18	60	NO
+TCGA-A7-A6VY	Chemotherapy	Cyclophosphamide	Complete Response	68	111	NO
+TCGA-LL-A740	Chemotherapy	ADRIAMYCIN	Complete Response	122	164	NO
+TCGA-GM-A2DI	Chemotherapy	Taxotere	Complete Response	70	133	NO
+TCGA-GM-A2D9	Chemotherapy	Xeloda	Clinical Progressive Disease	1362	1455	NO
+TCGA-S3-A6ZH	Chemotherapy	Adriamycin	Complete Response	141	185	NO
+TCGA-S3-A6ZF	Chemotherapy	taxotere	Complete Response	65	170	NO
+TCGA-A2-A0CK	Chemotherapy	Adriamycin	Complete Response	NA	NA	NO
+TCGA-C8-A1HM	Chemotherapy	Doxorubicin	Complete Response	26	49	NO
+TCGA-BH-A202	Chemotherapy	Carboplatin	Complete Response	47	169	NO
+TCGA-GM-A2DD	Chemotherapy	Fluorouracil	Complete Response	90	202	NO
+TCGA-Z7-A8R5	Chemotherapy	Adriamycin	Stable Disease	61	181	NO
+TCGA-C8-A1HO	Chemotherapy	5-Fluorouracil	Complete Response	-49	-45	NO
+TCGA-LL-A7SZ	Chemotherapy	ADRIAMYCIN	Complete Response	62	104	NO
+TCGA-GM-A4E0	Chemotherapy	Xeloda	Complete Response	121	184	NO
+TCGA-OL-A5RW	Chemotherapy	ADRIAMYCIN	Complete Response	69	234	NO
+TCGA-OL-A5S0	Chemotherapy	TAXOL	Complete Response	67	228	NO
+TCGA-AC-A23C	Chemotherapy	Chemo, NOS	Complete Response	77	204	NO
+TCGA-BH-A0BZ	Chemotherapy	Doxorubicin	Complete Response	76	167	NO
+TCGA-AC-A3W5	Chemotherapy	Docetaxel	Complete Response	56	139	NO
+TCGA-GM-A2DF	Chemotherapy	Taxol	Complete Response	82	159	NO
+TCGA-PE-A5DE	Chemotherapy	Taxotere	Complete Response	42	105	NO
+TCGA-GM-A2DA	Chemotherapy	fluorouracil	Complete Response	74	147	NO
+TCGA-OL-A6VO	Chemotherapy	TAXOTERE	Complete Response	71	147	NO
+TCGA-BH-A0DV	Chemotherapy	Taxotere	Complete Response	48	176	NO
+TCGA-A2-A3Y0	Chemotherapy	Adriamycin	Complete Response	74	137	NO
+TCGA-C8-A26X	Chemotherapy	5-Flourouracil	Complete Response	200	207	NO
+TCGA-E9-A1R2	Chemotherapy	Taxotere	Complete Response	36	144	NO
+TCGA-GM-A2DH	Chemotherapy	Taxol	Complete Response	86	163	NO
+TCGA-E9-A1NE	Chemotherapy	Doxorubicin	Complete Response	10	121	NO
+TCGA-E9-A227	Chemotherapy	Taxotere	Complete Response	92	197	NO
+TCGA-S3-AA15	Chemotherapy	ADRIAMYCIN	Complete Response	82	125	NO
+TCGA-S9-A6U8	Chemotherapy	Temozolomide	Stable Disease	1995	2200	NO
+TCGA-E1-A7Z6	Chemotherapy	Temodar	Stable Disease	356	705	NO
+TCGA-FG-A710	Chemotherapy	Temodar	Stable Disease	18	218	NO
+TCGA-FG-A70Y	Chemotherapy	Temodar	Stable Disease	515	554	NO
+TCGA-S9-A6TV	Chemotherapy	Temozolamide	Stable Disease	26	68	NO
+TCGA-FG-A4MW	Chemotherapy	Temodar	Stable Disease	32	71	NO
+TCGA-DU-A76K	Chemotherapy	Temozolomide	Clinical Progressive Disease	236	269	NO
+TCGA-2Z-A9J3	Chemotherapy	sunitinib	Clinical Progressive Disease	83	295	NO
+TCGA-A4-A57E	Chemotherapy	Afinitor	Clinical Progressive Disease	39	NA	NO
+TCGA-Q1-A5R3	Chemotherapy	Cisplatin	Partial Response	21	56	NO
+TCGA-UC-A7PG	Chemotherapy	cisplatin	Clinical Progressive Disease	58	90	NO
+TCGA-HG-A2PA	Chemotherapy	Taxol	Partial Response	NA	NA	NO
+TCGA-VS-A9UR	Chemotherapy	Cisplatin	Complete Response	45	90	NO
+TCGA-VS-A8EJ	Chemotherapy	Cisplatin	Clinical Progressive Disease	136	155	NO
+TCGA-VS-A9UP	Chemotherapy	Cisplatin	Complete Response	92	119	NO
+TCGA-MY-A913	Chemotherapy	Cisplatin	Complete Response	30	79	NO
+TCGA-VS-A9UC	Chemotherapy	Cisplatin	Stable Disease	146	203	NO
+TCGA-DD-A3A7	Chemotherapy		Clinical Progressive Disease	146	192	NO
+TCGA-2Y-A9GV	Chemotherapy	Naxavar	Clinical Progressive Disease	2233	2304	NO
+TCGA-DD-A3A4	Chemotherapy	Gemcitabine	Clinical Progressive Disease	459	486	NO
+TCGA-DD-A4NH	Chemotherapy	Sorafenib	Clinical Progressive Disease	162	305	NO
+TCGA-IR-A3LI	Chemotherapy	Cisplatin	Complete Response	52	73	NO
+TCGA-EK-A2H0	Chemotherapy	Cisplatin	Complete Response	54	90	NO
+TCGA-VS-A9UH	Chemotherapy	Cisplatin	Complete Response	90	133	NO
+TCGA-VS-A9V1	Chemotherapy	Cisplatin	Clinical Progressive Disease	21	49	NO
+TCGA-VS-A958	Chemotherapy	Cisplatin	Complete Response	69	83	NO
+TCGA-VS-A9V0	Chemotherapy	Cisplatin	Complete Response	144	166	NO
+TCGA-IR-A3L7	Chemotherapy	Cisplatin	Complete Response	67	99	NO
+TCGA-FU-A3HY	Chemotherapy	Cisplatin	Complete Response	60	91	NO
+TCGA-IR-A3LA	Chemotherapy	Cisplatin	Complete Response	81	148	NO
+TCGA-FU-A3HZ	Chemotherapy	Cisplatin	Complete Response	53	114	NO
+TCGA-MA-AA3W	Chemotherapy	Cisplatin	Complete Response	75	110	NO
+TCGA-IR-A3LB	Chemotherapy	Cisplatin	Complete Response	72	138	NO
+TCGA-VS-A9V3	Chemotherapy	Cisplatin	Complete Response	68	96	NO
+TCGA-JW-A5VH	Chemotherapy	carboplatinum	Clinical Progressive Disease	27	48	NO
+TCGA-IR-A3LH	Chemotherapy	Cisplatin	Complete Response	148	183	NO
+TCGA-VS-A9UY	Chemotherapy	Cisplatin	Clinical Progressive Disease	6	34	NO
+TCGA-3B-A9HI	Chemotherapy	Adriamycin	Stable Disease	850	959	NO
+TCGA-X9-A973	Chemotherapy	adriamycin	Stable Disease	323	392	NO
+TCGA-FX-A8OO	Chemotherapy	Ifosfamide	Complete Response	118	243	NO
+TCGA-JV-A5VE	Chemotherapy	Gemcitabine	Complete Response	38	165	NO
+TCGA-IE-A3OV	Chemotherapy	Dacarbazine (DTIC)	Clinical Progressive Disease	102	NA	NO
+TCGA-IE-A4EH	Chemotherapy	Taxotere	Complete Response	326	448	NO
+TCGA-KF-A41W	Chemotherapy	Taxotere	Complete Response	61	137	NO
+TCGA-3B-A9HS	Chemotherapy	gemcitabine	Clinical Progressive Disease	1034	1132	NO
+TCGA-KD-A5QS	Chemotherapy	Taxotere	Partial Response	30	72	NO
+TCGA-DX-A3U7	Chemotherapy	Taxotere	Partial Response	350	549	NO
+TCGA-3B-A9HZ	Chemotherapy	DOCETAXEL	Clinical Progressive Disease	482	602	NO
+TCGA-SI-A71O	Chemotherapy	Everolimus	Clinical Progressive Disease	350	462	NO
+TCGA-KO-8404	Chemotherapy	Thalidomide	Clinical Progressive Disease	117	139	NO
+TCGA-UD-AAC4	Chemotherapy	Cisplatin	Stable Disease	308	462	NO
+TCGA-SH-A9CU	Chemotherapy	Pemetrexed	Partial Response	56	178	NO
+TCGA-SC-A6LP	Chemotherapy	Cisplatin	Clinical Progressive Disease	12	12	NO
+TCGA-UD-AAC1	Chemotherapy	Carboplatin	Clinical Progressive Disease	148	183	NO
+TCGA-MQ-A6BR	Chemotherapy	Cisplatin	Complete Response	NA	117	NO
+TCGA-OU-A5PI	Chemotherapy	Etoposide	Stable Disease	69	239	NO
+TCGA-3H-AB3M	Chemotherapy	Cisplatin	Stable Disease	120	386	NO
+TCGA-SH-A9CT	Chemotherapy	Cisplatin	Partial Response	46	155	NO
+TCGA-3H-AB3S	Chemotherapy	gemcitabine	Clinical Progressive Disease	221	264	NO
+TCGA-3U-A98F	Chemotherapy	Carboplatin	Stable Disease	162	302	NO
+TCGA-SH-A7BC	Chemotherapy	Carboplatin	Partial Response	165	278	NO
+TCGA-3U-A98J	Chemotherapy	Carboplatin	Clinical Progressive Disease	137	228	NO
+TCGA-3H-AB3X	Chemotherapy	Cisplatin	Complete Response	435	461	NO
+TCGA-UT-A88D	Chemotherapy	Pemetrexed	Stable Disease	24	66	NO
+TCGA-LN-A8HZ	Chemotherapy	Capecitabine	Complete Response	42	86	NO
+TCGA-IG-A3I8	Chemotherapy	5-Fluorouracil	Complete Response	51	53	NO
+TCGA-DX-A8BU	Chemotherapy	Ifosfamide	Clinical Progressive Disease	1080	1081	NO
+TCGA-X9-A971	Chemotherapy	DOCETAXEL	Clinical Progressive Disease	413	434	NO
+TCGA-V5-AASV	Chemotherapy	carboplatin	Partial Response	NA	NA	NO
+TCGA-49-AAR4	Chemotherapy	TAXOL	Partial Response	57	61	NO
+TCGA-91-7771	Chemotherapy	Cisplatin	Complete Response	77	156	NO
+TCGA-64-5779	Chemotherapy	Cisplatin	Complete Response	94	157	NO
+TCGA-MP-A4TD	Chemotherapy	Cisplatin	Complete Response	75	165	NO
+TCGA-86-7713	Chemotherapy	Etoposide	Complete Response	29	182	NO
+TCGA-86-8674	Chemotherapy	Vinblastine	Clinical Progressive Disease	57	81	NO
+TCGA-69-7974	Chemotherapy	Pemetrexed	Clinical Progressive Disease	33	96	NO
+TCGA-53-A4EZ	Chemotherapy	Cisplatin	Complete Response	132	226	NO
+TCGA-86-8076	Chemotherapy	Etoposide	Complete Response	40	193	NO
+TCGA-73-7498	Chemotherapy	Pemetrexed	Complete Response	47	110	NO
+TCGA-55-8301	Chemotherapy	Carboplatin	Partial Response	261	NA	NO
+TCGA-55-6712	Chemotherapy	Carboplatin	Clinical Progressive Disease	55	164	NO
+TCGA-05-4427	Chemotherapy	Cisplatin	Complete Response	61	122	NO
+TCGA-55-7281	Chemotherapy	Carboplatin	Clinical Progressive Disease	424	474	NO
+TCGA-86-7955	Chemotherapy	Vepesid	Complete Response	27	274	NO
+TCGA-55-6968	Chemotherapy		Stable Disease	13	NA	NO
+TCGA-EW-A2FR	Chemotherapy	Paclitaxel	Stable Disease	97	174	NO
+TCGA-BH-A0DG	Chemotherapy	Taxotere	Complete Response	48	166	NO
+TCGA-A7-A5ZX	Chemotherapy	Doxorubicin	Complete Response	76	118	NO
+TCGA-C8-A8HR	Chemotherapy	5 fluorouracil	Complete Response	43	237	NO
+TCGA-C8-A27B	Chemotherapy	5-Flourouracil	Complete Response	62	85	NO
+TCGA-AC-A2BK	Chemotherapy	Cytoxan	Complete Response	73	136	NO
+TCGA-E2-A572	Chemotherapy	Taxol	Complete Response	147	200	NO
+TCGA-A7-A6VW	Chemotherapy	Taxol	Complete Response	148	257	NO
+TCGA-A2-A3XV	Chemotherapy	Carboplatin	Complete Response	62	175	NO
+TCGA-BH-A0AZ	Chemotherapy	Doxorubicin	Complete Response	126	209	NO
+TCGA-BH-A0BT	Chemotherapy	Adriamycin	Complete Response	97	139	NO
+TCGA-E9-A2JS	Chemotherapy	Cyclophosphamide	Complete Response	17	191	NO
+TCGA-BH-A5IZ	Chemotherapy	Adriamycin	Complete Response	77	140	NO
+TCGA-A8-A075	Chemotherapy	Epirubicoin	Complete Response	31	122	NO
+TCGA-AC-A3YI	Chemotherapy	Cytoxan	Complete Response	82	167	NO
+TCGA-E2-A573	Chemotherapy	Taxotere	Complete Response	104	167	NO
+TCGA-GM-A2DC	Chemotherapy	Xeloda	Complete Response	57	119	NO
+TCGA-A8-A0A6	Chemotherapy	Epirubicin	Complete Response	61	184	NO
+TCGA-NJ-A7XG	Chemotherapy	Cisplatin	Stable Disease	30	100	NO
+TCGA-55-5899	Chemotherapy	Carboplatin	Complete Response	146	208	NO
+TCGA-50-8459	Chemotherapy	ALIMTA	Complete Response	76	147	NO
+TCGA-55-8508	Chemotherapy	Cisplatin	Complete Response	57	120	NO
+TCGA-B0-5694	Chemotherapy	Pazopanib	Clinical Progressive Disease	441	469	NO
+TCGA-B0-5107	Chemotherapy	SUTENT	Clinical Progressive Disease	11	NA	NO
+TCGA-B0-5094	Chemotherapy	TORISEL	Clinical Progressive Disease	124	228	NO
+TCGA-A7-A6VV	Chemotherapy	Cyclophosphamide	Complete Response	160	266	NO
+TCGA-PE-A5DD	Chemotherapy		Complete Response	38	NA	NO
+TCGA-AQ-A54O	Chemotherapy	Adriamycin	Complete Response	77	118	NO
+TCGA-BH-A0HY	Chemotherapy	Carboplatin	Complete Response	88	190	NO
+TCGA-A7-A6VX	Chemotherapy	Docetaxel	Complete Response	79	142	NO
+TCGA-A7-A4SE	Chemotherapy	Adriamycin	Complete Response	49	91	NO
+TCGA-CR-7368	Chemotherapy		Complete Response	NA	148	NO
+TCGA-CN-A6UY	Chemotherapy	carboplatin	Complete Response	59	106	NO
+TCGA-BA-A4IG	Chemotherapy	Erbitux	Complete Response	79	140	NO
+TCGA-HD-7229	Chemotherapy	Cisplatin	Clinical Progressive Disease	187	187	NO
+TCGA-UF-A7JJ	Chemotherapy	Cisplatin	Complete Response	60	102	NO
+TCGA-HD-8314	Chemotherapy	Cisplatin	Complete Response	79	121	NO
+TCGA-T2-A6WX	Chemotherapy	carboplatin	Clinical Progressive Disease	71	92	NO
+TCGA-AC-A62V	Chemotherapy	Paclitaxel	Partial Response	114	245	NO
+TCGA-QK-A8Z7	Chemotherapy	Carboplatin	Complete Response	105	166	NO
+TCGA-IQ-A61E	Chemotherapy	Cisplatin	Complete Response	96	138	NO
+TCGA-CR-6493	Chemotherapy	Paclitaxel	Complete Response	100	150	NO
+TCGA-IQ-A61J	Chemotherapy	Cisplatin	Complete Response	64	99	NO
+TCGA-H7-A6C4	Chemotherapy	Cisplatin	Complete Response	74	NA	NO
+TCGA-BB-A5HY	Chemotherapy	Cisplatin	Complete Response	84	121	NO
+TCGA-BB-A5HU	Chemotherapy	Cisplatin	Complete Response	69	97	NO
+TCGA-BA-A6DD	Chemotherapy	Cisplatin	Clinical Progressive Disease	96	163	NO
+TCGA-CN-A498	Chemotherapy	carboplatin	Complete Response	59	101	NO
+TCGA-CR-5247	Chemotherapy	Paclitaxel	Complete Response	19	80	NO
+TCGA-CN-A49C	Chemotherapy	erbitux	Complete Response	26	78	NO
+TCGA-UF-A7JK	Chemotherapy	Cisplatin	Complete Response	132	174	NO
+TCGA-P3-A6T2	Chemotherapy	Cisplatin	Complete Response	30	91	NO
+TCGA-CN-A6V3	Chemotherapy	cisplatin	Complete Response	130	151	NO
+TCGA-CR-6491	Chemotherapy	Carboplatin	Complete Response	191	201	NO
+TCGA-T2-A6X0	Chemotherapy	cisplatin	Complete Response	60	95	NO
+TCGA-MZ-A7D7	Chemotherapy	Cisplatin	Complete Response	77	119	NO
+TCGA-05-4390	Chemotherapy	Cisplatin	Complete Response	61	92	NO
+TCGA-86-8279	Chemotherapy	Etoposide	Complete Response	28	119	NO
+TCGA-05-5425	Chemotherapy	Paclitaxel	Clinical Progressive Disease	700	761	NO
+TCGA-95-A4VK	Chemotherapy	Cisplatin	Stable Disease	76	121	NO
+TCGA-BH-A0B5	Chemotherapy	Adriamycin	Complete Response	63	NA	NO
+TCGA-OL-A5RU	Chemotherapy	cyclophosphamide	Complete Response	71	134	NO
+TCGA-OL-A66O	Chemotherapy	Cytoxan	Complete Response	129	192	NO
+TCGA-5T-A9QA	Chemotherapy	Cytoxan	Complete Response	NA	94	NO
+TCGA-XX-A899	Chemotherapy	Cytoxan	Complete Response	96	201	NO
+TCGA-A2-A0CR	Chemotherapy	Adriamycin	Complete Response	105	147	NO
+TCGA-BH-A2L8	Chemotherapy	Cytoxan	Complete Response	136	197	NO
+TCGA-D8-A3Z6	Chemotherapy	cyclophosphamidum	Stable Disease	22	86	NO
+TCGA-GM-A3XL	Chemotherapy	Fluorouracil	Complete Response	100	163	NO
+TCGA-EW-A1P3	Chemotherapy	Paclitaxel	Stable Disease	167	233	NO
+TCGA-A2-A3XU	Chemotherapy	Xeloda	Clinical Progressive Disease	657	902	NO
+TCGA-S3-AA10	Chemotherapy	CYTOXAN	Complete Response	75	199	NO
+TCGA-AC-A2B8	Chemotherapy	Chemo, NOS	Complete Response	135	NA	NO
+TCGA-A7-A4SD	Chemotherapy	Taxotere	Complete Response	64	134	NO
+TCGA-IR-A3LL	Chemotherapy	Cisplatin	Complete Response	48	80	NO
+TCGA-VS-A8EK	Chemotherapy	Cisplatin	Partial Response	58	104	NO
+TCGA-EA-A43B	Chemotherapy	Cisplatin	Complete Response	70	70	NO
+TCGA-LP-A4AU	Chemotherapy	5FU	Complete Response	91	307	NO
+TCGA-EX-A449	Chemotherapy	Cisplatin	Complete Response	47	109	NO
+TCGA-VS-A8QC	Chemotherapy	Paclitaxel	Clinical Progressive Disease	35	175	NO
+TCGA-JW-A5VI	Chemotherapy	Topotecan	Clinical Progressive Disease	571	623	NO
+TCGA-VS-A94Z	Chemotherapy	Cisplatin	Complete Response	52	80	NO
+TCGA-VS-A957	Chemotherapy	Cisplatin	Complete Response	119	140	NO
+TCGA-FU-A3WB	Chemotherapy	Cisplatin	Complete Response	65	116	NO
+TCGA-EX-A3L1	Chemotherapy	Cisplatin	Complete Response	96	131	NO
+TCGA-FU-A40J	Chemotherapy	Carboplatin	Complete Response	104	306	NO
+TCGA-VS-A8EL	Chemotherapy	Cisplatin	Complete Response	46	81	NO
+TCGA-VS-A8QH	Chemotherapy	Gemcitabine	Partial Response	62	98	NO
+TCGA-VS-AA62	Chemotherapy	Cisplatin	Clinical Progressive Disease	34	64	NO
+TCGA-VS-A9UU	Chemotherapy	Cisplatin	Complete Response	43	57	NO
+TCGA-C5-A1M6	Chemotherapy	Bleomycin	Clinical Progressive Disease	341	489	NO
+TCGA-VS-A94X	Chemotherapy	Cisplatin	Partial Response	64	92	NO
+TCGA-FR-A728	Chemotherapy	Dabrafenib	Partial Response	100	119	NO
+TCGA-DS-A7WI	Chemotherapy	Cisplatin	Complete Response	80	108	NO
+TCGA-VS-A9U5	Chemotherapy	Cisplatin	Complete Response	36	71	NO
+TCGA-VS-A9UO	Chemotherapy	Cisplatin	Complete Response	52	69	NO
+TCGA-VS-A9U7	Chemotherapy	Cisplatin	Complete Response	192	220	NO
+TCGA-Q1-A73O	Chemotherapy	Cisplatin	Complete Response	54	89	NO
+TCGA-DS-A7WH	Chemotherapy	Cisplatin	Complete Response	74	112	NO
+TCGA-DS-A5RQ	Chemotherapy	Cisplatin	Complete Response	63	98	NO
+TCGA-VS-A94W	Chemotherapy	Cisplatin	Complete Response	75	104	NO
+TCGA-VS-A9UM	Chemotherapy	Cisplatin	Complete Response	423	459	NO
+TCGA-VS-A9UD	Chemotherapy	Cisplatin	Complete Response	55	89	NO
+TCGA-HT-A5RA	Chemotherapy	Temodar	Partial Response	13	235	NO
+TCGA-E1-A7YH	Chemotherapy	Temodar	Stable Disease	45	87	NO
+TCGA-VS-A954	Chemotherapy	Cisplatin	Complete Response	94	122	NO
+TCGA-VS-A8QM	Chemotherapy	Cisplatin	Clinical Progressive Disease	49	136	NO
+TCGA-VS-A9V5	Chemotherapy	Carboplatin	Clinical Progressive Disease	89	124	NO
+TCGA-VS-A9UB	Chemotherapy	Cisplatin	Complete Response	65	100	NO
+TCGA-VS-A8EC	Chemotherapy	Carboplatin	Complete Response	430	617	NO
+TCGA-VS-A94Y	Chemotherapy	Cisplatin	Clinical Progressive Disease	95	104	NO
+TCGA-VS-A8EI	Chemotherapy	Cisplatin	Complete Response	16	47	NO
+TCGA-IR-A3LK	Chemotherapy	Cisplatin	Complete Response	73	101	NO
+TCGA-IR-A3LC	Chemotherapy	Cisplatin	Complete Response	NA	NA	NO
+TCGA-VS-A8EH	Chemotherapy	Cisplatin	Complete Response	67	88	NO
+TCGA-EK-A2RL	Chemotherapy	Taxol	Clinical Progressive Disease	912	968	NO
+TCGA-Q1-A5R2	Chemotherapy	Cisplatin	Partial Response	5	48	NO
+TCGA-VS-A9U6	Chemotherapy	Cisplatin	Stable Disease	74	105	NO
+TCGA-EA-A3QD	Chemotherapy	Cisplatin	Complete Response	75	109	NO
+TCGA-VS-A8QF	Chemotherapy	Cisplatin	Complete Response	92	118	NO
+TCGA-MA-AA3X	Chemotherapy	Cisplatin	Complete Response	92	140	NO
+TCGA-RA-A741	Chemotherapy	carboplatin	Complete Response	118	254	NO
+TCGA-52-7812	Chemotherapy	Paclitaxel	Clinical Progressive Disease	529	638	NO
+TCGA-85-7697	Chemotherapy	Cisplatin	Complete Response	18	134	NO
+TCGA-QG-A5YV	Chemotherapy	Xeloda	Complete Response	72	174	NO
+TCGA-NH-A6GA	Chemotherapy	oxaliplatin	Clinical Progressive Disease	61	135	NO
+TCGA-CM-4748	Chemotherapy	Oxaliplatin	Stable Disease	153	214	NO
+TCGA-CA-6715	Chemotherapy	oxaliplatin	Complete Response	44	227	NO
+TCGA-AA-3713	Chemotherapy	5-Fluorouracil	Partial Response	244	456	NO
+TCGA-A6-2671	Chemotherapy	Irinotecan	Clinical Progressive Disease	844	984	NO
+TCGA-AY-A8YK	Chemotherapy	5FU	Complete Response	69	286	NO
+TCGA-AZ-4684	Chemotherapy	Folfox	Clinical Progressive Disease	22	NA	NO
+TCGA-AD-6965	Chemotherapy	Oxaliplatin	Complete Response	42	196	NO
+TCGA-AD-6901	Chemotherapy	Xeloda	Complete Response	61	214	NO
+TCGA-CK-4950	Chemotherapy	Oxaliplatin	Complete Response	49	237	NO
+TCGA-F4-6569	Chemotherapy	5-Fluorouracil	Complete Response	23	201	NO
+TCGA-CA-5256	Chemotherapy	oxaliplatin	Complete Response	20	206	NO
+TCGA-AZ-6606	Chemotherapy	Folfiri	Clinical Progressive Disease	59	103	NO
+TCGA-NH-A6GB	Chemotherapy	oxaliplatin	Clinical Progressive Disease	49	212	NO
+TCGA-CA-6717	Chemotherapy	oxaliplatin	Complete Response	128	318	NO
+TCGA-A6-A566	Chemotherapy	Oxaliplatin	Clinical Progressive Disease	76	237	NO
+TCGA-CA-6716	Chemotherapy	oxaliplatin	Complete Response	42	226	NO
+TCGA-EB-A6R0	Chemotherapy	Lomustine	Complete Response	19	321	NO
+TCGA-EB-A6QZ	Chemotherapy	Dacarbazine	Partial Response	153	244	NO
+TCGA-EB-A3XC	Chemotherapy	Dacarbazine	Complete Response	410	558	NO
+TCGA-EB-A85J	Chemotherapy	Dacarbazine	Complete Response	13	92	NO
+TCGA-EB-A3Y6	Chemotherapy	Dacarbazine	Complete Response	51	126	NO
+TCGA-EB-A4OY	Chemotherapy	Lomustine	Complete Response	52	593	NO
+TCGA-FU-A23L	Chemotherapy	Cisplatin	Complete Response	80	106	NO
+TCGA-DS-A7WF	Chemotherapy	Cisplatin	Partial Response	80	397	NO
+TCGA-2W-A8YY	Chemotherapy	Cisplatin	Complete Response	57	99	NO
+TCGA-P5-A5F2	Chemotherapy	Mustophoran	Partial Response	30	242	NO
+TCGA-QH-A6X8	Chemotherapy	temozolomide	Stable Disease	49	292	NO
+TCGA-DU-A5TU	Chemotherapy	Temozolomide	Stable Disease	627	NA	YES
+TCGA-QH-A65Z	Chemotherapy	VINCRISTINE	Stable Disease	36	215	NO
+TCGA-DU-8165	Chemotherapy	Temozolomide	Stable Disease	30	71	NO
+TCGA-E1-A7YY	Chemotherapy	Temodar	Stable Disease	982	1351	NO
+TCGA-FG-6688	Chemotherapy	Avastin	Stable Disease	483	NA	YES
+TCGA-E1-A7Z2	Chemotherapy	Temodar	Clinical Progressive Disease	102	213	NO
+TCGA-S9-A7QY	Chemotherapy	Temozolomide	Stable Disease	20	372	NO
+TCGA-S9-A6U0	Chemotherapy	Temozolomide	Stable Disease	30	64	NO
+TCGA-S9-A89V	Chemotherapy	Temozolomide	Clinical Progressive Disease	12	46	NO
+TCGA-FG-A6J3	Chemotherapy	Temodar	Stable Disease	27	74	NO
+TCGA-VM-A8C8	Chemotherapy	Temozolomide	Stable Disease	1282	1431	NO
+TCGA-E1-A7YS	Chemotherapy	Temodar	Stable Disease	67	106	NO
+TCGA-DH-A7UU	Chemotherapy	Temodar	Stable Disease	41	88	NO
+TCGA-QH-A65X	Chemotherapy	temozolomide	Stable Disease	139	143	NO
+TCGA-E1-A7YD	Chemotherapy	CCNU	Clinical Progressive Disease	111	285	NO
+TCGA-DH-A7UR	Chemotherapy	Temodar	Complete Response	33	1076	NO
+TCGA-DU-8166	Chemotherapy	Temozolomide	Clinical Progressive Disease	62	143	NO
+TCGA-DU-A5TP	Chemotherapy	Temozolomide	Stable Disease	123	493	NO
+TCGA-DU-A7T8	Chemotherapy	Temozolomide	Stable Disease	147	193	NO
+TCGA-S9-A6WN	Chemotherapy	Temozolomide	Stable Disease	42	91	NO
+TCGA-DB-A4XB	Chemotherapy	Temodar	Stable Disease	28	57	NO
+TCGA-HT-8113	Chemotherapy	temodar	Partial Response	34	74	NO
+TCGA-WH-A86K	Chemotherapy	Temodar	Stable Disease	39	84	NO
+TCGA-S9-A6TW	Chemotherapy	Temozolomide	Stable Disease	25	304	NO
+TCGA-DH-A66B	Chemotherapy	Temozolomide	Stable Disease	25	432	NO
+TCGA-S9-A6TY	Chemotherapy	Temozolomide	Stable Disease	5	274	NO
+TCGA-TM-A84B	Chemotherapy	Temozolomide	Clinical Progressive Disease	188	338	NO
+TCGA-HT-7884	Chemotherapy	Temodar	Stable Disease	44	84	NO
+TCGA-HT-8013	Chemotherapy	Temodar	Clinical Progressive Disease	1334	1742	NO
+TCGA-TN-A7HJ	Chemotherapy	Cisplatin	Complete Response	31	92	NO
+TCGA-P3-A6SX	Chemotherapy		Complete Response	61	91	NO
+TCGA-IQ-A61O	Chemotherapy	Cisplatin	Complete Response	69	111	NO
+TCGA-DH-A7UV	Chemotherapy	Temodar	Stable Disease	20	463	NO
+TCGA-DH-A66G	Chemotherapy	Temodar	Partial Response	41	211	NO
+TCGA-HT-7477	Chemotherapy	Temodar	Complete Response	24	428	NO
+TCGA-DU-A7TB	Chemotherapy	Temozolomide	Clinical Progressive Disease	20	57	NO
+TCGA-S9-A7J0	Chemotherapy	Temozolomide	Stable Disease	59	91	NO
+TCGA-DU-8162	Chemotherapy	Temozolomide	Stable Disease	24	70	NO
+TCGA-S9-A89Z	Chemotherapy	Temozolomide	Stable Disease	29	308	NO
+TCGA-S9-A6TX	Chemotherapy	Temozolomide	Complete Response	268	856	NO
+TCGA-FG-8189	Chemotherapy	Temodar	Stable Disease	105	159	NO
+TCGA-P5-A5F0	Chemotherapy	Lomustine	Partial Response	89	287	NO
+TCGA-E1-A7YM	Chemotherapy	Temodar	Clinical Progressive Disease	27	75	NO
+TCGA-DB-A75K	Chemotherapy	Temozolomide	Complete Response	28	64	NO
+TCGA-S9-A7R8	Chemotherapy	Temozolamide	Clinical Progressive Disease	771	786	NO
+TCGA-HW-A5KJ	Chemotherapy	Temozolomide	Clinical Progressive Disease	16	16	NO
+TCGA-DU-A7TD	Chemotherapy	Temozolomide	Stable Disease	22	63	NO
+TCGA-TM-A84L	Chemotherapy	Temozolomide	Clinical Progressive Disease	1066	1185	NO
+TCGA-DH-A66D	Chemotherapy	Temozolomide	Stable Disease	31	73	NO
+TCGA-HW-8319	Chemotherapy	Temozolomide	Stable Disease	23	66	NO
+TCGA-HW-A5KK	Chemotherapy	Temozolomide	Clinical Progressive Disease	23	176	NO
+TCGA-S9-A6TS	Chemotherapy	Carmustine	Clinical Progressive Disease	1614	1697	NO
+TCGA-DB-A4XF	Chemotherapy	Temodar	Stable Disease	34	264	NO
+TCGA-VV-A829	Chemotherapy	Temodar	Stable Disease	0	792	NO
+TCGA-HT-A4DV	Chemotherapy	Temodar	Complete Response	42	88	NO
+TCGA-VW-A7QS	Chemotherapy	Temodar	Partial Response	14	595	NO
+TCGA-E1-A7YW	Chemotherapy	CCNU	Clinical Progressive Disease	711	978	NO
+TCGA-HW-8321	Chemotherapy	Temozolomide	Stable Disease	47	321	NO
+TCGA-DB-A4XD	Chemotherapy	Temodar	Complete Response	24	291	NO
+TCGA-DU-8161	Chemotherapy	Temozolomide	Stable Disease	39	78	NO
+TCGA-E1-A7YJ	Chemotherapy	Temodar	Stable Disease	39	84	NO
+TCGA-HT-A5RC	Chemotherapy	Temodar	Clinical Progressive Disease	34	98	NO
+TCGA-DB-A4XG	Chemotherapy	Temodar	Stable Disease	1732	2067	NO
+TCGA-E1-A7YE	Chemotherapy	CCNU	Clinical Progressive Disease	81	185	NO
+TCGA-DU-A5TY	Chemotherapy	Temozolomide	Stable Disease	17	64	NO
+TCGA-HT-A61C	Chemotherapy	Temodar	Complete Response	27	NA	
+TCGA-IK-8125	Chemotherapy	Temodar	Complete Response	111	265	NO
+TCGA-HT-8011	Chemotherapy	Temodar	Stable Disease	14	69	NO
+TCGA-P5-A5F4	Chemotherapy	Lomustine	Partial Response	19	231	NO
+TCGA-S9-A6WM	Chemotherapy	Temozolomide	Stable Disease	16	64	NO
+TCGA-DH-A7UT	Chemotherapy	Temodar	Stable Disease	55	97	NO
+TCGA-E1-A7Z4	Chemotherapy	Gliadel	Stable Disease	883	883	NO
+TCGA-DB-A64W	Chemotherapy	Temodar	Stable Disease	34	274	NO
+TCGA-DB-A64V	Chemotherapy	Temodar	Stable Disease	20	330	NO
+TCGA-QH-A6CY	Chemotherapy	Temozolomide	Stable Disease	267	NA	YES
+TCGA-DU-A76L	Chemotherapy	Temozolomide	Stable Disease	16	57	NO
+TCGA-E1-A7YQ	Chemotherapy	Temodar	Stable Disease	346	396	NO
+TCGA-DU-A76R	Chemotherapy	Temozolomide	Clinical Progressive Disease	389	394	NO
+TCGA-E1-A7YL	Chemotherapy	Temodar	Clinical Progressive Disease	36	78	NO
+TCGA-DU-A7TA	Chemotherapy	Temozolomide	Stable Disease	33	70	NO
+TCGA-QH-A6XC	Chemotherapy	temozolomide	Clinical Progressive Disease	103	390	NO
+TCGA-FG-A711	Chemotherapy	Temodar	Clinical Progressive Disease	350	673	NO
+TCGA-S9-A7J3	Chemotherapy	Lomustine	Stable Disease	2	177	NO
+TCGA-DU-A6S7	Chemotherapy	Temozolomide	Stable Disease	23	57	NO
+TCGA-KT-A74X	Chemotherapy	Temozolomide	Stable Disease	40	83	NO
+TCGA-FG-8191	Chemotherapy	Temodar	Stable Disease	31	76	NO
+TCGA-S9-A6U1	Chemotherapy	Temozolomide	Complete Response	1	253	NO
+TCGA-CN-A6V6	Chemotherapy	cisplatin	Complete Response	74	116	NO
+TCGA-CN-4731	Chemotherapy	erbitux	Clinical Progressive Disease	827	869	NO
+TCGA-CN-6989	Chemotherapy	gemcitabine	Clinical Progressive Disease	791	855	NO
+TCGA-HD-7753	Chemotherapy	Erbitux	Complete Response	71	85	NO
+TCGA-VP-A87D	Chemotherapy	Docetaxel	Complete Response	248	370	NO
+TCGA-KK-A8II	Chemotherapy	Docetaxel	Clinical Progressive Disease	2516	2738	NO
+TCGA-56-8308	Chemotherapy	Paclitaxel	Stable Disease	57	203	NO
+TCGA-34-5240	Chemotherapy	Cisplatin	Complete Response	153	153	NO
+TCGA-85-8664	Chemotherapy	Carboplatin	Clinical Progressive Disease	446	495	NO
+TCGA-NC-A5HJ	Chemotherapy	Cisplatin	Clinical Progressive Disease	411	412	NO
+TCGA-92-8063	Chemotherapy	Carboplatin	Complete Response	52	94	NO
+TCGA-56-8625	Chemotherapy	Cisplatin	Clinical Progressive Disease	120	140	NO
+TCGA-85-7698	Chemotherapy	Etoposide	Complete Response	654	738	NO
+TCGA-96-A4JL	Chemotherapy	Gemzar	Complete Response	52	136	NO
+TCGA-56-7730	Chemotherapy		Clinical Progressive Disease	117	148	NO
+TCGA-56-7222	Chemotherapy	Cisplatin	Complete Response	62	133	NO
+TCGA-58-A46K	Chemotherapy	Carboplatin	Complete Response	85	171	NO
+TCGA-94-8035	Chemotherapy		Complete Response	NA	NA	NO
+TCGA-56-8629	Chemotherapy	Cisplatin	Complete Response	66	148	NO
+TCGA-EB-A6QY	Chemotherapy	Carboplatin	Complete Response	56	192	NO
+TCGA-EB-A57M	Chemotherapy	Cisplatin	Complete Response	23	157	NO
+TCGA-EB-A5FP	Chemotherapy	Dacarbazine	Clinical Progressive Disease	24	52	NO
+TCGA-85-7699	Chemotherapy	Cisplatin	Complete Response	19	112	NO
+TCGA-56-7823	Chemotherapy	Cisplatin	Complete Response	129	197	NO
+TCGA-NC-A5HG	Chemotherapy	Cisplatin	Complete Response	37	107	NO
+TCGA-43-5668	Chemotherapy	Gemzar	Clinical Progressive Disease	481	551	NO
+TCGA-43-A475	Chemotherapy	Cisplatin	Complete Response	109	172	NO
+TCGA-58-A46J	Chemotherapy	Carboplatin	Complete Response	56	134	NO
+TCGA-56-A4BX	Chemotherapy	Chemo, NOS	Complete Response	52	144	NO
+TCGA-58-8387	Chemotherapy	Cisplatin	Complete Response	22	129	NO
+TCGA-90-A59Q	Chemotherapy	Cisplatin	Complete Response	75	117	NO
+TCGA-85-A4JB	Chemotherapy		Complete Response	20	447	NO
+TCGA-43-A474	Chemotherapy	Carboplatin	Complete Response	101	172	NO
+TCGA-85-A50Z	Chemotherapy	Vepesid	Complete Response	35	42	NO
+TCGA-56-A4BW	Chemotherapy	Carboplatin	Complete Response	30	109	NO
+TCGA-A6-5664	Chemotherapy	Irinotecan	Clinical Progressive Disease	301	635	NO
+TCGA-A6-A56B	Chemotherapy	Fluorouracil	Complete Response	82	110	NO
+TCGA-QG-A5YW	Chemotherapy	capecitabine	Complete Response	42	197	NO
+TCGA-RU-A8FL	Chemotherapy	C1 FOLFIRI/Zaltrap	Clinical Progressive Disease	679	756	NO
+TCGA-AZ-4616	Chemotherapy	XELODA	Stable Disease	113	NA	NO
+TCGA-A6-6652	Chemotherapy	Oxaliplatin	Stable Disease	86	254	NO
+TCGA-A6-A565	Chemotherapy	5FU	Clinical Progressive Disease	NA	NA	NO
+TCGA-F4-6805	Chemotherapy	Xeloda	Complete Response	29	111	NO
+TCGA-QG-A5Z1	Chemotherapy		Complete Response	NA	NA	NO
+TCGA-AD-6889	Chemotherapy	Xeloda	Complete Response	42	NA	NO
+TCGA-AZ-6600	Chemotherapy	CPT-11	Clinical Progressive Disease	122	144	NO
+TCGA-43-A56V	Chemotherapy	carboplatin	Complete Response	47	111	NO
+TCGA-56-A62T	Chemotherapy	Carboplatin	Complete Response	45	80	NO
+TCGA-85-6798	Chemotherapy	Etoposide	Stable Disease	20	111	NO
+TCGA-NK-A5D1	Chemotherapy	Gemcitabine	Clinical Progressive Disease	49	476	NO
+TCGA-NC-A5HR	Chemotherapy	Carboplatin	Complete Response	49	138	NO
+TCGA-J1-A4AH	Chemotherapy	cisplatin	Complete Response	68	131	NO
+TCGA-NC-A5HK	Chemotherapy	Cisplatin	Complete Response	37	128	NO
+TCGA-NC-A5HE	Chemotherapy	Cisplatin	Complete Response	51	142	NO
+TCGA-85-A4JC	Chemotherapy		Complete Response	39	52	NO
+TCGA-33-AASI	Chemotherapy	TAXOTERE	Stable Disease	134	134	NO
+TCGA-NC-A5HT	Chemotherapy	Carboplatin	Partial Response	246	288	NO
+TCGA-85-8351	Chemotherapy	Cisplatin	Complete Response	22	139	NO
+TCGA-94-8491	Chemotherapy		Complete Response	60	152	NO
+TCGA-NC-A5HI	Chemotherapy	Cisplatin	Complete Response	91	169	NO
+TCGA-96-A4JK	Chemotherapy	Gemcitabine	Complete Response	47	139	NO
+TCGA-56-7579	Chemotherapy	Carboplatin	Clinical Progressive Disease	88	215	NO
+TCGA-56-8624	Chemotherapy	Carboplatin	Complete Response	69	69	NO
+TCGA-NC-A5HQ	Chemotherapy	Carboplatin	Complete Response	57	133	NO
+TCGA-34-8454	Chemotherapy	Taxotere	Complete Response	68	166	NO
+TCGA-NC-A5HP	Chemotherapy	Cisplatin	Clinical Progressive Disease	52	113	NO
+TCGA-56-7822	Chemotherapy	Eloxatin	Clinical Progressive Disease	311	332	NO
+TCGA-AZ-6605	Chemotherapy	FOLFOX	Stable Disease	56	105	NO
+TCGA-CA-5254	Chemotherapy	oxaliplatin	Complete Response	50	204	NO
+TCGA-G9-A9S0	Chemotherapy	taxotere	Clinical Progressive Disease	591	654	NO
+TCGA-CE-A481	Chemotherapy	Doxorubicin	Complete Response	172	322	NO
+TCGA-NC-A5HO	Chemotherapy	Carboplatin	Complete Response	45	108	NO
+TCGA-85-8276	Chemotherapy	Cisplatin	Complete Response	17	144	NO
+TCGA-85-A512	Chemotherapy	Vepesid	Complete Response	42	78	NO
+TCGA-58-8391	Chemotherapy	Carboplatin	Complete Response	42	159	NO
+TCGA-37-A5EL	Chemotherapy	Temodal	Partial Response	222	228	NO
+TCGA-43-6647	Chemotherapy	Taxol	Complete Response	90	153	NO
+TCGA-90-A4EE	Chemotherapy	Cisplatin	Complete Response	121	184	NO
+TCGA-L3-A524	Chemotherapy	Cisplatin	Complete Response	197	350	NO
+TCGA-NH-A8F7	Chemotherapy	FLUOROURACIL	Partial Response	74	228	NO
+TCGA-AA-3494	Chemotherapy	Folinic acid	Partial Response	92	184	NO
+TCGA-CA-5255	Chemotherapy	oxaliplatin	Complete Response	164	331	NO
+TCGA-AD-6964	Chemotherapy	Folfox	Clinical Progressive Disease	63	214	NO
+TCGA-AA-3662	Chemotherapy	Capecitabine	Partial Response	62	184	NO
+TCGA-58-A46L	Chemotherapy	Carboplatin	Complete Response	67	265	NO
+TCGA-QH-A6X4	Chemotherapy	temozolomide	Clinical Progressive Disease	196	342	NO
+TCGA-S9-A7QW	Chemotherapy	Temozolomide	Stable Disease	382	592	NO
+TCGA-DU-8168	Chemotherapy	Temozolomide	Stable Disease	25	71	NO
+TCGA-S9-A7IX	Chemotherapy	Temozolomide	Clinical Progressive Disease	350	413	NO
+TCGA-E1-A7Z3	Chemotherapy	CCNU	Clinical Progressive Disease	1911	1921	NO
+TCGA-TM-A84M	Chemotherapy	Procarbazine	Complete Response	138	264	NO
+TCGA-E1-A7YN	Chemotherapy	Temodar	Stable Disease	35	90	NO
+TCGA-S9-A6WG	Chemotherapy	Temozolomide	Stable Disease	382	386	NO
+TCGA-HT-A619	Chemotherapy	Temodar	Complete Response	19	443	NO
+TCGA-HT-8114	Chemotherapy	Temodar	Complete Response	39	90	NO
+TCGA-E1-A7YV	Chemotherapy	Temodar	Clinical Progressive Disease	38	82	NO
+TCGA-QH-A65R	Chemotherapy	TEMOZOLOMIDE	Stable Disease	32	430	NO
+TCGA-DU-8163	Chemotherapy	Temozolomide	Stable Disease	35	81	NO
+TCGA-TM-A84C	Chemotherapy	Temozolomide	Clinical Progressive Disease	297	459	NO
+TCGA-S9-A7R7	Chemotherapy	Temozolomide	Stable Disease	144	526	NO
+TCGA-CN-A641	Chemotherapy	cisplatin	Complete Response	187	239	NO
+TCGA-TN-A7HL	Chemotherapy	Cisplatin	Complete Response	35	62	NO
+TCGA-UF-A7JC	Chemotherapy	Cisplatin	Complete Response	131	173	NO
+TCGA-D6-A6EK	Chemotherapy	cisplatin	Partial Response	39	105	NO
+TCGA-QK-A8Z9	Chemotherapy	Carboplatin	Complete Response	50	102	NO
+TCGA-P3-A6T6	Chemotherapy	Cetuximab	Clinical Progressive Disease	273	365	NO
+TCGA-F7-A50J	Chemotherapy	Cisplatin	Complete Response	70	114	NO
+TCGA-QK-A6II	Chemotherapy	Carboplatin	Clinical Progressive Disease	183	183	NO
+TCGA-CN-A63W	Chemotherapy	VECTIBIX	Complete Response	69	138	NO
+TCGA-IQ-7630	Chemotherapy	Docetaxel	Complete Response	102	147	NO
+TCGA-P3-A6SW	Chemotherapy	Cisplatin	Complete Response	NA	122	NO
+TCGA-P3-A5Q6	Chemotherapy	Cisplatin	Complete Response	43	104	NO
+TCGA-CN-A49A	Chemotherapy	carboplatin	Complete Response	76	126	NO
+TCGA-CQ-A4CH	Chemotherapy	cisplatin	Partial Response	120	148	NO
+TCGA-P3-A6T7	Chemotherapy	Cisplatin	Complete Response	91	122	NO
+TCGA-MZ-A5BI	Chemotherapy	Cisplatin	Complete Response	41	70	NO
+TCGA-CR-7389	Chemotherapy	Paclitaxel	Complete Response	31	73	NO
+TCGA-HD-8224	Chemotherapy	Cetuximab	Clinical Progressive Disease	90	147	NO
+TCGA-CR-7382	Chemotherapy		Complete Response	NA	159	NO
+TCGA-T2-A6WZ	Chemotherapy	docetaxel	Stable Disease	247	303	NO
+TCGA-BA-A6DJ	Chemotherapy	Cisplatin	Complete Response	105	140	NO
+TCGA-CN-A6V7	Chemotherapy	cisplatin	Complete Response	83	104	NO
+TCGA-HT-A74K	Chemotherapy	temodar	Complete Response	35	277	NO
+TCGA-DB-A64X	Chemotherapy	Temodar	Stable Disease	53	265	NO
+TCGA-VM-A8CF	Chemotherapy	Temodar	Stable Disease	41	88	NO
+TCGA-DU-A5TS	Chemotherapy	Temodar	Stable Disease	25	415	NO
+TCGA-HT-8564	Chemotherapy	Temodar	Clinical Progressive Disease	13	135	NO
+TCGA-DB-A64O	Chemotherapy	Temodar	Stable Disease	461	551	NO
+TCGA-QH-A65V	Chemotherapy	PROCARBAZINE	Stable Disease	147	327	NO
+TCGA-E1-A7YK	Chemotherapy	Temodar	Stable Disease	27	68	NO
+TCGA-KT-A7W1	Chemotherapy	Temozolomide	Clinical Progressive Disease	20	61	NO
+TCGA-CR-7404	Chemotherapy	Paclitaxel	Complete Response	85	135	NO
+TCGA-CR-5248	Chemotherapy	Paclitaxel	Complete Response	137	179	NO
+TCGA-BA-A4IF	Chemotherapy	Cisplatin	Complete Response	25	53	NO
+TCGA-BA-A6DL	Chemotherapy	Carboplatin	Complete Response	21	56	NO
+TCGA-BA-A6D8	Chemotherapy	Cisplatin	Complete Response	112	154	NO
+TCGA-QK-A6IG	Chemotherapy	Carboplatin	Clinical Progressive Disease	51	98	NO
+TCGA-CN-A63T	Chemotherapy	CISPLATIN	Complete Response	64	64	NO
+TCGA-KU-A6H7	Chemotherapy	Cisplatin	Complete Response	65	100	NO
+TCGA-P3-A6T3	Chemotherapy	Cisplatin	Complete Response	61	92	NO
+TCGA-H7-8501	Chemotherapy		Complete Response	76	137	NO
+TCGA-BA-A8YP	Chemotherapy		Complete Response	39	100	NO
+TCGA-CN-6998	Chemotherapy	cisplatin	Clinical Progressive Disease	64	131	NO
+TCGA-UF-A7JF	Chemotherapy	Cisplatin	Complete Response	71	86	NO
+TCGA-P3-A6T8	Chemotherapy	Cisplatin	Complete Response	92	122	NO
+TCGA-CR-7397	Chemotherapy	Paclitaxel	Complete Response	63	99	NO
+TCGA-BA-A6DI	Chemotherapy	Cisplatin	Complete Response	18	53	NO
+TCGA-CR-7383	Chemotherapy	Paclitaxel	Partial Response	462	483	NO
+TCGA-BA-A6DA	Chemotherapy	Cisplatin	Complete Response	68	110	NO
+TCGA-MZ-A6I9	Chemotherapy	Cisplatin	Complete Response	57	99	NO
+TCGA-QK-A6IH	Chemotherapy	Carboplatin	Clinical Progressive Disease	49	84	NO
+TCGA-IQ-A61G	Chemotherapy	Cisplatin	Clinical Progressive Disease	130	168	NO
+TCGA-BA-A4IH	Chemotherapy	Cisplatin	Complete Response	87	129	NO
+TCGA-E6-A8L9	Chemotherapy	Paclitaxel	Complete Response	75	173	NO
+TCGA-EO-A2CH	Chemotherapy	Carboplatin	Clinical Progressive Disease	98	276	NO
+TCGA-FI-A2EU	Chemotherapy	Carboplatinum	Complete Response	44	166	NO
+TCGA-AX-A2H5	Chemotherapy	Carboplatin	Complete Response	87	NA	NO
+TCGA-EO-A3B1	Chemotherapy	Carboplatin	Complete Response	64	247	NO
+TCGA-QF-A5YS	Chemotherapy	CARBOPLATIN	Complete Response	109	158	NO
+TCGA-EO-A3AV	Chemotherapy	Carboplatin	Complete Response	96	216	NO
+TCGA-AJ-A3BD	Chemotherapy	Carboplatin	Complete Response	37	125	NO
+TCGA-AJ-A3OJ	Chemotherapy	Carboplatin	Complete Response	81	230	NO
+TCGA-QK-A6IF	Chemotherapy	Carboplatin	Complete Response	17	63	NO
+TCGA-UF-A7JT	Chemotherapy	Cisplatin	Complete Response	173	229	NO
+TCGA-GM-A2DB	Chemotherapy	Taxol	Complete Response	91	167	NO
+TCGA-C8-A8HP	Chemotherapy	5-Flourouracil	Complete Response	31	224	NO
+TCGA-E9-A5FK	Chemotherapy	Cyclophosphamide	Complete Response	21	200	NO
+TCGA-GM-A5PV	Chemotherapy	Taxotere	Complete Response	107	174	NO
+TCGA-OL-A5D7	Chemotherapy	Cytoxan	Complete Response	41	104	NO
+TCGA-EW-A1OY	Chemotherapy	Paclitaxel	Stable Disease	180	308	NO
+TCGA-S3-AA14	Chemotherapy	ADRIAMYCIN	Complete Response	62	104	NO
+TCGA-OL-A5RV	Chemotherapy	Doxorubicin	Complete Response	63	161	NO
+TCGA-BH-A0C3	Chemotherapy	Adriamycin	Clinical Progressive Disease	109	209	NO
+TCGA-WT-AB41	Chemotherapy	Taxotere	Complete Response	89	150	NO
+TCGA-LL-A8F5	Chemotherapy	abraxane	Complete Response	189	259	NO
+TCGA-E9-A3X8	Chemotherapy	Cyclophosphane	Complete Response	14	160	NO
+TCGA-C8-A26W	Chemotherapy	Doxorubicin	Complete Response	23	193	NO
+TCGA-E9-A1NI	Chemotherapy	Doxorubicin	Complete Response	0	80	NO
+TCGA-LL-A5YO	Chemotherapy	TAXOTERE	Complete Response	56	160	NO
+TCGA-A2-A3XT	Chemotherapy	Cyclophosphamide	Partial Response	35	83	NO
+TCGA-4H-AAAK	Chemotherapy	Cyclophosphamide	Complete Response	27	98	NO
+TCGA-A2-A3XX	Chemotherapy	Cyclophosphamide	Complete Response	80	129	NO
+TCGA-AC-A2QH	Chemotherapy	Cytoxan	Complete Response	94	208	NO
+TCGA-AC-A2FB	Chemotherapy	Taxotere	Complete Response	101	205	NO
+TCGA-GM-A2DM	Chemotherapy	Taxol	Complete Response	81	169	NO
+TCGA-E9-A1N3	Chemotherapy	5-Fluorouracil	Complete Response	15	68	NO
+TCGA-AQ-A7U7	Chemotherapy	Cyclophosphamide	Complete Response	123	193	NO
+TCGA-AQ-A04H	Chemotherapy	Carboplatin	Complete Response	29	133	NO
+TCGA-OL-A66I	Chemotherapy	ADRIAMYCIN	Complete Response	43	312	NO
+TCGA-GM-A3NW	Chemotherapy	Fluorouracil	Stable Disease	65	181	NO
+TCGA-S3-A6ZG	Chemotherapy	Doxorubicin	Complete Response	52	100	NO
+TCGA-BH-A0DD	Chemotherapy	Docetaxel	Complete Response	105	217	NO
+TCGA-OL-A66P	Chemotherapy	Cytoxan	Complete Response	71	162	NO
+TCGA-E9-A6HE	Chemotherapy	Adriamycin	Complete Response	104	174	NO
+TCGA-C8-A27A	Chemotherapy	5-Flourouracil	Complete Response	411	434	NO
+TCGA-S3-AA0Z	Chemotherapy	DOXORUBICIN	Complete Response	84	84	NO
+TCGA-A7-A5ZW	Chemotherapy	Cyclophosphamide	Complete Response	71	176	NO
+TCGA-KK-A59X	Chemotherapy	Cabazitaxel	Partial Response	2262	2455	NO
+TCGA-NH-A50V	Chemotherapy	fluorouracil	Complete Response	22	210	NO
+TCGA-DM-A0XF	Chemotherapy	Mayo 425-20	Complete Response	45	174	NO
+TCGA-NH-A50U	Chemotherapy	oxaliplatin	Partial Response	21	189	NO
+TCGA-F4-6806	Chemotherapy	Irinotecan	Complete Response	42	158	NO
+TCGA-AZ-4682	Chemotherapy	Camptosar	Clinical Progressive Disease	100	NA	NO
+TCGA-D5-6533	Chemotherapy	Oxaliplatin, Folinic acid, Fluorouracil	Complete Response	67	195	NO
+TCGA-AZ-4308	Chemotherapy	Avastin	Complete Response	50	191	NO
+TCGA-F4-6856	Chemotherapy	5-Fluorouracil	Complete Response	11	41	NO
+TCGA-F4-6807	Chemotherapy	Xeloda	Complete Response	73	284	NO
+TCGA-CA-5796	Chemotherapy	oxaliplatin	Complete Response	30	183	NO
+TCGA-QG-A5YX	Chemotherapy	Xeloda	Complete Response	42	527	NO
+TCGA-SS-A7HO	Chemotherapy	Oxaliplatin	Complete Response	37	93	NO
+TCGA-NH-A8F8	Chemotherapy	fluorouracil	Clinical Progressive Disease	49	476	NO
+TCGA-FV-A3I0	Chemotherapy	Gemcitabine	Clinical Progressive Disease	166	586	NO
+TCGA-DD-A1EH	Chemotherapy	Sorafenib	Partial Response	358	863	NO
+TCGA-UB-A7MA	Chemotherapy	gemcitabine	Clinical Progressive Disease	60	207	NO
+TCGA-N5-A59F	Chemotherapy	Carboplatin	Complete Response	70	182	NO
+TCGA-N5-A59E	Chemotherapy	Carboplatin	Complete Response	63	224	NO
+TCGA-N6-A4VF	Chemotherapy	Taxol	Complete Response	77	140	NO
+TCGA-N8-A4PQ	Chemotherapy	Carboplatin	Complete Response	82	194	NO
+TCGA-N9-A4Q3	Chemotherapy	Paclitaxel	Partial Response	771	1128	NO
+TCGA-N5-A4RM	Chemotherapy	Carboplatin	Clinical Progressive Disease	60	123	NO
+TCGA-NG-A4VU	Chemotherapy	Taxol	Clinical Progressive Disease	76	258	NO
+TCGA-N8-A56S	Chemotherapy	Carboplatin	Stable Disease	57	183	NO
+TCGA-N5-A4RU	Chemotherapy	Ifosfamide	Complete Response	48	113	NO
+TCGA-N6-A4VE	Chemotherapy	Carboplatin	Clinical Progressive Disease	45	152	NO
+TCGA-N5-A4R8	Chemotherapy	Ifosfamide	Complete Response	68	189	NO
+TCGA-N9-A4Q7	Chemotherapy	Carboplatin	Complete Response	86	205	NO
+TCGA-NF-A4WX	Chemotherapy	Carboplatin	Complete Response	46	148	NO
+TCGA-N5-A4RF	Chemotherapy	Carboplatin	Complete Response	69	174	NO
+TCGA-NG-A4VW	Chemotherapy	Cisplatin	Complete Response	57	197	NO
+TCGA-N5-A4RS	Chemotherapy	Ifosfamide	Complete Response	NA	135	NO
+TCGA-N7-A4Y0	Chemotherapy	Ifosfamide	Stable Disease	305	324	NO
+TCGA-N6-A4VC	Chemotherapy	Carboplatin	Clinical Progressive Disease	55	160	NO
+TCGA-N5-A4RV	Chemotherapy	Ifosfamide	Complete Response	NA	NA	NO
+TCGA-N9-A4PZ	Chemotherapy	Carboplatin	Complete Response	88	193	NO
+TCGA-N8-A4PI	Chemotherapy	Taxol	Partial Response	57	199	NO
+TCGA-N5-A4RN	Chemotherapy	Carboplatin	Complete Response	65	170	NO
+TCGA-N8-A4PN	Chemotherapy	Taxol	Complete Response	46	151	NO
+TCGA-ND-A4WC	Chemotherapy	Carboplatin	Complete Response	59	215	NO
+TCGA-N6-A4VG	Chemotherapy	Carboplatin	Partial Response	62	166	NO
+TCGA-N9-A4Q1	Chemotherapy	Cisplatin	Complete Response	67	95	NO
+TCGA-N6-A4V9	Chemotherapy	Carboplatin	Complete Response	33	148	NO
+TCGA-CI-6620	Chemotherapy	Fluorouracil	Clinical Progressive Disease	39	160	NO
+TCGA-AG-A020	Chemotherapy	Folinic acid	Complete Response	31	212	NO
+TCGA-F5-6571	Chemotherapy	Mitomycin	Clinical Progressive Disease	770	813	NO
+TCGA-AG-A01W	Chemotherapy	5-Fluorouracil	Complete Response	62	184	NO
+TCGA-AH-6544	Chemotherapy	Oxaliplatin	Stable Disease	68	229	NO
+TCGA-AG-A036	Chemotherapy	5-Fluorouracil	Complete Response	92	215	NO
+TCGA-W5-AA2T	Chemotherapy	Gemcitabine	Complete Response	56	205	NO
+TCGA-3X-AAV9	Chemotherapy	Gemcitabine	Clinical Progressive Disease	253	326	NO
+TCGA-W5-AA36	Chemotherapy	Gemcitabine	Stable Disease	41	76	NO
+TCGA-W5-AA2Z	Chemotherapy	Cisplatin	Clinical Progressive Disease	63	NA	YES
+TCGA-UT-A88C	Chemotherapy	Cisplatin	Stable Disease	24	66	NO
+TCGA-SC-A6LR	Chemotherapy	Pemetrexed	Stable Disease	83	146	NO
+TCGA-LK-A4NW	Chemotherapy	Cisplatin	Clinical Progressive Disease	0	0	NO
+TCGA-SC-A6LQ	Chemotherapy	Pemetrexed	Stable Disease	74	137	NO
+TCGA-LK-A4O7	Chemotherapy	Cisplatin	Clinical Progressive Disease	177	238	NO
+TCGA-ZH-A8Y4	Chemotherapy	Gemzar	Partial Response	70	162	NO
+TCGA-LK-A4NZ	Chemotherapy	Cisplatin	Clinical Progressive Disease	36	36	NO
+TCGA-MQ-A6BQ	Chemotherapy	Cisplatinum	Stable Disease	11	133	NO
+TCGA-LK-A4O0	Chemotherapy	Cisplatinum	Complete Response	53	53	NO
+TCGA-SC-A6LM	Chemotherapy	EVERolimus	Clinical Progressive Disease	391	543	NO
+TCGA-SH-A7BH	Chemotherapy	Cisplatin	Clinical Progressive Disease	153	195	NO
+TCGA-LK-A4O5	Chemotherapy	CISPLATINUM	Clinical Progressive Disease	60	60	NO
+TCGA-SC-AA5Z	Chemotherapy	Pemetrexed	Stable Disease	106	170	NO
+TCGA-SH-A7BD	Chemotherapy	Pemetrexed	Partial Response	58	163	NO
+TCGA-UD-AAC6	Chemotherapy	Carboplatin	Stable Disease	138	256	NO
+TCGA-3B-A9HR	Chemotherapy	trabectedin	Clinical Progressive Disease	1425	1621	NO
+TCGA-DX-A3LU	Chemotherapy	Gemcitabine	Clinical Progressive Disease	451	492	NO
+TCGA-DX-A8BT	Chemotherapy	Gemcitabine	Complete Response	697	773	NO
+TCGA-DX-AB2E	Chemotherapy	Adriamycin	Partial Response	133	222	NO
+TCGA-SI-A71P	Chemotherapy	Ifosfamide	Complete Response	174	269	NO
+TCGA-A4-7287	Chemotherapy	Cisplatin	Clinical Progressive Disease	254	282	NO
+TCGA-MH-A855	Chemotherapy	carboplatin	Partial Response	86	205	NO
+TCGA-DD-A1EJ	Chemotherapy	Sorafenib	Clinical Progressive Disease	264	887	NO
+TCGA-BW-A5NP	Chemotherapy	Nexavar	Clinical Progressive Disease	128	289	NO
+TCGA-WX-AA47	Chemotherapy	Sorafenib	Clinical Progressive Disease	331	493	NO
+TCGA-DD-A1EK	Chemotherapy	Sorafenib	Clinical Progressive Disease	188	349	NO
+TCGA-BC-A8YO	Chemotherapy	Nexavar	Partial Response	54	186	NO
+TCGA-DD-A115	Chemotherapy		Stable Disease	502	841	NO
+TCGA-LN-A7HY	Chemotherapy	Capecitabine	Complete Response	104	159	NO
+TCGA-LN-A49U	Chemotherapy	Capecitabine	Complete Response	35	69	NO
+TCGA-LN-A7HZ	Chemotherapy	Capecitabine	Complete Response	112	153	NO
+TCGA-R6-A8W5	Chemotherapy	Oxaliplatin	Clinical Progressive Disease	361	385	NO
+TCGA-LN-A7HV	Chemotherapy	Capecitabine	Complete Response	36	71	NO
+TCGA-S8-A6BV	Chemotherapy	FOLFOX	Clinical Progressive Disease	276	290	NO
+TCGA-JY-A93D	Chemotherapy	Fluorouracil	Complete Response	150	280	NO
+TCGA-LN-A49W	Chemotherapy	Capecitabine	Complete Response	53	82	NO
+TCGA-V5-A7RC	Chemotherapy	carboplatin	Clinical Progressive Disease	NA	NA	NO
+TCGA-LN-A49Y	Chemotherapy	Capecitabine	Clinical Progressive Disease	92	126	NO
+TCGA-LN-A4A8	Chemotherapy	Docetaxel	Complete Response	276	432	NO
+TCGA-IC-A6RF	Chemotherapy	Carboplatin	Complete Response	342	370	NO
+TCGA-LN-A5U7	Chemotherapy	docetaxel	Complete Response	537	693	NO
+TCGA-LN-A49O	Chemotherapy	Capecitabine	Clinical Progressive Disease	76	104	NO
+TCGA-IA-A83W	Chemotherapy	Rituxan	Complete Response	496	601	NO
+TCGA-AG-3731	Chemotherapy	Folinic acid	Partial Response	92	914	NO
+TCGA-XM-AAZ1	Chemotherapy	Cisplatin	Stable Disease	13	55	NO
+TCGA-DY-A0XA	Chemotherapy	Mayo 425-20	Complete Response	47	239	NO
+TCGA-AG-A01Y	Chemotherapy	5-Fluorouracil	Complete Response	31	151	NO
+TCGA-3B-A9HV	Chemotherapy	DOCETAXEL	Clinical Progressive Disease	112	271	NO
+TCGA-3B-A9HP	Chemotherapy	Gemcitabine	Stable Disease	595	616	NO
+TCGA-2G-AAFY	Chemotherapy	Bleomycin	Complete Response	11	71	NO
+TCGA-YU-A90Q	Chemotherapy	Carboplatin	Complete Response	219	252	NO
+TCGA-2X-A9D5	Chemotherapy	Cisplatin	Complete Response	18	83	NO
+TCGA-2G-AAKL	Chemotherapy	Bleomycin	Partial Response	6	78	NO
+TCGA-2G-AAFO	Chemotherapy	Bleomycin	Complete Response	25	71	NO
+TCGA-2G-AAH4	Chemotherapy	Bleomycin	Partial Response	9	95	NO
+TCGA-2G-AAF8	Chemotherapy	Etoposide	Complete Response	3349	3420	NO
+TCGA-2G-AAGS	Chemotherapy	Bleomycin	Complete Response	17	49	NO
+TCGA-2G-AAH8	Chemotherapy	Bleomycin	Partial Response	2	68	NO
+TCGA-2G-AAKH	Chemotherapy	Bleomycin	Complete Response	24	65	NO
+TCGA-2G-AAGP	Chemotherapy	Bleomycin	Complete Response	8	53	NO
+TCGA-2G-AAKG	Chemotherapy	Bleomycin	Complete Response	134	182	NO
+TCGA-XE-AAOD	Chemotherapy	Bleomycin	Complete Response	77	82	NO
+TCGA-4K-AAAL	Chemotherapy	Etoposide	Complete Response	5	111	NO
+TCGA-2G-AAFG	Chemotherapy	Bleomycin	Complete Response	2506	2565	NO
+TCGA-2G-AAGN	Chemotherapy	Bleomycin	Complete Response	11	71	NO
+TCGA-YU-A912	Chemotherapy	Bleomycin	Complete Response	26	111	NO
+TCGA-YU-A94D	Chemotherapy	Bleomycin	Complete Response	69	151	NO
+TCGA-2G-AAFN	Chemotherapy	Etoposide	Complete Response	18	91	NO
+TCGA-2G-AAG0	Chemotherapy	Bleomycin	Complete Response	92	135	NO
+TCGA-4K-AA1G	Chemotherapy	Cisplatin	Complete Response	28	107	NO
+TCGA-2G-AAGC	Chemotherapy	Bleomycin	Complete Response	371	402	NO
+TCGA-2G-AAGF	Chemotherapy	Bleomycin	Complete Response	144	202	NO
+TCGA-YU-AA4L	Chemotherapy	Bleomycin	Stable Disease	2	83	NO
+TCGA-2G-AAHA	Chemotherapy	Bleomycin	Partial Response	4	83	NO
+TCGA-2G-AAHC	Chemotherapy	Bleomycin	Complete Response	3	50	NO
+TCGA-N5-A4RO	Chemotherapy	Ifosfamide	Stable Disease	67	141	NO
+TCGA-N8-A4PO	Chemotherapy	Taxol	Clinical Progressive Disease	101	144	NO
+TCGA-N5-A4RJ	Chemotherapy	Carboplatin	Complete Response	85	204	NO
+TCGA-N8-A4PM	Chemotherapy	Taxol	Complete Response	98	161	NO
+TCGA-NA-A4QW	Chemotherapy	Taxol	Complete Response	126	231	NO
+TCGA-N5-A4RT	Chemotherapy	Cisplatin	Complete Response	66	101	NO
+TCGA-N7-A4Y8	Chemotherapy	Paclitaxel	Stable Disease	13	133	NO
+TCGA-XE-AAOJ	Chemotherapy	Bleomycin	Partial Response	63	153	NO
+TCGA-2G-AAGG	Chemotherapy	Bleomycin	Partial Response	11	56	NO
+TCGA-2G-AAF6	Chemotherapy	Bleomycin	Complete Response	816	879	NO
+TCGA-2G-AAGT	Chemotherapy	Bleomycin	Partial Response	11	71	NO
+TCGA-VF-A8AD	Chemotherapy	Bleomycin	Complete Response	218	340	NO
+TCGA-2G-AAG8	Chemotherapy	Bleomycin	Complete Response	29	73	NO
+TCGA-2G-AAGA	Chemotherapy	Bleomycin	Complete Response	124	128	NO
+TCGA-2G-AAL7	Chemotherapy	Bleomycin	Complete Response	15	71	NO
+TCGA-2G-AAFL	Chemotherapy	Bleomycin	Complete Response	135	180	NO
+TCGA-2G-AAGJ	Chemotherapy	Bleomycin	Complete Response	173	229	NO
+TCGA-2G-AAGV	Chemotherapy	Bleomycin	Complete Response	3	62	NO
+TCGA-2G-AAFE	Chemotherapy	Etoposide	Complete Response	644	686	NO
+TCGA-YU-AA61	Chemotherapy	Bleomycin	Complete Response	49	106	NO
+TCGA-WB-A81Q	Chemotherapy	vincristine	Clinical Progressive Disease	620	704	NO
+TCGA-F5-6702	Chemotherapy	5-Fluorouracil	Clinical Progressive Disease	370	641	NO
+TCGA-AF-A56N	Chemotherapy	xeloda	Complete Response	54	95	NO
+TCGA-AF-A56L	Chemotherapy	Oxaliplatin	Complete Response	52	255	NO
+TCGA-AG-A02N	Chemotherapy	Folinic acid	Complete Response	28	89	NO
+TCGA-F5-6864	Chemotherapy	5-Fluorouracil	Complete Response	17	191	NO
+TCGA-DX-A8BV	Chemotherapy	Docetaxel	Clinical Progressive Disease	750	903	NO
+TCGA-QT-A5XJ	Chemotherapy	Xeloda	Clinical Progressive Disease	113	326	NO
+TCGA-2Y-A9H8	Chemotherapy	everolimus	Stable Disease	498	608	NO
+TCGA-DD-A4NS	Chemotherapy	Sorafenib	Clinical Progressive Disease	1116	1314	NO
+TCGA-DD-A4ND	Chemotherapy	Adriamycin/Cytoxan	Complete Response	20	218	NO
+TCGA-G7-7501	Chemotherapy	sutent	Clinical Progressive Disease	110	506	NO
+TCGA-UB-A7MB	Chemotherapy	5-fluorouracil	Clinical Progressive Disease	480	510	NO
+TCGA-DD-A11D	Chemotherapy	Sorafenib	Clinical Progressive Disease	586	641	NO
+TCGA-G3-A5SI	Chemotherapy	Sorafenib	Clinical Progressive Disease	599	733	NO
+TCGA-G3-A25S	Chemotherapy	Sunitinib	Clinical Progressive Disease	313	348	NO
+TCGA-KH-A6WC	Chemotherapy		Complete Response	53	NA	NO
+TCGA-L5-A88W	Chemotherapy	carboplatin	Clinical Progressive Disease	105	225	NO
+TCGA-L7-A6VZ	Chemotherapy	Leucovorin Calcium	Complete Response	97	244	NO
+TCGA-L7-A56G	Chemotherapy	Cisplatin	Stable Disease	49	77	NO
+TCGA-LN-A4A1	Chemotherapy	Cisplatin	Clinical Progressive Disease	200	236	NO
+TCGA-VR-A8ER	Chemotherapy	Fluorouracil	Complete Response	103	268	NO
+TCGA-LN-A4A3	Chemotherapy	Capecitabine	Clinical Progressive Disease	39	74	NO
+TCGA-IG-A3YC	Chemotherapy	Etoposide	Clinical Progressive Disease	556	560	NO
+TCGA-LN-A4MQ	Chemotherapy	Capecitabine	Complete Response	102	136	NO
+TCGA-LN-A9FP	Chemotherapy	Capecitabine	Complete Response	40	60	NO
+TCGA-LN-A7HX	Chemotherapy	Capecitabine	Complete Response	107	142	NO
+TCGA-VR-A8EQ	Chemotherapy	Fluorouracil	Complete Response	115	236	NO
+TCGA-LN-A5U6	Chemotherapy	Capecitabine	Complete Response	41	92	NO
+TCGA-VR-AA4D	Chemotherapy	Fluorouracil	Clinical Progressive Disease	166	288	NO
+TCGA-JY-A6FA	Chemotherapy	Epirubicin	Complete Response	152	271	NO
+TCGA-LN-A9FR	Chemotherapy	Capecitabine	Complete Response	23	89	NO
+TCGA-LN-A49M	Chemotherapy	Capecitabine	Complete Response	95	136	NO
+TCGA-V5-A7RE	Chemotherapy	carboplatin	Partial Response	36	67	NO
+TCGA-QR-A70P	Chemotherapy	cyclophosphamide, vincristine, and dacarbazine	Clinical Progressive Disease	966	NA	NO
+TCGA-DX-A3UC	Chemotherapy	Doxorubicin	Stable Disease	629	709	NO
+TCGA-FX-A3RE	Chemotherapy	Adriamycin	Complete Response	63	136	NO
+TCGA-X2-A95T	Chemotherapy	taxotere	Complete Response	10	132	NO
+TCGA-IS-A3K7	Chemotherapy	Doxorubicin	Partial Response	126	238	NO
+TCGA-HB-A43Z	Chemotherapy	Gemzar	Complete Response	42	105	NO
+TCGA-DX-A6B8	Chemotherapy	Adriamycin	Clinical Progressive Disease	NA	255	NO
+TCGA-K1-A6RU	Chemotherapy	Adriamycin	Clinical Progressive Disease	143	NA	NO
+TCGA-KD-A5QU	Chemotherapy	Gemzar	Complete Response	93	219	NO
+TCGA-FX-A48G	Chemotherapy	Taxotere	Clinical Progressive Disease	54	168	NO
+TCGA-IW-A3M4	Chemotherapy	Taxotere	Complete Response	58	170	NO
+TCGA-X6-A7WC	Chemotherapy	Gemcitabine	Stable Disease	819	854	NO
+TCGA-DX-A7EN	Chemotherapy	Gemcitabine	Complete Response	34	216	NO
+TCGA-RN-AAAQ	Chemotherapy	Ifosfamide	Complete Response	40	89	NO
+TCGA-QQ-A8VD	Chemotherapy	Gleevec	Stable Disease	2094	2780	NO
+TCGA-DX-A7EQ	Chemotherapy	Vorinostat	Clinical Progressive Disease	791	830	NO
+TCGA-3B-A9HT	Chemotherapy	CISPLATINUM	Complete Response	51	103	NO
+TCGA-IE-A6BZ	Chemotherapy	Adriamycin	Complete Response	112	204	NO
+TCGA-3B-A9HL	Chemotherapy	Gemcitabine	Clinical Progressive Disease	229	432	NO
+TCGA-DX-A6YX	Chemotherapy	Gemcitabine	Clinical Progressive Disease	285	407	NO
+TCGA-3B-A9I1	Chemotherapy	ADRIAMYCIN	Clinical Progressive Disease	71	176	NO
+TCGA-DX-A3UF	Chemotherapy	MORAb-004	Clinical Progressive Disease	1802	1915	NO
+TCGA-DX-AB3C	Chemotherapy	Ifosfamide	Complete Response	48	181	NO
+TCGA-X6-A8C6	Chemotherapy	Doxirubicin	Clinical Progressive Disease	785	840	NO
+TCGA-K1-A42X	Chemotherapy	Doxil	Clinical Progressive Disease	2134	2293	NO
+TCGA-LI-A67I	Chemotherapy	Doxil	Clinical Progressive Disease	595	670	NO
+TCGA-DX-AB3B	Chemotherapy	Adriamycin	Complete Response	158	269	NO
+TCGA-K1-A3PN	Chemotherapy	Gemcitabine	Clinical Progressive Disease	121	182	NO
+TCGA-AG-4022	Chemotherapy	5-Fluorouracil	Complete Response	61	153	NO
+TCGA-F5-6863	Chemotherapy	Etoposide	Stable Disease	196	251	NO
+TCGA-AH-6643	Chemotherapy	Oxaliplatin	Complete Response	41	202	NO
+TCGA-AH-6903	Chemotherapy	5-FU	Complete Response	70	228	NO
+TCGA-5U-AB0D	Chemotherapy	cisplatin	Partial Response	15	201	NO
+TCGA-AG-3591	Chemotherapy		Complete Response	NA	NA	
+TCGA-DY-A1DC	Chemotherapy	Capecitabine -xeloda	Partial Response	771	828	NO
+TCGA-AF-6136	Chemotherapy	Oxaliplatin	Stable Disease	209	385	NO
+TCGA-IF-A4AJ	Chemotherapy	Adriamycin	Clinical Progressive Disease	567	600	NO
+TCGA-DX-A6B7	Chemotherapy	Gemcitabine	Complete Response	65	86	NO
+TCGA-3B-A9I0	Chemotherapy	doxorubicin	Stable Disease	580	706	NO
+TCGA-2G-AAKD	Chemotherapy	Bleomycin	Partial Response	-4	45	NO
+TCGA-XE-A8H1	Chemotherapy	Bleomycin	Complete Response	24	84	NO
+TCGA-2G-AAF1	Chemotherapy	Carboplatin	Complete Response	32	32	NO
+TCGA-2G-AAFH	Chemotherapy	Bleomycin	Complete Response	22	79	NO
+TCGA-2G-AAFM	Chemotherapy	Bleomycin	Complete Response	18	74	NO
+TCGA-2G-AAFZ	Chemotherapy	Etoposide	Partial Response	11	79	NO
+TCGA-2G-AAGO	Chemotherapy	Bleomycin	Complete Response	28	84	NO
+TCGA-ZM-AA05	Chemotherapy	cisplatin	Complete Response	20	87	NO
+TCGA-ZM-AA06	Chemotherapy	cisplatin	Complete Response	47	51	NO
+TCGA-2G-AAGE	Chemotherapy	Bleomycin	Complete Response	127	171	NO
+TCGA-2G-AAG9	Chemotherapy	Bleomycin	Partial Response	5	63	NO
+TCGA-YY-A8LH	Chemotherapy	Gemcitabine	Complete Response	176	218	NO
+TCGA-HZ-8637	Chemotherapy	Gemcitabine	Complete Response	76	351	NO
+TCGA-IB-8127	Chemotherapy	Gemcitabine	Complete Response	60	194	NO
+TCGA-S4-A8RM	Chemotherapy	Gemzar	Complete Response	103	264	NO
+TCGA-HV-AA8X	Chemotherapy	Gemcitabine Injection	Clinical Progressive Disease	45	253	NO
+TCGA-2L-AAQI	Chemotherapy	Gemcitabine	Clinical Progressive Disease	42	72	NO
+TCGA-HZ-A77P	Chemotherapy	Gemcitabine	Complete Response	48	146	NO
+TCGA-QR-A6GT	Chemotherapy	Cytoxan, vincristine and dacarbazine	Partial Response	2435	3452	NO
+TCGA-ZH-A8Y5	Chemotherapy	Gemzar	Partial Response	132	246	NO
+TCGA-4G-AAZO	Chemotherapy	GEMCITABINE	Stable Disease	427	NA	YES
+TCGA-LB-A9Q5	Chemotherapy	gemcitabine HCL	Clinical Progressive Disease	310	310	NO
+TCGA-3A-A9I5	Chemotherapy	Gemcitabine	Complete Response	78	211	NO
+TCGA-HZ-A77O	Chemotherapy	Gemcitabine	Clinical Progressive Disease	96	120	NO
+TCGA-HZ-A9TJ	Chemotherapy	Gemcitabine	Clinical Progressive Disease	81	532	NO
+TCGA-IB-A5SO	Chemotherapy	Gemcitabine	Clinical Progressive Disease	309	309	NO
+TCGA-3A-A9J0	Chemotherapy	Gemcitabine	Clinical Progressive Disease	153	335	NO
+TCGA-FB-AAPP	Chemotherapy	Gemzar	Clinical Progressive Disease	89	150	NO
+TCGA-HZ-A49H	Chemotherapy	Gemcitabine	Complete Response	121	207	NO
+TCGA-FB-A5VM	Chemotherapy	Gemcitabine	Clinical Progressive Disease	77	162	NO
+TCGA-FB-AAPY	Chemotherapy	Gemzar	Complete Response	92	243	NO
+TCGA-H8-A6C1	Chemotherapy	Gemcitabine	Complete Response	79	233	NO
+TCGA-FB-A78T	Chemotherapy	Gemcitabine	Complete Response	106	115	NO
+TCGA-IB-A6UF	Chemotherapy	Gemcitabine	Complete Response	117	271	NO
+TCGA-RB-AA9M	Chemotherapy	Gemcitabine	Clinical Progressive Disease	67	218	NO
+TCGA-HZ-A49G	Chemotherapy	Gemcitabine	Clinical Progressive Disease	81	235	NO
+TCGA-2L-AAQA	Chemotherapy	Gemcitabine	Clinical Progressive Disease	82	126	NO
+TCGA-IB-AAUO	Chemotherapy	Gemcitabine	Clinical Progressive Disease	91	205	NO
+TCGA-3A-A9IZ	Chemotherapy	Gemcitabine	Clinical Progressive Disease	111	224	NO
+TCGA-Z5-AAPL	Chemotherapy	cyclophosphamide	Complete Response	5	21	NO
+TCGA-F2-A8YN	Chemotherapy	Gemzar	Clinical Progressive Disease	116	147	NO
+TCGA-2L-AAQE	Chemotherapy	Gemcitabine	Clinical Progressive Disease	NA	NA	NO
+TCGA-IB-AAUQ	Chemotherapy	Fluorouracil	Clinical Progressive Disease	135	169	NO
+TCGA-HZ-A4BK	Chemotherapy	Chemo, NOS	Clinical Progressive Disease	136	228	NO
+TCGA-FB-AAPQ	Chemotherapy		Clinical Progressive Disease	NA	NA	NO
+TCGA-IB-7885	Chemotherapy	Gemcitabine	Complete Response	95	279	NO
+TCGA-F2-A44G	Chemotherapy	Gemzar	Complete Response	60	75	NO
+TCGA-HZ-7918	Chemotherapy	Gemcitabine	Complete Response	98	137	NO
+TCGA-OE-A75W	Chemotherapy	5-FU	Clinical Progressive Disease	118	153	NO
+TCGA-G2-AA3F	Chemotherapy	Methotrexate	Partial Response	5	54	NO
+TCGA-XD-AAUI	Chemotherapy	Gemcitabine	Clinical Progressive Disease	62	181	NO
+TCGA-IB-7889	Chemotherapy	Gemcitabine	Clinical Progressive Disease	125	202	NO
+TCGA-G2-A3IB	Chemotherapy	methotrexate	Clinical Progressive Disease	143	145	NO
+TCGA-FD-A43U	Chemotherapy	cisplatin	Complete Response	97	187	NO
+TCGA-BT-A20T	Chemotherapy	Gemzar	Clinical Progressive Disease	161	263	NO
+TCGA-G2-AA3D	Chemotherapy	Tarceva	Complete Response	15	35	NO
+TCGA-DK-A3IU	Chemotherapy	Gemcitabine	Clinical Progressive Disease	521	578	NO
+TCGA-DK-A3IV	Chemotherapy	Gemcitabine	Clinical Progressive Disease	17	87	NO
+TCGA-G2-A3IE	Chemotherapy	Ifosfamide	Partial Response	29	68	NO
+TCGA-FD-A5BS	Chemotherapy	Gemcitabine	Complete Response	777	854	NO
+TCGA-GV-A3JW	Chemotherapy	Carboplatin	Partial Response	291	321	NO
+TCGA-FD-A5C1	Chemotherapy	Cisplatin	Complete Response	1421	1491	NO
+TCGA-FD-A6TC	Chemotherapy	Gemcitabine	Complete Response	88	144	NO
+TCGA-KQ-A41P	Chemotherapy	Carboplatin	Partial Response	189	331	NO
+TCGA-XF-A9SK	Chemotherapy	Gemzar	Partial Response	142	304	NO
+TCGA-XF-AAMY	Chemotherapy	Gemzar	Complete Response	669	853	NO
+TCGA-DK-AA6T	Chemotherapy	Gemcitabine	Complete Response	75	110	NO
+TCGA-ZF-AA4V	Chemotherapy	Gemcitabine and Cisplatin	Complete Response	202	265	NO
+TCGA-G2-A2EJ	Chemotherapy	Paclitaxel	Stable Disease	38	38	NO
+TCGA-BT-A42E	Chemotherapy	Carboplatin	Complete Response	49	154	NO
+TCGA-DK-A1A7	Chemotherapy	Cisplatin	Stable Disease	133	246	NO
+TCGA-XF-A9SU	Chemotherapy	Gemcitabine	Clinical Progressive Disease	137	137	NO
+TCGA-G2-A2EF	Chemotherapy	Methotrexate	Partial Response	58	170	NO
+TCGA-XF-AAN7	Chemotherapy	Cisplatin	Partial Response	162	200	NO
+TCGA-DK-AA6S	Chemotherapy	Ifosfamide	Clinical Progressive Disease	575	710	NO
+TCGA-GV-A3JZ	Chemotherapy		Stable Disease	529	589	NO
+TCGA-GV-A40E	Chemotherapy	Cisplatin	Clinical Progressive Disease	56	98	NO
+TCGA-DK-AA6R	Chemotherapy	Gemcitabine	Stable Disease	125	204	NO
+TCGA-G2-A2EK	Chemotherapy	Methotrexate	Stable Disease	16	51	NO
+TCGA-FD-A3SJ	Chemotherapy	carboplatin	Stable Disease	401	436	NO
+TCGA-BT-A2LD	Chemotherapy	Carboplatin	Clinical Progressive Disease	458	611	NO
+TCGA-GD-A3OS	Chemotherapy	Docetaxel	Clinical Progressive Disease	499	549	NO
+TCGA-ZF-AA51	Chemotherapy	Gemcitabine	Complete Response	69	148	NO
+TCGA-C4-A0EZ	Chemotherapy	Carboplatin	Partial Response	123	212	NO
+TCGA-XF-A8HI	Chemotherapy		Clinical Progressive Disease	161	544	NO
+TCGA-G2-A2EL	Chemotherapy	Etoposide	Stable Disease	84	147	NO
+TCGA-FD-A3B4	Chemotherapy	gemcitabine	Complete Response	115	157	NO
+TCGA-UY-A8OB	Chemotherapy	Gemcitabine	Complete Response	NA	NA	NO
+TCGA-DK-A6B6	Chemotherapy	Gemcitabine	Complete Response	43	113	NO
+TCGA-ZF-AA53	Chemotherapy	Gemcitabine	Complete Response	68	166	NO
+TCGA-XF-AAN0	Chemotherapy	Pacitaxol	Complete Response	53	175	NO
+TCGA-E5-A4U1	Chemotherapy	docetaxel	Clinical Progressive Disease	1024	1150	NO
+TCGA-FD-A3SQ	Chemotherapy	cisplatin	Stable Disease	78	151	NO
+TCGA-FJ-A3Z9	Chemotherapy	Gemcitabine	Complete Response	32	122	NO
+TCGA-GU-A42R	Chemotherapy	Carboplatin	Clinical Progressive Disease	105	344	NO
+TCGA-XF-AAMG	Chemotherapy	Cisplatin	Complete Response	74	151	NO
+TCGA-XF-AAMR	Chemotherapy	Cisplatin	Complete Response	119	192	NO
+TCGA-XF-A9SH	Chemotherapy	Halichondrin B	Stable Disease	625	996	NO
+TCGA-XF-AAN5	Chemotherapy	Cisplatin	Complete Response	127	211	NO
+TCGA-DK-AA6U	Chemotherapy	Gemcitabine	Complete Response	13	90	NO
+TCGA-XF-A9T5	Chemotherapy	Gemcitabine	Complete Response	687	757	NO
+TCGA-XF-A9SV	Chemotherapy	gemcitabine	Clinical Progressive Disease	174	208	NO
+TCGA-DK-A6B5	Chemotherapy	Paclitaxel	Complete Response	248	348	NO
+TCGA-CU-A3YL	Chemotherapy	Gemcitabine	Complete Response	155	224	NO
+TCGA-CF-A47T	Chemotherapy	Carboplatin	Clinical Progressive Disease	127	149	NO
+TCGA-UY-A78L	Chemotherapy	Gemcitabine	Clinical Progressive Disease	152	232	NO
+TCGA-XF-A9SY	Chemotherapy	Carboplatin	Clinical Progressive Disease	199	256	NO
+TCGA-K4-A83P	Chemotherapy	carboplatinum	Clinical Progressive Disease	NA	NA	
+TCGA-HZ-8317	Chemotherapy	Gemcitabine	Clinical Progressive Disease	137	186	NO
+TCGA-2L-AAQJ	Chemotherapy	Gemcitabine	Clinical Progressive Disease	50	171	NO
+TCGA-HZ-8001	Chemotherapy	Xeloda	Complete Response	97	265	NO
+TCGA-3E-AAAZ	Chemotherapy	Docetaxel	Partial Response	1332	1789	NO
+TCGA-IB-A5SS	Chemotherapy	Gemcitabine	Partial Response	52	259	NO
+TCGA-HZ-7289	Chemotherapy		Clinical Progressive Disease	438	NA	NO
+TCGA-IB-7891	Chemotherapy	5-Fluorouracil	Complete Response	70	223	NO
+TCGA-IB-7644	Chemotherapy	Gemcitabine	Clinical Progressive Disease	74	217	NO
+TCGA-FB-A545	Chemotherapy	5-Fluorouracil	Complete Response	113	224	NO
+TCGA-H6-8124	Chemotherapy	Xeloda	Complete Response	166	205	NO
+TCGA-3A-A9IX	Chemotherapy	5 FU	Complete Response	97	128	NO
+TCGA-IB-7652	Chemotherapy	Gemcitabine	Complete Response	115	268	NO
+TCGA-3A-A9I9	Chemotherapy	Oxaliplatin	Stable Disease	294	336	NO
+TCGA-F2-6879	Chemotherapy	Gemcitabine	Partial Response	190	225	NO
+TCGA-HV-AA8V	Chemotherapy	cisplatin	Clinical Progressive Disease	37	149	NO
+TCGA-LB-A8F3	Chemotherapy	gemzar	Complete Response	197	225	NO
+TCGA-HZ-A49I	Chemotherapy	5-FU	Clinical Progressive Disease	51	86	NO
+TCGA-3A-A9IC	Chemotherapy	Gemcitabine	Stable Disease	168	245	NO
+TCGA-IB-7651	Chemotherapy	Gemcitabine	Clinical Progressive Disease	124	343	NO
+TCGA-IB-A5SP	Chemotherapy	Gemcitabine	Clinical Progressive Disease	90	169	NO
+TCGA-XD-AAUG	Chemotherapy	Gemcitabine	Clinical Progressive Disease	13	109	NO
+TCGA-F2-A44H	Chemotherapy	Gemzar	Complete Response	98	196	NO
+TCGA-YB-A89D	Chemotherapy	Gemcitabine	Complete Response	7	210	NO
+TCGA-FB-AAQ6	Chemotherapy	Gemcitabine	Complete Response	92	156	NO
+TCGA-HV-A7OP	Chemotherapy	Fluorouracil	Clinical Progressive Disease	39	77	NO
+TCGA-IB-7645	Chemotherapy	Gemcitabine	Stable Disease	811	1230	NO
+TCGA-3A-A9IH	Chemotherapy	Gemcitabine	Stable Disease	71	237	NO
+TCGA-IB-A7LX	Chemotherapy	5-Fluorouracil	Clinical Progressive Disease	53	151	NO
+TCGA-LT-A5Z6	Chemotherapy	Gemcitabine	Complete Response	29	166	NO
+TCGA-DK-AA6M	Chemotherapy	Cisplatin	Partial Response	735	820	NO
+TCGA-FJ-A871	Chemotherapy	Gemcitabine	Clinical Progressive Disease	84	91	NO
+TCGA-DK-A3WX	Chemotherapy	Gemcitabine	Clinical Progressive Disease	56	105	NO
+TCGA-ZF-AA58	Chemotherapy	Gemcitabine	Complete Response	166	NA	NO
+TCGA-FJ-A3Z7	Chemotherapy	Cisplatin	Complete Response	70	70	NO
+TCGA-DK-A3WW	Chemotherapy	Gemcitabine	Complete Response	127	177	NO
+TCGA-XF-AAN3	Chemotherapy	Cisplatin	Complete Response	121	142	NO
+TCGA-FD-A3SO	Chemotherapy	gemcitabine	Clinical Progressive Disease	65	141	NO
+TCGA-YC-A89H	Chemotherapy	cisplatin	Complete Response	35	83	NO
+TCGA-VQ-A94O	Chemotherapy	Fluorouracil	Clinical Progressive Disease	200	392	NO
+TCGA-VQ-A91K	Chemotherapy	Fluorouracil	Complete Response	89	234	NO
+TCGA-FP-7998	Chemotherapy	Cisplatin	Complete Response	168	501	NO
+TCGA-VQ-A928	Chemotherapy	Fluorouracil	Clinical Progressive Disease	98	138	NO
+TCGA-KB-A6F7	Chemotherapy	Fluorouracil	Complete Response	150	154	NO
+TCGA-VQ-A8PB	Chemotherapy	Fluorouracil	Complete Response	63	273	NO
+TCGA-BR-6457	Chemotherapy	5-Fluorouracil	Complete Response	31	126	NO
+TCGA-CD-8531	Chemotherapy	Epirubicin	Complete Response	106	197	NO
+TCGA-BR-7959	Chemotherapy	Etoposide	Complete Response	35	127	NO
+TCGA-CD-A487	Chemotherapy	Epirubicin	Complete Response	24	284	NO
+TCGA-VQ-A91S	Chemotherapy	Fluorouracil	Complete Response	122	238	NO
+TCGA-B7-A5TN	Chemotherapy	Cisplatin	Complete Response	23	166	NO
+TCGA-VQ-A922	Chemotherapy	Fluorouracil	Clinical Progressive Disease	83	85	NO
+TCGA-D7-8579	Chemotherapy	5-fluorouracilum	Complete Response	97	213	NO
+TCGA-IN-7806	Chemotherapy	Epirubicin	Complete Response	62	116	NO
+TCGA-VQ-AA6K	Chemotherapy	Fluorouracil	Clinical Progressive Disease	136	280	NO
+TCGA-VQ-AA68	Chemotherapy	Fluorouracil	Complete Response	152	324	NO
+TCGA-IN-A7NU	Chemotherapy	Taxol	Clinical Progressive Disease	105	169	NO
+TCGA-BR-A4IV	Chemotherapy	Oxaliplatin	Complete Response	51	166	NO
+TCGA-BR-6707	Chemotherapy	Oxaliplatin	Clinical Progressive Disease	426	491	NO
+TCGA-VQ-A8DU	Chemotherapy	Fluorouracil	Clinical Progressive Disease	130	130	NO
+TCGA-G2-A2EC	Chemotherapy	Avastin	Partial Response	24	75	NO
+TCGA-XF-A9SX	Chemotherapy	Gemcitabine	Clinical Progressive Disease	136	348	NO
+TCGA-GV-A3QH	Chemotherapy	CDDP	Clinical Progressive Disease	135	170	NO
+TCGA-GV-A3QF	Chemotherapy	Carboplatin	Stable Disease	197	246	NO
+TCGA-ZF-AA5H	Chemotherapy	Gemcitabine	Clinical Progressive Disease	135	177	NO
+TCGA-BT-A20N	Chemotherapy	Gemzar	Clinical Progressive Disease	198	323	NO
+TCGA-DK-A3IQ	Chemotherapy	Gemcitabine	Stable Disease	277	417	NO
+TCGA-DK-A6B2	Chemotherapy	Gemcitabine	Clinical Progressive Disease	283	370	NO
+TCGA-FD-A62S	Chemotherapy	Gemcitabine	Clinical Progressive Disease	243	292	NO
+TCGA-BT-A2LA	Chemotherapy	Carboplatin	Complete Response	96	180	NO
+TCGA-XF-AAME	Chemotherapy	Carboplatin	Clinical Progressive Disease	2569	2569	NO
+TCGA-XF-A9T4	Chemotherapy	Cisplatin	Partial Response	158	281	NO
+TCGA-HU-8602	Chemotherapy	Xeloda	Complete Response	30	154	NO
+TCGA-CD-8533	Chemotherapy	Capecitabine	Clinical Progressive Disease	226	245	NO
+TCGA-CD-A486	Chemotherapy	Taxol	Complete Response	37	57	NO
+TCGA-VQ-A91Z	Chemotherapy	Fluorouracil	Complete Response	97	322	NO
+TCGA-XF-AAMJ	Chemotherapy	Gemcitabine	Complete Response	82	143	NO
+TCGA-DK-AA6W	Chemotherapy	Gemcitabine	Stable Disease	263	328	NO
+TCGA-SY-A9G5	Chemotherapy	gemcitabine	Complete Response	83	145	NO
+TCGA-DK-A1AC	Chemotherapy	Cisplatin	Complete Response	178	242	NO
+TCGA-XF-A9SZ	Chemotherapy	Gemcitabine	Complete Response	97	169	NO
+TCGA-GV-A3QI	Chemotherapy	Gemcitabine	Clinical Progressive Disease	771	895	NO
+TCGA-GC-A3YS	Chemotherapy	Gemzar	Complete Response	73	146	NO
+TCGA-CF-A47S	Chemotherapy	Doxobubicin	Complete Response	109	324	NO
+TCGA-E5-A2PC	Chemotherapy	Methotrexate	Complete Response	NA	139	NO
+TCGA-DK-AA76	Chemotherapy	Cisplatin	Complete Response	54	114	NO
+TCGA-BR-6563	Chemotherapy	Doxorubicin	Complete Response	157	330	NO
+TCGA-BR-6709	Chemotherapy	5-Fluorouracil	Partial Response	61	206	NO
+TCGA-VQ-A8P2	Chemotherapy		Complete Response	NA	107	NO
+TCGA-CD-A4MH	Chemotherapy	Epirubicin	Complete Response	118	212	NO
+TCGA-VQ-A94R	Chemotherapy	Fluorouracil	Clinical Progressive Disease	591	645	NO
+TCGA-BR-6458	Chemotherapy	5-Fluorouracil	Complete Response	58	167	NO
+TCGA-VQ-A91Y	Chemotherapy	Fluorouracil	Clinical Progressive Disease	84	237	NO
+TCGA-VQ-A91D	Chemotherapy	Fluorouracil	Clinical Progressive Disease	147	242	NO
+TCGA-CD-8527	Chemotherapy	Epirubicin	Clinical Progressive Disease	34	60	NO
+TCGA-CD-5804	Chemotherapy	Epirubicin	Complete Response	0	0	NO
+TCGA-FP-8211	Chemotherapy	Xeloda	Complete Response	110	357	NO
+TCGA-IN-A6RO	Chemotherapy	Irinotecan	Complete Response	83	200	NO
+TCGA-BR-6802	Chemotherapy	5-Fluorouracil	Complete Response	847	854	NO
+TCGA-BR-8381	Chemotherapy	Oxaliplatin	Complete Response	35	161	NO
+TCGA-VQ-A8PU	Chemotherapy	Fluorouracil	Complete Response	139	288	NO
+TCGA-B7-A5TI	Chemotherapy	Eloxatin	Complete Response	10	231	NO
+TCGA-CG-5732	Chemotherapy	Mitomycin	Complete Response	366	427	NO
+TCGA-HU-A4GT	Chemotherapy	Copolang	Stable Disease	43	100	NO
+TCGA-CG-5725	Chemotherapy	5-Fluorouracil	Clinical Progressive Disease	NA	NA	NO
+TCGA-D7-8570	Chemotherapy	PLFE	Clinical Progressive Disease	36	243	NO
+TCGA-KB-A93J	Chemotherapy	5-fluorouracil	Complete Response	157	255	NO
+TCGA-FP-7916	Chemotherapy	Xeloda	Clinical Progressive Disease	108	142	NO
+TCGA-D7-6520	Chemotherapy	Cisplatinum	Clinical Progressive Disease	249	321	NO
+TCGA-VQ-A91E	Chemotherapy	Fluorouracil	Complete Response	59	59	NO
+TCGA-BR-8680	Chemotherapy	Oxaliplatin	Complete Response	39	150	NO
+TCGA-HJ-7597	Chemotherapy	fluorouracil	Complete Response	296	471	NO
+TCGA-VQ-A8PP	Chemotherapy	Fluorouracil	Clinical Progressive Disease	165	333	NO
+TCGA-HU-A4H3	Chemotherapy	TS-1	Complete Response	18	316	NO
+TCGA-VQ-A91V	Chemotherapy	Cisplatin	Clinical Progressive Disease	77	228	NO
+TCGA-CD-8535	Chemotherapy	Docetaxel	Complete Response	138	234	NO
+TCGA-CG-5717	Chemotherapy	5-Fluorouracil	Clinical Progressive Disease	151	212	NO
+TCGA-3M-AB47	Chemotherapy	Epirubicin	Stable Disease	122	153	NO
+TCGA-HU-8238	Chemotherapy	Didox	Stable Disease	18	135	NO
+TCGA-BR-8367	Chemotherapy	Etoposide	Complete Response	61	163	NO
+TCGA-CD-8529	Chemotherapy	Epirubicin	Complete Response	50	148	NO
+TCGA-BR-A44T	Chemotherapy	5-Fluorouracil	Complete Response	47	196	NO
+TCGA-3M-AB46	Chemotherapy	Fluorouracil	Complete Response	92	212	NO
+TCGA-VQ-A8E2	Chemotherapy	Fluorouracil	Complete Response	145	277	NO
+TCGA-F1-A448	Chemotherapy	Capecitabine	Complete Response	98	119	NO
+TCGA-VQ-A91Q	Chemotherapy	Fluorouracil	Complete Response	158	311	NO
+TCGA-B7-A5TK	Chemotherapy	Xeloda	Complete Response	13	55	NO
+TCGA-BR-8291	Chemotherapy	Etoposide	Complete Response	39	137	NO
+TCGA-VQ-A8PD	Chemotherapy	Fluorouracil	Clinical Progressive Disease	117	121	NO
+TCGA-HU-A4H4	Chemotherapy	TS-1	Complete Response	13	309	NO
+TCGA-HU-A4GD	Chemotherapy	Micomycin	Stable Disease	20	76	NO
+TCGA-VQ-A8DZ	Chemotherapy	Fluorouracil	Clinical Progressive Disease	201	341	NO
+TCGA-CG-5724	Chemotherapy	Cisplatin	Clinical Progressive Disease	153	305	NO
+TCGA-VQ-AA6G	Chemotherapy	Fluorouracil	Clinical Progressive Disease	171	297	NO
+TCGA-BR-8682	Chemotherapy	Oxaliplatin	Complete Response	60	181	NO
+TCGA-BR-8372	Chemotherapy	Etoposide	Complete Response	31	174	NO
+TCGA-CD-8530	Chemotherapy	Epirubicin	Complete Response	75	176	NO
+TCGA-MX-A666	Chemotherapy	Epirubicin	Stable Disease	22	22	NO
+TCGA-HU-A4GP	Chemotherapy	Didox	Stable Disease	70	362	NO
+TCGA-VQ-A8DT	Chemotherapy	Fluorouracil	Complete Response	94	222	NO
+TCGA-HU-A4G3	Chemotherapy	Mitomycin C	Stable Disease	20	97	NO
+TCGA-BR-A4QL	Chemotherapy	5-Fluorouracil	Complete Response	59	90	NO
+TCGA-BR-8380	Chemotherapy	Polyplatillen	Complete Response	69	190	NO
+TCGA-VQ-A8E0	Chemotherapy	Fluorouracil	Clinical Progressive Disease	NA	NA	NO
+TCGA-VQ-AA6D	Chemotherapy	Fluorouracil	Complete Response	77	114	NO
+TCGA-F1-A72C	Chemotherapy	Capecitabine	Complete Response	166	181	NO
+TCGA-VQ-AA64	Chemotherapy	Fluorouracil	Complete Response	73	192	NO
+TCGA-VQ-A91N	Chemotherapy	Fluorouracil	Clinical Progressive Disease	98	219	NO
+TCGA-CD-8526	Chemotherapy	Epirubicin	Complete Response	62	111	NO
+TCGA-IN-8462	Chemotherapy	Epirubicin	Clinical Progressive Disease	298	319	NO
+TCGA-FP-A9TM	Chemotherapy	5-FU	Complete Response	110	142	NO
+TCGA-BR-8296	Chemotherapy	Etoposide	Complete Response	44	180	NO
+TCGA-BR-8690	Chemotherapy	Carboplatin	Complete Response	58	196	NO
+TCGA-CD-A48A	Chemotherapy	Capecitabine	Complete Response	38	66	NO
+TCGA-CD-8528	Chemotherapy	Epirubicin	Complete Response	105	232	NO
+TCGA-CD-8524	Chemotherapy	Epirubicin	Clinical Progressive Disease	64	168	NO
+TCGA-BR-8590	Chemotherapy	Etoposide	Complete Response	42	203	NO
+TCGA-D7-A747	Chemotherapy	epirubicinum	Clinical Progressive Disease	85	208	NO
+TCGA-BR-A4J8	Chemotherapy	Xeloda	Complete Response	65	77	NO
+TCGA-BR-8297	Chemotherapy	Etoposide	Clinical Progressive Disease	67	97	NO
+TCGA-HU-A4GX	Chemotherapy	Taxol	Clinical Progressive Disease	48	48	NO
+TCGA-SW-A7EB	Chemotherapy	Fluorouracil	Stable Disease	28	35	NO
+TCGA-FP-7829	Chemotherapy	5-FU	Complete Response	53	85	NO
+TCGA-HU-8249	Chemotherapy	Xeloda	Complete Response	27	286	NO
+TCGA-VQ-AA6F	Chemotherapy	Fluorouracil	Clinical Progressive Disease	119	249	NO
+TCGA-BR-8592	Chemotherapy	Etoposide	Complete Response	39	113	NO
+TCGA-BR-8373	Chemotherapy	5-Fluorouracil	Complete Response	55	84	NO
+TCGA-CD-8525	Chemotherapy	Epirubicin	Complete Response	62	157	NO
+TCGA-VQ-A8P3	Chemotherapy	Fluorouracil	Complete Response	124	254	NO

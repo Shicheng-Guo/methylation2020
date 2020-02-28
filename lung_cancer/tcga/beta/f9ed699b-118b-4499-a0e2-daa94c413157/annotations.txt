@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+f1287ebf-51d9-502b-8be9-68d6173fc590	11707	case	78a24c56-576c-4245-bb42-6603b3d19897	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy malignant melanoma of the skin. No systemic chemotherapy or radiation.

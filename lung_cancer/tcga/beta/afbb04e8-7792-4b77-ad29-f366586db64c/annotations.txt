@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+a0c417e3-cb92-5d79-b17c-3d4f9711fef3	11674	case	3fdf941e-40ec-43b6-b6e3-31a0861bd5b8	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy of a gynecological cancer. No systemic chemotherapy or radiation.

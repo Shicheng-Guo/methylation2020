@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+a292e01a-b87c-5fbc-a4cd-01a453e14fde	11760	case	e0acafdd-06d0-48a6-bd68-577ef666a419	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy cancer of the larynx. No systemic chemotherapy or radiation.

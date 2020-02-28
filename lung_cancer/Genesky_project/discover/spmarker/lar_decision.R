@@ -1,0 +1,97 @@
+setwd("/work/Working/meta/datasets/goldenGate/spmarker")
+data<-read.table("category.Adjusted.txt",head=T,sep="\t")
+
+#====== Classification Tree with rpart
+#m<-200 is the times of 10-fold cross validation
+#err<-1-(mc[1,1]+mc[2,2]+mc[3,3])/sum(mc) [pay attention to the number of mc[1,2,3]]
+
+library(rpart)
+y<-data[,1]
+x<-data[,-1]
+x[x<0.25]<-0
+x[x>0.75]<-1
+x[x>0.25 & x< 0.75]<-0.5
+data<-data.frame(y,x)
+
+#head for svm
+databcall <- subset(data,select=-y)
+classesbcall <- subset(data,select=y)
+
+##K-fold validation
+ # rearrage data
+n<-nrow(data)
+k<-5
+m<-5
+taille<-n%/%k
+
+all.err<-numeric(0)
+for (p in 1:m){
+set.seed(5)
+alea<-runif(n)
+rang<-rank(alea)
+bloc<-(rang-1)%/%taille+1
+bloc<-as.factor(bloc)
+print(summary(bloc))
+
+for(l in 1:k){
+# grow tree
+fit <- rpart(y~., method="class", data=data[bloc!=l,])
+pfit<- prune(fit, cp=fit$cptable[which.min(fit$cptable[,"xerror"]),"CP"])
+pred<-predict(pfit,newdata=data[bloc==l,],type="class")
+mc<-table(data$y[bloc==k],pred)
+err<-1-(mc[1,1]+mc[2,2]+mc[3,3])/sum(mc)
+all.err<-rbind(all.err,err)
+# grow tree
+#fit <- rpart(y~.,method="class",data=data[bloc!=k,])
+#printcp(fit) # display the results
+#plotcp(fit) # visualize cross-validation results
+#summary(fit) # detailed summary of splits
+# plot tree
+#plot(fit, uniform=TRUE,main="Classification Tree for NSCLC")
+#text(fit, use.n=TRUE, all=TRUE, cex=.6)
+# create attractive postscript plot of tree
+#post(fit, file = "tree.pdf",title = "guoshicheng2005@yeah.net")
+# prune the tree
+#pfit<- prune(fit, cp=fit$cptable[which.min(fit$cptable[,"xerror"]),"CP"])
+# plot the pruned tree
+#plot(pfit, uniform=TRUE, main="Pruned Classification Tree for NSCLC")
+#text(pfit, use.n=TRUE, all=TRUE, cex=.6)
+
+
+############
+svmodel <- svm(databcall[bloc!=l,],classesbcall[bloc!=l,],cross=10,type='C',scale=F)
+databctest <- databcall[bloc==l,]
+classesbctest <- classesbcall[bloc==l,]
+pred<-predict(svmodel,databctest)
+sc<-table(pred,classesbctest)
+err<-1-(sc[1,1]+sc[2,2]+sc[3,3])/sum(sc)
+}
+}
+print (all.err)
+err.cv<-mean(all.err)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

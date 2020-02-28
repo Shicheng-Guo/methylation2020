@@ -1,0 +1,154 @@
+---
+title: "ESCA Biomarker Project"
+author: "Shicheng Guo"
+date: "Friday, June 10, 2016"
+output: html_document
+---
+
+
+On June 2016, Dr. Jingde Zhu send me 11 MH450K array data including 10 ESCA cell line and 1 normal
+
+1, ESCA cell line hypermethylation and normal low methylation
+2, TCGA cancer hypermethylation
+3, PBMC low methylation
+4, methyaltion and expression negative correlated.
+5, TFBS, CpGI, Encode
+
+Section #1: ESCA cell line hypermethylation and normal low methylation
+```{r}
+esca1=read.table("/home/shg047/oasis/TCGA/Meth/Data/TCGA.Meth450.esca.ChAMP.DMS.txt",head=T,sep="\t")
+esca1=read.table("/home/shg047/oasis/TCGA/Meth/Data/TCGA.Meth450.esca.ChAMP.DMS.txt",head=T,sep="\t")
+esca1=read.table("/home/shg047/oasis/TCGA/Meth/Data/TCGA.Meth450.esca.ChAMP.DMS.txt",head=T,sep="\t")
+```
+
+Section #2:  GEO dataset GSE52826, including 4 cancer, 4 adjacent normal and 4 normal mucosa. 
+```{r}
+library("GEOquery")
+# GSE52826 <- getGEO("GSE52826",destdir="/home/sguo/monod/data/geo")
+# save(GSE52826, file="GSE53045_matrix.Rdata")
+load("GSE53045_matrix.Rdata")
+data <- as.data.frame(exprs(GSE52826[[1]]))
+phen <- pData(phenoData(GSE52826[[1]]))
+# type1<-phen[match(colnames(data),rownames(phen)),]$characteristics_ch1
+# PCAPlot(t(na.omit(data)),type1,output="esca.pca.GSE52826.pdf",legend.cex=0.5,multifigure=T)
+# type2<-phen[match(colnames(data),rownames(phen)),]$characteristics_ch1.1
+library("ChAMP")
+newdata<-na.omit(data)
+dim(newdata) # 479037/485577=98.6%
+pd<-c()
+pd$Sample_Name=as.character(rownames(phen))
+pd$Sentrix_ID=1:nrow(phen)
+pd$Sentrix_Position=1:nrow(phen)
+pd$Sample_Group=as.character(unlist(lapply(phen$characteristics_ch1.1,function(x) unlist(strsplit(as.character(x),": "))[2])))
+pd<-data.frame(pd)
+myNorm=na.omit(data)
+colnames(myNorm)=pd$Sample_Name
+beta.norm=myNorm
+compare.group = c("tumor","normal")
+mylimma=champ.MVP(beta.norm =myNorm, pd =pd, adjPVal = 0.05, adjust.method = "BH",compare.group = c("tumor","normal"), resultsDir = paste(getwd(), "resultsChamp", sep = "/"),bedFile = TRUE)
+library("doParallel")
+result<-champ.DMR(betaNorm=data.matrix(myNorm),design=pd$Sample_Group,maxGap=300,
+          cutoff=0.2,minProbes=3,smooth=TRUE,smoothFunction=loessByCluster,
+          useWeights=FALSE,permutations=NULL,B=100,pickCutoff=FALSE,
+          pickCutoffQ=0.99,nullMethod="bootstrap",verbose=TRUE,cores=5,arraytype="450K",
+          method = "Bumphunter",resultsFile=mylimma,meanLassoRadius=375,minSigProbesLasso=3,minDmrSep=1000,
+          minDmrSize=50,adjPvalProbe=0.05,adjPvalDmr=0.05,pData=pd)
+save(result,file="champ.DMR.RData")
+write.table(result$myDmrs,file="myDmrs.txt",col.names=NA,row.names=T,sep="\t",quote=F)
+write.table(result$myDmrProbes,file="myDmrProbes.txt",col.names=NA,row.names=T,sep="\t",quote=F)
+
+
+```
+PCA result show cancer adjacent is actually between cancer and normal. it is intermedian stage. 
+所谓的亚型极有可能是因为cancer cell的proportion不同造成的。
+
+
+
+
+```{r}
+
+PCAPlot<-function(data,pheno,output,multifigure=T,legend.cex=0.5){
+  print("Please be sure row is individual, column is variable")
+  pca <- prcomp(data,center=T,scale = F)  # Here, input file: row is individual and column is variable
+  outputfile=paste(output,".pdf",sep="")
+  pdf(outputfile)
+  if(multifigure){
+    par(mfrow=c(2,2),mar=c(4,4,4,4)) 
+  }
+  plot((pca$sdev[1:10])^2,type="o",xaxt="n",ylab="Variances",xlab="Principle Components",col="red",lwd=2)
+  axis(1,at=0:10,labels=paste("PC",0:10,sep=""))
+  var<-c()
+  for(i in 1:length(pca$sdev)){var[i]<-sum((pca$sdev[1:i])^2)/sum((pca$sdev)^2)}
+  plot(var,ylab="total variance",xlab="number of principle components",lwd=2,type="l")
+  abline(h=0.8,col="grey",lty=2)
+  abline(v=which(var>0.8)[1],col="grey",lty=2)
+  scores <- data.frame(pheno, pca$x[,1:3])
+  col = as.numeric(as.factor(pheno))
+  plot(x=scores$PC1,y=scores$PC2, xlim=c(min(scores$PC1),max(scores$PC1)),ylim=c(min(scores$PC2),max(scores$PC2)),type="n",xlab="PC1",ylab="PC2")
+  for(i in 1:length(scores$PC1)){
+    points(scores$PC1[i],scores$PC2[i],pch=as.numeric(as.factor(pheno))[i],col=col[i],cex=0.8,lwd=2)
+  }
+  legend("topright",legend=names(table(pheno)),pch=1:length(table(pheno)),col=1:length(table(pheno)),bty="n",cex=legend.cex)
+  plot(x=scores$PC1,y=scores$PC3, xlim=c(min(scores$PC1),max(scores$PC1)),ylim=c(min(scores$PC3),max(scores$PC3)),type="n",xlab="PC1",ylab="PC3")
+  for(i in 1:length(scores$PC1)){
+    points(scores$PC1[i],scores$PC3[i],pch=as.numeric(as.factor(pheno))[i],col=col[i],cex=0.9,lwd=2)
+  }
+  legend("bottomright",legend=names(table(pheno)),pch=1:length(table(pheno)),col=1:length(table(pheno)),bty="n",cex=legend.cex)
+  dev.off()
+}
+
+fhclust<-function(mydata,method="euclidean",cut=4,bootstrap=FALSE,plot="clust.plot"){
+  # 1, Ward Hierarchical Clustering(uni-cluster for row)  Jan 31st 2013
+  d <- dist(mydata, method = "euclidean") # distance matrix
+  fit <- hclust(d, method="ward")
+  file1=paste(plot,"nonbootstrap","pdf",sep=".")
+  file2=paste(plot,"bootstrap","pdf",sep=".")
+  
+  pdf(file1)
+  plot(fit)
+  dev.off()
+  # plot(fit) # display dendogram
+  clusters <- cutree(fit, k=cut) # cut tree into 5 clusters
+  # draw dendogram with red borders around the 5 cluster
+  # rect.hclust(fit, k=cut, border="red") 
+  if(bootstrap==TRUE){
+    library(pvclust)
+    pdf(file2)
+    # Ward Hierarchical Clustering with Bootstrapped p values
+    fit <- pvclust(mydata, method.hclust="ward",method.dist="euclidean")
+    plot(fit) # dendogram with p values
+    # add rectangles around groups highly supported by the data
+    pvrect(fit, alpha=.95)   
+  }
+  list<-names(table(clusters))
+  rlt<-list()
+  rlt<-lapply(list,function(x) names(which(clusters==x)))
+  rlt
+}
+
+HeatMap<-function(data,phen,varselect=12000,plot="heatmap.11.pdf",cexRow = 0.01,cexCol = 1.2,Colv=T,Rowv=T){
+#  subset<-order(unlist(apply(data,1,function(x) sd(x,na.rm=T))),decreasing=T)[1:4000]
+  x1<-which(phen==unique(phen)[1])
+  x2<-which(phen==unique(phen)[2])
+#  subset<-order(unlist(apply(data,1,function(x) t.test(x[x1],x[x2])$p.value)),decreasing=F)[1:varselect]  
+  subset<-order(unlist(apply(data,1,function(x) abs(mean(x[x1]-mean(x[x2]))))),decreasing=T)[1:varselect]  
+  
+  data<-data[subset,]
+  library("gplots")
+  colors <- colorpanel(75,"midnightblue","mediumseagreen","yellow") 
+  colors <-bluered(75)
+  colors <-greenred(75)
+  sidecol<-function(x){
+    x<-as.numeric(as.factor(x))
+    col<-rainbow(length(table(colnames(data))))
+    sapply(x,function(x) col[x])
+  }
+  ColSideColors=sidecol(phen)
+  pdf(plot)
+  heatmap.2(data,trace="none",cexRow = cexRow,cexCol = cexCol, ColSideColors=ColSideColors,density.info="none",col=colors,Colv=Colv,Rowv=Rowv,keysize=0.9, margins = c(5, 10))
+  dev.off()
+}
+
+
+
+```

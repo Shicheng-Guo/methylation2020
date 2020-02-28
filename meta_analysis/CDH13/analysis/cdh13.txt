@@ -1,0 +1,14 @@
+group	author	sampletype	age	stage1	stage2	genderatio	event.e	n.e	event.c	n.c	methods	aim	Multipletarget	controldesign	year	Ad2Sc	smoking	author2	author3
+1	Dong et al (2007, Korea)	tissue	63	0.579545455	0.761363636	0.795454545	26	88	7	88	qualitative	Non-diagnose	Multiple	hom	2007	0.397727273	4.5	Dong(Korea)	Dong
+2	Feng et al (2008, USA)	tissue	64.3	0.428571429	0.775510204	0.530612245	28	49	1	49	quantitative	Non-diagnose	Multiple	hom	2008	0.588235294	NA	Feng(USA)	Feng
+3	Hsu et al (2007, Taiwan)	plasma	66.81	NA	0.650793651	NA	21	63	6	36	qualitative	Diagnose	Multiple	heter	2007	NA	NA	Hsu(Taiwan)	Hsu
+4	Hsu et al (2007, Taiwan)	tissue	66.81	NA	0.650793651	NA	28	63	10	63	qualitative	Diagnose	Multiple	hom	2007	0.759259259	1.947368421	Hsu(Taiwan)	Hsu
+5	Toyooka et al(2001, USA)	tissue	NA	NA	NA	NA	18	42	2	25	qualitative	Non-diagnose	Single	hom	2001	0.738095238	NA	Toyooka(USA)	Toyooka
+6	Toyooka et al(2003, USA)	tissue	63	NA	NA	0.690661479	180	514	5	84	qualitative	Non-diagnose	Multiple	hom	2003	0.606490872	2.825757576	Toyooka(USA)	Toyooka
+7	Tsou et al (2007, USA)	tissue	NA	NA	NA	NA	37	51	24	49	quantitative	Diagnose	Multiple	both	2007	1	NA	Tsou(USA)	Tsou
+8	Ulivi et al (2006, Italy)	serum	70	0.557377049	0.721311475	0.803278689	14	61	0	15	quantitative	Diagnose	Multiple	heter	2006	0.692307692	NA	Ulivi(Italy)	Ulivi
+9	Wang et al (2008, China)	tissue	NA	NA	NA	0.607142857	15	28	3	12	qualitative	Diagnose	Multiple	hom	2008	0.681818182	NA	Wang(China)	Wang
+10	Zhai et al (2014, China)	serum	62.39	0.095238095	0.142857143	0.761904762	23	42	0	40	qualitative	Non-diagnose	Multiple	heter	2014	0.761904762	NA	Zhai(China)	Zhai
+11	Zhang et al (2011, China)	plasma	59	0.320512821	0.743589744	0.743589744	37	110	2	50	qualitative	Non-diagnose	Multiple	heter	2011	NA	NA	Zhang(China)	Zhang
+12	Zhang et al (2011, China)	tissue	59	0.320512821	0.743589744	0.743589744	38	78	8	78	qualitative	Non-diagnose	Multiple	hom	2011	0.454545455	1.689655172	Zhang(China)	Zhang
+13	Jin et al (2009, Japan)	tissue	66.7	NA	NA	0.708333333	25	72	2	63	quantitative	Non-diagnose	Multiple	hom	2009	0.651515152	2.428571429	Jin(Japan)	Jin

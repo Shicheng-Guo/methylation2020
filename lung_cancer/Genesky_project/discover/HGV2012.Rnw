@@ -1,0 +1,179 @@
+\documentclass[a4paper]{article}
+\title{The Algorithm and implement of k-NN}
+\author{Shicheng Guo
+Ministry of Education Key Laboratory of Contemporary Anthropology School of Life Sciences Fudan University
+220 Handan Road
+Shanghai, China 200433
+}
+\begin{document}
+\maketitle
+In this example we use knn() in R to perform a knn analysis into a \LaTeX{} document:\\
+[B]Aberrant DNA methylation is an important event in lung cancer initiation. So it is a promising biomarker for cancer early screening or diagnosis. Microarray analysis has yet to be widely accepted for molecular cancer diagnosis and classification of human cancers. There are exponential increase of microarray datasets in GEO,including methylation datasets,so we can make full use of such information to benefit clinical detection precision. 
+[Methos] Three independent microarray datasets were systematically quantified with serail of proecss: background-corrected, data intergate, batch effect emilination with Combat method and Differential ananlysis. External Validation was performed with Methylation-specific PCR(MSP) in 100 pairs of cancer and adajacent tissues.
+[Result] From meta analysis we identified 3 there genes() which
+[Conclusions] a panel of epigenetic biomarkers for NSCLC cancer diagnosis was established and 
+
+
+
+there are four dataset included in our analysis, first GSE16559(GoldenGate);
+
+<<>>=
+# for GSE16559  
+setwd("/work/Working/meta/datasets/R")
+library("affy")
+library("impute")
+library("preprocessCore")
+library("gplots")
+setwd("/work/Working/meta/datasets/cumpus/GSE16559")
+
+data<-read.table("GSE16559_non-normalized_data.txt",as.is=F,head=T,sep="\t")
+i<-as.numeric();beta<-data[,1]
+for(i in c(1:((dim(data)[2]-1)/2))){
+   b<-data[,2*i]/(data[,2*i]+data[,2*i+1]+100)
+   beta<-data.frame(beta,b)
+}
+
+sample<-colnames(data)
+m<-colnames(data)[c(1,seq(2,length(colnames(data)),by=2))]
+m<-gsub("\\.Signal\\.CY5","",m)
+
+#a<-unlist(strsplit(sample,"\\."))
+#b<-a[grep("X",a)]
+#c<-unlist(strsplit(b,"X"))
+#d<-((c[grep("\\d+",c,perl=T)]))
+#e<-c(colnames(data)[1],d[seq(2,length(d),by=2)])
+colnames(beta)<-m
+write.table(beta,file="GSE16559_non-normalized_beta_data.txt",sep="\t",quote=F,row.names=F)
+rm(list=ls())
+
+@
+
+
+
+<<>>=
+
+data<-read.table("GSE28094_lung_non-normalized_data.txt",as.is=F,head=T,sep="\t")
+
+Pval<-data[,c(1,grep("Pval",colnames(data)))]
+data<-data[,-grep("Pval",colnames(data))]
+i<-as.numeric();beta<-data[,1]
+for(i in c(1:((dim(data)[2]-1)/2))){
+   b<-data[,2*i+1]/(data[,2*i]+data[,2*i+1]+100)
+   beta<-data.frame(beta,b)
+}
+
+beta2<-array(as.matrix(beta[,seq(2,dim(beta)[2])]))
+beta2[which(Pval[,seq(2,dim(Pval)[2])]>0.05)]<-NA
+beta3<-matrix(beta2,dim(beta)[1])
+beta4<-data.frame(beta[,1],beta3)
+
+sample<-colnames(data)
+m<-colnames(data)[c(1,seq(2,length(colnames(data)),by=2))]
+m<-gsub("\\.CY3","",m)
+colnames(beta4)<-m
+write.table(beta4,file="GSE28094_lung_non-normalized_beta_data.txt",sep="\t",quote=F,row.names=F)
+rm(list=ls())
+
+@
+<<>>=
+#for GSE29505_unmethylated_and_methylated_signal_intensities.txt
+data<-read.table("GSE29505_unmethylated_and_methylated_signal_intensities.txt",as.is=F,head=T,sep="\t")
+i<-as.numeric();beta<-data[,1]
+for(i in c(1:((dim(data)[2]-1)/2))){
+   b<-data[,2*i+1]/(data[,2*i]+data[,2*i+1]+100)
+   beta<-data.frame(beta,b)
+}
+sample<-colnames(data)
+m<-colnames(data)[c(1,seq(2,length(colnames(data)),by=2))]
+m<-gsub("\\.Unmethylated\\.Signal","",m)
+colnames(beta)<-m
+TargetID<-gsub("a\\_","",beta[,1])
+TargetID<-gsub("\\-61","",TargetID)
+beta[,1]<-TargetID
+beta<-beta[,c(1,grep("Lung",colnames(beta)))]
+write.table(colnames(beta),file="GSE29505.sample.txt",sep="\t",row.names=F,col.names=F)
+write.table(beta,file="GSE29505_non-normalized_beta_data.txt",sep="\t",quote=F,row.names=F)
+@
+
+
+
+
+<<>>=
+# For GPL
+GPL<-read.table("goldengate.txt",as.is=F,head=T,sep="\t")
+GPL27<-read.table("methy27k.anotation.txt",as.is=F,head=T,sep="\t")
+match(as.factor(beta[,1]),GPL[,dim(GPL)[2]])
+write.table(GPL,file="1.txt",sep="\t",quote=F,row.names=F)
+write.table(as.factor(beta[,1]),file="2.txt",sep="\t",quote=F,row.names=F)
+data4<-read.table("TCGA_Methylation.txt",sep="\t",head=T,as.is=F)
+data5<-t(data4)
+write.table(data5,file="TCGA_non-normalized_beta_data.txt",sep="\t",row.names=T,col.names=F)
+
+@
+
+
+
+
+Last combind three dataset:
+cd /work/Working/meta/datasets/goldenGate/
+
+GSE16559_non-normalized_beta_data.txt
+GSE28094_lung_non-normalized_beta_data.txt
+TCGA_non-normalized_beta_data.txt
+(GSE29505_non-normalized_beta_data.txt is just very like with)
+
+
+GSE16559_GSE28094_TCGA_non-normalized_beta_data.txt
+GSE16559_GSE28094_TCGA_non-normalized_beta_data.txt rm
+GSE16559_GSE28094_TCGA_non-normalized_beta_data.txt.rm.txt  (include "NA")
+
+<<>>=
+setwd("/work/Working/meta/datasets/goldenGate")
+source("RM.R")
+RMNa("GSE16559_GSE28094_TCGA_non-normalized_beta_data.txt")
+
+mydata<-read.table("GSE16559_GSE28094_TCGA_non-normalized_beta_data.narm.knn.quantitle.txt",sep="\t",head=T,as.is=F) 
+
+source("combat.R")
+ComBat("GSE16559_GSE28094_TCGA_non-normalized_beta_data.narm.knn.quantitle.txt","Sample_.txt",covariates="all",skip=1,filter=F,par.prior=T)
+
+
+@
+
+
+<<>>=
+data1<-read.table("GSE16559_GSE28094_TCGA_non-normalized_beta_data.txt",as.is=F,head=T,sep="\t",row.names=1)
+data2<-read.table("GSE16559_GSE28094_TCGA_non-normalized_beta_data.narm.knn.quantitle.txt",row.names=1,as.is=F,head=T,sep="\t")
+data3<-data1[-which(is.na(match(rownames(data1),rownames(data2))=="TRUE")),]
+match(rownames(data2),rownames(data3));
+data4<-data2-data3
+data5<-read.table("Adjusted_GSE16559_GSE28094_TCGA_non-normalized_beta_data.narm.knn.quantitle.txt",as.is=F,head=T,sep="\t",row.names=1)
+
+@
+
+
+<<>>=
+setwd("/work/Working/meta/datasets/R")
+library("affy")
+library("impute")
+library("preprocessCore")
+library("gplots")
+
+
+
+GSE16559_GSE28094_TCGA_non-normalized_beta_data.knn.combat.txt
+
+ComBat("Result_order.narm.knn.quantitle.txt","array_batch.txt",covariates="all",skip=1,filter=F,par.prior=T)
+
+@
+the dendrograms are also included:
+\begin{center}
+<<fig=TRUE,echo=FALSE>>=
+par(mfrow = c(2, 2),mar = c(4,3,1,2)) 
+plot(dend) 
+plot(dend, nodePar=list(pch = c(1,NA), cex=0.8, lab.cex=0.8), type = "t", center=TRUE) 
+plot(dend, edgePar=list(col = 1:2, lty = 2:3), dLeaf=1, edge.root = TRUE) 
+plot(dend, nodePar=list(pch = 2:1, cex=.4*2:1, col=2:3), horiz=TRUE)
+@
+\end{center}
+\end{document}

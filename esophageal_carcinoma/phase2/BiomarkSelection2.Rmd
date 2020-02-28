@@ -1,0 +1,59 @@
+---
+title: "Methylation Biomarker Panel II in ESCA"
+author: "Shicheng Guo"
+date: "October 10, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r cars}
+data<-read.table("/home/shg047/oasis/TCGA/Meth/Data/split/PancancerTissueGSI.txt",head=F,as.is=T)
+head(data)
+sub<-subset(data,V2=="ESCA_0" & V3>0.35)
+dim(sub)
+hist(sub$V3)
+```
+
+```{r GSI_AND_PBMC}
+pbmc<-read.table("/home/shg047/oasis/TCGA/Meth/Normal.PBMC.GEO.HM450K.Beta.txt",head=T,row.names=1,sep="\t")
+head(pbmc)
+
+target<-pbmc[match(sub[,1],rownames(pbmc)),]
+subtarget<-subset(target,mean<0.1 & median<0.1 & Quantile.0.< 0.2 )
+dim(subtarget)
+
+sub<-data.frame(sub,target)
+dim(sub)
+
+
+mh450<-read.table("/home/shg047/oasis/db/GPL13534.map")
+
+sub<-data.frame(sub,mh450[match(sub$V1,mh450$V4),])
+write.table(sub,file="Esoph-PBMC.GSI.txt",col.names=T,row.names=F,sep="\t",quote=F)
+
+```
+
+We can find most esphogus specific hypermethylated CpGs are low methylated in PBMC. 
+
+
+```{r ENCODEN}
+
+system("wget https://www.encodeproject.org/files/ENCFF543KHZ/@@download/ENCFF543KHZ.bed.gz")
+encode<-read.table("/media/Home_Raid1/shg047/NAS3/bak/ENCFF543KHZ.epithelial.epithelial.Enhancer.Promoter.hg19.2016-ENCODE.bed")
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

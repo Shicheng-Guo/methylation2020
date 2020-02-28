@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+7f4eedeb-65ec-5c67-836c-372aec7d04ce	11947	case	c2a1de2e-6451-4c95-8ce6-263f2b7e6eff	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	Pt with synchronous lymphoma

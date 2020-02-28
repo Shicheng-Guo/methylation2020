@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+de3092c5-f416-5f48-8653-d9603ba6383d	21897	case	9dfddc49-1e66-4e26-9d71-40d748cca0a6	History of unacceptable prior treatment related to a prior/other malignancy	Notification	2014-08-26T00:00:00	Approved	During Enrollment it was found that the patient had a prior right breast malignancy and recieved systemic pharma treatment (cytoxan and taxotere).

@@ -1,0 +1,36 @@
+---
+title: Quantitative assessment of the diagnostic role of APC promoter methylation
+  in non-small cell lung cancer
+author: "Shicheng Guo"
+date: "August 18, 2016"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("meta")
+library("metafor")
+library("mada")
+```
+
+## Abstract
+
+
+```{r meta}
+apc<-read.table("FHIT.txt",head=T,sep="\t")
+head(apc)
+summary(cars)
+```
+
+[Background] Adenomatous polyposis coli (APC) has been reported to be a candidate tumor suppressor in many cancers. However, the diagnostic role of APC promoter methylation in non-small cell lung cancer (NSCLC) remains unclear. We systematically integrated published articles and DNA methylation microarray data to investigate the diagnostic performance of the APC methylation test for NSCLC. Two thousand two hundred and fifty-nine NSCLC tumor samples and 1,039 controls were collected from 17 published studies and TCGA NSCLC data. The association between APC promoter methylation and NSCLC was evaluated in a meta-analysis. An independent DNA methylation microarray dataset from TCGA project, in which five CpG sites located in the promoter region of APC were involved, was used to validate the results of the meta-analysis. [Results] A significant association was observed between APC promoter hypermethylation and NSCLC, with an aggregated odds ratio (OR) of 3.79 (95% CI: 2.22 to 6.45) in a random effects model. Pooled sensitivity and specificity were 0.548 (95% CI: 0.42 to 0.67, P???<???0.0001) and 0.776 (95% CI: 0.62 to 0.88, P???<???0.0001), respectively. Each of the five CpG sites was much better in prediction (area under the curve, AUC: 0.71 to 0.73) in lung adenocarcinoma (Ad) than in lung squamous cell carcinoma (Sc) (AUC: 0.45 to 0.61). The AUCs of the logistic prediction model based on these five CpGs were 0.73 and 0.60 for Ad and Sc, respectively. Integrated analysis indicated that CpG site location, heterogeneous or autogenous controls, and the proportion of adenocarcinoma in samples were the most significant heterogeneity sources. [Conclusions] The methylation status of APC promoter was strongly associated with NSCLC, especially adenocarcinoma. The APC methylation test could be applied in the clinical diagnosis of lung adenocarcinoma.
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

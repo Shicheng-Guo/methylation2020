@@ -1,0 +1,10 @@
+Gene	Gene name	Cancer	High	Medium	Low	Not detected	prognostic - favourable	unprognostic - favourable	prognostic - unfavourable	unprognostic - unfavourable
+ENSG00000000003	TSPAN6	breast cancer	1	7	2	2		7.712e-2		
+ENSG00000000003	TSPAN6	carcinoid	0	1	1	2				
+ENSG00000000003	TSPAN6	cervical cancer	11	1	0	0		8.967e-2		
+ENSG00000000003	TSPAN6	colorectal cancer	0	6	2	2		3.562e-2		
+ENSG00000000003	TSPAN6	endometrial cancer	10	2	0	0				2.567e-1
+ENSG00000000003	TSPAN6	glioma	0	0	0	11		3.617e-3		
+ENSG00000000003	TSPAN6	head and neck cancer	0	3	1	0				5.932e-2
+ENSG00000000003	TSPAN6	liver cancer	4	5	1	0		1.040e-1		
+ENSG00000000003	TSPAN6	lung cancer	8	4	0	0		1.090e-2		

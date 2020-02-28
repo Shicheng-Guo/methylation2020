@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+1aad0292-d4ba-5e63-a7c3-6771dfd8845d	11754	case	283af87a-f962-47ab-8a7b-4fcd7e45cdf6	Item does not meet study protocol	Notification	2012-10-31T00:00:00	Approved	Subjects history of prior malignancies is unknown, which does not meet study protocol criteria.

@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+a56885f3-d296-590e-99a3-4d24b00d4e4e	21870	case	613adbb3-c2d1-4992-9953-c4fadd249001	History of unacceptable prior treatment related to a prior/other malignancy	Notification	2014-08-14T00:00:00	Approved	Patient was given BCG for the prior bladder cancer, which was not approved by the lung group as an acceptable prior treatment. (per Kristen Leraas/BCR TCGA-2222)

@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+2d3a860d-81e6-5ae7-8cee-a8bcf5f07621	11723	case	49f975ea-a1cf-4a9b-bf13-030c68cc99e4	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy SCC of the tongue treated with locoregional radiation.
+7264f17f-6b6d-5d17-9ce4-648cf77abfdf	11936	case	49f975ea-a1cf-4a9b-bf13-030c68cc99e4	History of acceptable prior treatment related to a prior/other malignancy	Notification	2012-11-10T00:00:00	Approved	Prior malignancy SCC of the tongue treated with locoregional radiation.

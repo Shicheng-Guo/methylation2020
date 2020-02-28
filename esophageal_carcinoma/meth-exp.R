@@ -1,0 +1,12 @@
+setwd("C:\\Users\\User\\Dropbox\\Project\\methylation\\esophageal_carcinoma\\phase1\\ZNF132")
+setwd("N:\\ZNF132")
+data<-read.table("meth-exp.esca.txt",head=T)
+summary(lm(data$MF~log(data$EXP,2)))
+pdf("ZNF.meth.exp.pdf")
+par(mfrow=c(2,2))
+plot(log(data$EXP) ~ MF, data = data,type="n",col=as.numeric(as.factor(unlist(lapply(as.character(data$Target),function(x) substr(x,1,1)))))+1,xlab="Average Methylation Level")
+points(y=log(data$EXP),x=data$MF,pch=as.numeric(as.factor(unlist(lapply(as.character(data$Target),function(x) substr(x,1,1)))))+1)
+abline(lm(log(data$EXP)~data$MF),lwd=2,lty=5) # regression line (y~x) 
+legend("topright",legend=c("Normal","Cancer"),pch=c(2,3),bty="n")
+dev.off()
+

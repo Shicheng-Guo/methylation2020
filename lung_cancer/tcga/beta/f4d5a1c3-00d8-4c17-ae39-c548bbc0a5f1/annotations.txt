@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+fc1c8fed-bcdb-5195-8b5b-2e1f7fe9dd1d	11748	case	8d535aa6-6d59-4965-b5ed-17217d8f5930	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy kidney cancer. No systemic treatment or radiation.

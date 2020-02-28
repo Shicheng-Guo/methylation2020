@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+818b5656-e486-5e03-84c1-082e467217b1	3404	case	1575148b-0f63-44ee-86fd-93ae1a02be0b	Neoadjuvant therapy	Notification	2011-10-02T00:00:00	Approved	[intgen.org]: Neoadjuvant therapy

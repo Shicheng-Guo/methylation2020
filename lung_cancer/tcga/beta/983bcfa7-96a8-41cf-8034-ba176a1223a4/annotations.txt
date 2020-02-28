@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+671362a8-526f-57e6-93a7-31584afeb2ab	11949	case	0d66bf6c-eed0-4726-bd5b-3bf6d610b4e0	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	Pt with synchronous R lung carcinoid tumor.

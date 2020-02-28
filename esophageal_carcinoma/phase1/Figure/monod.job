@@ -1,0 +1,14 @@
+#!/bin/csh
+#PBS -n TCGA-Pan
+#PBS -q hotel
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=7:00:00
+#PBS -o TCGA-Pan.log
+#PBS -e TCGA-Pan.err
+#PBS -V
+#PBS -M shihcheng.guo@gmail.com
+#PBS -m abe
+#PBS -A k4zhang-group
+cd /home/shg047/oasis/TCGA/Meth/Data
+# Rscript monod.R
+Rscript validate.R 

@@ -1,0 +1,8 @@
+#PBS -N Human_CD4T-100yr.meth.bw
+#PBS -l nodes=1:ppn=1
+#PBS -M Guo.shicheng@marshfieldresearch.org
+#PBS -m abe
+#PBS -o /gpfs/home/guosa/hpc/methylation/methbase/PBMC/temp/
+#PBS -e /gpfs/home/guosa/hpc/methylation/methbase/PBMC/temp/
+cd /gpfs/home/guosa/hpc/methylation/methbase/PBMC
+bigWigToWig Human_CD4T-100yr.meth.bw Human_CD4T-100yr.meth.bw.wig

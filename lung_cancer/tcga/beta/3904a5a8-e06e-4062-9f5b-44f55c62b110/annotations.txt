@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+06891a17-e03b-5bb1-ac63-a3e6c2cdb097	11755	case	781f40c9-c099-4c96-8269-ebe2a449c93d	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy melanoma of the right arm. No systemic chemotherapy or radiation.

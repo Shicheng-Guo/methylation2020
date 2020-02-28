@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+8b9d9dc5-0ecf-5faf-b7d8-97afa971cca5	11977	case	a52e99d6-a61a-439d-b0b1-ca7a0eabcb04	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	PM of the spleen. No systemic chemo or radiation. Pt with synchronous L breast cancer.
+c5c6b816-5205-562d-8061-4b7d67dde110	11761	case	a52e99d6-a61a-439d-b0b1-ca7a0eabcb04	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy cancer of the spleen. No systemic chemotherapy or radiation. Patient with synchronous L breast cancer.

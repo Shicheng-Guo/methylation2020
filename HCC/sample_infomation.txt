@@ -1,0 +1,54 @@
+H1	nonHCC	healthy
+H2	nonHCC	healthy
+H3	nonHCC	healthy
+P1	nonHCC	acute hepatitis
+P2	nonHCC	chronic hepatitis
+P3	nonHCC	chronic hepatitis
+P4	nonHCC	chronic hepatitis
+P5	nonHCC	chronic hepatitis
+P6	nonHCC	chronic hepatitis
+P7	nonHCC	chronic hepatitis
+P8	nonHCC	chronic hepatitis
+P9	nonHCC	chronic hepatitis
+P10	nonHCC	chronic hepatitis
+P11	nonHCC	chronic hepatitis
+P12	nonHCC	chronic hepatitis
+P13	nonHCC	chronic hepatitis
+P14	nonHCC	chronic hepatitis
+P15	nonHCC	chronic hepatitis
+P16	nonHCC	chronic hepatitis
+P17	nonHCC	chronic hepatitis
+P18	nonHCC	nash-related cirrhosis
+P19	nonHCC	alcoholic cirrhosis
+P20	nonHCC	cirrhosis
+P21	nonHCC	cirrhosis
+P22	nonHCC	cirrhosis
+P23	nonHCC	cirrhosis
+P24	nonHCC	cirrhosis
+P25	nonHCC	cirrhosis
+P26	nonHCC	cirrhosis
+P27	nonHCC	cirrhosis
+P28	nonHCC	cirrhosis
+P29	nonHCC	cirrhosis
+P30	nonHCC	cirrhosis
+P31	nonHCC	cirrhosis
+P32	nonHCC	cirrhosis
+P33	nonHCC	cirrhosis
+P34	nonHCC	cirrhosis
+P35	HCC	early stage HCC
+P36	HCC	early stage HCC
+P37	HCC	early stage HCC
+P38	HCC	advanced HCC
+P39	HCC	advanced HCC
+P40	HCC	advanced HCC
+P41	HCC	advanced HCC
+P42	HCC	advanced HCC
+P43	HCC_surgery	after surgery
+P44	HCC_surgery	after surgery
+P45	HCC_surgery	after surgery
+P46	HCC_surgery	after surgery
+P47	HCC_surgery	after surgery
+P48	HCC_surgery	after surgery
+P49	HCC_surgery	after surgery
+P50	HCC_surgery	after surgery
+P51	HCC_surgery	after surgery

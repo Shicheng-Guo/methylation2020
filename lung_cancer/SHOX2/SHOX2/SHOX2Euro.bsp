@@ -1,0 +1,81 @@
+Forward primer
+25 bp (from 10 to 34)
+MethPrimer result
+
+Sequence Name: 
+Sequence Length: 300
+
+CpG island prediction results
+(Criteria used: Island size > 100, GC Percent > 50.0, Obs/Exp > 0.6)
+ 1 CpG island(s) were found in your sequence
+            Size	(Start - End)
+ Island 1   195 bp	 (49 - 243)
+
+Primer picking results for bisulfite sequencing (or restriction) PCR
+   
+   Primer            Start Size  Tm      GC%   'C's  Sequence
+1  Left  primer        10   25   54.82   36.00   4  TTTGTTGGTTTAATTTAGGAATAAT
+   Right primer       236   22   55.45   63.64   6  CCCTTTAAACAACCAACATAAC
+   Product size: 227, Tm: 72.4, CpGs in product: 17
+
+2  Left  primer        10   25   54.82   36.00   4  TTTGTTGGTTTAATTTAGGAATAAT
+   Right primer       237   23   56.34   65.22   7  ACCCTTTAAACAACCAACATAAC
+   Product size: 228, Tm: 72.4, CpGs in product: 17
+
+3  Left  primer        10   25   54.82   36.00   4  TTTGTTGGTTTAATTTAGGAATAAT
+   Right primer       235   21   51.74   61.90   6  CCTTTAAACAACCAACATAAC
+   Product size: 226, Tm: 72.3, CpGs in product: 17
+
+4  Left  primer        10   25   54.82   36.00   4  TTTGTTGGTTTAATTTAGGAATAAT
+   Right primer       238   24   57.63   62.50   7  AACCCTTTAAACAACCAACATAAC
+   Product size: 229, Tm: 72.3, CpGs in product: 17
+
+5  Left  primer        10   25   54.82   36.00   4  TTTGTTGGTTTAATTTAGGAATAAT
+   Right primer       164   25   54.16   60.00   8  ACCTAACTATCCAAAAAACCTTATA
+   Product size: 155, Tm: 70.3, CpGs in product: 9
+
+
+    1 TACCGCAAACTTGCTGGTCTAATTTAGGAACAATTGGGCCGAAAGGTATCAGCGAGAGCA
+      ||:++:|||:|||:||||:|||||||||||:|||||||:++||||||||:||++||||:|
+    1 TATCGTAAATTTGTTGGTTTAATTTAGGAATAATTGGGTCGAAAGGTATTAGCGAGAGTA
+               >>>>>>>>>>>>>>>>>>>>>>>>>                          
+
+   61 ACAGACCCCGGTGTTGTGCCGCACAGGGAGCCGCATCCGCAGACGCCCCTCGCTGCCCCT
+      |:|||:::++||||||||:++:|:||||||:++:||:++:|||++::::|++:||::::|
+   61 ATAGATTTCGGTGTTGTGTCGTATAGGGAGTCGTATTCGTAGACGTTTTTCGTTGTTTTT
+                                                                  
+
+  121 GGGCTCGGGCCAAACCCTGCATAAGGTCCCCTGGACAGCCAGGTAATCTCCGTCCCGCCT
+      |||:|++||::|||:::||:|||||||::::||||:||::|||||||:|:++|::++::|
+  121 GGGTTCGGGTTAAATTTTGTATAAGGTTTTTTGGATAGTTAGGTAATTTTCGTTTCGTTT
+                                                                  
+
+  181 GCCCGACCGGGGTCGCACGAGCACAGGCGCCCACGCCATGTTGGCTGCCCAAAGGGCTCG
+      |::++|:++||||++:|++||:|:|||++:::|++::|||||||:||:::||||||:|++
+  181 GTTCGATCGGGGTCGTACGAGTATAGGCGTTTACGTTATGTTGGTTGTTTAAAGGGTTCG
+                                        <<<<<<<<<<<<<<<<<<<<<<    
+
+  241 CCGCCCAAGCCGGGCCAGAAGGCAGGAGGCGGAAAACCAGCCTCCGGTGGCGGGCGAAAG
+      :++:::|||:++||::||||||:||||||++|||||::||::|:++||||++||++||||
+  241 TCGTTTAAGTCGGGTTAGAAGGTAGGAGGCGGAAAATTAGTTTTCGGTGGCGGGCGAAAG
+                                                                  
+
+******************************************************************
+*  Explanations                                                  *
+*----------------------------------------------------------------*
+*  Upper row: Original sequence                                  *
+*  Lower row: Bisulfite modified sequence                        *
+*             (For display, assume all CpG sites are methylated) *
+*  ++         CpG sites                                          *
+*  ::::       Non-CpG 'C' converted to 'T'                       *
+*  >>>>>>     Left  primer                                       *
+*  <<<<<<     Right primer                                       *
+*                                                                *
+******************************************************************
+
+
+
+
+MethPrimer v1.1 beta
+
+

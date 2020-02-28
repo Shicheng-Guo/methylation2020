@@ -1,0 +1,6 @@
+"" "Var1" "Freq"
+"1" "" 125
+"2" "Clinical Progressive Disease" 90
+"3" "Complete Response" 198
+"4" "Partial Response" 10
+"5" "Stable Disease" 40

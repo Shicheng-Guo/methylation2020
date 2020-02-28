@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+1d3c65b7-db4a-59a4-994b-af13849709da	11671	case	dbece124-c042-4adc-8136-90e7940ee6ad	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy uterine cancer. No systemic chemotherapy or radiation.

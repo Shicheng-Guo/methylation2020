@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+4be0d3d1-4984-5e2b-93cf-01ea922bd5a2	3761	case	afedf3fb-fc77-45a7-bdcd-2c78706a0f8a	Prior malignancy	Notification	2011-11-18T00:00:00	Approved	[intgen.org]: Subject has Hx of prior malignancy
+af9a333d-a068-5868-901e-020e697444e8	11937	case	afedf3fb-fc77-45a7-bdcd-2c78706a0f8a	History of unacceptable prior treatment related to a prior/other malignancy	Notification	2012-11-10T00:00:00	Approved	Prior malignancy  Hairy Cell Leukemia treated with 2-CdA and Pentostatin.

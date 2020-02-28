@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+04503b69-a4ba-5e78-9c88-870f12708975	11750	case	d5e94dcf-994f-48a0-b491-bbbf1c2a6783	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy B-cell chronic lymphocytic leukemia. No systemic chemotherapy or radiation.

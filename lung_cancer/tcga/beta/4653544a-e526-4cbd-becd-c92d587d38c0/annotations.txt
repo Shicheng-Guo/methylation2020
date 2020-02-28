@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+6336c0a0-018a-59f8-8074-ec219b8db240	3167	case	889aec8e-14ba-48d9-8fe1-f2416e82b333	Prior malignancy	Notification	2011-07-11T00:00:00	Approved	[intgen.org]: Prior Malignancy
+cdcafa70-4625-5679-8c13-a168009765fb	11946	case	889aec8e-14ba-48d9-8fe1-f2416e82b333	History of unacceptable prior treatment related to a prior/other malignancy	Notification	2012-11-10T00:00:00	Approved	Prior malignancy  of bowel carcinoid tumor treated with sandostatin. Prior malignancyR KIRP. No systemic chemotherapy or radiation .

@@ -1,0 +1,5 @@
+"Stage I"	"Stage IA"	"Stage IB"	"Stage II"	"Stage IIA"	"Stage IIB"	"Stage IIIA"	"Stage IIIB"	"Stage IV"
+"t1"	3	96	112	32	53	58	11	22	3
+"t2"	0	16	11	1	11	12	1	4	0
+"t3"	1	55	111	1	30	59	41	20	4
+"t4"	0	14	25	0	4	10	9	3	3

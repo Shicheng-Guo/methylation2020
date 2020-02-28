@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+ddf0df77-2272-5a0e-ab6d-3a9ff7e746e0	11733	case	230dc42d-681c-4e31-9d2e-c724e61829fb	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy skin cancer upper lip.  No systemic chemotherapy or radiation.

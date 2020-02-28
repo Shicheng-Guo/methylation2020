@@ -1,0 +1,30 @@
+bcr_patient_barcode	new_tumor_event_type	new_tumor_event_surgery	new_tumor_event_dx_evidence	new_tumor_event_surgery_days_to_loco	new_tumor_event_surgery_met	new_tumor_event_dx_days_to	new_tumor_event_surgery_days_to_met	new_tumor_event_radiation_tx	new_tumor_event_pharmaceutical_tx
+bcr_patient_barcode	new_neoplasm_event_type	additional_surgery_locoregional_procedure	progression_determined_by	days_to_additional_surgery_locoregional_procedure	additional_surgery_metastatic_procedure	days_to_new_tumor_event_after_initial_treatment	days_to_additional_surgery_metastatic_procedure	additional_radiation_therapy	additional_pharmaceutical_therapy
+CDE_ID:2673794	CDE_ID:3119721	CDE_ID:3008755	CDE_ID:2786205	CDE_ID:3408572	CDE_ID:3008757	CDE_ID:3392464	CDE_ID:3408682	CDE_ID:3427615	CDE_ID:3427616
+TCGA-J2-8192	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	NO	NO
+TCGA-69-8253	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	NO	NO
+TCGA-62-8395	Locoregional Recurrence|Distant Metastasis	NO	Convincing Imaging	[Not Available]	NO	500	[Not Available]	NO	YES
+TCGA-62-8402	Locoregional Recurrence|Distant Metastasis	NO	Convincing Imaging	[Not Available]	NO	772	[Not Available]	YES	YES
+TCGA-78-8648	Locoregional Recurrence	[Unknown]	Biopsy with Histologic Confirmation	[Not Available]	[Not Available]	720	[Not Available]	[Unknown]	[Unknown]
+TCGA-78-8660	Distant Metastasis	[Not Available]	Biopsy with Histologic Confirmation	[Not Available]	YES	242	260	YES	NO
+TCGA-78-8662	Locoregional Recurrence	NO	Biopsy with Histologic Confirmation	[Not Available]	[Not Available]	3044	[Not Available]	YES	[Unknown]
+TCGA-62-A46O	Locoregional Recurrence|Distant Metastasis	NO	Convincing Imaging	[Not Available]	NO	943	[Not Available]	NO	NO
+TCGA-62-A46P	Distant Metastasis	[Not Available]	Convincing Imaging	[Not Available]	YES	267	267	NO	YES
+TCGA-62-A46S	Locoregional Recurrence|Distant Metastasis	NO	Convincing Imaging	[Not Available]	NO	527	[Not Available]	NO	YES
+TCGA-62-A46Y	Distant Metastasis	[Not Available]	Biopsy with Histologic Confirmation|Convincing Imaging	[Not Available]	NO	314	[Not Available]	NO	YES
+TCGA-62-A470	Locoregional Recurrence	NO	Convincing Imaging	[Not Available]	[Not Available]	539	[Not Available]	YES	NO
+TCGA-62-A472	Locoregional Recurrence	NO	Biopsy with Histologic Confirmation|Convincing Imaging	[Not Available]	[Not Available]	290	[Not Available]	YES	NO
+TCGA-L4-A4E6	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	NO	NO
+TCGA-MN-A4N1	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	NO	NO
+TCGA-MN-A4N4	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	NO	NO
+TCGA-MN-A4N5	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	NO	NO
+TCGA-MP-A4SY	Locoregional Recurrence	YES	Biopsy with Histologic Confirmation	489	[Not Available]	489	[Not Available]	NO	YES
+TCGA-MP-A4T2	Distant Metastasis	[Not Available]	Biopsy with Histologic Confirmation	[Not Available]	YES	575	575	NO	NO
+TCGA-MP-A4T9	Locoregional Recurrence|Distant Metastasis	NO	Convincing Imaging	[Not Available]	NO	341	[Not Available]	YES	NO
+TCGA-MP-A4TA	Distant Metastasis	[Not Available]	Biopsy with Histologic Confirmation	[Not Available]	NO	725	[Not Available]	YES	YES
+TCGA-MP-A4TI	Locoregional Recurrence|Distant Metastasis	[Unknown]	Convincing Imaging	[Not Available]	[Unknown]	84	[Not Available]	YES	YES
+TCGA-MP-A4TK	Distant Metastasis	[Not Available]	Biopsy with Histologic Confirmation	[Not Available]	NO	397	[Not Available]	YES	NO
+TCGA-69-A59K	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	NO	NO
+TCGA-MP-A4TD	Locoregional Recurrence	NO	Convincing Imaging	[Not Available]	[Not Available]	226	[Not Available]	[Unknown]	YES
+TCGA-MP-A4TE	Locoregional Recurrence	YES	Biopsy with Histologic Confirmation	226	[Not Available]	226	[Not Available]	NO	NO
+TCGA-MP-A4TF	Distant Metastasis	[Not Available]	Biopsy with Histologic Confirmation|Convincing Imaging	[Not Available]	YES	195	202	YES	NO

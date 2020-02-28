@@ -1,0 +1,56 @@
+
+1. Epigenome analysis of buccal cells from monozygotic and dizygotic twins
+(Submitter supplied) Using the Infinium HM450 platform, we have performed a longitudinal study of DNA methylation at birth and age 18 months in DNA from buccal swabs from 10 monozygotic (MZ) and 5 dizygotic (DZ) twin pairs from the Peri/postnatal Epigenetic Twins Study (PETS) cohort.
+Organism:	Homo sapiens
+Type:		Methylation profiling by array
+Platform: GPL13534 53 Samples
+FTP download: GEO (TXT) ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE42nnn/GSE42700/
+Series		Accession: GSE42700	ID: 200042700
+
+2. Inactive or moderately active human promoters are enriched for inter-individual epialleles [Methylation BeadChip]
+(Submitter supplied) We first demonstrate that non-genetically determined inter-individual differentially methylated regions (iiDMRs) can be temporally stable for at least two years. Then, we show that iiDMRS are associated with concomitant changes in chromatin state as measured by inter-individual differences in the levels of the histone variant H2A.Z. However, the correlation of promoter iiDMRs with gene expression is negligible and this correlation is not improved even by integrating H2A.Z information. more...
+Organism:	Homo sapiens
+Type:		Methylation profiling by array
+Platform: GPL13534 14 Samples
+FTP download: GEO (TXT) ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE46nnn/GSE46168/
+Series		Accession: GSE46168	ID: 200046168
+
+3. Epigenome-wide analysis of monozygotic twin pairs discordant for body mass index
+(Submitter supplied) Genome wide DNA methylation profiling of MZ twins discordant and concordant for BMI. The Illumina Infinium 450k Human DNA methylation Beadchip was used to obtain DNA methylation profiles across approximately 485,000 CpGs. Samples included 30 MZ twin pairs discordant for BMI and 10 pairs concordant for BMI.
+Organism:	Homo sapiens
+Type:		Methylation profiling by array
+Platform: GPL13534 96 Samples
+FTP download: GEO (TXT) ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE43nnn/GSE43975/
+Series		Accession: GSE43975	ID: 200043975
+
+4. H3K4me1 marks DNA regions hypomethylated during aging in human stem and differentiated cells
+(Submitter supplied) This SuperSeries is composed of the SubSeries listed below.
+Organism:	Homo sapiens
+Type:		Methylation profiling by array
+Platform: GPL13534 58 Samples
+FTP download: GEO ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE52nnn/GSE52114/
+Series		Accession: GSE52114	ID: 200052114
+
+5. H3K4me1 marks DNA regions hypomethylated during aging in human stem and differentiated cells [twins]
+(Submitter supplied) In differentiated cells, aging is associated with hypermethylation of DNA regions enriched in repressive histone posttranslational modifications. However, the chromatin marks associated with changes in DNA methylation in adult stem cells during lifetime are still largely unknown. Here, DNA methylation profiling of mesenchymal stem cells obtained from individuals aged 2 to 92 identified 18735 hypermethylated and 45407 hypomethylated CpG sites associated with aging. more...
+Organism:	Homo sapiens
+Type:		Methylation profiling by array
+Platform: GPL13534 24 Samples
+FTP download: GEO (TXT) ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE52nnn/GSE52113/
+Series		Accession: GSE52113	ID: 200052113
+
+6. DNA Methylation Profiling of Human Saliva
+(Submitter supplied) Background: Low birth weight is associated with an increased adult metabolic disease risk. It is widely discussed that poor intrauterine conditions could induce long-lasting epigenetic modifications, leading to systemic changes in regulation of metabolic genes. In a unique cohort of 17 monozygotic (MZ) monochorionic female twins very discordant for birth weight (relative differences ranging from 21.3-35.7%), we examined if adverse prenatal growth conditions experienced by the smaller co-twins lead to systemic long-lasting DNA methylation changes. more...
+Organism:	Homo sapiens
+Type:		Methylation profiling by array
+Platform: GPL13534 34 Samples
+FTP download: GEO ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE39nnn/GSE39560/
+Series		Accession: GSE39560	ID: 200039560
+
+7. Inactive or moderately active human promoters are enriched for inter-individual epialleles
+(Submitter supplied) This SuperSeries is composed of the SubSeries listed below.
+Organism:	Homo sapiens
+Type:		Methylation profiling by array; Genome binding/occupancy profiling by high throughput sequencing; Expression profiling by high throughput sequencing
+Platforms: GPL13534 GPL10999 24 Samples
+FTP download: GEO (TXT) ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE46nnn/GSE46220/
+Series		Accession: GSE46220	ID: 200046220

@@ -1,0 +1,40 @@
+
+################
+# Deconv_rlt
+################
+
+We are trying to prove the assumption that cell-type level analysis is essential and critical in the study of Alzheimer's disease.
+
+To test this hypothesis, we applied deconvolution analysis to test the differential celltype contribution between the samples with AD or without AD.
+From the result, we found several celltypes (Ex6, Ex8, In6) have significant celltype contribution in general gene expression between case and control samples. (File.Deconv_rlt, Tab.'DiffExp by Celltype')
+
+To deep dived this phenomenon in gene level, we test the differential expression cross genes generally as well as in celltype level.
+From the result, we provided all the genes with significant differential expression observations in at least one celltypes or in general level. (File.Deconv_rlt, Tab.'DiffExp by Gene')
+Within these genes, 133 could be found significant in general level. Within the 133 genes, 35 could be found also significant cross all celltypes. 275 genes didn't deliver a significant differential expression generally but could be found significant in at least one celltype. (File.Deconv_rlt, Tab.'For Venn')
+
+Considerring the impact from experimental error, we also ran the same test with 30% component information excluded.
+
+################
+# Deconv_network_result
+################
+
+For the same goal, we are trying to identify the difference gene-gene expression among different celltypes.
+
+To get the result, we applied the structural equation and search and score algorithm to build the causal network on signaling pathways generally as well as in celltype levels.
+We used jaccard score (count of dupplicated edges / count of total edges) to measure the consistency cross different networks. And a range of 24%~98% overlap could be found between networks. (File.deconv_network_result, Tab.'Network Overlap')
+We also tested the stability of each edges (Frequency of occurrence among networks). And a range of 12%~94% stability could be found cross edges. (File.deconv_network_result, Tab.'Network Overlap2')
+
+################
+# Deconv_hotelling_test
+################
+
+Not only test the differential expression by gene seperately, we have also tried to test the differential expression within pathways.
+We applied hotelling test to test mutli gene differential expression within pathways between AD positive and negative. (Also other diseases have been test in the same file)
+From the results, we provided all the test pvalue of overal gene expression or cell type levels corss pathways for five diseases. (File.Deconv_hotelling_test, Tab.'All data output'). The strictly significant level should be 3E-6.
+For the result, there weren't any significant difference pathway found while considerring the overall gene expression under 30% component excluded for AD. However 3 were found sinificant in 9 celltype*pathway and all of them could be confirmed by existed literature.(File.Deconv_hotelling_test, Tab.'Significant Code for AD')
+
+################
+
+Rawdata:
+Expression data: 447 sample * 40120 genes
+Cell level reference data: 16240 gene * 4039 cell -> grouped to 17 cell type

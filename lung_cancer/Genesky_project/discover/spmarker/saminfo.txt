@@ -1,0 +1,33 @@
+	Category
+Mazda RX4	1
+Mazda RX4 Wag	2
+Datsun 710	3
+Hornet 4 Drive	4
+Hornet Sportabout	1
+Valiant	2
+Duster 360	3
+Merc 240D	4
+Merc 230	1
+Merc 280	2
+Merc 280C	3
+Merc 450SE	4
+Merc 450SL	1
+Merc 450SLC	2
+Cadillac Fleetwood	3
+Lincoln Continental	4
+Chrysler Imperial	1
+Fiat 128	2
+Honda Civic	3
+Toyota Corolla	4
+Toyota Corona	1
+Dodge Challenger	2
+AMC Javelin	3
+Camaro Z28	4
+Pontiac Firebird	1
+Fiat X1-9	2
+Porsche 914-2	3
+Lotus Europa	4
+Ford Pantera L	1
+Ferrari Dino	2
+Maserati Bora	3
+Volvo 142E	4

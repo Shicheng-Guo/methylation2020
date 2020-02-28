@@ -1,0 +1,834 @@
+	age	disease	gender	tissue
+GSM1024873	47	Depression	Male	brain
+GSM1024874	47	Depression	Male	brain
+GSM1024875	30	Control	Female	brain
+GSM1024876	13	Control	Female	brain
+GSM1024877	14	Depression	Female	brain
+GSM1024878	14	Depression	Female	brain
+GSM1024879	13	Control	Female	brain
+GSM1024880	47	Control	Male	brain
+GSM1024881	29	Depression	Female	brain
+GSM1024882	29	Depression	Female	brain
+GSM1024883	30	Control	Female	brain
+GSM1024884	47	Control	Male	brain
+GSM1024885	15	Control	Male	brain
+GSM1024886	17	Control	Male	brain
+GSM1024887	42	Depression	Female	brain
+GSM1024888	17	Depression	Male	brain
+GSM1024889	42	Control	Female	brain
+GSM1024890	15	Depression	Male	brain
+GSM1024891	15	Control	Male	brain
+GSM1024892	42	Control	Female	brain
+GSM1024893	17	Control	Male	brain
+GSM1024894	42	Depression	Female	brain
+GSM1024895	17	Depression	Male	brain
+GSM1024896	15	Depression	Male	brain
+GSM1024897	17	Control	Female	brain
+GSM1024898	23	Control	Male	brain
+GSM1024899	16	Depression	Female	brain
+GSM1024900	43	Control	Female	brain
+GSM1024901	16	Depression	Female	brain
+GSM1024902	43	Depression	Female	brain
+GSM1024903	43	Control	Female	brain
+GSM1024904	23	Depression	Male	brain
+GSM1024905	43	Depression	Female	brain
+GSM1024906	23	Depression	Male	brain
+GSM1024907	23	Control	Male	brain
+GSM1024908	17	Control	Female	brain
+GSM1024909	26	Control	Female	brain
+GSM1024910	21	Control	Male	brain
+GSM1024911	21	Depression	Male	brain
+GSM1024912	26	Control	Female	brain
+GSM1024913	46	Depression	Male	brain
+GSM1024914	26	Depression	Female	brain
+GSM1024915	46	Depression	Male	brain
+GSM1024916	26	Depression	Female	brain
+GSM1024917	46	Control	Male	brain
+GSM1024918	21	Depression	Male	brain
+GSM1024919	21	Control	Male	brain
+GSM1024920	46	Control	Male	brain
+GSM1024921	13	Depression	Male	brain
+GSM1024922	23	Control	Female	brain
+GSM1024923	48	Control	Female	brain
+GSM1024924	47	Depression	Female	brain
+GSM1024925	47	Depression	Female	brain
+GSM1024926	23	Depression	Female	brain
+GSM1024927	13	Depression	Male	brain
+GSM1024928	13	Control	Male	brain
+GSM1024929	23	Depression	Female	brain
+GSM1024930	13	Control	Male	brain
+GSM1024931	23	Control	Female	brain
+GSM1024932	48	Control	Female	brain
+GSM1024933	21	Control	Female	brain
+GSM1024934	21	Depression	Female	brain
+GSM1024935	47	Depression	Female	brain
+GSM1024936	21	Depression	Female	brain
+GSM1024937	21	Control	Female	brain
+GSM1024938	50	Control	Male	brain
+GSM1024939	47	Control	Female	brain
+GSM1024940	18	Control	Male	brain
+GSM1024941	47	Control	Female	brain
+GSM1024942	47	Depression	Female	brain
+GSM1024943	31	Depression	Female	brain
+GSM1024944	18	Control	Male	brain
+GSM1024945	18	Depression	Male	brain
+GSM1024946	31	Control	Female	brain
+GSM1024947	40	Control	Female	brain
+GSM1024948	18	Control	Male	brain
+GSM1024949	18	Depression	Male	brain
+GSM1024950	40	Control	Female	brain
+GSM1024951	41	Depression	Female	brain
+GSM1024952	31	Depression	Female	brain
+GSM1024953	31	Control	Female	brain
+GSM1024954	41	Depression	Female	brain
+GSM1024955	35	Control	Male	brain
+GSM1024956	16	Control	Female	brain
+GSM1024957	35	Control	Male	brain
+GSM1024958	48	Depression	Male	brain
+GSM1024959	16	Depression	Female	brain
+GSM1024960	48	Control	Male	brain
+GSM1024961	48	Depression	Male	brain
+GSM1024962	16	Depression	Female	brain
+GSM1024963	16	Control	Female	brain
+GSM1024964	35	Depression	Male	brain
+GSM1024965	48	Control	Male	brain
+GSM1024966	35	Depression	Male	brain
+GSM1024967	16	Depression	Female	brain
+GSM1024968	36	Control	Female	brain
+GSM1024969	50	Control	Male	brain
+GSM1024970	50	Depression	Male	brain
+GSM1024971	16	Depression	Female	brain
+GSM1024972	16	Control	Female	brain
+GSM1024973	50	Control	Male	brain
+GSM1024974	36	Control	Female	brain
+GSM1024975	16	Control	Female	brain
+GSM1024976	50	Depression	Male	brain
+GSM1024977	35	Depression	Female	brain
+GSM1024978	35	Depression	Female	brain
+GSM1024979	52	Control	Male	brain
+GSM1024980	52	Depression	Male	brain
+GSM1024981	18	Depression	Male	brain
+GSM1024982	78	Depression	Male	brain
+GSM1024983	79	Control	Male	brain
+GSM1024984	52	Depression	Male	brain
+GSM1024985	18	Control	Male	brain
+GSM1024986	52	Control	Male	brain
+GSM1024987	79	Control	Male	brain
+GSM1024988	78	Depression	Male	brain
+GSM1024989	18	Depression	Male	brain
+GSM1024990	18	Control	Male	brain
+GSM1024991	50	Control	Male	brain
+GSM1024992	50	Control	Male	brain
+GSM1024993	50	Control	Male	brain
+GSM1024994	50	Control	Male	brain
+GSM1024995	50	Control	Male	brain
+GSM1024996	50	Control	Male	brain
+GSM1024997	50	Control	Male	brain
+GSM1024998	50	Control	Male	brain
+GSM1024999	50	Control	Male	brain
+GSM1025000	16	Control	Female	brain
+GSM1025001	16	Depression	Female	brain
+GSM1025002	42	Control	Female	brain
+GSM1025003	41	Depression	Female	brain
+GSM1025004	43	Depression	Female	brain
+GSM1025005	16	Depression	Female	brain
+GSM1025006	18	Depression	Male	brain
+GSM1025007	16	Control	Female	brain
+GSM1025008	43	Control	Female	brain
+GSM1025009	40	Control	Female	brain
+GSM1025010	42	Depression	Female	brain
+GSM1025011	78	Depression	Male	brain
+GSM1025012	79	Control	Male	brain
+GSM1025013	47	Depression	Male	brain
+GSM1025014	47	Control	Male	brain
+GSM1025015	21	Control	Male	brain
+GSM1025016	21	Depression	Male	brain
+GSM1025018	50	Depression	Male	brain
+GSM2387020	37	control	M	brain
+GSM2387021	33	control	M	brain
+GSM2387022	60	schizophrenia	F	brain
+GSM2387023	30	control	M	brain
+GSM2387024	51	schizophrenia	F	brain
+GSM2387025	28	control	M	brain
+GSM2387026	69	control	M	brain
+GSM2387027	38	schizophrenia	M	brain
+GSM2387028	54	schizophrenia	M	brain
+GSM2387029	24	schizophrenia	M	brain
+GSM2387030	30	schizophrenia	M	brain
+GSM2387031	57	control	F	brain
+GSM2387032	57	control	M	brain
+GSM2387033	29	schizophrenia	M	brain
+GSM2387034	26	schizophrenia	M	brain
+GSM2387035	29	schizophrenia	M	brain
+GSM2387036	26	control	M	brain
+GSM2387037	50	control	F	brain
+GSM2387038	69	schizophrenia	M	brain
+GSM2387039	50	schizophrenia	M	brain
+GSM2387040	66	control	M	brain
+GSM2387041	32	schizophrenia	M	brain
+GSM2387042	44	control	M	brain
+GSM2387043	65	schizophrenia	M	brain
+GSM2387044	41	control	M	brain
+GSM2387045	70	control	M	brain
+GSM2387046	72	control	F	brain
+GSM2387047	32	control	M	brain
+GSM2387048	43	control	M	brain
+GSM2387049	70	schizophrenia	M	brain
+GSM2387050	39	schizophrenia	M	brain
+GSM2387051	47	schizophrenia	M	brain
+GSM2387052	21	control	M	brain
+GSM2387053	67	schizophrenia	M	brain
+GSM2387054	79	schizophrenia	M	brain
+GSM2387055	69	schizophrenia	F	brain
+GSM2387056	76	schizophrenia	F	brain
+GSM2387057	87	schizophrenia	M	brain
+GSM2387058	49	schizophrenia	F	brain
+GSM2387059	46	schizophrenia	M	brain
+GSM2387060	62	schizophrenia	M	brain
+GSM2387061	31	schizophrenia	M	brain
+GSM2387062	51	schizophrenia	M	brain
+GSM2387063	75	schizophrenia	F	brain
+GSM2387064	64	schizophrenia	M	brain
+GSM2387065	49	schizophrenia	M	brain
+GSM2387066	64	schizophrenia	M	brain
+GSM2387067	25	control	M	brain
+GSM2387068	82	control	F	brain
+GSM2387069	68	control	F	brain
+GSM2387070	57	control	M	brain
+GSM2387071	58	control	M	brain
+GSM2387072	95	control	M	brain
+GSM2387073	54	control	M	brain
+GSM2387074	67	control	M	brain
+GSM2387075	69	control	M	brain
+GSM2387076	48	control	M	brain
+GSM2387077	48	control	M	brain
+GSM2387078	79	control	M	brain
+GSM2387079	55	control	M	brain
+GSM2387088	37	control	M	brain
+GSM2387089	33	control	M	brain
+GSM2387090	60	schizophrenia	F	brain
+GSM2387091	30	control	M	brain
+GSM2387092	28	control	M	brain
+GSM2387093	69	control	M	brain
+GSM2387094	38	schizophrenia	M	brain
+GSM2387095	54	schizophrenia	M	brain
+GSM2387096	24	schizophrenia	M	brain
+GSM2387097	30	schizophrenia	M	brain
+GSM2387098	57	control	F	brain
+GSM2387099	57	control	M	brain
+GSM2387100	26	schizophrenia	M	brain
+GSM2387101	33	schizophrenia	M	brain
+GSM2387102	29	schizophrenia	M	brain
+GSM2387103	51	schizophrenia	F	brain
+GSM2387104	26	control	M	brain
+GSM2387105	73	schizophrenia	F	brain
+GSM2387106	50	control	F	brain
+GSM2387107	69	schizophrenia	M	brain
+GSM2387108	66	control	M	brain
+GSM2387109	32	schizophrenia	M	brain
+GSM2387110	44	control	M	brain
+GSM2387111	65	schizophrenia	M	brain
+GSM2387112	41	control	M	brain
+GSM2387113	70	control	M	brain
+GSM2387114	72	control	F	brain
+GSM2387115	32	control	M	brain
+GSM2387116	43	control	M	brain
+GSM2387117	70	schizophrenia	M	brain
+GSM2387118	39	schizophrenia	M	brain
+GSM2387119	47	schizophrenia	M	brain
+GSM2387120	21	control	M	brain
+GSM2387121	67	schizophrenia	M	brain
+GSM2387122	79	schizophrenia	M	brain
+GSM2387123	69	schizophrenia	F	brain
+GSM2387124	76	schizophrenia	F	brain
+GSM2387125	84	schizophrenia	F	brain
+GSM2387126	87	schizophrenia	M	brain
+GSM2387127	32	schizophrenia	F	brain
+GSM2387128	70	schizophrenia	F	brain
+GSM2387129	49	schizophrenia	F	brain
+GSM2387130	46	schizophrenia	M	brain
+GSM2387131	62	schizophrenia	M	brain
+GSM2387132	31	schizophrenia	M	brain
+GSM2387133	51	schizophrenia	M	brain
+GSM2387134	62	schizophrenia	M	brain
+GSM2387135	34	schizophrenia	F	brain
+GSM2387136	75	schizophrenia	F	brain
+GSM2387137	64	schizophrenia	M	brain
+GSM2387138	49	schizophrenia	M	brain
+GSM2387139	71	schizophrenia	F	brain
+GSM2387140	75	schizophrenia	F	brain
+GSM2387141	64	schizophrenia	M	brain
+GSM2387142	25	control	M	brain
+GSM2387143	49	control	M	brain
+GSM2387144	82	control	F	brain
+GSM2387145	82	control	F	brain
+GSM2387146	63	control	F	brain
+GSM2387147	68	control	F	brain
+GSM2387148	33	control	F	brain
+GSM2387149	50	control	M	brain
+GSM2387150	57	control	M	brain
+GSM2387151	58	control	M	brain
+GSM2387152	68	control	F	brain
+GSM2387153	86	control	M	brain
+GSM2387154	71	control	M	brain
+GSM2387155	95	control	M	brain
+GSM2387156	40	control	M	brain
+GSM2387157	54	control	M	brain
+GSM2387158	76	control	F	brain
+GSM2387159	67	control	M	brain
+GSM2387160	70	control	M	brain
+GSM2387161	96	control	F	brain
+GSM2387162	37	control	M	brain
+GSM2387163	70	control	M	brain
+GSM2387164	69	control	M	brain
+GSM2387165	48	control	M	brain
+GSM2387166	48	control	M	brain
+GSM2387167	80	control	M	brain
+GSM2387168	79	control	M	brain
+GSM2387169	55	control	M	brain
+GSM1921482	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921483	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921484	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921485	NA	Down syndrome	Female	Cerebellar cortex
+GSM1921486	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921487	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921488	NA	Down syndrome	Female	Cerebellar cortex
+GSM1921489	NA	Down syndrome	Female	Cerebellar cortex
+GSM1921490	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921491	NA	Down syndrome	Female	Cerebellar cortex
+GSM1921492	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921493	NA	Down syndrome	Female	Cerebellar cortex
+GSM1921494	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921495	NA	Normal	Male	Cerebellar cortex
+GSM1921496	NA	Normal	Female	Cerebellar cortex
+GSM1921497	NA	Normal	Female	Cerebellar cortex
+GSM1921498	NA	Normal	Female	Cerebellar cortex
+GSM1921499	NA	Normal	Male	Cerebellar cortex
+GSM1921500	NA	Normal	Male	Cerebellar cortex
+GSM1921501	NA	Normal	Male	Cerebellar cortex
+GSM1921502	NA	Normal	Female	Cerebellar cortex
+GSM1921503	NA	Normal	Female	Cerebellar cortex
+GSM1921504	NA	Normal	Male	Cerebellar cortex
+GSM1921505	NA	Down syndrome	Male	Frontal Cortex
+GSM1921506	NA	Down syndrome	Female	Frontal Cortex
+GSM1921507	NA	Down syndrome	Male	Frontal Cortex
+GSM1921508	NA	Down syndrome	Female	Frontal Cortex
+GSM1921509	NA	Down syndrome	Male	Frontal Cortex
+GSM1921510	NA	Down syndrome	Female	Frontal Cortex
+GSM1921511	NA	Down syndrome	Female	Frontal Cortex
+GSM1921512	NA	Down syndrome	Female	Frontal Cortex
+GSM1921513	NA	Down syndrome	Male	Frontal Cortex
+GSM1921514	NA	Normal	Female	Frontal Cortex
+GSM1921515	NA	Normal	Male	Frontal Cortex
+GSM1921516	NA	Normal	Female	Frontal Cortex
+GSM1921517	NA	Normal	Female	Frontal Cortex
+GSM1921518	NA	Normal	Female	Frontal Cortex
+GSM1921519	NA	Normal	Male	Frontal Cortex
+GSM1921520	NA	Normal	Male	Frontal Cortex
+GSM1921521	NA	Alzheimer's disease	Male	Frontal Cortex
+GSM1921522	NA	Alzheimer's disease	Male	Frontal Cortex
+GSM1921523	NA	Alzheimer's disease	Male	Frontal Cortex
+GSM1921524	NA	Down syndrome	Male	Frontal Cortex
+GSM1921525	NA	Down syndrome	Female	Frontal Cortex
+GSM1921526	NA	Down syndrome	Male	Frontal Cortex
+GSM1921527	NA	Down syndrome	Female	Frontal Cortex
+GSM1921528	NA	Down syndrome	Male	Frontal Cortex
+GSM1921529	NA	Down syndrome	Female	Frontal Cortex
+GSM1921530	NA	Down syndrome	Female	Frontal Cortex
+GSM1921531	NA	Down syndrome	Male	Frontal Cortex
+GSM1921532	NA	Down syndrome	Female	Frontal Cortex
+GSM1921533	NA	Normal	Female	Frontal Cortex
+GSM1921534	NA	Normal	Female	Frontal Cortex
+GSM1921535	NA	Normal	Female	Frontal Cortex
+GSM1921536	NA	Normal	Male	Frontal Cortex
+GSM1921537	NA	Normal	Female	Frontal Cortex
+GSM1921538	NA	Normal	Male	Frontal Cortex
+GSM1921539	NA	Normal	Male	Frontal Cortex
+GSM1921540	NA	Normal	Female	Frontal Cortex
+GSM1921541	NA	Normal	Female	Frontal Cortex
+GSM1921542	NA	Normal	Male	Frontal Cortex
+GSM1921543	NA	Normal	Female	Frontal Cortex
+GSM1921544	NA	Down syndrome	Female	Frontal Cortex
+GSM1921545	NA	Down syndrome	Male	Frontal Cortex
+GSM1921546	NA	Down syndrome	Male	Frontal Cortex
+GSM1921547	NA	Down syndrome	Female	Frontal Cortex
+GSM1921548	NA	Down syndrome	Female	Frontal Cortex
+GSM1921549	NA	Down syndrome	Male	Frontal Cortex
+GSM1921550	NA	Down syndrome	Male	Frontal Cortex
+GSM1921551	NA	Down syndrome	Female	Frontal Cortex
+GSM1921552	NA	Down syndrome	Male	Frontal Cortex
+GSM1921553	NA	Down syndrome	Male	Frontal Cortex
+GSM1921554	NA	Down syndrome	Female	Frontal Cortex
+GSM1921555	NA	Down syndrome	Male	Frontal Cortex
+GSM1921556	NA	Down syndrome	Female	Frontal Cortex
+GSM1921557	NA	Down syndrome	Female	Frontal Cortex
+GSM1921558	NA	Normal	Male	Frontal Cortex
+GSM1921559	NA	Normal	Female	Frontal Cortex
+GSM1921560	NA	Normal	Female	Frontal Cortex
+GSM1921561	NA	Normal	Female	Frontal Cortex
+GSM1921562	NA	Normal	Female	Frontal Cortex
+GSM1921563	NA	Normal	Male	Frontal Cortex
+GSM1921564	NA	Normal	Male	Frontal Cortex
+GSM1921565	NA	Normal	Female	Frontal Cortex
+GSM1921566	NA	Down syndrome	Male	Blood
+GSM1921567	NA	Down syndrome	Female	Blood
+GSM1921568	NA	Down syndrome	Female	Blood
+GSM1921569	NA	Down syndrome	Female	Blood
+GSM1921570	NA	Down syndrome	Female	Blood
+GSM1921571	NA	Down syndrome	Female	Blood
+GSM1921572	NA	Down syndrome	Male	Blood
+GSM1921573	NA	Down syndrome	Female	Blood
+GSM1921574	NA	Down syndrome	Female	Blood
+GSM1921575	NA	Down syndrome	Female	Blood
+GSM1921576	NA	Down syndrome	Male	Blood
+GSM1921577	NA	Normal	Male	Blood
+GSM1921578	NA	Normal	Female	Blood
+GSM1921579	NA	Normal	Female	Blood
+GSM1921580	NA	Normal	Female	Blood
+GSM1921581	NA	Normal	Male	Blood
+GSM1921582	NA	Normal	Female	Blood
+GSM1921583	NA	Normal	Male	Blood
+GSM1921584	NA	Normal	Female	Blood
+GSM1921585	NA	Normal	Female	Blood
+GSM1921586	NA	Normal	Male	Blood
+GSM1921587	NA	Down syndrome	Female	Cerebrum
+GSM1921588	NA	Down syndrome	Male	Cerebrum
+GSM1921589	NA	Down syndrome	Female	Cerebrum
+GSM1921590	NA	Down syndrome	Male	Cerebrum
+GSM1921591	NA	Down syndrome	Male	Cerebrum
+GSM1921592	NA	Down syndrome	Female	Cerebrum
+GSM1921593	NA	Down syndrome	Male	Cerebrum
+GSM1921594	NA	Down syndrome	Female	Cerebrum
+GSM1921595	NA	Normal	Male	Cerebrum
+GSM1921596	NA	Normal	Male	Cerebrum
+GSM1921597	NA	Normal	Female	Cerebrum
+GSM1921598	NA	Normal	Female	Cerebrum
+GSM1921599	NA	Normal	Male	Cerebrum
+GSM1921600	NA	Normal	Female	Cerebrum
+GSM1921601	NA	Normal	Female	Cerebellar cortex
+GSM1921602	NA	Normal	Female	Cerebellar cortex
+GSM1921603	NA	Normal	Female	Cerebellar cortex
+GSM1921604	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921605	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921606	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921607	NA	Normal	Female	Cerebellar cortex
+GSM1921608	NA	Normal	Female	Cerebellar cortex
+GSM1921609	NA	Normal	Female	Cerebellar cortex
+GSM1921610	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921611	NA	Down syndrome	Male	Cerebellar cortex
+GSM1921612	NA	Down syndrome	Male	Cerebellar cortex
+1	45.43561644	GBM	NA	brain
+2	53.80547945	GBM	NA	brain
+3	56.32054795	GBM	NA	brain
+4	60.10684932	GBM	NA	brain
+5	64.94520548	GBM	NA	brain
+6	54.70684932	GBM	NA	brain
+7	76.15068493	GBM	NA	brain
+8	28.31232877	GBM	NA	brain
+9	47.81369863	GBM	NA	brain
+10	56.92054795	GBM	NA	brain
+11	73.10136986	GBM	NA	brain
+12	63.96712329	GBM	NA	brain
+13	65.90410959	GBM	NA	brain
+14	60.11232877	GBM	NA	brain
+15	83.72054795	GBM	NA	brain
+16	58.64383562	GBM	NA	brain
+17	69.47945205	GBM	NA	brain
+18	50.85205479	GBM	NA	brain
+19	50.38630137	GBM	NA	brain
+20	51.9890411	GBM	NA	brain
+21	64.07945205	GBM	NA	brain
+22	65.56164384	GBM	NA	brain
+23	74.83835616	GBM	NA	brain
+24	20.18356164	GBM	NA	brain
+25	67.45479452	GBM	NA	brain
+26	61.95890411	GBM	NA	brain
+27	63.14246575	GBM	NA	brain
+28	62.5369863	GBM	NA	brain
+29	62.47671233	GBM	NA	brain
+30	74.30958904	GBM	NA	brain
+31	59.51780822	GBM	NA	brain
+32	61.69863014	GBM	NA	brain
+33	74.76438356	GBM	NA	brain
+34	42.48767123	GBM	NA	brain
+35	47.88219178	GBM	NA	brain
+36	83.09041096	GBM	NA	brain
+37	60.49863014	GBM	NA	brain
+38	63.58356164	GBM	NA	brain
+39	52.39178082	GBM	NA	brain
+40	71.20273973	GBM	NA	brain
+41	80.28219178	GBM	NA	brain
+42	78.26575342	GBM	NA	brain
+43	68.57808219	GBM	NA	brain
+44	77.94246575	GBM	NA	brain
+45	73.64109589	GBM	NA	brain
+46	59.80273973	GBM	NA	brain
+47	72.29589041	GBM	NA	brain
+48	65.8	GBM	NA	brain
+49	67.41643836	GBM	NA	brain
+50	60.16438356	GBM	NA	brain
+51	62.30410959	GBM	NA	brain
+52	50.48767123	GBM	NA	brain
+53	66.77534247	GBM	NA	brain
+54	75.88493151	GBM	NA	brain
+55	69.36986301	GBM	NA	brain
+56	75.33972603	GBM	NA	brain
+57	72.95342466	GBM	NA	brain
+58	56.34794521	GBM	NA	brain
+59	53.36712329	GBM	NA	brain
+60	63.37808219	GBM	NA	brain
+61	53.69315068	GBM	NA	brain
+62	54.84931507	GBM	NA	brain
+63	58.67945205	GBM	NA	brain
+64	66.6109589	GBM	NA	brain
+65	60.29589041	GBM	NA	brain
+66	70.96438356	GBM	NA	brain
+67	48.97260274	GBM	NA	brain
+68	52.88219178	GBM	NA	brain
+69	66.00547945	GBM	NA	brain
+70	51.26849315	GBM	NA	brain
+71	77.08219178	GBM	NA	brain
+72	66.29589041	GBM	NA	brain
+73	67.85479452	GBM	NA	brain
+74	59.15342466	GBM	NA	brain
+75	81.08493151	GBM	NA	brain
+76	74.50410959	GBM	NA	brain
+77	70.52876712	GBM	NA	brain
+78	60.50684932	GBM	NA	brain
+79	74.48219178	GBM	NA	brain
+80	65.18082192	GBM	NA	brain
+81	61.88767123	GBM	NA	brain
+82	46.59178082	GBM	NA	brain
+83	71.27945205	GBM	NA	brain
+84	52.2	GBM	NA	brain
+85	41.03561644	GBM	NA	brain
+86	62.69041096	GBM	NA	brain
+87	32.30958904	GBM	NA	brain
+88	61.81917808	GBM	NA	brain
+89	67.98356164	GBM	NA	brain
+90	35.5890411	GBM	NA	brain
+91	59.26027397	GBM	NA	brain
+92	81.80547945	GBM	NA	brain
+93	74.16986301	GBM	NA	brain
+94	63.09589041	GBM	NA	brain
+95	71.94520548	GBM	NA	brain
+96	43.4	GBM	NA	brain
+97	58.78630137	GBM	NA	brain
+98	70.87671233	GBM	NA	brain
+99	59.56438356	GBM	NA	brain
+100	44.23287671	GBM	NA	brain
+101	55.66849315	GBM	NA	brain
+102	61.13424658	GBM	NA	brain
+103	73.07123288	GBM	NA	brain
+104	74.34794521	GBM	NA	brain
+105	42.57808219	GBM	NA	brain
+106	59.2	GBM	NA	brain
+107	46.99452055	GBM	NA	brain
+108	48.83561644	GBM	NA	brain
+109	65.03013699	GBM	NA	brain
+110	69.33972603	GBM	NA	brain
+111	51.86027397	GBM	NA	brain
+112	34.23287671	GBM	NA	brain
+113	51.78630137	GBM	NA	brain
+114	57.1890411	GBM	NA	brain
+115	58.43013699	GBM	NA	brain
+116	54.3260274	GBM	NA	brain
+117	63.08219178	GBM	NA	brain
+118	77.46027397	GBM	NA	brain
+119	71.56164384	GBM	NA	brain
+120	51.29589041	GBM	NA	brain
+121	70.70410959	GBM	NA	brain
+122	62.65753425	GBM	NA	brain
+123	55.37808219	GBM	NA	brain
+124	76.47671233	GBM	NA	brain
+125	45.59178082	GBM	NA	brain
+126	51.54246575	GBM	NA	brain
+127	70.75616438	GBM	NA	brain
+128	60.83287671	GBM	NA	brain
+129	38.3890411	GBM	NA	brain
+130	58.72054795	GBM	NA	brain
+131	48.07671233	GBM	NA	brain
+132	56.34794521	GBM	NA	brain
+133	67.49863014	GBM	NA	brain
+134	57.93424658	GBM	NA	brain
+135	66.41643836	GBM	NA	brain
+136	55.03835616	GBM	NA	brain
+137	57.23013699	GBM	NA	brain
+138	58.3369863	GBM	NA	brain
+139	76.89863014	GBM	NA	brain
+140	66.64383562	GBM	NA	brain
+141	59.91506849	GBM	NA	brain
+142	75.04657534	GBM	NA	brain
+143	69.87945205	GBM	NA	brain
+144	48.38356164	GBM	NA	brain
+145	71.94246575	GBM	NA	brain
+146	75.50410959	GBM	NA	brain
+147	62.38082192	GBM	NA	brain
+148	51.0739726	GBM	NA	brain
+149	70.70684932	GBM	NA	brain
+150	70.39178082	GBM	NA	brain
+151	72.16164384	GBM	NA	brain
+152	60.0739726	GBM	NA	brain
+153	47.71780822	GBM	NA	brain
+154	66.78356164	GBM	NA	brain
+155	59.49589041	GBM	NA	brain
+156	46.58356164	GBM	NA	brain
+157	65.93150685	GBM	NA	brain
+158	69.41643836	GBM	NA	brain
+159	53.5260274	GBM	NA	brain
+160	78.69315068	GBM	NA	brain
+161	50.21369863	GBM	NA	brain
+162	71.67945205	GBM	NA	brain
+163	54.24657534	GBM	NA	brain
+164	40.47671233	GBM	NA	brain
+165	57.26849315	GBM	NA	brain
+166	65.14246575	GBM	NA	brain
+167	53.81369863	GBM	NA	brain
+168	65.8630137	GBM	NA	brain
+169	80.27123288	GBM	NA	brain
+170	82.58356164	GBM	NA	brain
+171	46.41369863	GBM	NA	brain
+172	59.44931507	GBM	NA	brain
+173	78.51232877	GBM	NA	brain
+174	85.82191781	GBM	NA	brain
+175	66.43013699	GBM	NA	brain
+176	47.92054795	GBM	NA	brain
+177	22.67671233	GBM	NA	brain
+178	62.01369863	GBM	NA	brain
+179	50.27123288	GBM	NA	brain
+180	81.09315068	GBM	NA	brain
+181	66.44109589	GBM	NA	brain
+GSM3143643	NA	Glioblastoma	Male	brain
+GSM3143644	NA	Glioblastoma	Male	brain
+GSM3143645	NA	Glioblastoma	Female	brain
+GSM3143646	NA	Glioblastoma	Female	brain
+GSM3143647	NA	Glioblastoma	Female	brain
+GSM3143648	NA	Glioblastoma	Male	brain
+GSM3143649	NA	Glioblastoma	Male	brain
+GSM3143650	NA	Glioblastoma	Female	brain
+GSM3143651	NA	Glioblastoma	Female	brain
+GSM3143652	NA	Glioblastoma	Female	brain
+GSM3143653	NA	Glioblastoma	Female	brain
+GSM3143654	NA	Glioblastoma	Female	brain
+GSM3143655	NA	Glioblastoma	Female	brain
+GSM3143656	NA	Glioblastoma	Female	brain
+GSM3143657	NA	Glioblastoma	Male	brain
+GSM3143658	NA	Glioblastoma	Male	brain
+GSM3143659	NA	Glioblastoma	Male	brain
+GSM3143660	NA	Glioblastoma	Male	brain
+GSM3143661	NA	Glioblastoma	Female	brain
+GSM3143662	NA	Glioblastoma	Female	brain
+GSM3143663	NA	Glioblastoma	Male	brain
+GSM3143664	NA	Glioblastoma	Male	brain
+GSM3143665	NA	Glioblastoma	Male	brain
+GSM3143666	NA	Glioblastoma	Female	brain
+GSM3143667	NA	Glioblastoma	Female	brain
+GSM3143668	NA	Glioblastoma	Male	brain
+GSM3143669	NA	Glioblastoma	Male	brain
+GSM3143670	NA	Glioblastoma	Male	brain
+GSM3143671	NA	Glioblastoma	Male	brain
+GSM3143672	NA	Glioblastoma	Female	brain
+GSM3143673	NA	Glioblastoma	Male	brain
+GSM3143674	NA	Glioblastoma	Male	brain
+GSM3143675	NA	Glioblastoma	Male	brain
+GSM3143676	NA	Glioblastoma	NA	brain
+GSM3143677	NA	Glioblastoma	NA	brain
+GSM3143678	NA	Glioblastoma	NA	brain
+GSM3143679	NA	Glioblastoma	NA	brain
+GSM3143680	NA	Glioblastoma	NA	brain
+GSM3143681	NA	Glioblastoma	NA	brain
+GSM3143682	NA	Glioblastoma	NA	brain
+GSM3143683	NA	Glioblastoma	NA	brain
+GSM3143684	NA	Glioblastoma	NA	brain
+GSM3143685	NA	Glioblastoma	NA	brain
+GSM3143686	NA	Glioblastoma	NA	brain
+GSM2808875	78	AD	F	brain
+GSM2808876	78	AD	F	brain
+GSM2808877	76	AD	M	brain
+GSM2808878	76	AD	M	brain
+GSM2808879	75	AD	F	brain
+GSM2808880	75	AD	F	brain
+GSM2808881	85	AD	F	brain
+GSM2808882	85	AD	F	brain
+GSM2808883	94	AD	M	brain
+GSM2808884	94	AD	M	brain
+GSM2808885	18	CTRL	M	brain
+GSM2808886	18	CTRL	M	brain
+GSM2808887	88	AD	F	brain
+GSM2808888	88	AD	F	brain
+GSM2808889	81	AD	F	brain
+GSM2808890	81	AD	F	brain
+GSM2808891	77	AD	F	brain
+GSM2808892	77	AD	F	brain
+GSM2808893	77	CTRL	F	brain
+GSM2808894	77	CTRL	F	brain
+GSM2808895	77	CTRL	F	brain
+GSM2808896	77	CTRL	F	brain
+GSM2808897	83	CTRL	F	brain
+GSM2808898	83	CTRL	F	brain
+GSM2808899	88	CTRL	F	brain
+GSM2808900	88	CTRL	F	brain
+GSM2808901	19	CTRL	M	brain
+GSM2808902	19	CTRL	M	brain
+GSM2808903	87	CTRL	M	brain
+GSM2808904	87	CTRL	M	brain
+GSM2808905	71	CTRL	M	brain
+GSM2808906	71	CTRL	M	brain
+GSM2808907	75	CTRL	M	brain
+GSM2808908	75	CTRL	M	brain
+GSM2808909	77	CTRL	F	brain
+GSM2808910	77	CTRL	F	brain
+GSM2808911	76	AD	M	brain
+GSM2808912	76	AD	M	brain
+GSM2808913	75	AD	F	brain
+GSM2808914	75	AD	F	brain
+GSM2808915	71	CTRL	M	brain
+GSM2808916	71	CTRL	M	brain
+GSM2808917	75	CTRL	M	brain
+GSM2808918	75	CTRL	M	brain
+GSM2808919	63	CTRL	M	brain
+GSM2808920	63	CTRL	M	brain
+GSM2808921	85	CTRL	M	brain
+GSM2808922	85	CTRL	M	brain
+GSM2808923	85	CTRL	F	brain
+GSM2808924	85	CTRL	F	brain
+GSM2808925	63	CTRL	F	brain
+GSM2808926	63	CTRL	F	brain
+GSM2808927	78	AD	F	brain
+GSM2808928	78	AD	F	brain
+GSM2808929	93	AD	F	brain
+GSM2808930	93	AD	F	brain
+GSM2808931	70	AD	M	brain
+GSM2808932	70	AD	M	brain
+GSM2808933	85	AD	M	brain
+GSM2808934	85	AD	M	brain
+GSM2808935	73	AD	F	brain
+GSM2808936	73	AD	F	brain
+GSM2808937	81	AD	M	brain
+GSM2808938	90	AD	M	brain
+GSM2808939	82	AD	F	brain
+GSM2808940	80	AD	M	brain
+GSM2808941	88	CTRL	F	brain
+GSM2808942	77	CTRL	F	brain
+GSM2808943	75	CTRL	M	brain
+GSM2808944	73	AD	M	brain
+GSM2808945	65	AD	F	brain
+GSM2808946	67	AD	F	brain
+GSM2808947	93	AD	F	brain
+GSM2808948	74	AD	M	brain
+GSM2808949	53	CTRL	M	brain
+GSM2808950	18	CTRL	M	brain
+GSM2808951	57	CTRL	M	brain
+GSM2808952	75	CTRL	F	brain
+GSM2808953	76	CTRL	F	brain
+GSM2808954	46	CTRL	F	brain
+GSM2808955	50	CTRL	M	brain
+GSM2808956	63	CTRL	M	brain
+GSM2808957	53	CTRL	M	brain
+GSM2808958	53	CTRL	M	brain
+GSM2808959	71	CTRL	M	brain
+GSM2808960	73	AD	F	brain
+GSM2808961	55	CTRL	F	brain
+GSM2808962	59	CTRL	M	brain
+GSM2808963	89	AD	F	brain
+GSM2808964	75	AD	M	brain
+GSM2808965	83	AD	M	brain
+GSM2808966	82	AD	F	brain
+GSM2808967	85	CTRL	M	brain
+GSM2808968	87	CTRL	M	brain
+GSM2808969	61	CTRL	M	brain
+GSM2808970	68	AD	F	brain
+GSM2808971	85	CTRL	F	brain
+GSM2808972	46	CTRL	M	brain
+GSM2808973	80	CTRL	F	brain
+GSM2808974	77	CTRL	F	brain
+GSM2808975	78	AD	F	brain
+GSM2808976	85	AD	F	brain
+GSM2808977	62	AD	M	brain
+GSM2808978	97	AD	F	brain
+GSM2808979	85	AD	F	brain
+GSM2808980	93	AD	F	brain
+GSM2808981	73	AD	F	brain
+GSM2808982	93	AD	F	brain
+GSM2808983	76	AD	F	brain
+GSM2808984	87	AD	M	brain
+GSM2808985	88	AD	F	brain
+GSM2808986	78	AD	F	brain
+GSM2808987	87	AD	M	brain
+GSM2808988	83	AD	M	brain
+GSM2808989	78	AD	F	brain
+GSM2808990	76	AD	M	brain
+GSM2808991	60	CTRL	M	brain
+GSM2808992	54	CTRL	M	brain
+GSM2808993	83	CTRL	F	brain
+GSM2808994	88	AD	F	brain
+GSM2808995	80	AD	M	brain
+GSM2808996	80	AD	F	brain
+GSM2808997	70	AD	M	brain
+GSM2808998	75	AD	F	brain
+GSM2808999	79	AD	F	brain
+GSM2809000	83	AD	M	brain
+GSM2809001	81	AD	M	brain
+GSM2809002	90	AD	M	brain
+GSM2809003	82	AD	F	brain
+GSM2809004	80	AD	M	brain
+GSM2809005	88	CTRL	F	brain
+GSM2809006	77	CTRL	F	brain
+GSM2809007	75	CTRL	M	brain
+GSM2809008	73	AD	M	brain
+GSM2809009	65	AD	F	brain
+GSM2809010	67	AD	F	brain
+GSM2809011	93	AD	F	brain
+GSM2809012	74	AD	M	brain
+GSM2809013	53	CTRL	M	brain
+GSM2809014	18	CTRL	M	brain
+GSM2809015	57	CTRL	M	brain
+GSM2809016	75	CTRL	F	brain
+GSM2809017	76	CTRL	F	brain
+GSM2809018	46	CTRL	F	brain
+GSM2809019	50	CTRL	M	brain
+GSM2809020	63	CTRL	M	brain
+GSM2809021	53	CTRL	M	brain
+GSM2809022	53	CTRL	M	brain
+GSM2809023	71	CTRL	M	brain
+GSM2809024	73	AD	F	brain
+GSM2809025	55	CTRL	F	brain
+GSM2809026	59	CTRL	M	brain
+GSM2809027	89	AD	F	brain
+GSM2809028	75	AD	M	brain
+GSM2809029	83	AD	M	brain
+GSM2809030	82	AD	F	brain
+GSM2809031	85	CTRL	M	brain
+GSM2809032	87	CTRL	M	brain
+GSM2809033	61	CTRL	M	brain
+GSM2809034	68	AD	F	brain
+GSM2809035	85	CTRL	F	brain
+GSM2809036	46	CTRL	M	brain
+GSM2809037	80	CTRL	F	brain
+GSM2809038	77	CTRL	F	brain
+GSM2809039	78	AD	F	brain
+GSM2809040	85	AD	F	brain
+GSM2809041	62	AD	M	brain
+GSM2809042	97	AD	F	brain
+GSM2809043	85	AD	F	brain
+GSM2809044	93	AD	F	brain
+GSM2809045	73	AD	F	brain
+GSM2809046	93	AD	F	brain
+GSM2809047	76	AD	F	brain
+GSM2809048	87	AD	M	brain
+GSM2809049	88	AD	F	brain
+GSM2809050	78	AD	F	brain
+GSM2809051	87	AD	M	brain
+GSM2809052	83	AD	M	brain
+GSM2809053	78	AD	F	brain
+GSM2809054	76	AD	M	brain
+GSM2809055	60	CTRL	M	brain
+GSM2809056	54	CTRL	M	brain
+GSM2809057	83	CTRL	F	brain
+GSM2809058	88	AD	F	brain
+GSM2809059	80	AD	M	brain
+GSM2809060	80	AD	F	brain
+GSM2809061	70	AD	M	brain
+GSM2809062	75	AD	F	brain
+GSM2809063	79	AD	F	brain
+GSM2809064	85	AD	F	brain

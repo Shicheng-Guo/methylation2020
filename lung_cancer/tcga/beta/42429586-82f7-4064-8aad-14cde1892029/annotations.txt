@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+5de6652d-418f-5584-88a2-634c35947cea	11759	case	aecf85cc-058c-46f3-9cdc-3573ac3b8438	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy lung cancer. No systemic chemotherapy or radiation.

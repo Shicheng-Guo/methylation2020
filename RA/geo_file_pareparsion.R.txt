@@ -1,0 +1,47 @@
+library("lumi")
+sampleInfo<-list.files(pattern="*.idat")
+sampleInfo<-gsub("_Red.idat","",sampleInfo)
+sampleInfo<-gsub("_Grn.idat","",sampleInfo)
+sampleInfo<-unique(sampleInfo)
+idat<-importMethyIDAT(sampleInfo, dataPath = getwd(), lib ="FDb.InfiniumMethylation.hg19")
+# Adjust background level of Illumina Infinium methylation data
+idat.bjc <- lumiMethyB(idat, method="bgAdjust2C", separateColor=TRUE)
+# Color bias adjust of Illumina Infinium methylation data
+idat.cjc <- lumiMethyC(idat.bjc)
+# Normalize the Illumina Infinium methylation data
+idat.qtl <- lumiMethyN(idat.cjc, method="quantile")
+
+# submission
+dataMatrix <- exprs(idat.qtl)
+beta<-m2beta(dataMatrix) # m<-beta2m(beta)
+methy <- assayDataElement(idat.qtl, "methylated")
+unmethy <- assayDataElement(idat.qtl, "unmethylated")
+dectP <- detection(idat.qtl)
+
+# here, you need assign the column name to sample name
+
+raw<-matrix(nrow=nrow(dataMatrix),ncol=ncol(beta)*2)
+ncol<-ncol(beta)
+for(i in 1:ncol){
+  raw[,2*i-1]=beta1[,i]
+  raw[,2*i]=dectP1[,i]
+}
+colnames(raw)[seq(1,2*ncol,by=2)]<-sam[match(colnames(beta),sam[,2]),1]
+colnames(raw)[seq(2,2*ncol,by=2)]<-"Detection Pval"
+rownames(raw)<-rownames(beta)
+
+write.table(raw,file="Matrix_processed.txt",sep="\t",quote=F,row.names=T,col.names=NA)
+
+raw<-matrix(nrow=nrow(dataMatrix),ncol=ncol(beta)*3)
+ncol<-ncol(beta)
+for(i in 1:ncol){
+  raw[,3*i-2]=unmethy[,i]
+  raw[,3*i-1]=methy[,i]
+  raw[,3*i]=dectP[,i]
+  
+}
+colnames(raw)[seq(1,3*ncol,by=3)]<-paste(sam[match(colnames(beta),sam[,2]),1],"Unmethylated Signal",sep=" ")
+colnames(raw)[seq(2,3*ncol,by=3)]<-paste(sam[match(colnames(beta),sam[,2]),1],"Methylated signal",sep=" ")
+colnames(raw)[seq(3,3*ncol,by=3)]<-paste(sam[match(colnames(beta),sam[,2]),1],"Detection Pval",sep=" ")
+rownames(raw)=rownames(beta)
+write.table(raw,file="Matrix_signal_intensities.txt",sep="\t",quote=F,row.names=T,col.names=NA)

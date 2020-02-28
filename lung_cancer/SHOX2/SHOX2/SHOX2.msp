@@ -1,0 +1,117 @@
+Product
+204 bp (from 128 to 331)
+MethPrimer result
+
+Sequence Name: 
+Sequence Length: 452
+
+CpG island prediction results
+Criteria used: Island size > 100, GC Percent > 50.0, Obs/Exp > 0.60
+ 1 CpG island(s) were found in your sequence
+            Size	(Start - End)
+ Island 1   345 bp	 (50 - 394)
+
+Primer picking results for methylation specific PCR (MSP)
+   
+   Primer            Start Size  Tm      GC%   'C's  Sequence
+3  Left  M primer     131   22   56.51   77.27   8  GTATTTTAGCGGGGTTATACGT
+   Right M primer     294   22   57.40   68.18   9  CCGAATAAATTAAAAAACCGAA
+   Product size: 164, Tm: 69.0
+   Left  U primer     129   24   56.63   79.17   8  GGGTATTTTAGTGGGGTTATATGT
+   Right U primer     298   25   59.26   68.00   9  TCCTCCAAATAAATTAAAAAACCAA
+   Product size: 170, Tm: 66.5
+2  Left  M primer     130   23   59.59   78.26   8  GGTATTTTAGCGGGGTTATACGT
+   Right M primer     325   20   58.97   65.00   4  AACCTTTACGCTTCTCCGAA
+   Product size: 196, Tm: 69.0
+   Left  U primer     128   25   59.59   80.00   8  GGGGTATTTTAGTGGGGTTATATGT
+   Right U primer     331   25   56.94   56.00   4  AAACTTAACCTTTACACTTCTCCAA
+   Product size: 204, Tm: 66.4
+1  Left  M primer     131   22   56.51   77.27   8  GTATTTTAGCGGGGTTATACGT
+   Right M primer     294   22   57.40   68.18   9  CCGAATAAATTAAAAAACCGAA
+   Product size: 164, Tm: 69.0
+   Left  U primer     128   25   59.59   80.00   8  GGGGTATTTTAGTGGGGTTATATGT
+   Right U primer     299   25   59.26   64.00   8  TTCCTCCAAATAAATTAAAAAACCA
+   Product size: 172, Tm: 66.4
+4  Left  M primer     131   22   56.51   77.27   8  GTATTTTAGCGGGGTTATACGT
+   Right M primer     294   22   57.40   68.18   9  CCGAATAAATTAAAAAACCGAA
+   Product size: 164, Tm: 69.0
+   Left  U primer     128   25   59.59   80.00   8  GGGGTATTTTAGTGGGGTTATATGT
+   Right U primer     298   25   59.26   68.00   9  TCCTCCAAATAAATTAAAAAACCAA
+   Product size: 171, Tm: 66.5
+5  Left  M primer     131   22   56.51   77.27   8  GTATTTTAGCGGGGTTATACGT
+   Right M primer     325   20   58.97   65.00   4  AACCTTTACGCTTCTCCGAA
+   Product size: 195, Tm: 69.0
+   Left  U primer     128   25   59.59   80.00   8  GGGGTATTTTAGTGGGGTTATATGT
+   Right U primer     331   25   56.94   56.00   4  AAACTTAACCTTTACACTTCTCCAA
+   Product size: 204, Tm: 66.4
+
+    1 TCCAGCTCATTGAGTTGTTCCAGGGTGAAATTGGTCCGACTTCGCCTCTGCTTGATTTTG
+      |::||:|:|||||||||||::||||||||||||||:++|:||++::|:||:|||||||||
+    1 TTTAGTTTATTGAGTTGTTTTAGGGTGAAATTGGTTCGATTTCGTTTTTGTTTGATTTTG
+                                                                  
+                                                                  
+
+   61 GTCTGGCCTTCGTCCTCCATCCCTTTCGCATCCTCTTTGCGATCTTTCAGCTCCGGGGAC
+      ||:|||::||++|::|::||:::|||++:||::|:||||++||:|||:||:|:++||||:
+   61 GTTTGGTTTTCGTTTTTTATTTTTTTCGTATTTTTTTTGCGATTTTTTAGTTTCGGGGAT
+                                                                  
+                                                                  
+
+  121 ACTGGAGGGGGCACCCCAGCGGGGCCACACGTGCATCCACACGAACACACACACACACGC
+      |:|||||||||:|::::||++|||::|:|++||:||::|:|++||:|:|:|:|:|:|++:
+  121 ATTGGAGGGGGTATTTTAGCGGGGTTATACGTGTATTTATACGAATATATATATATACGT
+               M>>>>>>>>>>>>>>>>>>>>>>                            
+             U>>>>>>>>>>>>>>>>>>>>>>>>                            
+
+  181 ACACACACACGGACGAAAACAGCACAGCAAATCCTGTTACCAGATTTGTCGCAAAAAAGA
+      |:|:|:|:|++||++||||:||:|:||:||||::|||||::||||||||++:||||||||
+  181 ATATATATACGGACGAAAATAGTATAGTAAATTTTGTTATTAGATTTGTCGTAAAAAAGA
+                                                                  
+                                                                  
+
+  241 ATAGAGAATCCTTCCCCCTCGTGGAATCCTGGTCCGGCTTCTCAACCCACCCGGAGGAAG
+      |||||||||::||:::::|++||||||::||||:++|:||:|:||:::|::++|||||||
+  241 ATAGAGAATTTTTTTTTTTCGTGGAATTTTGGTTCGGTTTTTTAATTTATTCGGAGGAAG
+                **********           M<<<<<<<<<<<<<<<<<<<<<<      
+                                      U<<<<<<<<<<<<<<<<<<<<<<<<<  
+
+  301 AATATCCCGGAGAAGCGCAAAGGTCAAGTCTGAGCGGCCGCCTGGGGCAAGGTGGGCAGT
+      |||||::++||||||++:||||||:||||:||||++|:++::|||||:||||||||:|||
+  301 AATATTTCGGAGAAGCGTAAAGGTTAAGTTTGAGCGGTCGTTTGGGGTAAGGTGGGTAGT
+                                                                  
+                                                                  
+
+  361 CATCCACCACCTCCTTCACAAACGTACCTCGACTCACCGCCTCACTATTCACCCCCCAGT
+      :||::|::|::|::||:|:|||++||::|++|:|:|:++::|:|:||||:|::::::|||
+  361 TATTTATTATTTTTTTTATAAACGTATTTCGATTTATCGTTTTATTATTTATTTTTTAGT
+                                                                  
+                                                                  
+
+  421 CACCGGCCTTCCCCAGCAAACACCAAATGGTT
+      :|:++|::||::::||:|||:|::||||||||
+  421 TATCGGTTTTTTTTAGTAAATATTAAATGGTT
+                                     M
+                                      
+
+******************************************************************
+*  Explanations                                                  *
+*----------------------------------------------------------------*
+*  Upper row: Original sequence                                  *
+*  Lower row: Bisulfite modified sequence                        *
+*             (For display, assume all CpG sites are methylated) *
+*  ++         CpG sites                                          *
+*  ::::       Non-CpG 'C' converted to 'T'                       *
+*  ****** target                                                 *
+*  M >>>>>>   Left  methylated-specific primer                   *
+*  M <<<<<<   Right methylated-specific primer                   *
+*                                                                *
+*  U >>>>>>   Left  unmethylated-specific primer                 *
+*  U <<<<<<   Right unmethylated-specific primer                 *
+******************************************************************
+
+
+
+
+MethPrimer v1.1 beta
+
+

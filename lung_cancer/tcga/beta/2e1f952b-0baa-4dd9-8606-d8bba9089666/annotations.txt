@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+6d097feb-1d30-5bd7-9945-6551a99a0af3	11948	case	cbfef004-b437-4d51-9d88-a2db50aa6481	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	Pt with synchronous endometrial cancer.

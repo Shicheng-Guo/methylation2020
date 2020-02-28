@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+e38d7b94-2f9d-5940-b3c2-e18b541af368	11952	case	9fcdccae-676e-4071-93c3-23d2d3ab0c00	History of acceptable prior treatment related to a prior/other malignancy	Notification	2012-11-10T00:00:00	Approved	Prior malignancy  of the throat treated with locoregional radiation. Prior malignancy  of the jaw. No systemic chemotherapy or radiation .
+971e52ea-8863-5b70-b9c6-7e468e3d1092	5493	case	9fcdccae-676e-4071-93c3-23d2d3ab0c00	Prior malignancy	Notification	2012-03-20T00:00:00	Approved	Throat CA with locoregional radiation. Jaw CA with no chemo or radiation.

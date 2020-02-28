@@ -1,0 +1,36 @@
+---
+title: "Methylation Research Summary in Lung Cancer Diagnosis, Prognosis"
+author: "Shicheng Guo"
+date: "July 20, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Methylation and Human Genome
+### Microsatellite instability (MSI)
+### Tumor suppress genes
+## Methylation and Complex Disease
+### Cancer
+## Methylation Matrics
+### Methylation haplotype 
+### Methylation average level
+## Methylation Matrics
+## Tissue specific DMR
+### Tissue specific hypermethylation 
+### Tissue specific hypomethylation 
+###single cell correlation vs poplution level correlation
+```{r cars}
+
+
+GSE81622
+
+
+
+```
+
+```{r pressure, echo=FALSE}
+
+
+```

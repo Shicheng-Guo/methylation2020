@@ -1,0 +1,114 @@
+             k     OR            95%-CI     Q    tau^2   I^2
+Non-tissue   6 3.8974 [1.1196; 13.5668] 22.62   1.58   77.9%
+Tissue       7 3.6814 [1.7551;  7.7222] 30.22   0.6809 80.1%
+
+Test for subgroup differences (random effects model):
+                    Q d.f.  p-value
+Between groups   0.01    1   0.9386
+
+
+
+
+          k      OR              95%-CI     Q    tau^2   I^2
+age<59    3 51.7384 [12.0688; 221.8000]  0.50   0         0%
+age>=59   7  3.2956 [ 1.6368;   6.6358] 25.86   0.5662 76.8%
+
+Test for subgroup differences (random effects model):
+                     Q d.f.  p-value
+Between groups   11.17    1   0.0008
+
+
+
+
+                 k      OR            95%-CI     Q    tau^2   I^2
+stage1<50.45%    4 13.4147 [2.4774; 72.6401]  4.92   1.158    39%
+stage1>=50.45%   5  2.3709 [1.0634;  5.2859] 31.50   0.7157 87.3%
+
+Test for subgroup differences (random effects model):
+                   Q d.f.  p-value
+Between groups   3.3    1   0.0693
+
+
+
+
+                   k      OR             95%-CI     Q    tau^2   I^2
+stage <69.66%      3 29.5812 [6.8181; 128.3417]  0.53   0         0%
+stage(I+II)>=60%   7  2.6727 [1.3227;   5.4005] 26.26   0.6409 77.2%
+
+Test for subgroup differences (random effects model):
+                    Q d.f.  p-value
+Between groups   8.38    1   0.0038
+
+
+
+
+                         k     OR            95%-CI     Q    tau^2 I^2
+Male vs Female >=71.3%   5 2.6641 [1.1865;  5.9818] 14.84   0.5012 73%
+Male vs Female <71.31%   6 4.5011 [1.4339; 14.1297] 33.28   1.5    85%
+
+Test for subgroup differences (random effects model):
+                    Q d.f.  p-value
+Between groups   0.54    1   0.4631
+
+
+
+
+Results for subgroups (random effects model):
+       k     OR            95%-CI     Q    tau^2   I^2
+MSP   10 3.2157 [1.5466;  6.6861] 47.87   0.8772 81.2%
+qMSP   3 4.3120 [1.3293; 13.9871]  5.64   0.6651 64.6%
+
+Test for subgroup differences (random effects model):
+                    Q d.f.  p-value
+Between groups   0.17    1   0.6782
+
+
+
+
+
+Results for subgroups (random effects model):
+                k     OR            95%-CI     Q   tau^2   I^2
+Diagnosis       5 1.5016 [0.7372;  3.0585]  9.20   0.342 56.5%
+Non-Diagnosis   8 6.9206 [2.7482; 17.4273] 42.24   1.144 83.4%
+
+Test for subgroup differences (random effects model):
+                   Q d.f.  p-value
+Between groups   6.6    1   0.0102
+
+
+
+Results for subgroups (random effects model):
+         k     OR            95%-CI     Q    tau^2 I^2
+Multi   10 3.1662 [1.5526;  6.4572] 33.37   0.7971 73%
+Single   3 5.6535 [0.9884; 32.3359] 22.15   1.884  91%
+
+Test for subgroup differences (random effects model):
+                    Q d.f.  p-value
+Between groups   0.36    1   0.5464
+
+
+
+
+Results for subgroups (random effects model):
+        k     OR            95%-CI     Q    tau^2   I^2
+heter   6 3.8974 [1.1196; 13.5668] 22.62   1.58   77.9%
+hom     7 3.6814 [1.7551;  7.7222] 30.22   0.6809 80.1%
+
+Test for subgroup differences (random effects model):
+                    Q d.f.  p-value
+Between groups   0.01    1   0.9386
+
+
+
+Results for subgroups (random effects model):
+                 k     OR            95%-CI     Q   tau^2   I^2
+Ad2Sc >= 79.6%   6 4.7264 [1.5624; 14.2980] 30.26   1.274 83.5%
+Ad2Sc < 79.6%    6 3.3960 [1.2897;  8.9421] 25.32   0.993 80.3%
+
+Test for subgroup differences (random effects model):
+                    Q d.f.  p-value
+Between groups   0.19    1   0.6595
+
+
+
+

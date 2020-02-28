@@ -1,0 +1,28 @@
+
+library(rpart)
+data<-read.table("category.Adjusted.txt",head=T,sep="\t")
+# Classification Tree with rpart
+# grow tree
+data2<-data[,2:dim(data)[2]]
+
+data2[data2<0.3]=0
+data2[data2<0.7 & data2 > 0.3 ]=0.5
+data2[data2 >0.7]=1
+
+
+
+
+Category<-data[,1]
+data<-data.frame(Category,data2)
+fit <- rpart(Category ~ cg03567830 + cg05722918 +cg15343119 + cg20530314,method="class", data=data)
+#fit <- rpart(Category ~ cg03567830 + cg05722918 +cg15343119 + cg20530314,method="anova", data=data)
+
+printcp(fit) # display the results
+plotcp(fit) # visualize cross-validation results
+summary(fit) # detailed summary of splits
+# plot tree
+plot(fit, uniform=TRUE,main="Classification Tree for Methylation")
+text(fit, use.n=TRUE, all=TRUE, cex=.8)
+# create attractive postscript plot of tree
+post(fit, file = "a.ps",title = "Classification Tree for Methylation")
+

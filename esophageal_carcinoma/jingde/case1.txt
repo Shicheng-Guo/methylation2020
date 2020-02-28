@@ -1,0 +1,10 @@
+Drug	KYSE410	KYSE150	KYSE450	KYSE140	KYSE30	KYSE510	COLO680n	KYSE180	KYSE70	TE1
+5FU	R		S			R			S	
+Vb			S	R		R			S	
+Ci	R			S	S					R
+Pa				R			S		S	R
+Dt	R				S			S		R
+Nd		R		S					S	R
+Mi			S	R	R			S		
+ChemSum	R		S					S		R
+Radiotherapy	R		R					S		S

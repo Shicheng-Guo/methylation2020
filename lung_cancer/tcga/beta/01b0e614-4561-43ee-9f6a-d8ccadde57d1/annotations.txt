@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+50a7fed3-f833-5fc2-820e-47808479823d	11716	case	bece6b8e-5d6c-4dd6-85a3-9b3a9c670aa7	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy melanoma of the neck. No systemic chemotherapy or radiation.

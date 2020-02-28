@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+abcb6298-b535-591c-bc76-292712a37158	11970	case	0b31dbdf-0623-48e4-a0ec-017650dceda7	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	Pt with synchronous thyroid cancer.

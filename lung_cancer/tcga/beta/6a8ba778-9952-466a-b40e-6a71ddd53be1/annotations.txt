@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+da95e91f-34c1-55d2-81a1-a6e2f88fd393	11714	case	628b1bc3-825b-4d0e-a4cd-57eeaf98e798	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy cancer of the pharynx treated with cisplatin.
+8556de31-68ae-57d4-9bc2-390ab88de812	11925	case	628b1bc3-825b-4d0e-a4cd-57eeaf98e798	History of unacceptable prior treatment related to a prior/other malignancy	Notification	2012-11-10T00:00:00	Approved	Prior malignancy cancer of the pharynx treated with cisplatin.

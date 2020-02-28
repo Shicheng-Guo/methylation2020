@@ -1,0 +1,401 @@
+---
+title: ""
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+---
+
+#Including the packages and plot formats for the analysis
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+
+#This script is to plot the figures and the tables for the ESCC paper writing.
+library(FactoMineR)
+library(knitr)
+library(ggsci)
+library(ggplot2)
+library(ggthemes)
+library(readxl)
+library(reshape2)
+library(readr)
+library(dplyr)
+library(tidyverse)
+library(ggbeeswarm)
+library(gridExtra)
+
+q =  theme_pander() + 
+  theme(panel.border = element_blank(),
+        axis.line.x = element_line(size = 0.5, linetype = "solid", colour = "black"),
+        axis.line.y = element_line(size = 0.5, linetype = "solid", colour = "black"))+
+  theme(legend.position=c(0.1,0.90))+
+  theme(legend.title = element_blank())+
+  theme(legend.text = element_text(colour="black", size = 16, face = "bold"))+
+  theme(axis.text.x=element_text(size=10))+
+  theme(axis.title.x=element_text(size=15))+
+  theme(axis.text.y=element_text(size=10))+
+  theme(axis.title.y=element_text(size=15))+
+  theme(plot.title = element_text(hjust = 0.5, vjust=0))
+Anno = read_tsv("f:/R function/Methylation_Analysis_Pipeline/HM450KAnnotation.txt")
+```
+
+# Do some preliminary sample quality control and CpGsite quality control
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+#First get the datasets of the 4 genomic regions: c("ADHFE1", "EOMES", "SALL1",  "TFPI2")
+
+setwd("f:/EspohagealCancer/For_Chenji/")
+load("Raw Data/NGS/Methy.Table.RData")
+load("Raw Data/NGS/Methy.Info.RData")
+
+My.Genes = c("ADHFE1", "EOMES", "SALL1",  "TFPI2")
+
+My.Methy.Table = subset(Methy.Table, Gene %in% My.Genes)
+My.Methy.Info = subset(Methy.Info, Gene %in% My.Genes)
+
+
+#Trimming the CpGsites: Remove the CpGsites with high missing rates (> 30%).
+Missing.Rates = apply(My.Methy.Table[,-c(1:3)], 1, function(x) sum(is.na(x))/ length(x) )
+#We found that no CpG sites showed higher missing rate than 30%. 
+
+#Sample Criteria 1: Remove the samples that not belong to the ESCC
+Remove.Pairs = c(7,10,15,17,23,30,50,55,64)
+Remove.Samples = c( paste("N", Remove.Pairs, sep=""), paste("T", Remove.Pairs, sep=""))
+
+#Sample Criteria 2: Remove the samples with high missing rates (Missing.Rate >= 0.3)
+Missing.Rates = apply(My.Methy.Table, 2, function(x) sum(is.na(x))/ length(x) )
+Remove.Samples = append( Remove.Samples, colnames(My.Methy.Table)[which(Missing.Rates >=0.30)])
+
+#Get the unique samples of the removed samples
+Remove.Samples = unique(Remove.Samples)
+Good.Samples = setdiff( colnames(My.Methy.Table)[-c(1:3)], Remove.Samples)
+My.Methy.Table = My.Methy.Table[, c(1:3, match(Good.Samples, colnames(My.Methy.Table)))]
+My.Methy.Info = subset(My.Methy.Info,  Sample %in% Good.Samples)
+
+save(My.Methy.Table, file = "My.Methy.Table.RData")
+save(My.Methy.Info, file="My.Methy.Info.RData")
+
+```
+
+# Figure1: The flow chart of the study design 
+
+
+# Figure2: The methylation curve of the 4 genomic regions in the validation dataset
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+source("f:/R function/Methylation_Analysis_Pipeline/MethylCurve.R")
+N.genes = length(unique(My.Methy.Table$Gene))
+MethylCurve(My.Methy.Table, control.name = "Control", case.name = "ESCC", return.value = F, 
+            legend.x = rep(0.10, N.genes), legend.y = rep(0.95, N.genes),error.bar = "CI")
+```
+
+
+# Figure3 A-E: The boxplot and scatterplot of the 4 genomic regions using the mean value of each regions as representatives
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+source("f:/R function/Methylation_Analysis_Pipeline/MethylationBoxplot.R")
+source("f:/R function/Methylation_Analysis_Pipeline/CpGsite2Gene_byMean.R")
+MethylationBoxplot(data = My.Methy.Table, Selected.Genes = My.Genes, case.name = "ESCC", control.name = "Control", CpGsite2Gene_method = CpGsite2Gene_byMean, return.value = FALSE)
+```
+
+# Figure3 F: The ROC curve for the logistic regression model using all of the four genomic regions as the predictors. 
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+source("f:/R function/Methylation_Analysis_Pipeline/ROCcurve.R")
+source("f:/R function/Methylation_Analysis_Pipeline/CpGsite2Gene_byMean.R")
+ROCcurve(data = My.Methy.Table, Selected.Genes = My.Genes, CpGsite2Gene_method = CpGsite2Gene_byMean)
+```
+
+
+# Table2A: The methylation status of the eight CpGsites in TCGA dataset, 
+##Here, we got the eight most significant CpG sites of these four genes, which have been tested in the validation 
+##stages. And we can directly obtained the information of these eight genes using the Supp Table 1.
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+Genes = c("ADHFE1","ADHFE1", "ADHFE1","EOMES","EOMES","SALL1","SALL1","TFPI2")
+Original.Pos=c(67344640, 67344665, 67344720, 27764810, 27764816, 51184355, 51184379, 93519473)
+Best.CpGsites = c("cg08090772", "cg20295442", "cg20912169", "cg16971668","cg22383888", 
+                  "cg04550052", "cg04698114", "cg12973591")
+```
+
+# Table2B: The methylation status of the 8 CpGsites in validation dataset
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+#Because that the primer design may be in the reverse strand, so the coordinates of the CpGsites may differ for +1 or -1 in our 
+#validation dataset, so we will consider it in the following analysis
+My.Sites.Table = subset(My.Methy.Table, Pos %in% c(Original.Pos, Original.Pos+1, Original.Pos-1))
+
+MethylationStatus(My.Sites.Table, Selected.Genes = My.Genes, output_name = "Validation_8_CpGsites_MethylationStatus", CpGsite2Gene_method = CpGsite2Gene_KeepUnchanged)
+
+```
+
+# Table 3: The methylation status of the 4 genomic regions in the validation dataset
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+MethylationStatus(My.Methy.Table, Selected.Genes = My.Genes, output_name = "Validation_4_Regions_MethylationStatus", CpGsite2Gene_method = CpGsite2Gene_byMean)
+
+```
+
+# Table 4: The diagnosis sensitivity, specificity, accuracy of several machine learning methods
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+source("f:/R function/Methylation_Analysis_Pipeline/ML_classfiers_Table.R")
+ML_classfiers_Table(My.Methy.Table,Selected.Genes = My.Genes, table.name = "MLTable_Validation", CpGsite2Gene_method = CpGsite2Gene_byMean)
+```
+
+
+
+# Supplementary Table 1: The methylation status of the CpG sites on the 4 genes in the TCGA dataset
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+ESCC_TCGA = read_tsv("./Raw Data/TCGA/ESCC.txt")
+load("./Raw Data/TCGA/Cgsite.RData")
+load("./Raw Data/TCGA/Type.RData")
+Candidate.CpGsites = intersect(Anno$ID[which(Anno$UCSC_RefGene_Name %in% My.Genes)], Cgsite)
+ESCC_TCGA_subset = ESCC_TCGA[match(Candidate.CpGsites, Cgsite),]
+CHR = Anno$CHR[match(Candidate.CpGsites, Anno$ID)]
+Pos = Anno$MAPINFO[match(Candidate.CpGsites, Anno$ID)]
+Gene =Anno$UCSC_RefGene_Name[match(Candidate.CpGsites, Anno$ID)]
+Candidate.CpGsites.Names = paste(Gene, Candidate.CpGsites, sep="-")
+
+colnames(ESCC_TCGA_subset) = paste( ifelse(Type =="01", "T-","N-"), colnames(ESCC_TCGA_subset), sep="")
+ESCC_TCGA_Table = data.frame(Candidate.CpGsites.Names, CHR, Pos, ESCC_TCGA_subset)
+colnames(ESCC_TCGA_Table)[1:3] = c("Gene", "Chr", "Pos")
+source("f:/R function/Methylation_Analysis_Pipeline/MethylationStatus.R")
+source("f:/R function/Methylation_Analysis_Pipeline/CpGsite2Gene_KeepUnchanged.R")
+na.idx = apply(ESCC_TCGA_Table, 1, function(x) { return( ifelse(sum(is.na(x)) > length(x)*0.5,  FALSE, TRUE) )})
+ESCC_TCGA_Table = ESCC_TCGA_Table[na.idx,]
+MethylationStatus(ESCC_TCGA_Table, Selected.Genes = ESCC_TCGA_Table$Gene, output_name =  "ESCC_TCGA_MethylationStatus",CpGsite2Gene_method = CpGsite2Gene_KeepUnchanged)
+```
+
+## After getting the methylation status of the CpG sites on these 4 genes, we then manually selected the best CpG sites to represent the ##methylation status of each gene for further validation. And the principle of our selection is to select the CpG sites with higher McaM (>=0.25) and lower McoM (<=0.25). Finally, four CpG sites were selected. 
+
+#Supplementary Table 2: The methylation status of the CpGsites on the 4 genes in GEO dataset 
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+GEO =read_csv("f:/GEO datasets/ESCA/GSE52826_series_matrix.csv",col_names =T) #GEO datasets with 1-4 samples as cancers and 5-12 samples as adjacent normal tissues.
+GEO.subset = GEO[match(Candidate.CpGsites, GEO$ID_REF),]
+GEO.subset = GEO.subset[,-1]
+CHR = Anno$CHR[match(Candidate.CpGsites, Anno$ID)]
+Pos = Anno$MAPINFO[match(Candidate.CpGsites, Anno$ID)]
+colnames(GEO.subset) = paste( c(rep("T",4), rep("N",8)), colnames(GEO.subset), sep="")
+Candidate.CpGsites.Names = paste(Gene, Candidate.CpGsites, sep="-")
+ESCC.GEO.Table = data.frame(Candidate.CpGsites.Names, CHR, Pos, GEO.subset)
+colnames(ESCC.GEO.Table)[1:3] = c("Gene", "Chr", "Pos")
+
+MethylationStatus(ESCC.GEO.Table, Selected.Genes = Candidate.CpGsites.Names, output_name = "CpGsites.GEO.Table",
+                CpGsite2Gene_method = CpGsite2Gene_KeepUnchanged)
+
+```
+
+#Supplementary Table 3: The methylation status of the CpGsites on the 4 genes in normal dataset
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+PBL = read_rds("f:/GEO datasets/PBL.rds")
+PBMC = read_rds("f:/GEO datasets/PBMC.rds")
+PBL.subset = subset(PBL, Gene %in% Candidate.CpGsites)
+PBMC.subset = subset(PBMC, Gene %in% Candidate.CpGsites)
+
+Mean.PBL = apply(PBL.subset[,-c(1:3)], 1, function(x) mean(x, na.rm=T))
+Mean.PBMC = apply(PBMC.subset[,-c(1:3)], 1, function(x) mean(x, na.rm=T))
+
+Table = data.frame(PBL.subset[,1:3], Mean.PBL, Mean.PBMC)
+
+write.csv(Table, file="CpGsites in Normal Cells.csv", row.names = F, quote=F)
+```
+
+#Supplementary Table4-8: The methylation status of the 4 genes in different subgroups 
+
+
+#Supplementary Table 4: The methylation status of the 5 genomic regions in the Young/Old subgroups
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+Subtype_Info = read_csv("Clinical/cleaned_clinical.csv",col_names = T)
+Median.Age = median(Subtype_Info$`年龄`)
+Young.ID = Subtype_Info$`送公司编号`[which( Subtype_Info$`年龄` < Median.Age)]
+Old.ID = Subtype_Info$`送公司编号`[which( Subtype_Info$`年龄` >= Median.Age)]
+Young.samples = c(paste("N", Young.ID, sep=""), paste("T", Young.ID, sep=""))
+Old.samples = c(paste("N", Old.ID, sep=""), paste("T", Old.ID, sep=""))
+
+Young.Methy.Table = My.Methy.Table[, c(1:3, which(colnames(My.Methy.Table) %in% Young.samples))]
+Old.Methy.Table = My.Methy.Table[, c(1:3, which(colnames(My.Methy.Table) %in% Old.samples))]
+
+#Young
+setwd("f:/EspohagealCancer/For_Chenji/Subgroup/")
+dir.create("Young/")
+setwd("./Young/")
+MethylationStatus(Young.Methy.Table, Selected.Genes = My.Genes, output_name = "Young_MethylationStatus", CpGsite2Gene_method = CpGsite2Gene_byMean)
+ROCcurve(Young.Methy.Table, Selected.Genes = My.Genes, CpGsite2Gene_method = CpGsite2Gene_byMean)
+
+#Old
+dir.create("../Old/")
+setwd("../Old/")
+MethylationStatus(Old.Methy.Table, Selected.Genes = My.Genes, output_name = "Old_MethylationStatus", CpGsite2Gene_method = CpGsite2Gene_byMean)
+ROCcurve(Old.Methy.Table, Selected.Genes = My.Genes, CpGsite2Gene_method = CpGsite2Gene_byMean)
+```
+
+
+#Supplementary Table 5: The methylation status of the 5 genomic regions in the Male/Female subgroups
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+Male.ID = Subtype_Info$`送公司编号`[which( Subtype_Info$`性别` == "男")]
+Female.ID = Subtype_Info$`送公司编号`[which( Subtype_Info$`性别` == "女")]
+Male.samples = c(paste("N", Male.ID, sep=""), paste("T", Male.ID, sep=""))
+Female.samples = c(paste("N", Female.ID, sep=""), paste("T", Female.ID, sep=""))
+
+Male.Methy.Table = My.Methy.Table[, c(1:3, which(colnames(My.Methy.Table) %in% Male.samples))]
+Female.Methy.Table = My.Methy.Table[, c(1:3, which(colnames(My.Methy.Table) %in% Female.samples))]
+
+#Male
+dir.create("../Male/")
+setwd("../Male/")
+MethylationStatus(Male.Methy.Table, Selected.Genes = My.Genes, output_name = "Male_MethylationStatus", CpGsite2Gene_method = CpGsite2Gene_byMean)
+ROCcurve(Male.Methy.Table, Selected.Genes = My.Genes, CpGsite2Gene_method = CpGsite2Gene_byMean)
+
+#Female
+dir.create("../Female/")
+setwd("../Female/")
+MethylationStatus(Female.Methy.Table, Selected.Genes = My.Genes, output_name = "Female_MethylationStatus", CpGsite2Gene_method = CpGsite2Gene_byMean)
+ROCcurve(Female.Methy.Table, Selected.Genes = My.Genes, CpGsite2Gene_method = CpGsite2Gene_byMean)
+```
+
+#Supplementary Table 6: The methylation status of the 5 genomic regions in the Smoked/Non-Smoked subgroups
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+Smoking.ID = Subtype_Info$`送公司编号`[which( Subtype_Info$Smoking == "Yes")]
+Nonsmoking.ID = Subtype_Info$`送公司编号`[which( Subtype_Info$Smoking == "No")]
+Smoking.samples = c(paste("N", Smoking.ID, sep=""), paste("T", Smoking.ID, sep=""))
+Nonsmoking.samples = c(paste("N", Nonsmoking.ID, sep=""), paste("T", Nonsmoking.ID, sep=""))
+
+Smoking.Methy.Table = My.Methy.Table[, c(1:3, which(colnames(My.Methy.Table) %in% Smoking.samples))]
+Nonsmoking.Methy.Table = My.Methy.Table[, c(1:3, which(colnames(My.Methy.Table) %in% Nonsmoking.samples))]
+
+#Smoking
+dir.create("../Smoking/")
+setwd("../Smoking/")
+MethylationStatus(Smoking.Methy.Table, Selected.Genes = My.Genes, output_name = "Smoking_MethylationStatus", CpGsite2Gene_method = CpGsite2Gene_byMean)
+ROCcurve(Smoking.Methy.Table, Selected.Genes = My.Genes, CpGsite2Gene_method = CpGsite2Gene_byMean)
+
+#Nonsmoking
+dir.create("../NonSmoking/")
+setwd("../NonSmoking/")
+MethylationStatus(Nonsmoking.Methy.Table, Selected.Genes = My.Genes, output_name = "Nonsmoking_MethylationStatus", CpGsite2Gene_method = CpGsite2Gene_byMean)
+ROCcurve(Nonsmoking.Methy.Table, Selected.Genes = My.Genes, CpGsite2Gene_method = CpGsite2Gene_byMean)
+```
+
+#Supplementary Table 7: The methylation status of the 5 genomic regions in the Alcohol/Nonalcohol subgroups
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+Alcohol.ID = Subtype_Info$`送公司编号`[which( Subtype_Info$Alcohol == "Yes")]
+Nonalcohol.ID = Subtype_Info$`送公司编号`[which( Subtype_Info$Alcohol == "No")]
+Alcohol.samples = c(paste("N", Alcohol.ID, sep=""), paste("T", Alcohol.ID, sep=""))
+Nonalcohol.samples = c(paste("N", Nonalcohol.ID, sep=""), paste("T", Nonalcohol.ID, sep=""))
+
+Alcohol.Methy.Table = My.Methy.Table[, c(1:3, which(colnames(My.Methy.Table) %in% Alcohol.samples))]
+Nonalcohol.Methy.Table = My.Methy.Table[, c(1:3, which(colnames(My.Methy.Table) %in% Nonalcohol.samples))]
+
+#Alcohol
+dir.create("../Alcohol/")
+setwd("../Alcohol/")
+MethylationStatus(Alcohol.Methy.Table, Selected.Genes = My.Genes, output_name = "Alcohol_MethylationStatus", CpGsite2Gene_method = CpGsite2Gene_byMean)
+ROCcurve(Alcohol.Methy.Table, Selected.Genes = My.Genes, CpGsite2Gene_method = CpGsite2Gene_byMean)
+
+#Nonalcohol
+dir.create("../Nonalcohol/")
+setwd("../Nonalcohol/")
+MethylationStatus(Nonalcohol.Methy.Table, Selected.Genes = My.Genes, output_name = "Nonalcohol_MethylationStatus", CpGsite2Gene_method = CpGsite2Gene_byMean)
+ROCcurve(Nonalcohol.Methy.Table, Selected.Genes = My.Genes, CpGsite2Gene_method = CpGsite2Gene_byMean)
+```
+
+
+
+
+#Supplementary Figure1: The PCA analysis for the adjacent normal tissues of ESCC and EAC from TCGA dataset
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+clinical = read.table("f:/EspohagealCancer/Raw data/fc624cd6-a4ac-4e7b-9ca9-5cc103d9fdb0/Clinical/Biotab/nationwidechildrens.org_clinical_patient_esca.txt", header=T, skip = 1, sep="\t")
+load("ESCC/Type.RData")
+TCGA.Controls = ESCC[,which(Type=="11")]
+Control.ID = sapply(colnames(TCGA.Controls), function(x) paste( strsplit(x, "[.]")[[1]][1:3], collapse = "-"))
+Subtype = clinical$histological_type[match(Control.ID, clinical$bcr_patient_barcode)]
+Subtype = ifelse(Subtype == "Esophagus Squamous Cell Carcinoma", "ESCC", "EAC")
+##start to do the PCA analysis
+pca.data = as.data.frame(t(TCGA.Controls))
+pca1 = PCA(pca.data, graph=F)
+scores = as.data.frame(pca1$ind$coord)
+colnames(scores)[1:5] = paste("PC", 1:5, sep="")
+SampleID = rownames(scores)
+data.plot = data.frame(Subtype, SampleID, scores[,1:2])
+data.plot$Subtype = factor(data.plot$Subtype, levels = c("ESCC","EAC"))
+p = ggplot(data.plot, aes(PC1,PC2)) + geom_point(aes(colour=Subtype), size=5) + q+ scale_color_npg()+
+  theme(legend.position = c(0.9,0.9))
+ggsave(p, filename = "PCA_ESCC_EAC_adjacent_normals.pdf", units = "cm", width = 16, 
+           height = 12,dpi = 300,device = "pdf")
+
+```
+
+
+#Supplementary Figure2: The PCA analysis for all of the samples in the validation stage 
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+pca.data = as.data.frame(t(My.Methy.Table[,-c(1:3)]))
+colnames(pca.data) = paste(My.Methy.Table$Gene, My.Methy.Table$Pos, sep="-")
+pca1 = PCA(pca.data, graph=F)
+scores = as.data.frame(pca1$ind$coord)
+colnames(scores)[1:5] = paste("PC", 1:5, sep="")
+SampleID = rownames(scores)
+Type = sapply(SampleID, function(x) {return(substr(x,1,1))})
+Type = ifelse(Type =="N", "Control", "ESCC")
+data.plot = data.frame(Type, SampleID, scores[,1:2])
+data.plot$Type = factor(data.plot$Type, levels = c("ESCC","Control"))
+p = ggplot(data.plot, aes(PC1,PC2)) + geom_point(aes(colour=Type), size=5) + q+ scale_color_npg()
+ggsave(p, filename = "PCA_Allsamples_validation.pdf", units = "cm", width = 18, 
+           height = 14,dpi = 300,device = "pdf")
+
+```
+
+
+#Supplementary Figure3 A-H: The ROC curve for the subgroups using all of the four genomic regions as predictors. 
+
+
+#Figure 3F : The bisulfite conversion efficiency between ESCC and control samples.
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+methyl.efficiency = read_excel("f:/EspohagealCancer//2016.10.8/methylation.xlsx",sheet = 1)
+methyl.efficiency = subset(methyl.efficiency, Sample %in% colnames(My.Methy.Table)[-c(1:3)])
+Type = as.vector(as.character(sapply(methyl.efficiency$Sample, function(x) substr(x,1,1))))
+Type = ifelse(Type =="N", "Control", "ESCC")
+methyl.efficiency = data.frame(Type, methyl.efficiency)
+methyl.efficiency$Efficiency = sapply(methyl.efficiency$Efficiency, function(x) strsplit(x, "%")[[1]][1])
+methyl.efficiency$Efficiency = as.numeric(methyl.efficiency$Efficiency)
+methyl.efficiency$Type = factor(methyl.efficiency$Type, levels = c("ESCC", "Control"))
+p = ggplot(methyl.efficiency) + geom_boxplot(aes(Type, Efficiency),lwd=0.5,fill="lightgrey", outlier.shape = NA)+
+  geom_quasirandom(aes(Type, Efficiency, colour= Type),size=3) + q + scale_color_npg() +  
+                   theme(axis.text.x=element_text(size=15)) + 
+                   theme(axis.title.x=element_blank())+ theme(legend.position="none") +
+                   scale_y_continuous(limits=c(97, 100), breaks = seq(96,100,1)) +
+                   ylab("Bisulfite Conversion Efficiency (%)")
+
+ ggsave(p, filename = "Supplementary Figure 4.pdf", units = "cm", width = 16, height = 12,dpi = 300,device = "pdf")   
+
+```
+
+
+
+#Supplementary Figure 4: The expression profiles of these four genes
+```{r, echo =FALSE, warning=FALSE, message=FALSE,fig.height=8, fig.width=12}
+load("f:/EspohagealCancer/For_Chenji/ESCC/ESCA_rnaseq.RData")
+clinical = read_tsv("f:/EspohagealCancer/Raw data/fc624cd6-a4ac-4e7b-9ca9-5cc103d9fdb0/Clinical/Biotab/nationwidechildrens.org_clinical_patient_esca.txt", skip =1)
+clinical = clinical[-1,]
+ESCC.clinical = subset(clinical, histological_type == "Esophagus Squamous Cell Carcinoma")
+barcode1 = colnames(ESCA_rnaseq)[which(colnames(ESCA_rnaseq) %in% ESCC.clinical$bcr_patient_barcode)]
+barcode2 = colnames(ESCA_rnaseq)[which(ESCA_rnaseq[1,] == "11")]
+barcode = unique(c(barcode1, barcode2))
+ESCC_rnaseq = ESCA_rnaseq[,colnames(ESCA_rnaseq) %in% barcode]
+Type = ESCC_rnaseq[1,]
+Type = ifelse(Type == "01", "ESCC", "Control")
+ESCC_rnaseq = ESCC_rnaseq[-1,]
+All_Genes = sapply(as.character(rownames(ESCC_rnaseq)),function(x) strsplit(x,split="[|]")[[1]][1])
+Exp.subset = ESCC_rnaseq[ match(My.Genes, All_Genes),]
+Exp.subset = as.data.frame(t(Exp.subset))
+Exp.subset = data.frame(Type, Exp.subset)
+Exp.subset[,-1] = apply(Exp.subset[,-1], 2,function(x) as.numeric(x))
+Exp.subset$Type = factor(Exp.subset$Type, levels = c("ESCC", "Control"))
+
+Exp.figures = list()
+for(i in 1:length(My.Genes)){
+  temp = Exp.subset[,c(1, match(My.Genes[i], colnames(Exp.subset)))]
+  colnames(temp) = c("Type", "Expression")
+Exp.figures[[i]] = ggplot(data = temp) + geom_boxplot(aes(Type, Expression),lwd=0.5,fill="lightgrey", outlier.shape = NA)+
+                   geom_quasirandom(aes(Type, Expression, colour= Type),size=3) + q + scale_color_npg() +  
+                   theme(axis.title.y=element_text(size=18)) +
+                   theme(axis.text.x=element_text(size=15)) + ggtitle( My.Genes[i]) + 
+                   theme(axis.title.x=element_blank())+ theme(legend.position="none") + ylab("Expression (RPKM)")+
+                   scale_y_continuous(limits =c(0,10))
+
+}
+
+Exp.combine = grid.arrange(grobs = Exp.figures, nrow =2)
+
+```

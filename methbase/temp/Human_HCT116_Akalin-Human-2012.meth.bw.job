@@ -1,0 +1,8 @@
+#PBS -N Human_HCT116_Akalin-Human-2012.meth.bw
+#PBS -l nodes=1:ppn=1
+#PBS -M Guo.shicheng@marshfieldresearch.org
+#PBS -m abe
+#PBS -o /gpfs/home/guosa/hpc/methylation/methbase/temp/
+#PBS -e /gpfs/home/guosa/hpc/methylation/methbase/temp/
+cd /gpfs/home/guosa/hpc/methylation/methbase
+bigWigToWig Human_HCT116_Akalin-Human-2012.meth.bw Human_HCT116_Akalin-Human-2012.meth.bw.wig

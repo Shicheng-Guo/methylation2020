@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+db495ea0-4738-5fbf-a043-ccc43be548f8	11677	case	4ca13c92-84b4-4edf-842a-b20b7e713415	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy bilateral LUAD. Prior malignancy R LUAD. No systemic chemotherapy or radiation.

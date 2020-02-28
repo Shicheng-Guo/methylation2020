@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+10abd3ec-ab57-5d17-8feb-ab9bc8eb8016	11962	case	108a71cf-b9db-47cd-aa74-c03ec989b41b	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	Pt with synchronous cancer of the thymus.

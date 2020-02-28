@@ -1,0 +1,47 @@
+Here are listed in tables the GENCORD2 discovered eQTLs, mQTLs and eQTMs at 10% FDR for each cell-type (fibroblasts, F; lymphoblastoid, L; T-cells, T).
+Note that for eQTMs, although in the table of the article the number of discovered genes with these associations at 10%FDR is reported, we are providing a list of all the
+methylation sites associated to each gene given that their correlation structure is not as strong as that for genetic variants and may be useful to have this information.
+Please see the Materials and Methods section for details.
+All coordinates based on hg19.
+Gene annotation: Gencode V10 (exon coordinates correspond to merged exons from the annotated transcripts of a gene)
+
+Columns:
+
+EQTL files:
+
+SNP_label = SNP ID
+GENE_ID = Ensembl Gene ID and exon start and end coordinates
+SNP_chromosome = SNP chromosome
+GENE_chromosome = gene chromosome
+SNP_location = SNP position
+GENE_location = transcription start site of gene
+Distance = distance from SNP to transcription start site
+rvalue = Spearman correlation coefficient
+pvalue = P-value
+-log10(pvalue) = -log10(P-value)
+
+MQTL files:
+
+SNP_label = SNP ID
+METHYL_ID = methylation site probe ID
+SNP_chromosome = SNP chromosome
+METHYL_chromosome = methylation site chromosome
+SNP_location = SNP position
+METHYL_location = methylation site position
+Distance = distance from SNP to methylation site
+rvalue = Spearman correlation coefficient
+pvalue = P-value
+-log10(pvalue) = -log10(P-value)
+
+EQTM files:
+
+METHYL_label = methylation site probe ID
+GENE_ID = Ensembl Gene ID and exon start and end coordinates
+METHYL_chromosome = methylation site chromosome
+GENE_chromosome = gene chromosome
+METHYL_location = methylation site position
+GENE_location = transcription start site of gene
+Distance = distance from methylation site to transcription start site
+rvalue = Spearman correlation coefficient
+pvalue = P-value
+-log10(pvalue) = -log10(P-value)

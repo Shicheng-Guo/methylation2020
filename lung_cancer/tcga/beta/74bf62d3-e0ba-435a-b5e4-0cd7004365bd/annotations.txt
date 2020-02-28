@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+fb4b01ad-035d-5967-ad35-3fe7030db5f5	11745	case	9a9bd705-1ef1-4a6c-bb1e-bdd346dc01c0	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy chronic lymphocytic leukemia. Prior malignancy skin cancer. No systemic chemotherapy or radiation.

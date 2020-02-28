@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+0b2c49f6-3851-5e68-9db3-851c2b82300b	11756	case	e51f717f-72e8-400e-9f35-fc5dc32fdf71	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy  treated with loco-regional radiation to the neck.
+f199dda9-ede7-5adf-8a92-6be6e637921c	11967	case	e51f717f-72e8-400e-9f35-fc5dc32fdf71	History of acceptable prior treatment related to a prior/other malignancy	Notification	2012-11-10T00:00:00	Approved	Prior malignancy  treated with loco-regional radiation to the neck.

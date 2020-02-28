@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+ad2b3be7-23e1-5017-bf03-ffecf06e170f	5492	case	294cb595-0907-44c7-bbef-985a27c1e6e2	Prior malignancy	Notification	2012-03-20T00:00:00	Approved	Uterus. No chemo or radiation.

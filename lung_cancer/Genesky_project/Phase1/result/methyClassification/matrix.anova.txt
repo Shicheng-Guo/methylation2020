@@ -1,0 +1,119 @@
+"Gender"	"Age"	"Smoking"	"type"	"differention"	"TNM"	"pheno"	"AGTR1"	"EPAS1"	"EPAS2"	"EPAS3"	"EPAS4"	"GALR1"	"LINE.1"	"NTSR1"	"SLC5A8"	"ZBTB1"	"ZBTB2"	"ZBTB3"	"ZBTB4"	"ZMYND10"	"Ref"
+"Gender"	NA	"0.0121560384833674"	"9.09299772392486e-20"	"0.000499750124937531"	"0.628185907046477"	"0.678660669665167"	"0.817091454272864"	"0.63857559291745"	"0.515743661043913"	"0.822425462409384"	"0.785809772613062"	"0.88067235789233"	"0.664427586037859"	"0.558325745704774"	"0.902548725637181"	"2.25338626875201e-05"	"0.910299622249111"	"0.807192689265975"	"0.972529109992466"	"0.758758277924566"	"0.0417903649263744"	"0.0628996373971898"
+"Age"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Smoking"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"type"	"0.000499750124937531"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	NA	"0.185407296351824"	"0.00349825087456272"	"0.821589205397301"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"0.635182408795602"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"
+"differention"	"0.653173413293353"	"0.589678398732952"	"0.81189342612861"	"0.185907046476762"	NA	"0.207896051974013"	"0.415792103948026"	"0.829477942140484"	"0.603125337921714"	"0.282671780559756"	"0.694446523469772"	"0.184516270975244"	"0.630700929117858"	"0.135330414521106"	"0.920539730134933"	"0.669792675121075"	"0.719627594706945"	"0.934860860040236"	"0.955033551624984"	"0.477174984452412"	"0.582682941866332"	"0.689546314661414"
+"TNM"	"0.691154422788606"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"0.00399800099950025"	"0.216891554222889"	NA	"0.708645677161419"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"0.132933533233383"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"
+"pheno"	"0.813593203398301"	"0.513630863980979"	"0.0363465317259934"	"0.828585707146427"	"0.397301349325337"	"0.733633183408296"	NA	"0.00396279549714709"	"7.56924356595222e-07"	"1.21398568452126e-07"	"0.00562670657925541"	"1.10070982232635e-08"	"0.00391543145451814"	"6.45902009066068e-05"	"0.000499750124937531"	"0.000124288234429192"	"0.000188689913358881"	"0.00373208240205568"	"0.000227807785207365"	"0.000220069986374216"	"0.00104452645865846"	"0.145819626088535"
+"AGTR1"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"EPAS1"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"EPAS2"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"EPAS3"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"EPAS4"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"GALR1"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"LINE.1"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"NTSR1"	"0.912043978010994"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"0.626686656671664"	"0.924537731134433"	"0.135932033983008"	"0.000499750124937531"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	NA	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"	"Error in oneway.test(as.numeric(data[tmp, j]) ~ data[tmp, i], na.action = \"na.omit\") : 
+  not enough observations
+"
+"SLC5A8"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"ZBTB1"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"ZBTB2"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"ZBTB3"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"ZBTB4"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"ZMYND10"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Ref"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA

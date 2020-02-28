@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+c0642913-2e40-5ded-8eed-ab2dc0db5ae5	11971	case	c0fdb152-25d2-404b-bec7-a43ece381f5b	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	Pt with synchronous thymoma.

@@ -1,0 +1,8 @@
+#PBS -N Human_PBMC_Heyn2012.meth.bw
+#PBS -l nodes=1:ppn=1
+#PBS -M Guo.shicheng@marshfieldresearch.org
+#PBS -m abe
+#PBS -o /gpfs/home/guosa/hpc/methylation/methbase/PBMC/temp/
+#PBS -e /gpfs/home/guosa/hpc/methylation/methbase/PBMC/temp/
+cd /gpfs/home/guosa/hpc/methylation/methbase/PBMC
+bigWigToWig Human_PBMC_Heyn2012.meth.bw Human_PBMC_Heyn2012.meth.bw.wig

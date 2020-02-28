@@ -1,0 +1,270 @@
+LOCUS       NC_000011               4578 bp    DNA     linear   CON 13-AUG-2013
+DEFINITION  Homo sapiens chromosome 11, GRCh37.p13 Primary Assembly.
+ACCESSION   NC_000011 REGION: 67350006..67354583 GPC_000000035
+VERSION     NC_000011.9  GI:224589802
+DBLINK      BioProject: PRJNA168
+            Assembly: GCF_000001405.25
+KEYWORDS    RefSeq.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 4578)
+  AUTHORS   Taylor,T.D., Noguchi,H., Totoki,Y., Toyoda,A., Kuroki,Y., Dewar,K.,
+            Lloyd,C., Itoh,T., Takeda,T., Kim,D.W., She,X., Barlow,K.F.,
+            Bloom,T., Bruford,E., Chang,J.L., Cuomo,C.A., Eichler,E.,
+            FitzGerald,M.G., Jaffe,D.B., LaButti,K., Nicol,R., Park,H.S.,
+            Seaman,C., Sougnez,C., Yang,X., Zimmer,A.R., Zody,M.C.,
+            Birren,B.W., Nusbaum,C., Fujiyama,A., Hattori,M., Rogers,J.,
+            Lander,E.S. and Sakaki,Y.
+  TITLE     Human chromosome 11 DNA sequence and analysis including novel gene
+            identification
+  JOURNAL   Nature 440 (7083), 497-500 (2006)
+   PUBMED   16554811
+REFERENCE   2  (bases 1 to 4578)
+  CONSRTM   International Human Genome Sequencing Consortium
+  TITLE     Finishing the euchromatic sequence of the human genome
+  JOURNAL   Nature 431 (7011), 931-945 (2004)
+   PUBMED   15496913
+REFERENCE   3  (bases 1 to 4578)
+  AUTHORS   Lander,E.S., Linton,L.M., Birren,B., Nusbaum,C., Zody,M.C.,
+            Baldwin,J., Devon,K., Dewar,K., Doyle,M., FitzHugh,W., Funke,R.,
+            Gage,D., Harris,K., Heaford,A., Howland,J., Kann,L., Lehoczky,J.,
+            LeVine,R., McEwan,P., McKernan,K., Meldrim,J., Mesirov,J.P.,
+            Miranda,C., Morris,W., Naylor,J., Raymond,C., Rosetti,M.,
+            Santos,R., Sheridan,A., Sougnez,C., Stange-Thomann,N.,
+            Stojanovic,N., Subramanian,A., Wyman,D., Rogers,J., Sulston,J.,
+            Ainscough,R., Beck,S., Bentley,D., Burton,J., Clee,C., Carter,N.,
+            Coulson,A., Deadman,R., Deloukas,P., Dunham,A., Dunham,I.,
+            Durbin,R., French,L., Grafham,D., Gregory,S., Hubbard,T.,
+            Humphray,S., Hunt,A., Jones,M., Lloyd,C., McMurray,A., Matthews,L.,
+            Mercer,S., Milne,S., Mullikin,J.C., Mungall,A., Plumb,R., Ross,M.,
+            Shownkeen,R., Sims,S., Waterston,R.H., Wilson,R.K., Hillier,L.W.,
+            McPherson,J.D., Marra,M.A., Mardis,E.R., Fulton,L.A.,
+            Chinwalla,A.T., Pepin,K.H., Gish,W.R., Chissoe,S.L., Wendl,M.C.,
+            Delehaunty,K.D., Miner,T.L., Delehaunty,A., Kramer,J.B., Cook,L.L.,
+            Fulton,R.S., Johnson,D.L., Minx,P.J., Clifton,S.W., Hawkins,T.,
+            Branscomb,E., Predki,P., Richardson,P., Wenning,S., Slezak,T.,
+            Doggett,N., Cheng,J.F., Olsen,A., Lucas,S., Elkin,C.,
+            Uberbacher,E., Frazier,M., Gibbs,R.A., Muzny,D.M., Scherer,S.E.,
+            Bouck,J.B., Sodergren,E.J., Worley,K.C., Rives,C.M., Gorrell,J.H.,
+            Metzker,M.L., Naylor,S.L., Kucherlapati,R.S., Nelson,D.L.,
+            Weinstock,G.M., Sakaki,Y., Fujiyama,A., Hattori,M., Yada,T.,
+            Toyoda,A., Itoh,T., Kawagoe,C., Watanabe,H., Totoki,Y., Taylor,T.,
+            Weissenbach,J., Heilig,R., Saurin,W., Artiguenave,F., Brottier,P.,
+            Bruls,T., Pelletier,E., Robert,C., Wincker,P., Smith,D.R.,
+            Doucette-Stamm,L., Rubenfield,M., Weinstock,K., Lee,H.M.,
+            Dubois,J., Rosenthal,A., Platzer,M., Nyakatura,G., Taudien,S.,
+            Rump,A., Yang,H., Yu,J., Wang,J., Huang,G., Gu,J., Hood,L.,
+            Rowen,L., Madan,A., Qin,S., Davis,R.W., Federspiel,N.A.,
+            Abola,A.P., Proctor,M.J., Myers,R.M., Schmutz,J., Dickson,M.,
+            Grimwood,J., Cox,D.R., Olson,M.V., Kaul,R., Raymond,C., Shimizu,N.,
+            Kawasaki,K., Minoshima,S., Evans,G.A., Athanasiou,M., Schultz,R.,
+            Roe,B.A., Chen,F., Pan,H., Ramser,J., Lehrach,H., Reinhardt,R.,
+            McCombie,W.R., de la Bastide,M., Dedhia,N., Blocker,H.,
+            Hornischer,K., Nordsiek,G., Agarwala,R., Aravind,L., Bailey,J.A.,
+            Bateman,A., Batzoglou,S., Birney,E., Bork,P., Brown,D.G.,
+            Burge,C.B., Cerutti,L., Chen,H.C., Church,D., Clamp,M.,
+            Copley,R.R., Doerks,T., Eddy,S.R., Eichler,E.E., Furey,T.S.,
+            Galagan,J., Gilbert,J.G., Harmon,C., Hayashizaki,Y., Haussler,D.,
+            Hermjakob,H., Hokamp,K., Jang,W., Johnson,L.S., Jones,T.A.,
+            Kasif,S., Kaspryzk,A., Kennedy,S., Kent,W.J., Kitts,P.,
+            Koonin,E.V., Korf,I., Kulp,D., Lancet,D., Lowe,T.M., McLysaght,A.,
+            Mikkelsen,T., Moran,J.V., Mulder,N., Pollara,V.J., Ponting,C.P.,
+            Schuler,G., Schultz,J., Slater,G., Smit,A.F., Stupka,E.,
+            Szustakowski,J., Thierry-Mieg,D., Thierry-Mieg,J., Wagner,L.,
+            Wallis,J., Wheeler,R., Williams,A., Wolf,Y.I., Wolfe,K.H.,
+            Yang,S.P., Yeh,R.F., Collins,F., Guyer,M.S., Peterson,J.,
+            Felsenfeld,A., Wetterstrand,K.A., Patrinos,A., Morgan,M.J., de
+            Jong,P., Catanese,J.J., Osoegawa,K., Shizuya,H., Choi,S. and
+            Chen,Y.J.
+  CONSRTM   International Human Genome Sequencing Consortium
+  TITLE     Initial sequencing and analysis of the human genome
+  JOURNAL   Nature 409 (6822), 860-921 (2001)
+   PUBMED   11237011
+  REMARK    Erratum:[Nature 2001 Aug 2;412(6846):565]
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            CM000673.1.
+            On Jun 10, 2009 this sequence version replaced gi:51511727.
+            Assembly Name: GRCh37.p13 Primary Assembly
+            The DNA sequence is composed of genomic sequence, primarily
+            finished clones that were sequenced as part of the Human Genome
+            Project. PCR products and WGS shotgun sequence have been added
+            where necessary to fill gaps or correct errors. All such additions
+            are manually curated by GRC staff. For more information see:
+            http://genomereference.org.
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Version          :: Homo sapiens Annotation Release 105
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 5.1
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..4578
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="11"
+     gene            1061..4120
+                     /gene="GSTP1"
+                     /gene_synonym="DFN7; FAEES3; GST3; GSTP; PI"
+                     /note="glutathione S-transferase pi 1; Derived by
+                     automated computational analysis using gene prediction
+                     method: BestRefSeq,Gnomon."
+                     /db_xref="GeneID:2950"
+                     /db_xref="HGNC:4638"
+                     /db_xref="HPRD:00614"
+                     /db_xref="MIM:134660"
+     mRNA            join(1061..1310,1600..1635,1930..2036,2151..2238,
+                     2604..2707,3570..3677,3855..4119)
+                     /gene="GSTP1"
+                     /gene_synonym="DFN7; FAEES3; GST3; GSTP; PI"
+                     /product="glutathione S-transferase pi 1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: BestRefSeq."
+                     /transcript_id="NM_000852.3"
+                     /db_xref="GI:194363754"
+                     /db_xref="GeneID:2950"
+                     /db_xref="HGNC:4638"
+                     /db_xref="HPRD:00614"
+                     /db_xref="MIM:134660"
+     mRNA            join(1153..1310,1600..1635,1930..2036,2151..2238,
+                     2604..2707,3573..3677,3855..4120)
+                     /gene="GSTP1"
+                     /gene_synonym="DFN7; FAEES3; GST3; GSTP; PI"
+                     /product="glutathione S-transferase pi 1, transcript
+                     variant X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 43 ESTs, and 96% coverage by
+                     RNAseq alignments, including 19 samples with support for
+                     all introns"
+                     /transcript_id="XM_005273958.1"
+                     /db_xref="GI:530396700"
+                     /db_xref="GeneID:2950"
+                     /db_xref="HGNC:4638"
+                     /db_xref="HPRD:00614"
+                     /db_xref="MIM:134660"
+     CDS             join(1310,1600..1635,1930..2036,2151..2238,2604..2707,
+                     3570..3677,3855..4043)
+                     /gene="GSTP1"
+                     /gene_synonym="DFN7; FAEES3; GST3; GSTP; PI"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: BestRefSeq."
+                     /codon_start=1
+                     /product="glutathione S-transferase P"
+                     /protein_id="NP_000843.1"
+                     /db_xref="GI:4504183"
+                     /db_xref="CCDS:CCDS41679.1"
+                     /db_xref="GeneID:2950"
+                     /db_xref="HGNC:4638"
+                     /db_xref="HPRD:00614"
+                     /db_xref="MIM:134660"
+                     /translation="MPPYTVVYFPVRGRCAALRMLLADQGQSWKEEVVTVETWQEGSL
+                     KASCLYGQLPKFQDGDLTLYQSNTILRHLGRTLGLYGKDQQEAALVDMVNDGVEDLRC
+                     KYISLIYTNYEAGKDDYVKALPGQLKPFETLLSQNQGGKTFIVGDQISFADYNLLDLL
+                     LIHEVLAPGCLDAFPLLSAYVGRLSARPKLKAFLASPEYVNLPINGNGKQ"
+     CDS             join(1310,1600..1635,1930..2036,2151..2238,2604..2707,
+                     3573..3677,3855..4043)
+                     /gene="GSTP1"
+                     /gene_synonym="DFN7; FAEES3; GST3; GSTP; PI"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="glutathione S-transferase P isoform X1"
+                     /protein_id="XP_005274015.1"
+                     /db_xref="GI:530396701"
+                     /db_xref="GeneID:2950"
+                     /db_xref="HGNC:4638"
+                     /db_xref="HPRD:00614"
+                     /db_xref="MIM:134660"
+                     /translation="MPPYTVVYFPVRGRCAALRMLLADQGQSWKEEVVTVETWQEGSL
+                     KASCLYGQLPKFQDGDLTLYQSNTILRHLGRTLGLYGKDQQEAALVDMVNDGVEDLRC
+                     KYISLIYTNYAGKDDYVKALPGQLKPFETLLSQNQGGKTFIVGDQISFADYNLLDLLL
+                     IHEVLAPGCLDAFPLLSAYVGRLSARPKLKAFLASPEYVNLPINGNGKQ"
+ORIGIN      
+        1 ttgacagttg atggaatagg agaagctgtc tgtcatgtct aaagccaaca agagatcaat
+       61 atctagaata aatggagatc tgcaaatcaa cagaaagtag gcagcaaagc caaagaaaat
+      121 agcctaaggc acagccacta aaaggaacgt gatcatgtcc tttgcaggga catgggtgga
+      181 gctggaagcc gttagcctca gcaaactcac acaggaacag aaaaccagcg agaccgcatg
+      241 gtctcactta taagtgggag ctgaacaatg agaacacatg gtcacatggc ggcgatcaac
+      301 acacactggt gcctgttgag cggggtgctg gggagggaga gtaccaggaa gaatagctaa
+      361 gggatactgg gcttaatacc tgggtgatgg gatgatctgt acagcaaacc atcatggcgc
+      421 acacacctat gtaacaaacc tgcacatcct ctacatgtac cccagaactt caaataaaag
+      481 ttggacggcc aggcgtggtg gctcacgcct gtaatcccag cactttggga agccgaggcg
+      541 tgcagatcac ctaaggtcag gagttcgaga ccagcccggc caacatggtg aaaccccgtc
+      601 tctactaaaa atacaaaaat cagccagatg tggcacgcac ctataattcc acctactcgg
+      661 gaggctgaag cagaattgct tgaacccgag aggcggaggt tgcagtgagc cgccgagatc
+      721 gcgccactgc actccagcct gggccacagc gtgagactac gtcataaaat aaaataaaat
+      781 aacacaaaat aaaataaaat aaaataaaat aaaataaaat aaaataaaat aaaataaaat
+      841 aaaaaaataa aataaaataa aataaaataa agcaatttcc tttcctctaa gcggcctcca
+      901 cccctctccc ctgccctgtg aagcgggtgt gcaagctccg ggatcgcagc ggtcttaggg
+      961 aatttccccc cgcgatgtcc cggcgcgcca gttcgctgcg cacacttcgc tgcggtcctc
+     1021 ttcctgctgt ctgtttactc cctaggcccc gctggggacc tgggaaagag ggaaaggctt
+     1081 ccccggccag ctgcgcggcg actccgggga ctccagggcg cccctctgcg gccgacgccc
+     1141 ggggtgcagc ggccgccggg gctggggccg gcgggagtcc gcgggaccct ccagaagagc
+     1201 ggccggcgcc gtgactcagc actggggcgg agcggggcgg gaccaccctt ataaggctcg
+     1261 gaggccgcga ggccttcgct ggagtttcgc cgccgcagtc ttcgccacca gtgagtacgc
+     1321 gcggcccgcg tccccgggga tggggctcag agctcccagc atggggccaa cccgcagcat
+     1381 caggcccggg ctcccggcag ggctcctcgc ccacctcgag acccgggacg ggggcctagg
+     1441 ggacccagga cgtccccagt gccgttagcg gctttcaggg ggcccggagc gcctcgggga
+     1501 gggatgggac cccgggggcg gggagggggg gcagactgcg ctcaccgcgc cttggcatcc
+     1561 tcccccgggc tccagcaaac ttttctttgt tcgctgcagt gccgccctac accgtggtct
+     1621 atttcccagt tcgaggtagg agcatgtgtc tggcagggaa gggaggcagg ggctggggct
+     1681 gcagcccaca gcccctcgcc cacccggaga gatccgaacc cccttatccc tccgtcgtgt
+     1741 ggcttttacc ccgggcctcc ttcctgttcc ccgcctctcc cgccatgcct gctccccgcc
+     1801 ccagtgttgt gtgaaatctt cggaggaacc tgtttccctg ttccctccct gcactcctga
+     1861 cccctccccg ggttgctgcg aggcggagtc ggcccggtcc ccacatctcg tacttctccc
+     1921 tccccgcagg ccgctgcgcg gccctgcgca tgctgctggc agatcagggc cagagctgga
+     1981 aggaggaggt ggtgaccgtg gagacgtggc aggagggctc actcaaagcc tcctgcgtaa
+     2041 gtgaccatgc ccgggcaagg ggagggggtg ctgggcctta gggggctgtg actaggatcg
+     2101 ggggacgccc aagctcagtg cccctccctg agccatgcct cccccaacag ctatacgggc
+     2161 agctccccaa gttccaggac ggagacctca ccctgtacca gtccaatacc atcctgcgtc
+     2221 acctgggccg cacccttggt gagtcttgaa cctccaagtc cagggcaggc atgggcaagc
+     2281 ctctgccccc ggagcccttt tgtttaaatc agctgccccg cagccctctg gagtggagga
+     2341 aactgagacc cactgaggtt acgtagtttg cccaaggtca agcctgggtg cctgcaatcc
+     2401 ttgccctgtg ccaggctgcc tcccaggtgt caggtgagct ctgagcacct gctgtgtggc
+     2461 agtctctcat ccttccacgc acatcctctt cccctcctcc caggctgggg ctcacagaca
+     2521 gccccctggt tggcccatcc ccagtgactg tgtgttgatc aggcgcccag tcacgcggcc
+     2581 tgctcccctc cacccaaccc cagggctcta tgggaaggac cagcaggagg cagccctggt
+     2641 ggacatggtg aatgacggcg tggaggacct ccgctgcaaa tacatctccc tcatctacac
+     2701 caactatgtg agcatctgca ccagggttgg gcactggggg ctgaacaaag aaaggggctt
+     2761 cttgtgccct cacccccctt acccctcagg tggcttgggc tgaccccttc ttgggtcagg
+     2821 gtgcaggggc tgggtcagct ctgggccagg ggcccagggg cctgggacaa gacacaacct
+     2881 gcacccttat tgcctgggac atcaaccagc caagtaacgg gtcatggggg cgagtgcaag
+     2941 gacagagacc tccagcaact ggtggtttct gatctcctgg ggtggcgagg gcttcctgga
+     3001 gtagccagag gtggaggagg atttgtcgcc agtttctgga tggaggtgct ggcactttta
+     3061 gctgaggaaa atatgcagac acagagcaca tttggggacc tgggaccagt tcagcagagg
+     3121 cagcgtgtgt gcgcgtgcgt gtgcatgtgt gtgcgtgtgt gtgtgtacgc ttgcatttgt
+     3181 gtcgggtggg taaggagata gagatgggcg ggcagtaggc ccaggtcccg aaggccttga
+     3241 acccactggt ttggagtctc ctaagggcaa tgggggccat tgagaagtct gaacagggct
+     3301 gtgtctgaat gtgaggtcta gaaggatcct ccagagaagc cagctctaaa gcttttgcaa
+     3361 tcatctggtg agagaaccca gcaaggatgg acaggcagaa tggaatagag atgagttggc
+     3421 agctgaagtg gacaggattt ggtactagcc tggttgtggg gagcaagcag aggagaatct
+     3481 gggactctgg tgtctggcct ggggcagacg ggggtgtctc aggggctggg agggatgaga
+     3541 gtaggatgat acatggtggt gtctggcagg aggcgggcaa ggatgactat gtgaaggcac
+     3601 tgcccgggca actgaagcct tttgagaccc tgctgtccca gaaccaggga ggcaagacct
+     3661 tcattgtggg agaccaggtg agcatctggc cccatgctgt tccttcctcg ccaccctctg
+     3721 cttccagatg gacacaggtg tgagccattt gtttagcaaa gcagagcaga cctaggggat
+     3781 gggcttaggc cctctgcccc caattcctcc agcctgctcc cgctggctga gtccctggcc
+     3841 cccctgccct gcagatctcc ttcgctgact acaacctgct ggacttgctg ctgatccatg
+     3901 aggtcctagc ccctggctgc ctggatgcgt tccccctgct ctcagcatat gtggggcgcc
+     3961 tcagtgcccg gcccaagctc aaggccttcc tggcctcccc tgagtacgtg aacctcccca
+     4021 tcaatggcaa cgggaaacag tgagggttgg ggggactctg agcgggaggc agagtttgcc
+     4081 ttcctttctc caggaccaat aaaatttcta agagagctac tatgagcact gtgtttcctg
+     4141 ggacggggct taggggttct cagcctcgag gtcggtggga gggcagagca gaggactaga
+     4201 aaacagctcc tccagcacag tcagtggctt cctggagccc tcagcctggc tgtgtttact
+     4261 gaacctcaca aactagaaga ggaagaaaaa aaaagagaga gagaaacaaa gagaaataac
+     4321 catggtcact gtcctggagc accacacagt gtatatagaa ggagaaaagt ctcatagaaa
+     4381 catgctttct aggcacagca cgtgcctgtc agatggacag actccaggat ggagggaaat
+     4441 gagggattct gggaaggagg gatgtgagga gttccctgtc ctgggggatt agctgagtag
+     4501 ctctgagcag cccaggttgg tgggagggtc attctgcttg gatgggggct ttcctggctt
+     4561 cctgctgact tgtgagtt
+//
+

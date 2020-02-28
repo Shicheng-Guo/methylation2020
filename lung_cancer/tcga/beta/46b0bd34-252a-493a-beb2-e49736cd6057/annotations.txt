@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+33d5879d-6102-50b8-be12-0e08cb9700aa	11975	case	c650b1ff-8a4c-4ee9-b7c1-268c28c83827	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	Pt with synchronous R LUAD-mixed subtype.

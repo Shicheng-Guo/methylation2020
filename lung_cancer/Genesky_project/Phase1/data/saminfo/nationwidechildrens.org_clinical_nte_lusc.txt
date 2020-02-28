@@ -1,0 +1,31 @@
+bcr_patient_barcode	new_tumor_event_dx_days_to	new_tumor_event_type	new_tumor_event_dx_evidence	new_tumor_event_surgery	new_tumor_event_surgery_days_to_loco	new_tumor_event_surgery_met	new_tumor_event_surgery_days_to_met	new_tumor_event_radiation_tx	new_tumor_event_pharmaceutical_tx
+bcr_patient_barcode	days_to_new_tumor_event_after_initial_treatment	new_neoplasm_event_type	progression_determined_by	additional_surgery_locoregional_procedure	days_to_additional_surgery_locoregional_procedure	additional_surgery_metastatic_procedure	days_to_additional_surgery_metastatic_procedure	additional_radiation_therapy	additional_pharmaceutical_therapy
+CDE_ID:2673794	CDE_ID:3392464	CDE_ID:3119721	CDE_ID:2786205	CDE_ID:3008755	CDE_ID:3408572	CDE_ID:3008757	CDE_ID:3408682	CDE_ID:3427615	CDE_ID:3427616
+TCGA-77-8128	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-77-8130	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-77-8131	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-77-8133	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-77-8136	301	Distant Metastasis	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-77-8138	289	Locoregional Recurrence	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-77-8139	[Not Available]	[Not Available]	[Not Available]	NO	[Not Available]	NO	[Not Available]	NO	NO
+TCGA-77-8140	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-77-8143	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-77-8144	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-77-8145	136	Distant Metastasis	[Not Available]	NO	[Not Available]	NO	[Not Available]	YES	NO
+TCGA-77-8146	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-77-8148	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-77-8150	1278	Locoregional Recurrence	Biopsy with Histologic Confirmation	NO	[Not Available]	NO	[Not Available]	YES	YES
+TCGA-77-8154	[Not Available]	[Not Available]	[Not Available]	NO	[Not Available]	NO	[Not Available]	NO	NO
+TCGA-77-8156	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Not Available]	[Unknown]	[Unknown]
+TCGA-98-8020	11	Distant Metastasis	Convincing Imaging	[Not Available]	[Not Available]	NO	[Not Available]	YES	NO
+TCGA-68-7757	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	NO	NO
+TCGA-68-8250	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	NO	NO
+TCGA-58-8392	96	Distant Metastasis	Convincing Imaging	[Not Available]	[Not Available]	NO	[Not Available]	NO	YES
+TCGA-58-A46K	735	Locoregional Recurrence|Distant Metastasis	Convincing Imaging	NO	[Not Available]	NO	[Not Available]	YES	YES
+TCGA-85-A4QQ	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Unknown]
+TCGA-85-A50Z	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Unknown]
+TCGA-85-A510	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Unknown]
+TCGA-85-A512	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Unknown]
+TCGA-85-A513	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Unknown]	[Unknown]
+TCGA-NC-A5HI	70	New Primary Tumor	Convincing Imaging	[Not Available]	[Not Available]	[Not Available]	[Not Available]	NO	NO
+TCGA-77-A5GB	229	New Primary Tumor	Biopsy with Histologic Confirmation	YES	168	[Unknown]	[Not Available]	[Unknown]	[Unknown]

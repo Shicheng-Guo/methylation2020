@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+f850d36d-afb6-53eb-b176-222773872d33	4969	case	c8544fb3-b26e-4672-bb81-a271db724b04	Neoadjuvant therapy	Notification	2012-02-01T00:00:00	Approved	\N

@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+ade6d7b6-ad37-5025-b07a-b994297f3bbd	11742	case	5af499be-d2b9-4eaf-9a9f-435dccb51917	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy thryoid cancer. No systemic chemotherapy or radiation.

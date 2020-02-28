@@ -1,0 +1,96 @@
+MethPrimer result
+
+Sequence Name: 
+Sequence Length: 244
+
+CpG island prediction results
+Criteria used: Island size > 100, GC Percent > 50.0, Obs/Exp > 0.60
+ 1 CpG island(s) were found in your sequence
+            Size	(Start - End)
+ Island 1   139 bp	 (49 - 187)
+
+Primer picking results for methylation specific PCR (MSP)
+   
+   Primer            Start Size  Tm      GC%   'C's  Sequence
+1  Left  M primer      18   20   55.48   75.00   7  ATTTTAGCGGGGTTATACGT
+   Right M primer     160   18   54.33   61.11   4  GAACCAAAATTCCACGAA
+   Product size: 143, Tm: 66.6
+   Left  U primer      14   24   56.63   79.17   8  GGGTATTTTAGTGGGGTTATATGT
+   Right U primer     163   20   57.82   65.00   4  ACCAAACCAAAATTCCACAA
+   Product size: 150, Tm: 65.2
+2  Left  M primer      19   19   54.98   78.95   7  TTTTAGCGGGGTTATACGT
+   Right M primer     160   18   54.33   61.11   4  GAACCAAAATTCCACGAA
+   Product size: 142, Tm: 66.6
+   Left  U primer      14   24   56.63   79.17   8  GGGTATTTTAGTGGGGTTATATGT
+   Right U primer     163   20   57.82   65.00   4  ACCAAACCAAAATTCCACAA
+   Product size: 150, Tm: 65.2
+3  Left  M primer      17   21   55.65   76.19   8  TATTTTAGCGGGGTTATACGT
+   Right M primer     160   18   54.33   61.11   4  GAACCAAAATTCCACGAA
+   Product size: 144, Tm: 66.6
+   Left  U primer      14   24   56.63   79.17   8  GGGTATTTTAGTGGGGTTATATGT
+   Right U primer     163   20   57.82   65.00   4  ACCAAACCAAAATTCCACAA
+   Product size: 150, Tm: 65.2
+4  Left  M primer      16   22   56.51   77.27   8  GTATTTTAGCGGGGTTATACGT
+   Right M primer     160   18   54.33   61.11   4  GAACCAAAATTCCACGAA
+   Product size: 145, Tm: 66.8
+   Left  U primer      14   24   56.63   79.17   8  GGGTATTTTAGTGGGGTTATATGT
+   Right U primer     163   20   57.82   65.00   4  ACCAAACCAAAATTCCACAA
+   Product size: 150, Tm: 65.2
+5  Left  M primer      18   20   55.48   75.00   7  ATTTTAGCGGGGTTATACGT
+   Right M primer     178   21   54.10   66.67   9  CGAATAAATTAAAAAACCGAA
+   Product size: 161, Tm: 67.9
+   Left  U primer      14   24   56.63   79.17   8  GGGTATTTTAGTGGGGTTATATGT
+   Right U primer     180   23   55.01   65.22   9  TCCAAATAAATTAAAAAACCAAA
+   Product size: 167, Tm: 65.6
+
+    1 GGGACACTGGAGGGGGCACCCCAGCGGGGCCACACGTGCATCCACACGAACACACACACA
+      ||||:|:|||||||||:|::::||++|||::|:|++||:||::|:|++||:|:|:|:|:|
+    1 GGGATATTGGAGGGGGTATTTTAGCGGGGTTATACGTGTATTTATACGAATATATATATA
+                      M>>>>>>>>>>>>>>>>>>>>                       
+                  U>>>>>>>>>>>>>>>>>>>>>>>>                       
+
+   61 CACGCACACACACACGGACGAAAACAGCACAGCAAATCCTGTTACCAGATTTGTCGCAAA
+      :|++:|:|:|:|:|++||++||||:||:|:||:||||::|||||::||||||||++:|||
+   61 TACGTATATATATACGGACGAAAATAGTATAGTAAATTTTGTTATTAGATTTGTCGTAAA
+                                                                  
+                                                                  
+
+  121 AAAGAATAGAGAATCCTTCCCCCTCGTGGAATCCTGGTCCGGCTTCTCAACCCACCCGGA
+      ||||||||||||||::||:::::|++||||||::||||:++|:||:|:||:::|::++||
+  121 AAAGAATAGAGAATTTTTTTTTTTCGTGGAATTTTGGTTCGGTTTTTTAATTTATTCGGA
+                           M<<<<<<<<<<<<<<<<<<                    
+                            U<<<<<<<<<<<<<<<<<<<<                 
+
+  181 GGAAGAATATCCCGGAGAAGCGCAAAGGTCAAGTCTGAGCGGCCGCCTGGGGCAAGGTGG
+      ||||||||||::++||||||++:||||||:||||:||||++|:++::|||||:|||||||
+  181 GGAAGAATATTTCGGAGAAGCGTAAAGGTTAAGTTTGAGCGGTCGTTTGGGGTAAGGTGG
+                                                                  
+                                                                  
+
+  241 GCAG
+      |:||
+  241 GTAG
+         M
+          
+
+******************************************************************
+*  Explanations                                                  *
+*----------------------------------------------------------------*
+*  Upper row: Original sequence                                  *
+*  Lower row: Bisulfite modified sequence                        *
+*             (For display, assume all CpG sites are methylated) *
+*  ++         CpG sites                                          *
+*  ::::       Non-CpG 'C' converted to 'T'                       *
+*  M >>>>>>   Left  methylated-specific primer                   *
+*  M <<<<<<   Right methylated-specific primer                   *
+*                                                                *
+*  U >>>>>>   Left  unmethylated-specific primer                 *
+*  U <<<<<<   Right unmethylated-specific primer                 *
+******************************************************************
+
+
+
+
+MethPrimer v1.1 beta
+
+

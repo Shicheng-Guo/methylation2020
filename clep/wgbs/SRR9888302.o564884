@@ -1,0 +1,9 @@
+
+Now testing Bismark result file ../bam/SRR9888302_1_val_1_bismark_bt2_pe.nonCG_filtered.bam for positional sorting (which would be bad...)	/gpfs/home/guosa/PRJNA528657/methyfreq/SRR9888302_1_val_1_bismark_bt2_pe.nonCG_filtered_splitting_report.txt.1
+/gpfs/home/guosa/PRJNA528657/methyfreq/SRR9888302_1_val_1_bismark_bt2_pe.nonCG_filtered_splitting_report.txt.2
+
+/gpfs/home/guosa/PRJNA528657/methyfreq/SRR9888302_1_val_1_bismark_bt2_pe.nonCG_filtered_splitting_report.txt.1.mbias
+/gpfs/home/guosa/PRJNA528657/methyfreq/SRR9888302_1_val_1_bismark_bt2_pe.nonCG_filtered_splitting_report.txt.2.mbias
+
+/gpfs/home/guosa/PRJNA528657/methyfreq/CpG_context_SRR9888302_1_val_1_bismark_bt2_pe.nonCG_filtered.txt
+

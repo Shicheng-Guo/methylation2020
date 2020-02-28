@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+979e7e39-a81d-57d1-a84f-d9081e096a6e	11708	case	8b119d1c-6d21-4bbd-8a00-12da7b97d6c4	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy prostate cancer treated with hormone therapy. Prior malignancy secondary malignancy of unknown location treated with radiation in unknown field.
+b38d6acd-8184-54f4-890f-58eed0ad7b30	11911	case	8b119d1c-6d21-4bbd-8a00-12da7b97d6c4	History of unacceptable prior treatment related to a prior/other malignancy	Notification	2012-11-10T00:00:00	Approved	Prior malignancy prostate cancer treated with hormone therapy. Prior malignancy secondary malignancy of unknown location treated with radiation in unknown field.

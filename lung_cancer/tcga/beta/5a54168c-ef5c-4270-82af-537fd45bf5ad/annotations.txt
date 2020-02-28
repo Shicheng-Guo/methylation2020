@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+e98ebf5a-d8ca-5e30-a1a1-9a2ef5d9c1da	11758	case	ea741488-5475-4a3d-b9fe-81722f129974	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy prostate cancer.  No systemic chemotherapy or radiation. Patient with synchronous LUAD, mixed subtype.
+55eb6cc2-9a4c-5200-bf54-cc80c70bbe5c	11974	case	ea741488-5475-4a3d-b9fe-81722f129974	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	Prior malignancy prostate cancer.  No systemic chemotherapy or radiation. Patient with synchronous LUAD, mixed subtype.

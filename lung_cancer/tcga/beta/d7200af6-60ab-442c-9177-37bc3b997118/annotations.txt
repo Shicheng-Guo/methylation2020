@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+92a4d84a-7457-501c-b95b-2fa0a04e6297	16483	case	99daa971-31d0-4c37-9c12-b0dc42ddd19b	Synchronous malignancy	Notification	2013-07-16T00:00:00	Approved	Patient was diagnosed with a thymoma at same time as this lung mallignancy.

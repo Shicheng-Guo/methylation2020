@@ -1,0 +1,11 @@
+#############################################################################
+browser position chr19:49302001-49304701
+browser pack refGene encodeRegions
+track type=bedGraph name="BedGraph Format" description="BedGraph format" visibility=full color=0,100,200 altColor=200,100,0 priority=20 maxHeightPixels=128:64:32 visibility=full 
+#############################################################################
+
+track type=bedGraph name=track_label description=center_label
+track type=bedGraph name=H1299_NSCLC description=Human_NSCLC_H1299 visibility=full color=0,100,200 altColor=200,100,0 priority=20 maxHeightPixels=128:64:32
+
+
+

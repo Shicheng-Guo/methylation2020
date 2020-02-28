@@ -1,0 +1,96 @@
+Reverse primer
+20 bp (from 359 to 340)
+MethPrimer result
+
+Sequence Name: 
+Sequence Length: 452
+
+CpG island prediction results
+(Criteria used: Island size > 100, GC Percent > 50.0, Obs/Exp > 0.6)
+ 1 CpG island(s) were found in your sequence
+            Size	(Start - End)
+ Island 1   345 bp	 (50 - 394)
+
+Primer picking results for bisulfite sequencing (or restriction) PCR
+   
+   Primer            Start Size  Tm      GC%   'C's  Sequence
+1  Left  primer       116   20   58.85   75.00   5  GGGATATTGGAGGGGGTATT
+   Right primer       359   20   58.29   75.00   4  CTACCCACCTTACCCCAAAC
+   Product size: 244, Tm: 68.7, CpGs in product: 14
+
+2  Left  primer       116   20   58.85   75.00   5  GGGATATTGGAGGGGGTATT
+   Right primer       360   21   59.13   71.43   4  ACTACCCACCTTACCCCAAAC
+   Product size: 245, Tm: 68.7, CpGs in product: 14
+
+3  Left  primer       116   20   58.85   75.00   5  GGGATATTGGAGGGGGTATT
+   Right primer       358   19   57.23   73.68   4  TACCCACCTTACCCCAAAC
+   Product size: 243, Tm: 68.6, CpGs in product: 14
+
+4  Left  primer       116   20   58.85   75.00   5  GGGATATTGGAGGGGGTATT
+   Right primer       361   21   59.62   71.43   5  AACTACCCACCTTACCCCAAA
+   Product size: 246, Tm: 68.8, CpGs in product: 14
+
+5  Left  primer       116   20   58.85   75.00   5  GGGATATTGGAGGGGGTATT
+   Right primer       357   18   57.10   77.78   4  ACCCACCTTACCCCAAAC
+   Product size: 242, Tm: 68.6, CpGs in product: 14
+
+
+    1 TCCAGCTCATTGAGTTGTTCCAGGGTGAAATTGGTCCGACTTCGCCTCTGCTTGATTTTG
+      |::||:|:|||||||||||::||||||||||||||:++|:||++::|:||:|||||||||
+    1 TTTAGTTTATTGAGTTGTTTTAGGGTGAAATTGGTTCGATTTCGTTTTTGTTTGATTTTG
+                                                                  
+
+   61 GTCTGGCCTTCGTCCTCCATCCCTTTCGCATCCTCTTTGCGATCTTTCAGCTCCGGGGAC
+      ||:|||::||++|::|::||:::|||++:||::|:||||++||:|||:||:|:++||||:
+   61 GTTTGGTTTTCGTTTTTTATTTTTTTCGTATTTTTTTTGCGATTTTTTAGTTTCGGGGAT
+                                                             >>>>>
+
+  121 ACTGGAGGGGGCACCCCAGCGGGGCCACACGTGCATCCACACGAACACACACACACACGC
+      |:|||||||||:|::::||++|||::|:|++||:||::|:|++||:|:|:|:|:|:|++:
+  121 ATTGGAGGGGGTATTTTAGCGGGGTTATACGTGTATTTATACGAATATATATATATACGT
+      >>>>>>>>>>>>>>>                                             
+
+  181 ACACACACACGGACGAAAACAGCACAGCAAATCCTGTTACCAGATTTGTCGCAAAAAAGA
+      |:|:|:|:|++||++||||:||:|:||:||||::|||||::||||||||++:||||||||
+  181 ATATATATACGGACGAAAATAGTATAGTAAATTTTGTTATTAGATTTGTCGTAAAAAAGA
+                                                                  
+
+  241 ATAGAGAATCCTTCCCCCTCGTGGAATCCTGGTCCGGCTTCTCAACCCACCCGGAGGAAG
+      |||||||||::||:::::|++||||||::||||:++|:||:|:||:::|::++|||||||
+  241 ATAGAGAATTTTTTTTTTTCGTGGAATTTTGGTTCGGTTTTTTAATTTATTCGGAGGAAG
+                                                                  
+
+  301 AATATCCCGGAGAAGCGCAAAGGTCAAGTCTGAGCGGCCGCCTGGGGCAAGGTGGGCAGT
+      |||||::++||||||++:||||||:||||:||||++|:++::|||||:||||||||:|||
+  301 AATATTTCGGAGAAGCGTAAAGGTTAAGTTTGAGCGGTCGTTTGGGGTAAGGTGGGTAGT
+                                             <<<<<<<<<<<<<<<<<<<< 
+
+  361 CATCCACCACCTCCTTCACAAACGTACCTCGACTCACCGCCTCACTATTCACCCCCCAGT
+      :||::|::|::|::||:|:|||++||::|++|:|:|:++::|:|:||||:|::::::|||
+  361 TATTTATTATTTTTTTTATAAACGTATTTCGATTTATCGTTTTATTATTTATTTTTTAGT
+                                                                  
+
+  421 CACCGGCCTTCCCCAGCAAACACCAAATGGTT
+      :|:++|::||::::||:|||:|::||||||||
+  421 TATCGGTTTTTTTTAGTAAATATTAAATGGTT
+                                      
+
+******************************************************************
+*  Explanations                                                  *
+*----------------------------------------------------------------*
+*  Upper row: Original sequence                                  *
+*  Lower row: Bisulfite modified sequence                        *
+*             (For display, assume all CpG sites are methylated) *
+*  ++         CpG sites                                          *
+*  ::::       Non-CpG 'C' converted to 'T'                       *
+*  >>>>>>     Left  primer                                       *
+*  <<<<<<     Right primer                                       *
+*                                                                *
+******************************************************************
+
+
+
+
+MethPrimer v1.1 beta
+
+

@@ -1,0 +1,12 @@
+group	author	sampletype	age	stage1	stage2	genderatio	event.e	n.e	event.c	n.c	methods	aim	Multipletarget	controldesign	year	Ad2Sc	primer	primer2	author2	author3
+1	Haroun et al	tissue	53	17.9	39.3	0.714286	7	28	0	28	MSP	Diagnose	Multiple	hom	2014	0.64 	set1	set1	Haroun(Egypt)	Haroun
+2	Grimminger et al	tissue	63	49	21	0.758242	13	91	13	91	qMSP	Non-diagnose	Single	hom	2012	0.43 	set2	set2	Grimminger(Germany)	Grimminger
+3	Vineis et al	serum	59	NA	NA	0.49495	49	93	47	96	pyrosequencing	Non-diagnose	Multiple	heter	2011	0.68 	set3	set3	Vineis(multi)	Vineis
+4	Kim,D.S.et al	tissue	63	56.6	18.2	0.808081	15	99	5	99	MSP	Non-diagnose	Multiple	hom	2007	0.38 	set1	set1	Kim,D.S.(Korea)	Kim,D.S.
+5	Vallböhmer et al	tissue	63	49	21	0.758242	17	91	14	91	qMSP	Non-diagnose	Multiple	hom	2006	0.44 	set2	set2	Vallböhmer(USA)	Vallböhmer
+6	Kim,Y.T.et al	tissue	59	44.44	15.28	0.402778	33	72	24	72	MSP	Non-diagnose	Multiple	hom	2005	1.00 	set1	set1	Kim,Y.T.(Korea)	Kim,Y.T.
+7	Topaloglu et al	BAL(Bronchoalveolar Lavage)	NA	54.84	29.03	NA	1	31	0	10	qMSP	Non-diagnose	Multiple	heter	2004	0.75 	NA	NA	Topaloglu(USA)	Topaloglu
+8	Yanagawa et al	tissue	67.3	66.67	8	0.72	1	75	0	75	MSP	Diagnose	Multiple	hom	2003	0.60 	set1	set1	Yanagawa(Japan)	Yanagawa
+9	Toyooka et al	tissue	63	NA	NA	0.690661	37	514	0	84	MSP	Non-diagnose	Multiple	hom	2003	0.61 	set1	set1	Toyooka(multi)	Toyooka
+10	Zochbauer-Muller et al	tissue	61	57.01	19.63	0.71028	7	107	0	104	MSP	Non-diagnose	Multiple	hom	2001	0.51 	set1	set1	Zochbauer-Muller(Australia)	Zochbauer-Muller
+

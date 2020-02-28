@@ -1,0 +1,53 @@
+lab tests
+diagnosis
+clinics
+procedures
+medications
+
+
+
+providers
+practices
+enterprises
+
+persionalized treatment
+predictive diagnostic 
+
+dna
+rna
+protein
+metablomics
+
+integrate and share different information: PI/LAB, pathology lab, genomci center, HPC and informatics technology, healthcare insitutions. 
+
+How to merge these data? 
+
+costs overexaggeration 
+
+security issue in healthcare research. 
+
+store, sturcture, secure, hanlde process track report and visualizeation and search. 
+
+multi-role based grahpical user itnerface. 
+
+ppt skill is really powerful for india people. 
+
+LIMS laboratory information management system 
+
+
+bcl2fastq   mismatch 
+
+
+CLinic : ICD and NDC
+Genomcis: authentic genes, generline snp or somatic snp
+clincial genomics: gene to disease, germline snp to disease, somatic snp to disase
+
+
+PAS-code 
+PAS-Genomcis
+PAS-SNP
+PAS-MUT
+
+
+
+

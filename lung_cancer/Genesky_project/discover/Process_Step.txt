@@ -1,0 +1,4 @@
+first: prepare array file seperately and normalization
+second: chage gene to cgsite
+third: integrate all the data
+forth: 

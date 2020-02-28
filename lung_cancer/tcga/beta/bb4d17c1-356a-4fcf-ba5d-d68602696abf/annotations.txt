@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+9438962b-a1b4-5475-888c-cca3c77f4675	11965	case	ad74c0e8-8878-4efc-997d-981cd547bc5b	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	Pt with synchronous R bronchioalveolar carcinoma

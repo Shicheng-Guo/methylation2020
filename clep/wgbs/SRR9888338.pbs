@@ -1,0 +1,19 @@
+#!/bin/bash
+#PBS -N SRR9888338
+#PBS -q shortq
+#PBS -l nodes=1:ppn=1
+#PBS -M Guo.Shicheng@marshfieldresearch.org
+#PBS -m abe
+cd /mnt/bigdata/Genetic/Projects/shg047/methylation/clep/wgbs
+# fastq-dump --skip-technical --split-files --gzip SRR9888338
+# trim_galore --paired --stringency 3 --phred33 --clip_R1 2 --clip_R2 2 --fastqc --illumina SRR9888338_1.fastq.gz SRR9888338_2.fastq.gz --output_dir ../fastq_trim
+# bismark --bowtie2 --multicore 1 --fastq -N 1 --phred33-quals ~/hpc/db/hg19/bismark -1 ../fastq_trim/SRR9888338_1_val_1.fq.gz -2 ../fastq_trim/SRR9888338_2_val_2.fq.gz -o ../bam
+# filter_non_conversion --paired ../bam/SRR9888338_1_val_1_bismark_bt2_pe.bam
+# deduplicate_bismark --bam ../bam/SRR9888338_1_val_1_bismark_bt2_pe.nonCG_filtered.bam
+# bismark_methylation_extractor --no_overlap --multicore 1 --merge_non_CpG --bedGraph --cutoff 10 --ignore 1 --buffer_size 4G --comprehensive --output /gpfs/home/guosa/PRJNA528657/methyfreq  ../bam/SRR9888338_1_val_1_bismark_bt2_pe.nonCG_filtered.bam
+coverage2cytosine --merge_CpG --gzip --genome_folder ~/hpc/db/hg19/bismark -o /gpfs/home/guosa/PRJNA528657/bed/SRR9888338_1.mergeCpG.bed /gpfs/home/guosa/PRJNA528657/methyfreq/SRR9888338_1_val_1_bismark_bt2_pe.nonCG_filtered.bismark.cov.gz
+# samtools sort -@ 8 ../bam/SRR9888338_1_val_1_bismark_bt2_pe.nonCG_filtered.bam -o ../sortbam/SRR9888338_bismark_bt2_pe.sortc.bam
+# samtools index ../sortbam/SRR9888338_bismark_bt2_pe.sortc.bam
+# cd ../sortbam
+# perl ~/bin/samInfoPrep4Bam2Hapinfo.pl ~/oasis/db/hg19/hg19.cut10k.bed > saminfo.txt
+# perl ~/bin/bam2hapInfo2PBS.pl saminfo.txt submit bismark ~/hpc/db/hg19/hg19.chrom.sizes ~/hpc/db/hg19/HsGenome19.CpG.positions.txt

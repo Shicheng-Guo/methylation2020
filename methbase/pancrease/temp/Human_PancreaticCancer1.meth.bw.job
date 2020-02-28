@@ -1,0 +1,8 @@
+#PBS -N Human_PancreaticCancer1.meth.bw
+#PBS -l nodes=1:ppn=1
+#PBS -M Guo.shicheng@marshfieldresearch.org
+#PBS -m abe
+#PBS -o /gpfs/home/guosa/hpc/methylation/methbase/pancrease/temp/
+#PBS -e /gpfs/home/guosa/hpc/methylation/methbase/pancrease/temp/
+cd /gpfs/home/guosa/hpc/methylation/methbase/pancrease
+bigWigToWig Human_PancreaticCancer1.meth.bw Human_PancreaticCancer1.meth.bw.wig

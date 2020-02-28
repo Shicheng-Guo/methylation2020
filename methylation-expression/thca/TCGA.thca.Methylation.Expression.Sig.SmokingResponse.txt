@@ -1,0 +1,2 @@
+CHR	Dmr.Start	Dmr.End	Delta.beta	meth.Pvalue	Meth.Status	Gene.Symbol	Expression.FC	Expression.Pvalue	Expression.Status
+13	100577701	100579715	0.209341735291653	1.35181176581102e-22	Hypomethylation	ZIC5	32.45	1.43568947170814e-13	Overexpression

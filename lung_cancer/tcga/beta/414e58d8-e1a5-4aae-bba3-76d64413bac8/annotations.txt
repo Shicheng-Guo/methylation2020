@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+7540077a-0a70-5550-821e-7436855a3e9f	11957	case	3c112114-6a8b-4aea-9349-6dffbaad078d	Neoadjuvant therapy	Notification	2012-11-10T00:00:00	Approved	Patient received neo-adjuvant vincristine, CCNU, cytoxan, doxirubicin, and cisplatinum  prior to resection of TCGA tumor

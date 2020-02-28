@@ -1,0 +1,584 @@
+bcr_patient_barcode	bcr_sample_uuid	days_to_normal_sample_procurement	method_of_normal_sample_procurement	ncedna_dna_conc	ncedna_dna_qm	ncedna_dna_qty	ncedna_dna_vol	normal_control_type	normal_tissue_anatomic_site	normal_tissue_proximity	vial_number
+CDE_ID:2673794		CDE_ID:3288496	CDE_ID:3288147	CDE_ID:3288187	CDE_ID:3288186	CDE_ID:3288185	CDE_ID:3288188	CDE_ID:3081936			
+TCGA-18-5592	558c83ec-e426-4073-98e8-2a08bdaa70e0	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-18-5595	5311ca13-cd6f-484f-acfe-0e1ec2654229	20	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-21-5782	fb30daef-7a1f-4d1e-aa45-dde6792cd388	0	Blood Draw	100	Nano drop	30	300	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-5784	d8c493ce-15c0-4410-8fa8-76ed2071ade5	-9	Blood Draw	100	Nano drop	30	300	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-5786	5a0e5fcb-f978-45d0-88c4-4395ae5b8b06	5	Blood Draw	100	Nano drop	30	300	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-5787	949e196b-347e-4992-8119-1a3372c87447	45	Blood Draw	100	Nano drop	30	300	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-22-5471	b3ed1f7d-5862-4e5c-bf9a-e6cfa43dd279	13	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-5472	5d7f9648-e83a-41ee-a90c-5ae7c3bfa9be	25	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-22-5473	618ddeb6-3d60-4f5a-9370-82242e6725ee	-2	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-5474	31a3d319-8f98-4223-9bea-e2ca0089a529	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-5477	f83937db-9c5a-4e27-9627-c92d90610c6a	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-5478	8455fc46-28fc-4979-bb97-b8171120c604	5	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-5480	c5273909-84f8-4d94-b7d9-7ed786aa0ff0	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-5482	3f038ee5-25bc-448e-9ab1-86f50f950edd	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-5485	ab2b1ec0-6b7f-4c17-a1a4-ebb14f64bade	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-5489	546a0c7c-38cc-4b72-a622-b3a7c51f4cf0	16	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-5491	c069f618-5980-4e2c-8fc8-e496b0a4c5e1	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-5492	6290720a-78cc-4f1b-b315-5a878e5115cd	30	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-34-5234	43b305dd-e96f-48f6-8518-bf52b9a86269	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-37-5819	c833a3be-1ec3-4be7-a9ec-1320ac146459	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-43-5668	f473e06e-1938-48e5-9a5b-ffece7b17320	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-5668	302794e9-ada7-4b5e-9638-0889004bdf43	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-5897	50b1191e-db55-4ca7-b8d7-df58f12c0677	1	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-5898	b8f34b7e-fc5d-4599-bb48-5e6a123e8787	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-22-4593	f0217eb5-1196-4d7b-9eff-b4082ade5ed7	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-22-5483	e6dff509-ec1f-43fb-ad44-c0bccd68c506	2	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-33-6737	7458814a-f80a-4dcc-bb93-2be5810c3fd4	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-34-5231	c635d291-4a94-431f-b63d-9cd1c050670e	28	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-34-5232	7d7f4cad-7963-4990-b9a0-5717a77ebe1d	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-34-5236	7e416738-4c10-464b-892e-b8b848c86506	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-34-5239	4e7ce50a-073d-4281-b8b1-3e0eb7f75933	36	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-34-5927	91e5ff77-bb73-44c0-bbcb-f1a4b8d3873b	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Adjacent (< or = 2cm)	1
+TCGA-34-5928	1c0c4031-9928-4399-8c7c-8199f6c4a721	153	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Adjacent (< or = 2cm)	1
+TCGA-34-5929	ad80dde4-13b6-4e7f-91c5-697b5e16fb5c	43	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-39-5019	ee4505bb-fe1e-49b2-b2da-01524bfc6e0f	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5022	d2327f3e-8d7f-4d91-9d84-e415293ebbdb	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5024	3e642d50-ee15-4696-9522-cb6801e08340	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-39-5027	0f7076c3-4121-4d3d-bb3b-ff923064a1a0	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-43-6143	9c551d4b-3bb6-4686-8f59-462fb8c682ba	26	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-6143	51cdde20-9d99-427b-99ad-c8bab96b0fd4	26	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-6647	b2bd3842-6ca1-4c63-9e71-031af39c3a65	42	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-6647	2b465b7d-e2a0-485b-9a50-ff20083c7c2c	42	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-6770	aed64b85-c5b5-46dc-a829-6c8c1a3f2949	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-6770	ec08f43c-bb64-42eb-b08e-c2f61d3d04b2	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-6771	826fe8ce-da91-4d56-bf72-36e5342f92eb	68	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-6771	3510e568-5fa1-4dd0-bd44-ed4c7363e736	68	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-46-6025	365936f0-8622-44b8-803d-b6c17a5f27a2	29	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Adjacent (< or = 2cm)	1
+TCGA-46-6026	c862c655-6f38-45ef-8c3f-8da0323bdd36	18	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Adjacent (< or = 2cm)	1
+TCGA-56-6545	832a3dcb-6f0f-499f-b39c-2e4687a4256a	62	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-6546	d150f9bd-656c-4b64-ab09-91933947f796	25	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-60-2709	37a36c00-ab6b-41eb-90e3-a059c183c72c	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-63-6202	acba7c23-91a7-4849-9472-fd530c08d08a	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-70-6722	8c04f1c5-684c-4c6c-b9f1-968ae8e7b70f	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-70-6723	1bf81f9b-1b1b-47c9-b05d-cb14158eb181	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-6175	7556da84-45af-4d2b-b68f-1559ae1846dd	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-6560	f87ca70b-224b-4362-9db6-c9756f7428e0	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-6561	dd50dde9-1972-4384-a2e1-35f84fb4c6d4	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-22-5479	214a7d55-0859-4828-9ee8-d946bfb5c0ad	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-5481	18be516f-6889-47f5-ba2d-9d7ac91636e3	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-33-6738	834f6de5-88c6-43c9-9c5b-5ac4d6338096	9	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-34-7107	4034aec2-8ef0-42bc-80da-90bae682babf	34	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-34-7107	14b8e871-2d5f-41ed-818c-207215f49fb6	34	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-6773	784c9706-949d-43e6-ae1c-aeadef91ad6c	59	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-6773	a2240a6a-e1b5-45dc-b303-e798face8790	59	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-63-7020	582bd113-af5e-43a6-bc66-b880e24701bb	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-7021	fc9faa3c-b7c9-4e59-a215-7910770bc6e4	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-7022	640ee60e-6de4-4328-86da-e7c97560becd	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-7023	34e60e42-6906-4d1b-9b73-43f2a63b1d40	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-6842	1e94ef05-bdba-4811-b1da-d2380d0d5fbe	-1	Blood Draw	0.238	Nanodrop	25	105	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-77-6842	2a1157f7-2069-497f-8a0f-90a0e4be869b	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	Distal (>2cm)	1
+TCGA-77-6843	ff240243-cf04-4ca9-b829-3bbd459ff8f5	1	Blood Draw	0.359	Nanodrop	27	75	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-77-6843	4468fbfa-ae45-4cce-bc5f-1cbff7d95091	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-77-6844	5e0458cd-82de-427e-b43d-0258fbbd8130	7	Blood Draw	0.253	Nanodrop	24	95	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-77-6844	615a79ca-dd69-40fe-82d4-2dbd4fb5fcf8	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-77-6845	ce332e3f-aa8e-46ea-a407-95ffb4b576d8	2	Blood Draw	0.245	Nanodrop	26	105	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-77-6845	db6ccda4-1d65-4523-87dd-adc12a669908	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-79-5596	ead3376a-6835-495a-b492-79f2c1bd6e3e	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-6798	a6826284-735e-48bb-aff0-dfa247317c26	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-90-6837	0945bee5-8d09-44a3-ac01-8e8064d2b094	42	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-90-6837	b471831a-eda9-425a-a3f2-55d62f599945	42	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-94-7033	82947b87-2680-4345-825b-75f49d268834	-1	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-51-6867	bdb749fb-4d94-4f0e-976b-e0d86f7cc03b	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-56-7221	8e0ca202-770c-4631-a741-785a7658eeb9	30	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-7222	8d216091-866c-4b2b-aec3-8c2b223cf7be	8	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-56-7222	0a7fef1a-55cb-4acb-ac28-5d30b840b423	13	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-7223	5fbe820e-c96c-44cf-824a-fb92efb6361a	21	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-7579	f941c30f-2f7e-4cbf-a40b-b77ac0711a70	44	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-56-7579	34c32a1a-b4e4-4d26-82e2-db6d190d9a45	44	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-7580	d7878b79-2422-4bec-b13c-9ca26c65965e	35	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-56-7580	e8b0ef03-7060-4f91-a5f8-4e178178f0c3	37	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-7582	c002ad87-ed8d-4e67-a067-32ab72739795	26	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-7582	c20d4f53-4d3f-4062-a01e-c3cf2d23de31	26	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-60-2703	7ced0952-5750-4a2b-a337-9190b599c670	54	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2704	15078ebf-c7bd-4cb1-a947-b0d49cb4d9d5	70	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-77-7138	561ce0a1-9571-4ac8-8437-5edbde482dc1	0	Blood Draw	1.103	Nanodrop	22	20	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-77-7138	37159282-62c1-474d-88bd-0c303b16eadf	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-77-7139	13ce75ea-0190-4fc3-8276-fb1da412c1fa	3	Blood Draw	0.479	Nanodrop	22	46	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-77-7139	177fb718-0d74-40e0-a349-a22d9c50a5e1	-365	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-77-7140	88b45754-a545-4e4d-9195-0808d796a21b	-22	Blood Draw	0.781	Nanodrop	22	28	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-77-7140	f82c56ef-163a-4c44-b408-d397d6d54405	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-77-7141	ccb34ac0-c472-4cfc-ae66-5c8a54e8f5fe	2	Blood Draw	0.138	Nanodrop	22	159	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-77-7141	42d4112d-4094-4c21-920b-312e7de2d60f	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-77-7142	815c5269-135a-4a4c-9eb8-5d115f25f463	5	Blood Draw	0.238	Nanodrop	20	84	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-7142	8b0c5f64-54df-47b2-8147-2e89520889bc	5	Blood Draw	0.238	Nanodrop	20	84	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-7335	20046c5b-b7d3-449c-bf76-4e8518f6073e	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Distal (>2cm)	1
+TCGA-77-7337	98145dc8-4762-4b2b-9301-2ac0c7bf43c7	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Distal (>2cm)	1
+TCGA-77-7338	42ceb77a-88b7-46d4-ad6a-8a009a336718	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-77-7463	73c423b7-c1e3-4be3-bc1d-de61e1111dd8	-18	Blood Draw	0.182	Nanodrop	20	110	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-7465	20ee5e61-e9d6-4439-b1af-df675cb420ae	-1	Blood Draw	0.402	Nanodrop	20	50	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-92-7340	264e40a5-7514-43e9-ad8a-b141bfdeb5c6	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-92-7340	0050cf50-b69b-4806-966c-129ca63212ed	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-92-7341	73886b08-71a1-42f8-9e5d-89e9cb0447bb	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-92-7341	769dae69-c9a5-4e8a-a415-af79bf2bc70d	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-96-7544	3b032e37-b96b-4417-87df-dc6371f79498	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-96-7545	789d87b2-59bb-49c8-b055-e2a917a4f018	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-7454	0aaaae8b-19eb-4274-882a-b1d28373550a	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-7454	dc86fd8b-419a-41c8-aae3-93c15ded70d7	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-22-4605	a5931a6d-ca7e-4984-a5ea-a81cdece9fac	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-4609	894d620e-4c29-4499-94bf-dcb510cd5aca	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-33-4587	a4047782-532b-4f1a-bcdc-6a140cfa0f7f	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-39-5040	acb1d1c3-e1e7-4d23-a1ca-12d9ad379855	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-43-5670	52f75eb2-7156-415c-91f4-2278e976312f	37	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-5670	3f43c470-45b7-4ef6-9ddc-85bf2519a0ae	37	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-5670	0f621065-6f8f-4f57-8676-4dd855f4b2ed	37	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	3
+TCGA-43-7656	4d42a376-6b9f-4be4-a439-186c7cb38749	16	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-7656	731e5066-906b-424e-8267-b0a954f3eca2	16	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-7657	f30e0014-6bc3-4d0c-967c-6bea94b10751	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-7657	92c7c076-1ae8-4672-a58f-7a4e6cc10e47	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-7658	ec1a4a7d-cae9-404d-a121-738e33dda2f5	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-7658	94b70d2c-da6d-4054-9bcf-7f9334ba70fe	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-52-7622	55fb8004-0bd7-4b76-923c-19e7ead33939	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-52-7809	93a75805-410c-4c2c-b8f6-6e80e5946692	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-52-7810	764298f1-326b-45da-a0aa-5432bcade145	40	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-52-7811	9fab6877-7060-4af2-9db0-917f8b7651a9	23	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-52-7812	dcb8deb8-e798-45b7-9f69-c56577cda4ca	26	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-7730	bc60f18a-2856-45b7-bd35-707e6fe15e79	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-7731	0faa6d13-9653-4037-898c-4162bf2f9c09	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-56-7731	44a33023-86eb-4273-8982-7477202fa75a	1	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-7822	adb3e691-c5af-4a92-8775-eb3c09b734c4	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-56-7822	069bb34e-e4ca-4a07-89d6-107f28598718	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-60-2697	4c209fb1-503c-4152-99af-1ba713fc3b9b	93	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-68-7755	06bc9b2b-fe43-46d7-a6fc-4f0f371565fb	-28	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-68-7756	7e08e7d1-2e88-484d-9576-a684522c599a	50	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-7696	016efcf8-0369-427c-a377-5e87280c5044	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-7697	0420904d-34b1-485d-9c5b-2539d9f1c7ca	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-85-7698	3cf93188-160b-4781-8bb5-426aad91af3c	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	3
+TCGA-85-7699	dd4820fc-ea6d-42c8-bf41-e76e539442bd	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-85-7710	9f43a52d-46e7-4d93-8e32-0eb7bb043534	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	3
+TCGA-85-7710	8d47b3af-175c-454f-a7e1-967ddda59b5e	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-85-7843	e5cc6bde-1b20-442f-92c4-41d8068e28fd	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-7844	2c47345e-6d85-47f7-9771-8b92000565af	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	3
+TCGA-90-7766	322ac0d2-ddb7-41a1-ba2c-2baf295a70b0	47	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-90-7766	9ffe7f54-f2b5-47ac-befb-dded3f39da85	47	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-90-7767	338ebcb0-4eb5-4094-89c5-3af9023067df	32	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-90-7767	19c3bdde-e891-4545-8f2d-9cb94641371f	32	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-90-7769	5b3018fb-bdf8-41fa-a808-4304252ccaf2	18	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-90-7769	f6446265-8eb4-4af2-a12a-7e9b0a2bb31b	18	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-94-7557	dcb8756a-8e7d-4c36-8bbc-cfb2f3110ddc	-1	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-5783	950c5149-21ed-4e66-b6be-3c4ed5857f02	113	Blood Draw	100	Nano drop	30	300	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8007	0145082f-de51-4a4f-b353-e10f067ca40b	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-77-8008	18752bfa-d7f0-4116-9a6e-0ca1b9716990	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-77-8009	b3f4d83d-c3c8-4b0e-900f-4b2bd90fb165	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-85-7950	1d59a6d7-dd73-47f7-add0-87b017ce073c	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-90-7964	93610108-f9ee-484e-9e25-d0eccd5fa8c3	36	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-90-7964	81d1758d-ff4a-4fb6-bab4-fb6c5a6c476f	36	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-94-7943	bb4fd47c-7f4f-4ec0-a70d-32b64dc0ce59	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-43-8115	fb00923a-e409-4533-82c0-545642728b2f	53	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-43-8115	3c665ff4-8dfd-47ae-8150-61394d8cc014	53	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-8116	83bd2f6a-efea-4bea-8adb-8fee0b0088db	34	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-43-8116	1080d0fc-09a4-46c2-a0c1-b63ced5835ed	34	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-7823	1bc8a213-6161-4a8f-9b3b-ca802514f780	74	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-7823	7865aa7e-db17-448f-b730-327165b69ccf	74	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-56-8082	c82a44fd-88fc-4c7d-98bb-72aa1ebaa6cd	26	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8082	62bbfd79-c0bc-41e2-ac4b-4520eb192429	23	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-8083	15074ff8-a4bd-4914-9a78-a44d76ef7ec7	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8083	1fc126f8-a075-48e8-8fdc-ea5b0e8d7c6f	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-8201	2ccf8a17-d7a6-4752-a9a4-6f80733c625b	25	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8201	160cfdb8-0930-4c95-beb4-006e5f42c10a	28	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-77-8128	4b1ba700-a8f0-4a1e-8414-af75b20ba05b	-9	Blood Draw	0.45	Nanodrop	20	45	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8130	35775b56-b829-471c-838d-3c485f7f7858	1	Blood Draw	1.15	Nanodrop	20	17	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8131	52772b40-5e96-4c1c-8c43-702887055278	0	Blood Draw	0.33	Nanodrop	20	61	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8133	26ac5bf6-a461-4471-89b8-225198e218fe	3	Blood Draw	0.48	Nanodrop	20	42	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8136	0025eed5-0362-4d78-b2c1-cc26a26e96bf	4	Blood Draw	0.56	Nanodrop	20	35	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8138	9c5331d2-6038-4b96-ac78-0bca8a2aca6f	-14	Blood Draw	0.4	Nanodrop	20	49	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8139	4877c0fa-6977-4eb2-97ae-97495906c27f	8	Blood Draw	0.5	Nanodrop	20	40	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8140	e5352841-e651-455e-8ce8-d26a00ac7161	5	Blood Draw	0.35	Nanodrop	20	57	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8143	0d0e193f-1752-4fc8-8f50-2b511e9b30c9	4	Blood Draw	0.2	Nanodrop	20	100	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8144	3b4fed79-2515-44f3-9da2-8718be1ae480	-35	Blood Draw	0.16	Nanodrop	20	124	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8145	d7cf8fb6-0fd9-4ad8-bac8-1ae325752d39	3	Blood Draw	0.1	Nanodrop	20	192	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8146	9cf1ee59-2be8-40a2-bec7-19bfd75fd20e	6	Blood Draw	0.43	Nanodrop	20	47	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8148	678d9cb7-1cd2-4f4e-a0e2-b61ae0c83473	6	Blood Draw	0.36	Nanodrop	20	56	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8150	7f5dae3d-31a8-4ead-a296-b34b3125eade	5	Blood Draw	0.35	Nanodrop	20	57	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8154	f39b4cc9-9253-4cf9-8827-ebf26af1003a	5	Blood Draw	0.21	Nanodrop	20	94	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-8156	9a328bf6-8507-4c73-827d-1373fa46b471	1	Blood Draw	0.76	Nanodrop	20	26	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8048	45744281-e681-4649-a5b3-b435b71d1c0f	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8049	d95c8ad8-c8ef-4ce3-b1ed-4bc2a7036568	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8052	0e88db42-469a-4bda-9ef0-bf33a0ca5444	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8070	c77c6654-84f6-481d-abf9-185f0b0c11a6	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8071	f14d7719-561b-4d8b-98a2-afc496d13b0f	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8072	faa7fb00-b3af-4017-aa9d-6bf0b6aeb51f	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-92-8063	7b686ccf-007b-40d3-a971-674c74cb5589	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-92-8064	b380d9b9-5562-400e-9a14-e7817d7c5ae4	7	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-92-8065	f3903f48-f9be-4a68-a846-158581c5700e	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-94-8035	22eb3236-9d04-45f3-9197-5dd3ebfed6ac	-1	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-8020	40d52b28-961c-4d14-9731-a3cc7c9433c2	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-8020	7a705996-d3a6-40c2-90c3-93ef646cb317	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-98-8021	29e559ad-cdc0-4225-a3a6-a3bea51a77e7	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-8021	86407d28-3546-4dcb-92e3-8523309b62a8	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-8022	832c6915-9eb8-49b2-b64d-66b955b2356a	49	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-8022	9008ad7b-1f1b-4e23-9b53-321d7ec63ed7	49	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-8023	8cbda21a-6091-417d-81b3-d14c7e1b3b2a	53	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-98-8023	cb0824cd-3962-4e46-b4e3-e307517b351e	53	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8305	afb9ce91-c865-4c6f-861c-2254ff3eef11	105	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8305	d252e701-553e-4d2c-8c67-d88539d85689	100	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-8307	16393715-9f1c-4174-be3e-bcac29db9347	27	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8307	767f2401-8301-44ac-b5fb-3f9688448c1a	23	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-8308	f2a000ea-8dea-4c6f-8faa-9e1a031bb9ab	28	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8308	207dc499-125d-43bb-94f4-93cb0a9bb107	28	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-8309	8f924289-066a-4418-9e21-3b3a47944079	15	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8309	84578d4c-1064-4ffa-8185-a048088b2c2c	13	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-58-8386	79b02db3-c75e-4985-868a-c7fcee71d59e	0	Blood Draw	0.12	spectrophotometry	20	170	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-8386	f0a7c7ae-3941-4cc4-96cf-39b77c97dd80	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-58-8387	7e538c50-49e9-4be2-921c-31a087369977	0	Blood Draw	0.18	spectrophotometry	20	112	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-8387	ec45915d-f30e-48b6-aa6e-b6512c14c805	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-68-7757	9f095d2b-b1a6-42e9-8e08-57b1f63c4687	78	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-68-8250	69891f97-f793-439b-8805-6274650a6e66	126	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-68-8251	c7fe0f65-affa-41f2-80b2-00d720e25f88	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8276	2c41e65c-282f-4069-9de9-1a7cd58b1b92	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8277	0a7903bc-2d51-4a5c-8d31-e9242025b1e3	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8287	be4b9820-28fd-4ead-847c-7b4cd0019fef	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8288	972f6a0a-d42b-48bc-a224-42518cb433db	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8350	32802807-c5c6-4c67-b7c8-6fc72f0c1188	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8351	1f763cce-0a22-4d2b-8beb-8692c6b4df1b	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8353	42240c4a-31c6-407e-94df-3ec024566031	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8355	489869f8-d350-487d-b70d-bc2901722b00	14	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-96-8169	35495cad-bb48-4bea-b02d-e8121dcda4e9	-3	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-96-8170	0ef0d753-6899-49d0-83b6-189c34ccea39	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-1070	6de96e13-e98e-4315-ace7-336c5e45a686	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-1071	0f498c71-67e9-4c68-9b7e-39aa9622ca7b	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-1072	a8af632c-a468-4dc1-9c32-4f4415e9dd60	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-1075	c4b13046-663e-4dcc-865e-be48b1b85067	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-1076	706ea9bd-2216-444b-8173-3a3e022b622b	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-1077	bcad837f-4a4e-4af9-a52e-b6e9be5ccd48	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-1078	fce0a00e-a958-48ea-8cb3-59880e09f748	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-1079	70385e8a-e9ab-4852-a039-39ce3a7c78d9	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-1080	1e6542da-9f8a-460d-9983-02d9624091b7	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-1081	93a26ec5-4e81-4afd-9e7c-7a1c18555664	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-21-1082	34e0475d-75c4-43c1-9715-027c19fa25f8	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-21-1083	11bdaa8b-86a1-4f0a-b300-ed70c54791d6	0	Tumor Resection	.05	Nanodrop	30	600	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-22-0940	b34e70c2-fb7f-4c9e-84dd-9e77f05882f7	2	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-22-0944	0696049a-4797-40b7-be1d-96bb9042fb3c	21	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-1000	c9fc7872-5f2e-40be-8d39-bc01b3a02422	4	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-22-1002	6b8dd212-ec85-4689-be07-4627740b1db8	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-1005	0a95abe1-b034-4211-b9a3-29b9dad72405	23	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-1011	0890e7a4-9d1f-4f5e-a3a8-255fc68d4204	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-1012	c55de783-415f-4402-9e55-6ea766aee3d3	29	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-1016	d06bc0a9-6053-454a-bdb9-bbdfdaa7c4e4	2	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-56-1622	cead55b5-08a0-4cc6-8f20-166acb63e623	784	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-34-8454	df9a2ffb-769c-4294-9ac1-048a5ce22508	28	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-34-8454	4b9cb117-1bb1-475e-a91e-5640fd2bf0c7	28	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-34-8455	d0974188-0c47-44d1-89b0-e8a47a1c0081	12	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-34-8455	7f3c947e-8c01-4728-a89f-f871ce6c48c3	12	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-34-8456	d8c81d21-6273-49bf-8ad5-d35221d13c2e	114	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-34-8456	26d319c9-7abc-4a2f-baef-59206f1a3d20	114	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8304	753d3b22-9117-49e1-a74a-4fc219184553	80	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-8388	a03b7c12-22b1-4df5-8809-62fe44094b79	0	Blood Draw	0.144	spectrophotometry	20	140	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-8388	79433ba3-e6da-4b29-84ad-8945d1c0decd	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-58-8390	f3df90fd-4d6e-4f77-a768-a525fa3e8a63	0	Blood Draw	0.14	spectrophotometry	20	145	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-8390	33df024e-900f-4998-8d29-4a45a7cab3fe	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-58-8391	f02c8d6a-714d-48d4-9ad7-3654bb101f7a	0	Blood Draw	0.31	spectrophotometry	20	66	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-8391	d58f92f5-ace3-4002-b787-51626dcc5d7b	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	Distal (>2cm)	1
+TCGA-58-8392	e898b973-4be0-479f-a87f-399332cdabfb	0	Blood Draw	0.34	spectrophotometry	20	59	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-8392	98802e5e-9dd3-4d07-8a40-5e907f71189c	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-58-8393	00aea89f-7559-474e-882c-e5c8c05dd97b	0	Blood Draw	0.21	spectrophotometry	20	96	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-8393	e857b834-6123-40d8-9f37-8b82ba007c6c	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-85-8352	3c2299db-1e69-4ce1-9a52-e75c5c7f8e9f	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8354	d23b084d-a0b2-42ad-9e34-b1d4e3dfb122	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8479	1f4cc916-8378-4eb0-a01c-3a96cc6cc84a	15	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8481	1d500751-8fdb-4a7e-a15d-ff833833c36f	-28	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-94-8490	cffae28a-b0a0-4654-8ab0-a27abb67eb2e	35	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-94-8491	0a2f3ee0-b501-424a-984b-b289a68588b8	15	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-43-8118	a50af970-3aed-41a8-8053-97bb06a55fe1	34	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-8118	5805b1bf-7c11-4738-abd3-e1799e35d37e	34	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8503	ecab5b9f-bcd5-45d9-81dc-116cd0530136	41	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8504	b0c8d87b-4caf-429c-9dfd-7494e2eec142	17	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8504	d194fcad-dbef-410a-9b61-3dff6e78ad4a	17	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-8622	4fbc4f11-a9bb-47be-9c09-97d34bac45a2	55	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8622	2e7d07d8-2c02-4fcd-95c4-575b08dfbdbd	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-8624	1369933c-c661-434e-b4a9-cc4d34b8320e	38	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8624	94ab61de-7378-49bf-ae06-d0ef06bfde81	34	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-8625	ac86431d-cbf0-4c24-99a0-f43be98a2e14	59	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8625	ee7329b2-fe1e-4c33-b7c1-21b7a95c1fa9	57	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-8626	43783fc8-b491-42a0-884a-9c1d3260eb8f	17	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8628	4f8e4b2e-39fe-4f31-bfc7-7dcb3edcaa07	16	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8628	8b69d04a-8e18-4ce8-b950-df65f2a2a9a7	15	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-8629	f655b123-f9c1-4928-aa45-c6ca95c2f64f	33	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-8629	92f2be80-e90a-4b88-ae63-ca0c911cfe6b	32	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-77-8153	164d3eaa-7d2c-45f5-9e4a-5ef4953f051f	-43	Blood Draw	0.32	Nanodrop	20	63	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8580	2465496d-52d2-48ed-8411-0406d4d750d0	-12	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8582	b21d9f7f-4110-4f6c-bd97-d75a5a5e1e1b	4	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8584	a08565e8-fdf0-4588-b560-affafbf3106d	-26	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8664	44736148-2661-4397-a36f-8e650a5f30e1	1	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-8666	264cb91f-587b-4a55-a94f-da5b914bae8b	13	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-43-A474	DF4E615A-FF6D-4C32-8F06-847A6C790FEC	48	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-A474	E9A9B923-4A00-4220-88B3-DC0DE1B944CF	48	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-43-A475	75AD9526-2E64-4655-A67F-5E13F2B2266A	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-A475	F5989395-0356-4D2D-8777-83D7313C330E	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-A49D	0346E550-F787-4990-9771-D750C8939165	38	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-A4BW	3E67C61A-78A8-48CB-B40B-3D6C86C2A7A6	2	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-A4BW	2F05F02D-9FFB-43DA-A83E-63EF4D5DE7E9	2	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-A4BX	AC88D6AC-AAC9-431B-A4A4-AA7FE9381A8F	44	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-A4BX	682BB3DE-A04F-4B76-9EB7-74E4D19324B3	35	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-A4BY	F5572537-FC75-4F2E-8CFB-BAA8A428EADE	25	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-A4BY	77E454CF-C7EC-4DA3-AB9E-6DEB39BA79EA	21	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-58-A46J	EB685148-9AE3-47C6-9450-399FBC2F0D22	30	Blood Draw	0.17	spectrophotometry	20	115	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-A46J	05659979-1FE8-467E-A8FB-2099FEE70939	30	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-58-A46K	E0F732A5-3352-4CDC-BB7E-0D0AAD07D7A2	15	Blood Draw	0.20	spectrophotometry	20	101	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-A46K	391A361D-564B-42D5-A64E-E1115148E37D	15	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-58-A46L	549EF8B9-3833-4471-B7C0-29E1C0F327C9	28	Blood Draw	0.13	spectrophotometry	20	159	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-A46L	A89004FF-0A55-4B84-8EAC-C51F5367C8C8	28	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-58-A46M	47F2319B-48DB-48A8-87BF-9872F2639BBB	62	Blood Draw	0.17	spectrophotometry	20	117	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-A46M	D6E4411B-627F-45E2-8EE3-82A52D236E29	62	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-58-A46N	3781C877-37D0-42C4-A1E9-A68DDFBC65A3	29	Blood Draw	0.22	spectrophotometry	20	90	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-58-A46N	31AEF512-58C4-44B8-8385-2599F65FDA95	29	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-85-A4CN	B8AF117D-7AB7-41F6-9F03-93EF0219E142	-24	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-J1-A4AH	23964EE3-1D48-4194-9AF9-B1B9A69B25B3	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A4JC	9592EFEC-583E-4C2E-8297-F17AF06267BB	-16	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A4PA	6066EF1B-E912-405A-8463-3F8FAEAACEEF	-5	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A4QR	9C4C55CF-FF2C-4EFD-A3C5-C4C5E9F5BA33	25	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-90-A4ED	810DF1D8-3CE6-4564-BB72-C4E9B89713A4	33	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-90-A4ED	D11FDFF6-5B48-42CC-84DC-84FA03D0F0C2	33	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-90-A4EE	1B22C0EF-620A-4341-8587-0886624D971A	35	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-90-A4EE	62D89BEF-55BE-4AC3-B60A-80DF40DD0B79	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-90-A4EE	741080E8-F41A-46E5-827E-7EA5198049F8	35	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Bronchus	Distal (>2cm)	1
+TCGA-94-A4VJ	178D76D6-BE22-4511-9875-E4518717EFFE	43	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-96-A4JK	6DF2910B-988B-45A8-B620-C258A2164160	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-96-A4JL	ED518A68-48A1-4D04-BA7F-EB0DA776D433	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-L3-A4E7	B9EA169F-CB2A-4AE1-AD55-30586C8AFAD5	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-LA-A446	BA20ADFC-D832-418D-89BE-2FC73E253E34	28	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-33-A4WN	92DAE327-E26E-496F-A007-237CD106FBB1	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-A4ZJ	7B778D26-0534-4CC1-BDBD-719584B0D8AC	22	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-A4ZJ	A0D37C33-D2AC-43AB-95E6-1B6AF895D354	22	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-56-A4ZK	689190EB-526E-478A-994C-32CEEB9A1305	3	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-A4ZK	4E46AD18-21CC-4860-9444-F40114C1D3AE	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-68-A59I	314FB3E6-F026-4F19-9059-21B46E5254BB	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A4JB	DA7EB0AC-9272-4033-9AB0-FBD5CB6F3414	-17	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A4QQ	EAEEFA68-D015-41C8-9B39-DB5EDCF1DEE2	-2	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A50M	4ED04E8E-2E72-4C8D-A03E-8F055718D857	13	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A50Z	97AA6E23-205A-4F56-9A4C-CFA0C2BC95B8	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A511	AFEE3C43-1965-4E89-8DD1-DDEFEA5CBB37	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-A538	05A06B9E-B65C-4A30-BC70-45FE5ADB7BC1	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-A538	7E5754F3-554C-443E-A3CF-01E8291B5B4F	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-A539	0DD95C35-F7A1-4C9C-94E2-B8AC2B224C43	68	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-A539	D164E04C-03A2-445C-856A-2314D7871420	68	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-A53A	82C91DC1-5DE1-4807-A8D2-08F04226E160	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-A53A	10873CD5-5512-4B17-AF5C-D53DB30E0A8C	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-A53B	EB324090-DCFE-42E5-BFF8-3C7D7D541524	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-A53B	3B7CFF0C-CD61-4DC5-A996-20919AF08F02	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-A53C	61118337-1F9C-4D34-B87E-45D631C54D26	78	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-A53C	2EE58783-7A44-4762-8E75-B832385AC750	78	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-A53D	4EF48F7E-AA3C-4DD7-B105-56F8B8437842	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-A53D	4A30E238-319D-4C60-9E02-CE20E7FB1404	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-A53H	7AEFE207-CC03-4CB6-8BC7-09ADB915F110	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-A53H	293BAD31-BD95-4D7A-890A-5AF6F4BDDEF9	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-A53I	C917AA26-6C28-469D-86D8-6AFF270FB5CF	0	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-A53I	DCC890CB-9702-4928-B051-8237A75B9A40	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-L3-A524	EB42BD01-5BE8-450A-9E60-2272DDC5FCFE	343	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-MF-A522	8F72D79F-ECE9-4032-B704-7FFF3C247A79	25	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-O2-A52S	534EE14A-8797-465D-A168-01554E2188A4	48	Blood Draw	0.301	Spectrophotometry	20	66.436	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-O2-A52V	B64F65FF-97FB-4139-B66A-A0E37BBED2AF	-1	Blood Draw	1.451	Spectrophotometry	20	13.785	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-21-A5DI	264BE1F2-9DE1-437B-95FC-E15D77B527CD	68	Blood Draw	75	NanoDrop	30	400	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-37-A5EN	792A3583-CDAA-49E0-9900-EA29862D71A6	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-43-A56U	279CAF59-E9E1-47C1-86FC-3492D6BA8981	42	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-43-A56U	76F70443-1041-4844-B9DA-A9E56BD24B5C	42	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-A56V	0387A1BF-D0FE-4E5C-A171-A52B7319E373	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-43-A56V	E876EF96-DB3A-427F-97C2-42C1BA74B037	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5M9	B4467462-F86F-4765-B90E-BD54A08B57A4	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MB	700BB7A3-5A53-460E-A15B-0593698EA775	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MM	1C64C9F4-6B32-4F29-BCA2-C83C344CE84F	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MP	7DE4AEA6-D51A-46EB-9595-A5C3860FC562	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MS	56DE8ADC-240A-497C-AE65-0F8A9F7D4F1D	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MT	5CD65D22-B76A-4F9D-973D-8F8921C733C7	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MU	00FCC5A8-F382-4C5E-9B82-755175DDD33A	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MV	8468A5E2-F79E-40AF-92C1-5B8F2B232E15	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MW	207751ED-30E2-4D79-AEDE-84217222E75F	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MY	765AD027-652B-4832-9941-36ED9348C804	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-68-A59J	01DEC130-7402-45FA-AEFA-57D80D683AF3	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A4CL	ECA987D6-3089-4E52-8023-5568B445F954	15	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A510	944B0F14-3444-44C7-8119-952225DB3174	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A512	B32701F5-E864-4019-829A-55946044841A	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A513	6A3CB7C4-C674-4383-9E9B-4C2E970B809B	17	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A53L	508B16DB-5305-42A6-B1F8-191FED04A9ED	7	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-85-A5B5	D8D5F5F6-0F4E-47FD-AC71-5F6EBDC6840E	111	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-90-A59Q	DC0E3813-5234-4740-9D28-61F7F9F923C3	15	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-94-A5I4	AD3EB307-8B69-47F9-AD49-F0517A74290D	-1	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-98-A53J	EB30A7C1-6AD7-433C-A59F-77EDD0FE235D	50	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-98-A53J	1E298A10-D40A-4FDD-B0DC-C82F06A384B6	50	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HD	8DB635DB-D9A0-4A6E-A0EF-DBF1FAFBBB26	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HE	9448123C-2EF1-4A80-934E-A8342E34A931	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HF	A48D3B6D-CAB6-4A79-A08D-1F535B42EB47	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HG	CA37DE8C-1AB6-4B56-B70E-4413EE91D28B	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HH	A643A8C3-2D9B-4A50-8FD4-ACA8689ED2E9	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HI	93070362-0052-43D2-9958-8E65C4873B89	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HJ	2D19B480-68F0-41AE-B7B0-2DFAB1EDA121	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HK	AB1F620A-5478-4E8F-834C-E3A0EDA6D951	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HL	003AD685-BCAD-49F6-98F0-F37C46E2775F	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HM	53086613-FC03-4699-BB6C-D00D19DBC834	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HN	2B60ED9F-497C-4DA6-AA6C-97EA61BC05B2	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HO	5C5779F1-F0CA-4F68-899A-3016C66E371F	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HP	C8D4EA2E-3B1E-4CD5-B195-1F8BB3604BAE	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HQ	DE5B7F26-331C-4912-9AC5-7E23B153F310	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HR	EF3DA2BE-7069-4D08-BA04-473DF7EBE560	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NC-A5HT	492AA8BB-A677-46BB-88AF-FD60D72DFA5E	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NK-A5CR	FDDB2B5D-A256-44F5-A275-281DBFD6C284	-13	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NK-A5CT	987135FC-3F44-4D12-B9CA-983CAA21F4B1	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-NK-A5CX	F3EF9D0A-53B0-4305-A509-60D8DBF23381	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-O2-A52N	72AAF168-0DB9-4DC4-B435-D199FCC7464D	-1	Blood Draw	0.643	Spectrophotometry	20	31.071	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-O2-A52Q	908C57F1-EA68-486E-BD42-9DE0529092B3	0	Blood Draw	0.900	Spectrophotometry	20	22.216	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-O2-A52W	A9F1C16F-1C43-492F-AE96-8D05369207E7	20	Blood Draw	2.393	Spectrophotometry	20	8.356	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-22-A5C4	AB3B5B90-4A04-4299-91B3-20E9FF13684C	29	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-33-A5GW	84DC9E6F-DAFE-41F9-898D-C4F0B3E73181	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-34-A5IX	F4FB8332-7430-4638-99DF-A2873769B0F3	127	Tumor resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-34-A5IX	F4A94D86-9810-402D-A69F-B4167968475F	127	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-37-A5EM	0943A10E-BFB6-4557-A58D-C1DC4EFFD8A3	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-A5DR	A6643201-1299-4ABA-9A20-8F5DC7581EF2	1	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-56-A5DS	F2FC1947-4030-41CC-B1E4-7843407B8E8C	-1	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MG	0A7DF675-C5E8-4800-AF79-7C5E68867CE8	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MH	FB004658-9523-465A-A27E-8D565BF11FA1	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MI	93C03693-8083-4D4F-BD03-77C15C3067E7	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MJ	5B58ACD4-63BE-4EAC-AD29-6A456A61C285	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5ML	860D4416-C138-4BB6-9B0B-6934A60B7141	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MN	65226A55-85D7-4609-B5BF-37B38A0DC40A	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-A5MR	B7D28833-BDB9-4D1B-BC08-16338B82315F	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-A5FZ	F899A66F-9D39-48AA-A3A2-5C30440121D5	6	Blood Draw	0.461	Nanodrop	20	43.4	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-A5G3	230FFF36-CCF8-4E3A-8C4B-602019CB9987	-1	Blood Draw	0.076	Nanodrop	20	265	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-A5GB	F208AFE7-97B4-4A61-835C-599304F533D5	-50	Blood Draw	0.04	Nanodrop	20	501	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-77-A5GH	C3724D35-88C2-4B8C-A719-378616956C3D	3	Blood Draw	0.588	Nanodrop	20	34	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-94-A5I6	7D596068-9BAB-41F8-A685-822F45BC038F	31	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-O2-A5IB	844C2AB6-0617-4004-BBEC-473BA705DB19	-1	Blood Draw	0.60176	Spectrophotometry	15	38	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-34-2596	6db2df95-c7e7-4538-b6b4-a79819fbb97b	33	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-34-2600	6686e50a-931d-40b3-95e9-13e182e65610	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-34-2604	d7eb4b88-1476-40af-a35a-d3f5c6f56099	179	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-34-2605	98bde7c4-9c63-4ec2-a6e7-f6c625573360	63	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-34-2608	e78dacda-d795-4d1e-bb79-046594efa7b5	18	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-34-2609	4461d495-3fc2-4210-8876-f1ce76d8071a	48	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-43-2576	17ceecae-def1-487f-86f4-820e7e603bf4	31	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-43-2578	82032c3f-fcd5-4ade-b170-960e76fb16ae	25	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-43-2581	d4706f2d-6484-406a-97c8-f2e0e7846d72	66	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-60-2695	2a45262f-5657-42cf-b468-766445877433	52	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2696	6c62ae5e-599e-485d-9bb4-73edecb74bcf	51	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2698	0ee8b6c2-6fad-4550-98b0-381a49ba48f2	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2706	7a6fe2d9-adc8-4662-8b10-cf91dac8acf5	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2707	47fa52f7-6654-4944-a6bf-068974645082	73	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2708	d41b4c09-b1d3-4052-84b7-3db8a4228d76	78	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2710	4cde4076-0e72-4eaf-a53a-6669e335c381	104	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2711	0784a6f1-fb91-48d6-8cba-619c655e5d5b	36	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2712	06166b19-87b4-48c7-8149-c413c4f0bd43	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2713	45558be4-91e0-42a9-aa05-8234b08ccf6c	70	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2714	629ae459-8a30-4287-9c45-c0f95f03e4f8	135	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2715	c23c1ae6-2505-4d32-aedf-4acd96dac57d	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2716	7fc4d94d-1320-4c1a-a78c-db12a06afe38	19	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2719	3744f45b-0871-471a-a9be-5b0ad0b3a305	58	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2720	bf0427de-523c-4753-97d1-c45f05f0e3eb	44	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2721	3ce56da6-a260-4634-9398-5738268a244c	25	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2722	5a2365b6-f9a1-480d-937d-06d2f254f8dc	63	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2723	6dcda9ab-47b0-470a-94c6-fcd8a1460af5	43	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2724	10f7d78c-3d61-40ca-89c3-80f0e0664343	20	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-60-2726	3c66f293-9bdb-4eda-899d-886ba05f3fb7	59	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2755	bf3b751f-f381-4ea0-81d5-c263acac8aef	0	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2756	2c9885ea-ea3f-499c-8efc-557ecb083aaa	30	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2757	e483f506-f9d3-43e3-87b6-9de36ccc68d6	30	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2758	a501cd55-0965-4b9f-bb49-97b526302bcc	59	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2759	a0a0e151-8e1c-41ac-a2db-097172f6db75	61	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2763	081847a4-cf55-4c04-8323-d501928c6930	30	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2765	dbd06c23-08fb-4200-aa8b-4ddc1f61d0f9	61	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2766	9fcd7c3d-b3b4-4ddd-8298-411b7a27833a	0	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2767	c5af3e4b-f32f-4e69-94fa-62283f80d728	30	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2768	878f214e-f5d5-4e93-b89a-e258d59216a7	30	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2769	5a11b624-5368-4ce5-8ba9-9421775b5347	31	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2770	6b685bfc-651b-48d1-8e68-32c8096ea205	122	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2778	580d2e07-cb96-4292-8d9a-779a78a7ccee	153	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2780	2dc07866-0eb6-44cd-81f3-51f6b8f47e61	62	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2781	b71c4bdc-1798-4422-ad70-f184cf1ed6d8	92	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2782	b8a1d472-1f31-4883-be90-a6bfce7cb6e9	92	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2785	580899a2-b80e-4e7d-8359-6c94f5ba6897	60	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2786	eb7e437e-f9bd-4091-be73-38981cdf0116	91	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-18-3406	ab8b5e65-efbe-42f1-99c3-917f1e818912	-92	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	Distal (>2cm)	1
+TCGA-18-3407	5822fe84-c25f-4cad-8c17-4e37fc9376a3	97	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-18-3408	786c2a76-177f-4f22-a317-20fea7e594be	53	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-18-3409	47aa271a-73c5-427f-8797-68d80de3150a	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	Distal (>2cm)	1
+TCGA-18-3410	addd6bc0-4736-47c6-8925-abe527792391	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	Distal (>2cm)	1
+TCGA-18-3411	c2b83333-3dd9-4ac5-969f-4b6afc4416b3	36	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-18-3412	9539f12c-2243-4bc7-bc4a-6c0f52f7cfcc	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-18-3414	5853a8c9-b791-4252-a97e-3805cf255c10	487	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-18-3415	92069f9f-20ca-4922-b802-2562448ebc65	21	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-18-3416	88ef6457-4b82-46e7-8e1d-d4e3d2e619e4	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-18-3419	b527c910-89ee-46d4-b320-609acdcc6856	43	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	Distal (>2cm)	1
+TCGA-18-3421	28642bdc-31c2-4deb-aae4-58a3a4a6941b	42	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-37-3789	c850c8e7-155d-4263-949f-571919afb38d	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-37-3792	26a14700-0dfa-4b76-9288-e1c6df8c07c3	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-43-3394	91aa926c-fc3f-4bd8-b256-ecca224f036d	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-43-3394	2eec798f-3161-403e-937f-b340a6a3c865	88	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-43-3920	b6cbaf4d-c146-4e80-8785-ce64becf4c2c	59	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-43-3920	8b9ccb03-20ac-4f00-9a78-3c89ccc061cc	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-46-3765	e1454a8e-491b-4811-b438-1104890b4d6f	12	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-46-3766	37be7a57-dc7f-4efc-8f48-889d82285241	2	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-46-3767	cd455f22-228e-4594-8a6e-29513fa517f6	9	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-46-3768	e88be11a-8e24-4fc8-baab-b503018f58b8	12	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-46-3769	bd48fb3a-ac50-4fd7-8c8c-78f178f27607	-8	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-66-2727	803454c8-9c6e-4e3e-8c05-6f5837542a82	61	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2734	05f21c06-c3f8-460e-aea6-5f2efbfbadbb	31	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2737	7f0b91d5-2712-42db-8659-77a8c9cd56b7	30	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2742	4a8d459a-e736-4218-be9a-0b1d5e09291f	61	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2744	b6bde1f3-ae17-4e83-8e74-d4269e5af31e	30	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2753	d27af58b-7287-4036-b0fb-3aad580d6988	31	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2754	03b38809-f587-4389-9b9b-fe055d91a433	31	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2771	14358c14-8387-4a90-be1e-97fd37a8ce24	30	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2787	3f68597c-0936-424b-acdf-4abeeb0801bf	31	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2788	a01fa4e5-5fb9-4956-851d-d9f1546fadd1	0	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2789	fd45b4ee-5bd7-4182-b37f-df17e5783455	0	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2790	e0892370-01b9-4dec-a55e-3b8e856272c6	30	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2791	5d2a48ea-36b2-4955-b725-7be83b39c35f	30	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2792	9da88162-b1aa-44b3-97ac-2ad80a752eef	61	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2795	77c32ccd-922c-4a88-a507-b7758ca9b61a	91	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-18-4083	f585eeed-fa52-470c-9493-98c51fbe8232	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Distal (>2cm)	1
+TCGA-18-4086	52ceaf49-0a21-457f-93bd-03ba01539122	56	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-37-4129	419a39ef-65b0-47e6-a5a4-df9447b8b2d5	-9	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-37-4130	1111ceb8-2389-494c-b467-d574e19fc3e5	-17	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-37-4132	05015f7c-d2d9-4579-9f84-77e63445d310	-10	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-37-4133	7234cb94-a958-4711-bd9a-80c7d961f506	-10	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-37-4135	a3a8df4e-06ee-4baf-b53a-8a9396298d13	-8	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-37-4141	0457b04a-272b-4fdc-926b-3f3ce6b8d773	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-51-4079	fce0f383-9550-4c0a-b220-4da86d68430a	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-51-4079	a06316bb-3309-43f7-9a29-78a3c91a85c6	-8	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-51-4080	be87da43-09a8-4949-92ce-1c9fbf467e0d	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-51-4080	785fe5f7-d137-4ac2-bbf4-4ddab0807972	-22	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	Adjacent (< or = 2cm)	1
+TCGA-51-4081	f44b5aee-7b92-45cc-8fab-5b3d42cb6ad3	-31	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	2
+TCGA-51-4081	354585a6-e1d5-471b-beb0-4d8893d62009	-7	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-4591	5c64723f-e0c6-45e1-978f-ee603bf119cc	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-4594	67633aa6-0ac5-4f72-bd21-bc4c9874eaa5	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-4595	a24fdbb1-58af-47b2-9614-8dc4ff8e10d3	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-4596	eafc1414-5c95-4f5a-8aa5-db4663045364	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-4604	45cde305-0013-4716-800f-fd7950dea91d	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-4607	5b55ef03-f632-4593-b4ba-cd3ea74beacd	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-33-4532	2fef1aa7-2224-4197-9f1f-b063efb4ff03	43	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-33-4533	6d9f535d-3f8b-44ab-9087-ee422952cc5c	-6	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-33-4538	ab3ddb2d-8f10-46ed-a294-9bf52794535e	-2	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-33-4547	731fc35e-1d92-4c6a-b698-1375bd15a26c	42	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	Distal (>2cm)	1
+TCGA-37-3783	673220ff-3753-4f80-9c0b-fbfef465b324	0	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-60-2725	1162cdab-eace-4842-812d-20604a8a1e44	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2773	df2d2200-292d-4078-b528-615cfac1589e	61	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2777	21bd4c01-e931-4036-b7ed-fc082b50a2b6	61	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2783	fced4bfe-881a-4845-90d2-d2f17f72cede	29	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-66-2793	f9f1f4a3-305e-4716-8c00-65b54a805e46	92	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2794	243a8e95-dfaa-466d-a058-b683ab6a7a8c	792	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-66-2800	32121478-cadc-4cca-b353-88ad4712e8ea	31	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-18-3417	cdd5283d-f3ce-4cfe-b0c7-c5e121679c3c	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	Distal (>2cm)	1
+TCGA-18-4721	1a50cb47-4a02-40be-aa02-4cef765dba3d	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-22-4599	d234a28f-d641-4601-b464-22151d47ddd0	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	Adjacent (< or = 2cm)	1
+TCGA-22-4601	e183bc1d-af10-4dfe-816a-c56ff26824bb	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-22-4613	fbb61993-0b38-43a4-892e-229156590d62	0	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	Adjacent (< or = 2cm)	1
+TCGA-33-4566	041b3323-0894-44df-9da9-8d8b90fab5ba	-2	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	Distal (>2cm)	1
+TCGA-33-4582	a12ff145-5c2b-4c83-b290-b391a32328e2	95	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-33-4583	638049ac-1dd4-486a-a1bc-28f11b2fbbad	17	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-33-4586	69cb1538-12d7-4c0a-97f4-0cd616504dbf	42	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-33-4589	49809601-4f30-419d-89c1-fb7195f5c610	32	Tumor Resection	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Other	[Not Available]	1
+TCGA-34-5240	091ed3f6-d99a-4a6b-a9e7-84fc968364ee	66	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-34-5241	01ab454f-ef5a-4eb9-99c2-3132516e1b16	61	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-39-5011	78424b32-7e33-4d2a-bdcd-5916d215598a	27	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5016	ccef4338-4167-46cc-b16e-db902430c51c	8	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5021	1cca2548-51d4-45c7-a73e-5984353cf279	6	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5028	8996edd4-6fb8-4481-80cb-c12522063bfe	42	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5029	5ad6a227-a4a3-463a-ac69-2fa35133b3fd	94	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5030	b586c7f9-7796-45d2-b930-47263d6ffc64	4	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5031	9430c7ac-afb5-4fca-a92d-6268523367f4	38	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5034	847a8d1b-2179-43fe-ad99-d22d7951dd98	30	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5035	1620b6ce-e530-4b49-96ba-e62bd1103e61	20	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5036	99e5b0e0-6012-4473-b04d-5bdfe367c8ba	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5037	171901e0-24ca-4cbd-9553-2f1b34b28e73	0	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-39-5039	a9ba49ad-a77c-432a-83e1-f02fa14c3848	35	Other Method (please specify)	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	Lung	[Not Available]	1
+TCGA-63-5128	550bec3b-35e4-488f-895e-0297a2e5cfe9	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1
+TCGA-63-5131	b0bc5b41-942c-4d33-9db4-bb01dd5951b5	[Not Available]	Blood Draw	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	[Not Available]	1

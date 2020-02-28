@@ -1,0 +1,25 @@
+
+Identification of uniform methylation marker for Gastrointestinal cancer
+
+1, 10 Cancer type
+
+Esophageal cancer(ESCC)
+Stomach cancer(gastric adenocarcinomas, 200)
+Pancreatic cancer
+Liver cancer(377)
+Colorectal cancer(459)
+cholangiocarcinoma (45, GSE60446, 69 target)
+Gallbladder cancer (GBC)
+Anal cancer
+Small Intestine Cancer
+
+
+2, Sample size. Each cancer have different subtype, remember to contain all subtype cancer samples.
+
+samples for each cancer type. N=8*24=192
+samples for Stomach cancer. N=200
+
+3, Biomarkers: 50
+
+
+4, TCGA-: 3856

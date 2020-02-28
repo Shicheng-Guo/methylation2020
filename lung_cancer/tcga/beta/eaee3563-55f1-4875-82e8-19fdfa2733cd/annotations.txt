@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+260c1f73-ac6f-5f98-956f-9349c32b6af9	11757	case	3351b902-9b7e-4b90-bf6b-bcf74be00bc1	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy bladder cancer treated with locoregional intravesical therapy
+903e1630-a692-5633-b55d-f055326948e7	11973	case	3351b902-9b7e-4b90-bf6b-bcf74be00bc1	History of acceptable prior treatment related to a prior/other malignancy	Notification	2012-11-10T00:00:00	Approved	Prior malignancy bladder cancer treated with locoregional intravesical therapy

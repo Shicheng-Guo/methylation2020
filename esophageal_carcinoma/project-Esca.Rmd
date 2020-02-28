@@ -1,0 +1,28 @@
+---
+title: "methylation panel in ESCA"
+author: "Shicheng Guo"
+date: "Tuesday, February 02, 2016"
+output: html_document
+---
+
+Here we try to screen 50 CpG loci in ESCA to do some basic research. 
+
+1, DMS
+2, DMR
+3, GWAS
+
+```{r}
+setwd("C:\\Users\\shicheng\\Dropbox\\Project\\methylation\\esca")
+data<-read.table("TCGA.Meth450.esca.ChAMP.DMS.txt",head=T,as.is=T)
+
+x<-c(1156,839,1067,934)
+y<-matrix(x,2,2)
+chisq.test(y)
+```
+
+
+```{r, echo=FALSE}
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+(114.14+54.91)/3

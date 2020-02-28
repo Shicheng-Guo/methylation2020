@@ -1,0 +1,3 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+dc0a8bcf-ba7a-5cae-8e63-a868c1b9e5dd	11950	case	3b195845-0050-49cb-b639-1fe85a131ebe	History of acceptable prior treatment related to a prior/other malignancy	Notification	2012-11-10T00:00:00	Approved	Prior malignancy cancer of the larynx treated with locoregional radiation.
+0dff7825-9afc-56a7-8732-4a8a3fec73d6	11740	case	3b195845-0050-49cb-b639-1fe85a131ebe	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy cancer of the larynx treated with locoregional radiation.

@@ -1,0 +1,11 @@
+sam<-read.table("https://raw.githubusercontent.com/Shicheng-Guo/HowtoBook/master/TCGA/ucec/tcga.TCGA-UCEC.drug.txt",sep="\t",head=T)
+head(sam)
+newsam<-unique(data.frame(sam$bcr_patient_barcode,sam$measure_of_response))
+valid<-subset(newsam,sam.measure_of_response !="")
+dim(valid)
+newsam<-subset(sam,measure_of_response !="")
+head(newsam)
+which(sort(table(newsam$drug_name))>1)
+unique(newsam$bcr_patient_barcode)
+table(newsam$bcr_patient_barcode)
+

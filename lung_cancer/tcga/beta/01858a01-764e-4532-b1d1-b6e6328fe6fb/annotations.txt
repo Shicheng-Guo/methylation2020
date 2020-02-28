@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+2455f4d8-9b14-5dfb-9cc9-2c2f1f5d205a	5491	case	69dba721-a168-47a4-b7ff-80a448bad654	Prior malignancy	Notification	2012-03-20T00:00:00	Approved	R breast CA. No chemo or radiation.

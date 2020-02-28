@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+12ff5a02-93fa-5f33-bb20-3ce7fedea7a3	11749	case	1dba835e-cbe9-41e0-883d-50bf86bc7821	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy basal cell carcinoma of the skin. No systemic chemotherapy or radiation.

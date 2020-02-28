@@ -1,0 +1,9 @@
+Sample_Name,Sample_Well,Sample_Plate,Sample_Group,Pool_ID,Sentrix_ID,Sentrix_Position,ID,Case_Control,Basename
+GSM3684001,GSM3684001,GSM3684001,Sample1,Sample1,GSM3684001,Sample1_450K_rep1,GSM3684001_450K_rep1,rep1,/home/local/MFLDCLIN/guosa/hpc/methylation/clep/450k/GSM3684001_Sample1_450K_rep1
+GSM3684002,GSM3684002,GSM3684002,Sample1,Sample1,GSM3684002,Sample1_450K_rep2,GSM3684002_450K_rep2,rep2,/home/local/MFLDCLIN/guosa/hpc/methylation/clep/450k/GSM3684002_Sample1_450K_rep2
+GSM3684003,GSM3684003,GSM3684003,Sample2,Sample2,GSM3684003,Sample2_450K_rep1,GSM3684003_450K_rep1,rep1,/home/local/MFLDCLIN/guosa/hpc/methylation/clep/450k/GSM3684003_Sample2_450K_rep1
+GSM3684004,GSM3684004,GSM3684004,Sample2,Sample2,GSM3684004,Sample2_450K_rep2,GSM3684004_450K_rep2,rep2,/home/local/MFLDCLIN/guosa/hpc/methylation/clep/450k/GSM3684004_Sample2_450K_rep2
+GSM3684005,GSM3684005,GSM3684005,Sample3,Sample3,GSM3684005,Sample3_450K_rep1,GSM3684005_450K_rep1,rep1,/home/local/MFLDCLIN/guosa/hpc/methylation/clep/450k/GSM3684005_Sample3_450K_rep1
+GSM3684006,GSM3684006,GSM3684006,Sample3,Sample3,GSM3684006,Sample3_450K_rep2,GSM3684006_450K_rep2,rep2,/home/local/MFLDCLIN/guosa/hpc/methylation/clep/450k/GSM3684006_Sample3_450K_rep2
+GSM3684007,GSM3684007,GSM3684007,Sample4,Sample4,GSM3684007,Sample4_450K_rep1,GSM3684007_450K_rep1,rep1,/home/local/MFLDCLIN/guosa/hpc/methylation/clep/450k/GSM3684007_Sample4_450K_rep1
+GSM3684008,GSM3684008,GSM3684008,Sample4,Sample4,GSM3684008,Sample4_450K_rep2,GSM3684008_450K_rep2,rep2,/home/local/MFLDCLIN/guosa/hpc/methylation/clep/450k/GSM3684008_Sample4_450K_rep2

@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+b9ec1624-5ad8-56c0-b2a0-5b40f6baeaae	11966	case	44218b35-219c-4ad9-a01e-fde14067c4c0	Synchronous malignancy	Notification	2012-11-10T00:00:00	Approved	Pt with synchronous L papillary adenocarcinoma

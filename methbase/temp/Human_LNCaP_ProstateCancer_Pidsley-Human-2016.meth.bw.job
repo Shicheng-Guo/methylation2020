@@ -1,0 +1,8 @@
+#PBS -N Human_LNCaP_ProstateCancer_Pidsley-Human-2016.meth.bw
+#PBS -l nodes=1:ppn=1
+#PBS -M Guo.shicheng@marshfieldresearch.org
+#PBS -m abe
+#PBS -o /gpfs/home/guosa/hpc/methylation/methbase/temp/
+#PBS -e /gpfs/home/guosa/hpc/methylation/methbase/temp/
+cd /gpfs/home/guosa/hpc/methylation/methbase
+bigWigToWig Human_LNCaP_ProstateCancer_Pidsley-Human-2016.meth.bw Human_LNCaP_ProstateCancer_Pidsley-Human-2016.meth.bw.wig

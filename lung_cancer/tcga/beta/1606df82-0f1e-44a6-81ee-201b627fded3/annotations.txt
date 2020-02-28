@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+c8ee4297-9dd6-5361-91eb-d86d8b276a0f	11726	case	edf80622-aea2-4b50-bb69-691d6708aa83	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy L ovarian cancer. No systemic chemotherapy or radiation.

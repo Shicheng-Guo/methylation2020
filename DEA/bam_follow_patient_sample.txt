@@ -1,0 +1,408 @@
+Patients	chemo_therapy	days_to_death	days_to_last_followup	days_to_tumor_recurrence	primary_therapy_outcome_success	site_of_tumor_first_recurrence	age_at_initial_pathologic_diagnosis	anatomic_organ_subdivision	ethnicity	initial_pathologic_diagnosis_method	jewish_origin	karnofsky_performance_score	lymphatic_invasion	neoplasm_histologic_grade	performance_status_scale_timing	pretreatment_history	race	tumor_residual_disease	tumor_stage	vital_status	intermediate_dimension_cm	longest_dimension_cm	shortest_dimension_cm
+TCGA-24-1928	YES	336	336	70	Progressive Disease	Loco-Regional	77	Bilateral	NA	Cytology	NA	NA	NA	G3	NA	NO	WHITE	11-20 mm	IIIC	DECEASED	0.5	1.5	0.3
+TCGA-31-1953	YES	NA	204	70	Progressive Disease	Loco-Regional	52	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	Pre-Adjuvant Therapy	NO	ASIAN	NA	IIIC	LIVING	0.5	1	0.1
+TCGA-61-2009	YES	NA	1212	101	Complete Response	Loco-Regional	65	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	11-20 mm	IIIC	LIVING	2	2	0.2
+TCGA-10-0934	YES	203	118	110	Progressive Disease	Metastasis	50	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.6	0.9	0.4
+TCGA-04-1350	NO	1946	1946	111	Stable Disease	Metastasis	46	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Pre-Operative	NO	WHITE	>20 mm	IIIC	DECEASED	1	1.5	0.4
+TCGA-23-1027	YES	975	965	114	Progressive Disease	NA	48	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.8	0.8	0.4
+TCGA-23-1028	YES	NA	1503	133	Complete Response	Metastasis	43	Left	HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.6	0.8	0.4
+TCGA-24-1560	YES	1341	1341	143	Complete Response	Loco-Regional	51	Left	NA	Tumor resection	NA	NA	NA	G4	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.1	0.5
+TCGA-24-1565	YES	312	312	145	Partial Response	Metastasis	74	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.7	0.8	0.4
+TCGA-24-0982	YES	679	679	152	Complete Response	Metastasis	77	Bilateral	NA	Cytology	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.8	1	0.8
+TCGA-04-1356	NO	1499	1499	156	Progressive Disease	Metastasis	62	Bilateral	HISPANIC OR LATINO	Tumor resection	NA	80	YES	G3	Pre-Operative	NO	WHITE	NA	IIC	DECEASED	1	1.2	0.4
+TCGA-61-1733	YES	NA	966	174	Stable Disease	Metastasis	71	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.6	1.5	0.2
+TCGA-29-1698	YES	NA	2077	180	Complete Response	Loco-Regional	53	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IIIC	LIVING	0.9	1.4	0.3
+TCGA-30-1891	YES	914	914	181	Partial Response	Loco-Regional	61	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	NO	G2	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.8	1.2	0.4
+TCGA-29-1688	YES	2399	2399	183	Stable Disease	Loco-Regional	39	Bilateral	NA	Tumor resection	NA	NA	NA	G2	NA	NO	WHITE	NA	IIIC	DECEASED	1.5	2.5	0.5
+TCGA-25-1318	YES	1064	1064	185	Partial Response	Metastasis	54	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	2	4.5	0.8
+TCGA-09-0366	YES	1756	1756	189	Stable Disease	Loco-Regional	55	Bilateral	NA	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	NA	NA	NA
+TCGA-13-0725	YES	377	377	190	Complete Response	Metastasis	44	Bilateral	HISPANIC OR LATINO	Cytology	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.5	0.5
+TCGA-24-1431	YES	583	583	199	NA	Loco-Regional	67	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.5	0.6
+TCGA-24-1548	YES	493	493	207	Complete Response	Loco-Regional	57	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.7	1.2	0.4
+TCGA-61-2110	YES	1354	1354	213	Progressive Disease	Metastasis	56	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	NA	NA	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	0.4	0.4	0.1
+TCGA-24-1564	YES	787	787	221	Complete Response	Metastasis	67	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.4	0.4
+TCGA-04-1362	YES	1348	1348	223	NA	Metastasis	59	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIC	DECEASED	1	1.2	0.6
+TCGA-24-1562	YES	1384	1384	228	Complete Response	Loco-Regional	67	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Other	NO	WHITE	1-10 mm	IIIC	DECEASED	0.9	1	0.5
+TCGA-25-1871	YES	760	760	230	Progressive Disease	Metastasis	70	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	11-20 mm	IIIC	DECEASED	0.5	0.7	0.1
+TCGA-29-1774	YES	NA	526	233	Progressive Disease	Loco-Regional	82	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	LIVING	1	1.5	1
+TCGA-10-0937	YES	608	460	235	Complete Response	Metastasis	44	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Pre-Operative	NO	WHITE	1-10 mm	IIIC	DECEASED	0.4	0.6	0.4
+TCGA-30-1714	YES	1158	1158	241	Complete Response	Loco-Regional	68	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	NA	YES	G3	NA	NO	WHITE	1-10 mm	IV	DECEASED	0.4	0.6	0.3
+TCGA-25-1870	YES	454	454	242	Partial Response	Metastasis	59	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	11-20 mm	IIIC	DECEASED	0.4	0.8	0.2
+TCGA-25-2399	YES	608	608	243	Partial Response	Metastasis	80	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.8	1.6	0.4
+TCGA-25-1328	YES	2009	1979	244	Partial Response	Loco-Regional	38	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1.8	2.8	1
+TCGA-13-0727	YES	462	462	253	Complete Response	Metastasis	71	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.9	1.2	0.3
+TCGA-30-1892	YES	1484	1484	253	Complete Response	Loco-Regional	52	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.7	1.2	0.3
+TCGA-57-1586	YES	NA	679	259	NA	Loco-Regional	66	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	11-20 mm	IIIC	LIVING	0.6	1.5	0.2
+TCGA-09-0369	YES	1081	1081	273	Complete Response	Loco-Regional	56	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	NA	NA	NA
+TCGA-24-1558	YES	594	594	273	Partial Response	Loco-Regional	73	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.9	0.9
+TCGA-61-1738	YES	1089	1089	276	Progressive Disease	Metastasis	60	Right	NA	Tumor resection	NA	NA	YES	G3	NA	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IIIC	DECEASED	1.2	1.2	0.2
+TCGA-24-0970	YES	354	354	280	Partial Response	Loco-Regional	63	Bilateral	NA	Fine needle aspiration biopsy	NA	NA	YES	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.8	2	0.8
+TCGA-29-1705	YES	555	555	283	Complete Response	Loco-Regional	47	Bilateral	NA	Tumor resection	NA	NA	NA	G2	Post-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	DECEASED	1.1	1.8	0.7
+TCGA-30-1866	YES	1114	1114	284	Complete Response	Loco-Regional	61	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G2	NA	NO	WHITE	1-10 mm	IV	DECEASED	0.8	1.2	0.4
+TCGA-29-1702	YES	728	567	285	Complete Response	Loco-Regional	84	Right	NA	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	DECEASED	0.7	1.2	0.5
+TCGA-25-1628	YES	626	626	286	Stable Disease	Metastasis	67	NA	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.5	2	0.4
+TCGA-10-0926	YES	788	788	287	Complete Response	Metastasis	63	Bilateral	NA	Tumor resection	NA	80	NO	G3	Pre-Operative	NO	WHITE	11-20 mm	IIIC	DECEASED	0.8	1	0.6
+TCGA-24-2035	YES	857	857	287	Partial Response	Loco-Regional	65	Left	NA	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	DECEASED	0.7	1	0.3
+TCGA-04-1364	YES	1024	1024	288	Progressive Disease	Metastasis	61	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	Pre-Operative	NO	WHITE	1-10 mm	IIIC	DECEASED	0.6	1.2	0.3
+TCGA-61-2113	YES	676	676	291	NA	NA	53	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	NA	IIC	DECEASED	0.8	1.6	0.4
+TCGA-13-0720	YES	1355	1355	292	Complete Response	Metastasis	48	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	DECEASED	1.2	8	0.5
+TCGA-13-1483	YES	894	894	296	Partial Response	NA	61	NA	NOT HISPANIC OR LATINO	Fine needle aspiration biopsy	NA	60	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	DECEASED	1.4	1.8	0.4
+TCGA-13-0920	YES	NA	420	297	Complete Response	Metastasis	65	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.7	1	0.4
+TCGA-29-1701	NO	515	514	298	Partial Response	Loco-Regional	56	Bilateral	NA	Tumor resection	NA	NA	YES	G3	Post-Adjuvant Therapy	NO	WHITE	NA	IIIC	DECEASED	1.1	1.3	0.6
+TCGA-10-0931	YES	1000	982	300	Complete Response	Metastasis	44	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Pre-Operative	NO	WHITE	1-10 mm	IIIC	DECEASED	0.5	0.5	0.5
+TCGA-25-2409	YES	820	820	303	Complete Response	Metastasis	71	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IV	DECEASED	1.5	1.5	0.4
+TCGA-25-2393	YES	1157	1157	305	Partial Response	Metastasis	81	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	11-20 mm	IIIC	DECEASED	0.7	1.3	0.3
+TCGA-36-1578	YES	NA	847	310	NA	Metastasis	63	NA	NOT HISPANIC OR LATINO	Cytology	NA	NA	NA	G3	Pre-Operative	NO	ASIAN	>20 mm	IV	LIVING	0.6	0.6	0.5
+TCGA-29-1710	YES	951	889	315	Partial Response	Metastasis	54	Bilateral	NA	Tumor resection	NA	NA	NA	G2	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	DECEASED	1.1	1.8	0.4
+TCGA-25-1626	YES	517	480	318	Partial Response	Metastasis	65	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.5	1.4	0.4
+TCGA-24-1924	YES	919	919	320	Complete Response	Loco-Regional	65	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.5	1	0.5
+TCGA-24-1464	YES	379	379	323	NA	Loco-Regional	70	Left	NA	Tumor resection	NA	NA	YES	G3	Post-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	DECEASED	1.2	1.5	0.7
+TCGA-24-2290	YES	1102	1102	324	Complete Response	Loco-Regional	56	NA	NA	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.5	0.3
+TCGA-29-1703	YES	1815	1815	324	Complete Response	Metastasis	56	Bilateral	NA	Tumor resection	NA	NA	NA	G2	Post-Adjuvant Therapy	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IIIC	DECEASED	1	1.4	0.4
+TCGA-13-0795	YES	NA	595	325	Complete Response	Metastasis	66	Bilateral	NOT HISPANIC OR LATINO	Fine needle aspiration biopsy	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	LIVING	0.9	1.4	0.3
+TCGA-23-1110	YES	NA	1658	326	Complete Response	Metastasis	42	Right	HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.8	0.8	0.6
+TCGA-13-0804	YES	1073	1073	329	Complete Response	Metastasis	73	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1.3	1.5	0.3
+TCGA-24-1474	YES	675	675	331	Partial Response	Loco-Regional	57	Left	NA	Tumor resection	NA	NA	NA	G3	NA	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IIIC	DECEASED	1	1	0.7
+TCGA-24-1567	YES	524	524	335	NA	NA	54	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIB	DECEASED	0.3	1.1	0.3
+TCGA-24-1434	YES	568	568	337	Partial Response	Loco-Regional	59	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1.5	1.5	0.6
+TCGA-61-2000	YES	NA	441	339	Stable Disease	Loco-Regional	67	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	1	1	0.4
+TCGA-25-1623	YES	565	565	342	Complete Response	Metastasis	71	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IV	DECEASED	1	1.8	0.3
+TCGA-29-1696	YES	1032	1025	342	Partial Response	Loco-Regional	43	Right	NA	Tumor resection	NA	NA	NO	G2	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.8	0.8	0.3
+TCGA-24-1923	YES	689	689	343	Complete Response	Loco-Regional	51	Bilateral	NA	Incisional Biopsy	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.6	1.3	0.6
+TCGA-04-1517	YES	608	608	349	Complete Response	Loco-Regional	79	Bilateral	NA	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.9	1.5	0.4
+TCGA-31-1950	YES	NA	571	349	Partial Response	Loco-Regional	76	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G2	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	0.9	1.2	0.2
+TCGA-04-1530	YES	3622	3622	350	Complete Response	Loco-Regional	68	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.4	0.4
+TCGA-13-1488	YES	2154	2154	351	Complete Response	Metastasis	59	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	11-20 mm	IV	DECEASED	1	2.3	0.4
+TCGA-24-2033	YES	562	562	351	Partial Response	Loco-Regional	87	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.7	1	0.7
+TCGA-10-0933	YES	446	356	356	Complete Response	Loco-Regional	77	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	Pre-Operative	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	0.4	1	0.4
+TCGA-36-1571	YES	695	695	374	Complete Response	Loco-Regional	53	Bilateral	NA	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	No Macroscopic disease	IIIB	DECEASED	0.9	1.3	0.9
+TCGA-36-1570	YES	NA	655	375	Partial Response	NA	49	Bilateral	NA	Tumor resection	NA	NA	YES	G3	Pre-Operative	NO	WHITE	>20 mm	IIIC	LIVING	1	1.3	0.7
+TCGA-29-1770	YES	NA	741	377	Complete Response	Loco-Regional	54	Bilateral	NA	Tumor resection	NA	NA	NA	G2	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	0.6	1.2	0.5
+TCGA-04-1338	YES	NA	1418	380	NA	Metastasis	78	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	Pre-Operative	NO	WHITE	1-10 mm	IIIC	LIVING	1	1.5	0.4
+TCGA-25-1634	YES	1091	1081	380	Complete Response	Metastasis	75	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	1	1.4	0.1
+TCGA-13-0901	YES	NA	589	390	Complete Response	Metastasis	41	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	ASIAN	>20 mm	IIIC	LIVING	1	1.3	0.4
+TCGA-13-0726	YES	948	945	392	Complete Response	Loco-Regional	55	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	GX	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.5	0.4
+TCGA-25-1313	YES	819	819	394	Complete Response	NA	62	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IV	DECEASED	1.5	2	1.5
+TCGA-04-1332	YES	1247	1247	395	NA	Metastasis	70	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	Pre-Operative	NO	WHITE	1-10 mm	IIIC	DECEASED	0.6	1	0.5
+TCGA-09-0364	YES	887	887	395	Complete Response	Loco-Regional	80	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	11-20 mm	IIC	DECEASED	NA	NA	NA
+TCGA-25-1326	YES	1248	944	395	Partial Response	Loco-Regional	61	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	2.5	3	1.2
+TCGA-24-1563	YES	1451	1451	396	Complete Response	Loco-Regional	66	Left	NA	Tumor resection	NA	NA	NA	G3	NA	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IIIC	DECEASED	1.1	1.1	0.4
+TCGA-30-1860	YES	1366	1366	397	Complete Response	Loco-Regional	58	Bilateral	HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.4	0.5	0.3
+TCGA-24-1552	YES	1259	1259	403	Complete Response	Loco-Regional	77	Left	NA	Tumor resection	NA	NA	YES	G3	Other	NO	WHITE	1-10 mm	IIIC	DECEASED	0.8	0.9	0.8
+TCGA-24-1616	YES	1163	1163	405	Complete Response	Loco-Regional	56	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.7	0.9	0.4
+TCGA-04-1648	YES	871	871	412	NA	NA	57	NA	NA	Cytology	NA	NA	NA	G2	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	DECEASED	0.4	1.2	0.4
+TCGA-13-1487	YES	681	681	412	Complete Response	Metastasis	74	NA	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	GX	NA	NO	WHITE	NA	IV	DECEASED	1	1.4	0.4
+TCGA-61-1918	YES	479	479	413	Complete Response	Metastasis	45	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IV	DECEASED	0.4	1	0.4
+TCGA-24-2024	YES	1769	1769	421	Complete Response	Loco-Regional	72	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IIIC	DECEASED	1	1.1	0.5
+TCGA-25-1320	YES	1154	1124	423	Progressive Disease	Metastasis	65	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	3	3.4	1
+TCGA-25-2404	YES	882	882	425	Complete Response	Metastasis	38	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	AMERICAN INDIAN OR ALASKA NATIVE	No Macroscopic disease	IIIC	DECEASED	1	2	0.6
+TCGA-24-0979	YES	1264	1264	428	Complete Response	Loco-Regional	53	Bilateral	NA	Cytology	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IV	DECEASED	0.6	0.8	0.5
+TCGA-29-1763	YES	NA	2031	428	Complete Response	Metastasis	43	Bilateral	NA	Tumor resection	NA	NA	NA	G2	Other	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IIC	LIVING	0.7	1.3	0.5
+TCGA-61-1919	YES	1161	1161	439	Complete Response	Metastasis	58	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G2	NA	NO	WHITE	NA	IIIC	DECEASED	0.8	1.5	0.4
+TCGA-36-1580	YES	737	737	440	NA	NA	82	NA	NA	Cytology	NA	NA	NA	G3	Pre-Operative	NO	NA	>20 mm	IIIC	DECEASED	1	2	0.4
+TCGA-20-0987	YES	701	701	442	NA	Loco-Regional	61	Bilateral	NOT HISPANIC OR LATINO	Fine needle aspiration biopsy	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.6	1.5	0.3
+TCGA-61-2095	YES	1875	1875	445	Complete Response	Metastasis	54	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G2	NA	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	1	1.2	0.4
+TCGA-23-1122	YES	1189	1189	447	Complete Response	Metastasis	53	Left	NA	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.8	1.1	0.5
+TCGA-24-1428	YES	NA	528	448	Complete Response	Loco-Regional	50	Left	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	1.2	1.5	0.5
+TCGA-24-1430	YES	862	862	448	Complete Response	Loco-Regional	68	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Other	NO	WHITE	>20 mm	IIIC	DECEASED	1.7	2	0.8
+TCGA-23-1022	YES	1511	1293	450	Complete Response	Metastasis	67	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.7	0.7	0.3
+TCGA-25-1321	YES	1033	1033	453	Complete Response	Metastasis	65	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	1.6	3	0.8
+TCGA-04-1331	YES	1336	1224	459	Complete Response	NA	78	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.4	0.5	0.4
+TCGA-09-1667	YES	NA	1882	460	Complete Response	Loco-Regional	61	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G2	NA	NO	WHITE	No Macroscopic disease	IIC	LIVING	0.7	1	0.4
+TCGA-13-0893	YES	1319	1319	461	Partial Response	Metastasis	48	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	NA	G3	NA	NO	BLACK OR AFRICAN AMERICAN	11-20 mm	IIIC	DECEASED	1	1.2	0.3
+TCGA-61-2109	YES	629	629	465	NA	Metastasis	40	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	NO	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.8	1.7	0.2
+TCGA-09-1665	YES	1265	1265	468	Complete Response	Loco-Regional	73	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G2	NA	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	0.6	1.5	0.6
+TCGA-24-2298	YES	1620	1620	469	Complete Response	Loco-Regional	55	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.4	1	0.4
+TCGA-24-1105	YES	1442	1442	470	Complete Response	Loco-Regional	36	Bilateral	NA	Cytology	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.4	0.8
+TCGA-29-1785	YES	1104	1053	473	Complete Response	Loco-Regional	55	Right	NA	Tumor resection	NA	NA	YES	G3	Post-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	DECEASED	0.7	1.2	0.4
+TCGA-09-1666	YES	NA	1751	480	Complete Response	Loco-Regional	57	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.6	1.5	0.6
+TCGA-61-1741	YES	1024	1024	487	Complete Response	Metastasis	76	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIB	DECEASED	1	1.2	0.4
+TCGA-23-1023	YES	NA	1233	490	Complete Response	Loco-Regional	65	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.6	0.8	0.4
+TCGA-04-1536	YES	884	884	498	NA	Metastasis	60	Bilateral	NA	Cytology	NA	NA	NA	G3	NA	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IV	DECEASED	1.5	1.8	0.2
+TCGA-29-1697	YES	948	948	499	Complete Response	Metastasis	62	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Other	NO	WHITE	>20 mm	IIIC	DECEASED	0.8	1.9	0.4
+TCGA-24-1435	YES	1324	1324	505	Complete Response	Loco-Regional	57	Bilateral	NA	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1.2	1.5	0.5
+TCGA-24-2267	YES	1446	1446	512	Complete Response	Loco-Regional	58	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIB	DECEASED	1.3	1.5	0.3
+TCGA-13-0887	YES	2027	2027	513	Complete Response	Metastasis	42	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	DECEASED	1.2	1.3	0.4
+TCGA-25-1625	YES	840	548	526	Stable Disease	Metastasis	66	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1.3	1.5	0.3
+TCGA-57-1584	NO	NA	643	530	NA	Metastasis	47	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	1	2.3	0.8
+TCGA-61-1728	YES	NA	848	533	Complete Response	Metastasis	59	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IV	LIVING	0.6	1.1	0.2
+TCGA-24-2280	YES	NA	2143	534	Complete Response	Loco-Regional	74	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	1.3	1.5	0.4
+TCGA-25-1632	YES	1799	1732	537	Complete Response	Metastasis	68	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IV	DECEASED	0.8	1.4	0.3
+TCGA-23-1030	YES	NA	885	543	Complete Response	Metastasis	64	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.8	1.5	0.5
+TCGA-24-1930	YES	2467	2467	543	Complete Response	Metastasis	53	Bilateral	NA	Tumor resection	NA	100	NA	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1	0.6
+TCGA-09-1670	YES	NA	547	547	Complete Response	Loco-Regional	57	Bilateral	NA	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	No Macroscopic disease	IIIA	LIVING	0.5	1.6	0.4
+TCGA-13-0899	YES	NA	1708	547	Complete Response	Metastasis	60	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	1.3	1.6	0.5
+TCGA-29-1768	YES	952	950	547	Stable Disease	Loco-Regional	50	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	>20 mm	IV	DECEASED	0.5	1	0.4
+TCGA-36-1568	YES	NA	874	547	Partial Response	Loco-Regional	52	Bilateral	NA	Tumor resection	NA	NA	NO	G3	NA	NO	NA	NA	IIIC	LIVING	0.5	1.6	0.3
+TCGA-24-1556	YES	2148	2148	549	Complete Response	Loco-Regional	50	Left	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIB	DECEASED	1	1.9	0.6
+TCGA-25-1877	YES	730	549	549	Complete Response	Metastasis	81	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.4	0.7	0.4
+TCGA-29-2414	YES	2621	2621	551	Complete Response	Loco-Regional	75	Left	NA	Tumor resection	NA	NA	NA	G2	NA	NO	WHITE	11-20 mm	IIIC	DECEASED	0.7	1	0.5
+TCGA-13-0908	YES	NA	1364	552	Complete Response	Metastasis	58	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IV	LIVING	1.3	1.4	0.3
+TCGA-13-0897	YES	NA	1748	553	Complete Response	Loco-Regional	54	Right	NOT HISPANIC OR LATINO	Cytology	ASHKENAZI	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	0.5	1.1	0.5
+TCGA-24-1553	YES	1767	1767	553	Complete Response	Loco-Regional	53	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIB	DECEASED	0.8	1.3	0.4
+TCGA-24-2289	YES	2049	2049	568	Complete Response	Loco-Regional	68	Bilateral	NA	Cytology	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IV	DECEASED	1	1.5	0.4
+TCGA-04-1348	YES	1483	1483	574	Complete Response	Metastasis	44	Bilateral	HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIB	DECEASED	1	1.5	0.4
+TCGA-25-2398	YES	1369	1369	577	Complete Response	Metastasis	71	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1.3	1.5	0.5
+TCGA-25-2400	YES	1278	1278	577	Complete Response	Metastasis	76	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	1.1	1.1	0.5
+TCGA-13-1499	YES	NA	1167	582	Complete Response	Metastasis	56	NA	NOT HISPANIC OR LATINO	Incisional Biopsy	ASHKENAZI	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	NA	IIIC	LIVING	1.1	2.1	0.4
+TCGA-09-2051	YES	NA	1919	583	Complete Response	Metastasis	42	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.7	0.8	0.3
+TCGA-13-1482	YES	1877	1877	602	Partial Response	Metastasis	52	NA	NOT HISPANIC OR LATINO	Cytology	NA	80	NA	G2	Pre-Operative	NO	WHITE	>20 mm	IV	DECEASED	1.3	1.3	0.4
+TCGA-24-2254	YES	1736	1736	606	Complete Response	Loco-Regional	66	Bilateral	NA	Tumor resection	NA	NA	YES	G3	Other	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1	0.4
+TCGA-29-1691	YES	1470	1435	613	Complete Response	Metastasis	51	Bilateral	NA	Tumor resection	NA	NA	NA	G2	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.4	0.5	0.05
+TCGA-25-1635	YES	1583	1558	614	Complete Response	Metastasis	71	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1.3	1.7	0.3
+TCGA-25-1633	YES	1891	1843	616	Complete Response	Metastasis	64	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.3	0.2
+TCGA-24-2027	YES	3336	3336	617	Complete Response	Loco-Regional	51	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Other	NO	WHITE	>20 mm	IV	DECEASED	0.8	1.6	0.6
+TCGA-20-1683	YES	NA	772	618	Stable Disease	Loco-Regional	65	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.5	1	0.4
+TCGA-23-2084	YES	1516	1516	619	Complete Response	Loco-Regional	45	Right	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IV	DECEASED	1.1	1.4	0.5
+TCGA-13-0766	YES	NA	651	628	Complete Response	Metastasis	42	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.9	1.7	0.3
+TCGA-09-2045	YES	1069	1069	631	Stable Disease	Loco-Regional	50	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G2	NA	NO	ASIAN	1-10 mm	IV	DECEASED	0.7	1.5	0.4
+TCGA-23-1114	YES	2089	2089	634	Complete Response	Metastasis	55	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	0.6	1	0.4
+TCGA-30-1853	YES	1103	1103	634	Complete Response	Loco-Regional	58	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.6	1	0.4
+TCGA-36-1574	YES	NA	686	648	Complete Response	Loco-Regional	48	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Pre-Operative	NO	ASIAN	>20 mm	IIIC	LIVING	0.5	0.7	0.4
+TCGA-31-1951	YES	NA	683	658	NA	Loco-Regional	58	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.5	0.7	0.3
+TCGA-31-1946	YES	NA	918	664	NA	Loco-Regional	30	Bilateral	NA	Tumor resection	NA	NA	NO	G3	NA	NO	NA	No Macroscopic disease	IIIC	LIVING	0.9	1	0.3
+TCGA-13-0765	YES	NA	869	668	Complete Response	Metastasis	50	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.6	1.2	0.3
+TCGA-29-1766	YES	1198	1189	672	Progressive Disease	Metastasis	74	Right	NA	Tumor resection	NA	NA	NA	G2	Post-Adjuvant Therapy	NO	WHITE	11-20 mm	IIIC	DECEASED	0.5	1.3	0.4
+TCGA-24-1103	YES	1645	1645	677	Complete Response	Loco-Regional	50	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IIIC	DECEASED	1	1.5	0.6
+TCGA-31-1944	YES	NA	1386	678	Complete Response	Loco-Regional	47	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.5	1	0.3
+TCGA-29-1693	YES	NA	3095	694	Complete Response	Loco-Regional	72	Left	NA	Tumor resection	NA	NA	YES	G3	Other	NO	WHITE	>20 mm	IIIC	LIVING	0.7	0.7	0.4
+TCGA-36-1581	YES	NA	751	702	Complete Response	Metastasis	63	Left	NA	Cytology	NA	NA	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIC	LIVING	0.6	1.7	0.6
+TCGA-24-2020	YES	4623	4623	723	Complete Response	Loco-Regional	67	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.8	1.1	0.4
+TCGA-25-1319	YES	1977	1977	730	NA	NA	73	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	11-20 mm	IIIC	DECEASED	2.5	3	1
+TCGA-61-1907	YES	NA	952	743	Stable Disease	NA	63	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	11-20 mm	IIIC	LIVING	0.9	1.6	0.4
+TCGA-13-0891	YES	NA	2099	761	Complete Response	Metastasis	73	Bilateral	NOT HISPANIC OR LATINO	Fine needle aspiration biopsy	ASHKENAZI	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IV	LIVING	1.2	1.4	0.4
+TCGA-24-1551	YES	1579	1579	764	Complete Response	Loco-Regional	53	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Other	NO	WHITE	1-10 mm	IIIC	DECEASED	0.7	1.2	0.5
+TCGA-61-1736	YES	1484	1484	764	Complete Response	Loco-Regional	45	Bilateral	NOT HISPANIC OR LATINO	Excisional Biopsy	NA	NA	YES	G3	NA	NO	WHITE	NA	IIIC	DECEASED	0.8	1	0.4
+TCGA-23-1026	YES	NA	816	797	Complete Response	Loco-Regional	45	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.7	0.8	0.4
+TCGA-13-1489	YES	NA	2521	806	Complete Response	Loco-Regional	70	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	80	NA	G2	Pre-Adjuvant Therapy	NO	WHITE	NA	IIIC	LIVING	1	1.7	0.4
+TCGA-61-1743	YES	1329	1329	809	Complete Response	Loco-Regional	53	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G2	NA	NO	WHITE	No Macroscopic disease	IIC	DECEASED	1	1.5	0.3
+TCGA-13-1497	YES	NA	1652	813	Complete Response	Metastasis	47	NA	NOT HISPANIC OR LATINO	Cytology	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	NA	IIIC	LIVING	1.2	1.3	0.3
+TCGA-36-1576	YES	NA	914	816	Complete Response	Loco-Regional	76	NA	NA	Tumor resection	NA	NA	YES	G3	Pre-Adjuvant Therapy	NO	NA	>20 mm	IIIC	LIVING	1	2.6	0.4
+TCGA-61-2008	YES	NA	931	817	Complete Response	Loco-Regional	40	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G2	NA	NO	ASIAN	No Macroscopic disease	IIC	LIVING	0.7	1.2	0.4
+TCGA-13-0883	YES	2096	2096	818	Complete Response	Loco-Regional	61	Bilateral	NOT HISPANIC OR LATINO	Cytology	ASHKENAZI	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1.1	1.4	0.4
+TCGA-04-1655	YES	1379	1379	819	NA	Metastasis	49	Bilateral	NA	Cytology	NA	NA	NA	G2	Pre-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIIB	DECEASED	0.6	1.1	0.4
+TCGA-24-2271	YES	962	962	827	NA	Metastasis	55	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	ASIAN	>20 mm	IIIC	DECEASED	0.8	1.6	0.5
+TCGA-61-1725	YES	NA	955	843	Stable Disease	Metastasis	40	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	11-20 mm	IIIC	LIVING	0.8	1	0.4
+TCGA-61-1911	YES	NA	1292	843	Complete Response	Metastasis	55	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	NA	IIA	LIVING	0.7	2	0.4
+TCGA-24-1545	YES	1745	1745	861	Complete Response	Loco-Regional	69	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	DECEASED	1	1.8	0.5
+TCGA-13-0913	YES	NA	912	871	Complete Response	Metastasis	53	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.6	1.3	0.4
+TCGA-24-1550	YES	1249	1249	892	Complete Response	Loco-Regional	49	Left	NA	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.5	0.7
+TCGA-30-1718	YES	1579	1579	896	NA	Loco-Regional	44	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.6	1.3	0.4
+TCGA-24-2036	YES	1947	1947	914	Complete Response	Loco-Regional	50	NA	NA	Tumor resection	NA	NA	NA	G3	Other	NO	WHITE	1-10 mm	IIIA	DECEASED	0.8	1.1	0.4
+TCGA-04-1361	YES	NA	989	926	Stable Disease	NA	57	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IIIB	LIVING	0.4	0.8	0.3
+TCGA-24-1104	YES	1933	1933	958	Complete Response	Metastasis	56	Left	NA	Cytology	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IV	DECEASED	1	1.5	0.7
+TCGA-24-1463	YES	2218	2218	971	Complete Response	Loco-Regional	70	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	1.3	2	0.5
+TCGA-13-1495	YES	NA	1497	977	Complete Response	Metastasis	60	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	80	NA	G2	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	1.5	2.1	0.4
+TCGA-23-1109	YES	1562	1562	987	Partial Response	Loco-Regional	62	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.9	1	0.8
+TCGA-04-1651	YES	1102	1102	990	NA	Metastasis	53	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	DECEASED	0.4	1.5	0.3
+TCGA-24-1603	YES	2742	2742	992	Complete Response	Loco-Regional	53	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	NA	IIIB	DECEASED	1	1	0.7
+TCGA-10-0927	YES	2490	2478	1001	Complete Response	Metastasis	65	Bilateral	HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G2	NA	NO	NA	1-10 mm	IIIC	DECEASED	0.7	1.1	0.6
+TCGA-04-1542	YES	2561	2561	1035	Complete Response	Metastasis	52	Bilateral	NA	Tumor resection	NA	NA	NO	G2	Pre-Operative	NO	WHITE	1-10 mm	IIIB	DECEASED	0.8	1	0.3
+TCGA-24-1549	YES	1721	1721	1042	Complete Response	Loco-Regional	58	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	NA	IIIB	DECEASED	0.6	0.6	0.4
+TCGA-09-1662	YES	2717	2717	1046	Complete Response	Metastasis	58	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IV	DECEASED	0.7	1.5	0.5
+TCGA-24-2023	YES	1364	1364	1069	Complete Response	Loco-Regional	54	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIA	DECEASED	1	1.2	0.5
+TCGA-24-2038	NO	1353	1353	1169	Complete Response	Loco-Regional	68	Right	NA	Tumor resection	NA	NA	NA	GB	NA	NO	WHITE	1-10 mm	IIIA	DECEASED	0.6	1	0.4
+TCGA-04-1514	YES	1720	1720	1221	Complete Response	Metastasis	45	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G2	Pre-Operative	NO	WHITE	No Macroscopic disease	IIIA	DECEASED	0.5	1.1	0.5
+TCGA-23-2077	YES	NA	3525	1232	Complete Response	Loco-Regional	45	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.9	1.1	0.4
+TCGA-13-0884	YES	3260	3260	1251	Complete Response	Loco-Regional	39	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.7	1.3	0.5
+TCGA-24-1467	YES	3224	3224	1252	Complete Response	Metastasis	51	Right	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1.2	1.3	0.7
+TCGA-04-1365	YES	NA	2328	1328	Complete Response	Metastasis	87	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	Pre-Operative	NO	WHITE	NA	IIIB	LIVING	1.2	1.2	0.6
+TCGA-29-1762	YES	2634	2606	1374	Complete Response	Loco-Regional	59	Bilateral	NA	Tumor resection	NA	NA	NA	G2	Post-Adjuvant Therapy	NO	WHITE	>20 mm	IV	DECEASED	0.9	0.9	0.4
+TCGA-24-1555	YES	2692	2692	1577	Complete Response	Loco-Regional	50	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Other	NO	WHITE	NA	IIIC	DECEASED	1	1	0.4
+TCGA-29-2427	YES	NA	1900	1581	Complete Response	NA	60	Left	NA	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	LIVING	1	1.5	0.5
+TCGA-61-1914	YES	NA	1721	1673	Complete Response	Loco-Regional	65	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	NA	>20 mm	IIIC	LIVING	1	1.2	0.4
+TCGA-61-2104	YES	NA	2337	1680	Complete Response	Metastasis	53	Bilateral	NA	Tumor resection	NA	NA	NA	G2	NA	NO	WHITE	No Macroscopic disease	IIC	LIVING	0.6	1.5	0.4
+TCGA-61-2111	YES	NA	3824	2205	Complete Response	Metastasis	61	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	NA	IV	LIVING	1.4	1.5	0.3
+TCGA-23-1119	YES	NA	3953	3378	Complete Response	Metastasis	64	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.8	0.8	0.6
+TCGA-04-1337	NO	61	61	NA	NA	NA	78	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G2	Pre-Operative	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	1	1.2	0.3
+TCGA-04-1341	YES	NA	NA	NA	NA	NA	85	NA	NA	NA	NA	NA	NA	G3	NA	NO	NA	NA	NA	LIVING	1	1.5	0.4
+TCGA-04-1343	YES	361	361	NA	Progressive Disease	NA	72	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	Pre-Operative	NO	WHITE	>20 mm	IV	DECEASED	0.6	1	0.4
+TCGA-04-1347	YES	NA	1918	NA	Complete Response	NA	81	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	100	NO	G3	Pre-Operative	NO	WHITE	No Macroscopic disease	IV	LIVING	1	1.1	0.1
+TCGA-04-1357	YES	NA	NA	NA	NA	NA	52	NA	NA	NA	NA	NA	NA	G3	NA	NO	NA	NA	IIIB	LIVING	0.6	1.5	0.6
+TCGA-09-0367	YES	546	546	NA	Progressive Disease	NA	67	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER	1-10 mm	IIIC	DECEASED	NA	NA	NA
+TCGA-09-1659	YES	303	303	NA	Stable Disease	NA	51	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.6	1	0.4
+TCGA-09-1661	YES	1169	1169	NA	Stable Disease	NA	75	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.4	0.6	0.1
+TCGA-09-1668	YES	NA	1684	NA	Complete Response	NA	57	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	NA	IIIC	LIVING	0.6	0.7	0.3
+TCGA-09-1669	YES	NA	927	NA	Complete Response	NA	54	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	No Macroscopic disease	IIIA	LIVING	0.5	0.9	0.3
+TCGA-09-1673	YES	NA	92	NA	NA	NA	50	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	>20 mm	IV	LIVING	1	3	0.6
+TCGA-09-1674	YES	NA	260	NA	Complete Response	NA	79	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	1.5	2.1	0.7
+TCGA-09-2044	YES	NA	186	NA	Complete Response	NA	77	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	ASIAN	No Macroscopic disease	IIB	LIVING	1.4	1.8	0.4
+TCGA-09-2048	YES	137	137	NA	Stable Disease	NA	63	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.7	1	0.2
+TCGA-09-2053	YES	NA	1209	NA	Complete Response	NA	72	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.4	0.7	0.3
+TCGA-09-2054	YES	636	636	NA	Progressive Disease	NA	58	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IIIC	DECEASED	0.8	2	0.4
+TCGA-09-2056	YES	NA	379	NA	Complete Response	NA	62	Bilateral	HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.7	1.6	0.4
+TCGA-10-0928	YES	562	562	NA	NA	NA	71	Bilateral	NA	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.8	1	0.4
+TCGA-10-0936	YES	1123	1089	NA	Partial Response	Loco-Regional	69	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	Pre-Adjuvant Therapy	NO	BLACK OR AFRICAN AMERICAN	>20 mm	IIIC	DECEASED	0.6	1	0.5
+TCGA-10-0938	YES	636	604	NA	Progressive Disease	Metastasis	80	Bilateral	NA	NA	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.6	1	0.6
+TCGA-13-0714	YES	189	189	NA	Progressive Disease	NA	55	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IV	DECEASED	0.6	1.2	0.5
+TCGA-13-0724	YES	83	83	NA	Progressive Disease	NA	72	Right	HISPANIC OR LATINO	Excisional Biopsy	NA	80	NA	G3	Pre-Operative	NO	WHITE	1-10 mm	IV	DECEASED	0.7	1.3	0.4
+TCGA-13-0760	YES	351	351	NA	NA	NA	63	Bilateral	NOT HISPANIC OR LATINO	Incisional Biopsy	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IV	DECEASED	0.9	1.5	0.4
+TCGA-13-0762	YES	NA	981	NA	Complete Response	NA	65	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.8	1.1	0.2
+TCGA-13-0768	YES	NA	256	NA	Complete Response	NA	73	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	60	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	0.7	0.8	0.4
+TCGA-13-0797	YES	NA	265	NA	Complete Response	NA	49	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	1.2	1.6	0.3
+TCGA-13-0799	YES	NA	237	NA	Complete Response	NA	44	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	ASIAN	No Macroscopic disease	IIIC	LIVING	1.1	1.6	0.3
+TCGA-13-0800	YES	NA	247	NA	Complete Response	NA	52	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.9	1.5	0.3
+TCGA-13-0801	YES	NA	252	NA	Complete Response	NA	46	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	BLACK OR AFRICAN AMERICAN	No Macroscopic disease	IIIC	LIVING	0.6	1.5	0.3
+TCGA-13-0885	YES	NA	2780	NA	Complete Response	NA	70	Left	NOT HISPANIC OR LATINO	Cytology	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	11-20 mm	IIIC	LIVING	0.6	1.2	0.4
+TCGA-13-0886	YES	NA	2259	NA	Complete Response	NA	67	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.6	1	0.5
+TCGA-13-0888	YES	NA	2141	NA	Partial Response	NA	78	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.8	1.2	0.4
+TCGA-13-0890	YES	NA	2068	NA	Complete Response	NA	56	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	1.5	1.5	0.4
+TCGA-13-0900	YES	NA	1736	NA	Complete Response	NA	59	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	60	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	NA	IIIC	LIVING	0.6	1.5	0.1
+TCGA-13-0905	YES	NA	1455	NA	Complete Response	NA	51	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	NA	IIIC	LIVING	1	1.2	0.3
+TCGA-13-0906	YES	NA	1367	NA	Complete Response	NA	50	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	60	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	1	1.1	0.4
+TCGA-13-0911	YES	NA	842	NA	Partial Response	NA	55	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IV	LIVING	1	1.5	0.8
+TCGA-13-0916	YES	NA	643	NA	Complete Response	NA	49	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	1	1.5	0.6
+TCGA-13-0919	YES	NA	453	NA	Complete Response	NA	52	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.8	1	0.4
+TCGA-13-0923	YES	NA	195	NA	Complete Response	NA	74	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	NA	NA	NA
+TCGA-13-0924	YES	NA	185	NA	Complete Response	NA	45	Bilateral	NOT HISPANIC OR LATINO	Cytology	ASHKENAZI	NA	NA	G3	NA	NO	WHITE	1-10 mm	IV	LIVING	NA	NA	NA
+TCGA-13-1403	YES	NA	331	NA	Complete Response	NA	48	Left	NOT HISPANIC OR LATINO	Cytology	NA	NA	NA	G3	NA	NO	WHITE	NA	IIIC	LIVING	0.9	1.2	0.4
+TCGA-13-1404	YES	NA	201	NA	Complete Response	NA	48	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	60	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	1	1.5	0.3
+TCGA-13-1405	YES	NA	224	NA	Complete Response	NA	49	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IV	LIVING	1.3	1.3	0.5
+TCGA-13-1407	YES	NA	184	NA	Complete Response	NA	51	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	NA	G3	NA	NO	WHITE	NA	IIIC	LIVING	0.7	1.5	0.4
+TCGA-13-1408	YES	NA	180	NA	Partial Response	NA	59	NA	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	LIVING	1.1	1.8	0.3
+TCGA-13-1409	YES	NA	208	NA	NA	NA	73	NA	NOT HISPANIC OR LATINO	Incisional Biopsy	NA	60	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	1	1.6	0.6
+TCGA-13-1410	YES	NA	143	NA	Complete Response	NA	57	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	60	NA	GX	Pre-Adjuvant Therapy	NO	WHITE	NA	IV	LIVING	1.3	1.9	0.5
+TCGA-13-1411	YES	NA	128	NA	Partial Response	NA	81	NA	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	LIVING	1.5	1.7	0.3
+TCGA-13-1477	YES	1661	1661	NA	Progressive Disease	Metastasis	49	Bilateral	NOT HISPANIC OR LATINO	Incisional Biopsy	NA	NA	NA	G2	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IV	DECEASED	1.3	1.3	0.3
+TCGA-13-1481	YES	2648	2648	NA	Complete Response	NA	76	Right	NOT HISPANIC OR LATINO	Cytology	NA	NA	NA	G2	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1.3	1.4	0.4
+TCGA-13-1485	YES	629	629	NA	Partial Response	Metastasis	48	Bilateral	NOT HISPANIC OR LATINO	Incisional Biopsy	NA	80	NA	G2	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IV	DECEASED	1.1	1.6	0.3
+TCGA-13-1492	YES	NA	2237	NA	Complete Response	NA	66	NA	NOT HISPANIC OR LATINO	Fine needle aspiration biopsy	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	NA	IIIC	LIVING	1.2	2.5	0.4
+TCGA-13-1496	YES	129	129	NA	NA	NA	65	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	1	1.1	0.3
+TCGA-13-1498	YES	NA	1144	NA	Partial Response	Metastasis	73	NA	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	60	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	LIVING	0.5	1.1	0.4
+TCGA-13-1501	YES	NA	999	NA	Partial Response	Metastasis	50	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	>20 mm	IV	LIVING	1.2	1.5	0.4
+TCGA-13-1505	YES	NA	128	NA	Complete Response	NA	63	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	1	1.2	0.3
+TCGA-13-1506	YES	NA	134	NA	Complete Response	NA	45	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	NA	IIIC	LIVING	0.6	1.1	0.2
+TCGA-13-1507	YES	NA	145	NA	Complete Response	NA	77	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	60	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	1.1	2	0.4
+TCGA-13-1509	YES	NA	126	NA	Complete Response	NA	64	Bilateral	NOT HISPANIC OR LATINO	Cytology	ASHKENAZI	40	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IV	LIVING	1.5	1.7	0.4
+TCGA-13-1510	NA	NA	78	NA	NA	NA	62	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	1.1	2	0.4
+TCGA-13-1511	YES	NA	118	NA	Partial Response	NA	52	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	60	NA	G3	Pre-Adjuvant Therapy	NO	ASIAN	>20 mm	IV	LIVING	1.6	2.2	0.4
+TCGA-13-1512	YES	NA	94	NA	NA	NA	49	Bilateral	NOT HISPANIC OR LATINO	Fine needle aspiration biopsy	NA	60	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIIC	LIVING	1.4	2	0.4
+TCGA-13-2060	YES	NA	261	NA	Complete Response	NA	51	Bilateral	NA	Cytology	NA	80	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	1-10 mm	IV	LIVING	1.5	2.5	0.5
+TCGA-20-0991	YES	NA	797	NA	Complete Response	NA	78	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIB	LIVING	0.6	0.8	0.4
+TCGA-20-1682	YES	NA	836	NA	Complete Response	NA	56	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	GX	Post-Adjuvant Therapy	NO	WHITE	11-20 mm	IIIC	LIVING	0.4	1	0.3
+TCGA-20-1684	YES	NA	580	NA	Complete Response	NA	51	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	0.5	1	0.4
+TCGA-20-1685	YES	NA	507	NA	Complete Response	NA	45	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	0.7	0.8	0.3
+TCGA-20-1686	YES	NA	89	NA	Complete Response	NA	75	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	Post-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.4	0.8	0.4
+TCGA-20-1687	YES	NA	81	NA	Complete Response	NA	46	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IV	LIVING	0.8	1.8	0.5
+TCGA-23-1021	YES	1446	1446	NA	Partial Response	NA	45	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	>20 mm	IV	DECEASED	0.9	1	0.5
+TCGA-23-1024	YES	NA	468	NA	Complete Response	NA	52	Right	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	NA	NA	G3	NA	NO	WHITE	1-10 mm	IV	LIVING	0.4	0.8	0.2
+TCGA-23-1029	YES	NA	268	NA	Complete Response	NA	46	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.8	0.8	0.3
+TCGA-23-1032	NO	84	68	NA	NA	NA	73	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IV	DECEASED	0.8	1	0.6
+TCGA-23-1107	NO	9	9	NA	NA	NA	59	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IV	DECEASED	0.6	1	0.6
+TCGA-23-1111	YES	NA	98	NA	NA	NA	63	Right	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	>20 mm	IIIC	LIVING	0.9	0.9	0.4
+TCGA-23-1113	YES	949	949	NA	Partial Response	NA	48	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IV	DECEASED	0.8	1	0.8
+TCGA-23-1116	YES	NA	139	NA	NA	NA	83	Left	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	NA	YES	G3	NA	NO	WHITE	>20 mm	IIIC	LIVING	0.8	1	0.6
+TCGA-23-1118	YES	NA	2616	NA	Complete Response	NA	45	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	>20 mm	IIIC	LIVING	0.7	0.8	0.7
+TCGA-23-1120	YES	NA	130	NA	NA	NA	60	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.8	1.8	0.6
+TCGA-23-1123	YES	1018	1018	NA	Progressive Disease	NA	59	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	11-20 mm	IIIC	DECEASED	0.8	0.8	0.6
+TCGA-23-1809	YES	NA	16	NA	NA	NA	63	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIC	LIVING	0.6	0.9	0.4
+TCGA-23-2078	YES	NA	2661	NA	Complete Response	NA	66	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.6	0.9	0.5
+TCGA-23-2081	YES	2342	2342	NA	Progressive Disease	NA	49	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	ASHKENAZI	NA	YES	G3	NA	NO	WHITE	1-10 mm	IV	DECEASED	0.7	0.8	0.5
+TCGA-24-0966	YES	NA	232	NA	Stable Disease	NA	78	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	BLACK OR AFRICAN AMERICAN	>20 mm	IIIC	LIVING	0.7	1.3	0.7
+TCGA-24-0968	YES	597	597	NA	Partial Response	Loco-Regional	59	Left	NA	Cytology	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.8	1.2	0.6
+TCGA-24-0975	YES	663	663	NA	Partial Response	NA	58	Bilateral	NA	Cytology	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.5	0.7
+TCGA-24-1413	YES	NA	192	NA	Complete Response	NA	51	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.6	1.1	0.4
+TCGA-24-1416	YES	NA	194	NA	Complete Response	NA	34	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IV	LIVING	0.6	1.5	0.5
+TCGA-24-1417	YES	NA	238	NA	Complete Response	NA	54	Left	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IV	LIVING	1.1	1.3	0.3
+TCGA-24-1418	YES	NA	243	NA	Complete Response	NA	68	Bilateral	NA	Fine needle aspiration biopsy	NA	NA	NA	G3	Other	NO	WHITE	>20 mm	IIIC	LIVING	1.2	1.2	0.3
+TCGA-24-1419	YES	NA	239	NA	Complete Response	NA	62	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	11-20 mm	IIIC	LIVING	1.2	1.8	0.3
+TCGA-24-1422	NO	23	23	NA	NA	NA	82	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IIIC	DECEASED	1.2	1.8	0.5
+TCGA-24-1423	YES	NA	190	NA	Complete Response	NA	61	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	1	1.8	0.6
+TCGA-24-1424	YES	NA	183	NA	Complete Response	NA	67	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.6	1.2	0.6
+TCGA-24-1425	YES	NA	181	NA	Complete Response	NA	45	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Other	NO	WHITE	1-10 mm	IIIC	LIVING	0.8	1.5	0.4
+TCGA-24-1426	YES	NA	163	NA	Complete Response	NA	43	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.4	1.2	0.3
+TCGA-24-1427	YES	NA	146	NA	Partial Response	NA	58	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	NA	>20 mm	IIIC	LIVING	1	1.7	0.7
+TCGA-24-1436	YES	260	260	NA	Partial Response	Loco-Regional	57	Right	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.7	1.5	0.3
+TCGA-24-1469	YES	NA	277	NA	Complete Response	NA	71	Right	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.7	1.5	0.3
+TCGA-24-1470	YES	NA	104	NA	Complete Response	NA	54	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Other	NO	WHITE	1-10 mm	IIIB	LIVING	1	1.2	0.5
+TCGA-24-1471	YES	NA	36	NA	NA	NA	60	Left	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	>20 mm	IIIC	LIVING	1	1.5	0.5
+TCGA-24-1544	YES	820	820	NA	Partial Response	Loco-Regional	71	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	BLACK OR AFRICAN AMERICAN	1-10 mm	IIIC	DECEASED	0.8	1.4	0.5
+TCGA-24-1546	YES	1955	1955	NA	NA	NA	46	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.4	1.5	0.4
+TCGA-24-1557	YES	1213	1213	NA	Partial Response	Loco-Regional	49	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.9	1.5	0.5
+TCGA-24-1604	YES	2687	2687	NA	Complete Response	Metastasis	66	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	NA	IIIC	DECEASED	1.3	1.4	0.6
+TCGA-24-1842	YES	NA	253	NA	Complete Response	NA	49	Bilateral	NA	Tumor resection	NA	NA	YES	G3	Other	NO	WHITE	1-10 mm	IIIC	LIVING	0.7	1.5	0.7
+TCGA-24-1843	YES	NA	106	NA	Complete Response	NA	66	Right	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	1	1.4	0.4
+TCGA-24-1844	YES	NA	113	NA	NA	NA	64	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	1	1.1	0.4
+TCGA-24-1845	YES	NA	116	NA	NA	NA	42	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.8	1.8	0.5
+TCGA-24-1846	YES	NA	133	NA	NA	NA	45	Bilateral	NA	Tumor resection	NA	NA	YES	G3	Other	NO	NA	1-10 mm	IIIC	LIVING	0.7	1.1	0.6
+TCGA-24-1847	YES	NA	343	NA	Complete Response	NA	45	Bilateral	NA	Excisional Biopsy	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IV	LIVING	0.9	1	0.3
+TCGA-24-1849	YES	NA	175	NA	Complete Response	NA	80	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	1.4	1.8	0.5
+TCGA-24-1850	YES	NA	167	NA	Complete Response	NA	72	Bilateral	NA	Tumor resection	NA	NA	YES	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	1.5	2	0.5
+TCGA-24-2019	YES	NA	148	NA	NA	NA	46	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Other	NO	WHITE	1-10 mm	IIIC	LIVING	1	1.5	0.3
+TCGA-24-2026	YES	1059	1059	NA	NA	NA	79	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	1	1	1
+TCGA-24-2261	NO	24	24	NA	NA	NA	76	Left	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	11-20 mm	IIIC	DECEASED	1.4	1.7	0.4
+TCGA-24-2262	NO	11	11	NA	NA	NA	57	Right	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.6	1.5	0.4
+TCGA-24-2281	YES	NA	1356	NA	Complete Response	NA	68	Bilateral	NA	Tumor resection	NA	NA	YES	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIA	LIVING	0.9	1.5	0.2
+TCGA-24-2288	YES	25	25	NA	NA	NA	70	Bilateral	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.6	1.2	0.5
+TCGA-24-2293	YES	506	506	NA	Partial Response	NA	47	Right	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	NA	DECEASED	1.1	1.3	0.3
+TCGA-24-2297	YES	1699	1699	NA	Complete Response	NA	56	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	0.6	1	0.3
+TCGA-25-1312	NA	31	31	NA	NA	NA	69	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IV	DECEASED	2.5	3	1
+TCGA-25-1314	YES	1003	973	NA	Partial Response	NA	42	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IV	DECEASED	2	4.5	0.8
+TCGA-25-1315	YES	1583	1553	NA	Partial Response	NA	50	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	2	3.5	0.9
+TCGA-25-1316	YES	1279	1126	NA	Progressive Disease	NA	55	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	2.5	3	1.5
+TCGA-25-1317	YES	68	31	NA	NA	NA	66	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	NA	IIIC	DECEASED	1.4	1.5	0.5
+TCGA-25-1322	YES	91	91	NA	NA	NA	62	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IV	DECEASED	1.8	2.6	0.8
+TCGA-25-1323	YES	395	365	NA	Complete Response	NA	72	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	2	2.5	0.6
+TCGA-25-1324	YES	1035	1035	NA	NA	NA	74	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.5	0.8
+TCGA-25-1329	YES	457	90	NA	NA	NA	76	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	11-20 mm	IIIC	DECEASED	2.6	3	0.6
+TCGA-25-1627	YES	394	11	NA	NA	NA	73	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.5	0.3
+TCGA-25-1630	YES	1162	239	NA	Complete Response	NA	73	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.4	0.4
+TCGA-25-1631	NO	9	9	NA	NA	NA	73	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	2	2	0.4
+TCGA-25-2042	YES	396	396	NA	Progressive Disease	Metastasis	60	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	AMERICAN INDIAN OR ALASKA NATIVE	>20 mm	IIIC	DECEASED	0.6	1.4	0.3
+TCGA-25-2391	YES	1492	1492	NA	Complete Response	NA	57	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	>20 mm	IIIC	DECEASED	1	1.5	0.3
+TCGA-25-2392	NO	31	31	NA	NA	NA	75	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	11-20 mm	IV	DECEASED	1	1.5	0.3
+TCGA-25-2396	NA	92	92	NA	NA	NA	71	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	1	1	1
+TCGA-25-2397	NA	365	365	NA	NA	NA	59	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IV	DECEASED	1.3	2.2	0.7
+TCGA-25-2401	NA	90	90	NA	NA	NA	64	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	1.8	0.3
+TCGA-29-1690	YES	1448	1360	NA	NA	NA	66	Bilateral	NA	Tumor resection	NA	NA	NA	G2	NA	NO	WHITE	11-20 mm	IIIC	DECEASED	1.3	1.4	0.7
+TCGA-29-1694	YES	1187	1172	NA	Stable Disease	Loco-Regional	45	Bilateral	NA	Tumor resection	NA	NA	NA	GX	Other	NO	WHITE	11-20 mm	IIIC	DECEASED	1	1.2	0.3
+TCGA-29-1695	NA	1229	24	NA	NA	NA	62	Left	NA	Tumor resection	NA	NA	NA	G2	NA	NO	WHITE	>20 mm	IIIC	DECEASED	1	1.1	0.4
+TCGA-29-1711	YES	NA	1053	NA	Complete Response	NA	45	Bilateral	NA	Tumor resection	NA	NA	NA	G2	Post-Adjuvant Therapy	NO	BLACK OR AFRICAN AMERICAN	No Macroscopic disease	IIIC	LIVING	1.1	1.2	0.4
+TCGA-29-1761	YES	528	517	NA	Stable Disease	NA	80	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	ASIAN	>20 mm	IIIC	DECEASED	0.5	0.9	0.4
+TCGA-29-1769	YES	NA	699	NA	Complete Response	NA	40	Bilateral	NA	Tumor resection	NA	NA	NO	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	0.5	1.1	0.4
+TCGA-29-1776	YES	NA	360	NA	Stable Disease	Loco-Regional	63	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	BLACK OR AFRICAN AMERICAN	>20 mm	IIIC	LIVING	0.7	0.9	0.4
+TCGA-29-1777	YES	NA	374	NA	Progressive Disease	Loco-Regional	47	Bilateral	NA	Tumor resection	NA	NA	NA	G2	Post-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	LIVING	0.6	1.3	0.5
+TCGA-29-1778	YES	NA	454	NA	Complete Response	NA	77	Right	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	1	1.1	0.5
+TCGA-29-1781	NO	NA	254	NA	Complete Response	NA	69	Bilateral	NA	Tumor resection	NA	NA	NA	G3	Pre-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIIC	LIVING	1	1.2	0.4
+TCGA-29-1783	YES	NA	219	NA	NA	NA	58	Right	NA	Tumor resection	NA	NA	NA	G3	Post-Adjuvant Therapy	NO	WHITE	1-10 mm	IIIC	LIVING	1	1.2	0.4
+TCGA-29-1784	YES	NA	163	NA	Complete Response	NA	55	Right	NA	Tumor resection	NA	NA	YES	G3	Post-Adjuvant Therapy	NO	WHITE	No Macroscopic disease	IIIC	LIVING	1	1.5	0.4
+TCGA-29-2425	YES	NA	1977	NA	Complete Response	Loco-Regional	60	NA	NA	Tumor resection	NA	NA	NO	G2	Post-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	LIVING	0.8	1	0.5
+TCGA-29-2428	YES	NA	1372	NA	Complete Response	NA	58	Left	NA	Tumor resection	NA	NA	YES	G3	Post-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	LIVING	1.2	1.7	0.4
+TCGA-30-1855	NO	75	75	NA	NA	NA	61	NA	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.6	1	0.4
+TCGA-30-1862	NO	185	185	NA	NA	NA	65	NA	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G2	NA	NO	WHITE	>20 mm	IV	DECEASED	NA	NA	NA
+TCGA-31-1956	YES	NA	1341	NA	NA	NA	60	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	NA	IIIB	LIVING	0.9	1.3	0.2
+TCGA-31-1959	YES	NA	66	NA	NA	NA	49	Bilateral	NOT HISPANIC OR LATINO	Excisional Biopsy	NA	NA	YES	G2	NA	NO	WHITE	NA	IV	LIVING	0.7	1.1	0.2
+TCGA-36-1569	YES	NA	884	NA	Partial Response	NA	52	Bilateral	NA	Cytology	NA	NA	YES	G3	Pre-Operative	NO	WHITE	1-10 mm	IIIC	LIVING	0.9	1.6	0.4
+TCGA-36-1575	YES	NA	260	NA	NA	NA	83	NA	NA	Tumor resection	NA	NA	NO	G3	NA	NO	NA	No Macroscopic disease	IIIB	LIVING	0.8	1.6	0.4
+TCGA-36-1577	YES	NA	783	NA	Complete Response	NA	43	Bilateral	NA	Cytology	NA	NA	NA	G2	NA	NO	ASIAN	No Macroscopic disease	IIC	LIVING	0.6	1.7	0.6
+TCGA-57-1582	YES	731	731	NA	Progressive Disease	NA	50	Left	NA	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	0.6	2	0.6
+TCGA-57-1583	YES	346	346	NA	NA	NA	57	Left	NA	Tumor resection	NA	NA	NO	G3	NA	NO	BLACK OR AFRICAN AMERICAN	No Macroscopic disease	IIIC	DECEASED	1	1.4	0.4
+TCGA-57-1585	YES	53	53	NA	Progressive Disease	NA	57	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	11-20 mm	IIIC	DECEASED	0.6	0.8	0.3
+TCGA-57-1993	YES	NA	762	NA	NA	NA	56	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	0.5	1.5	0.5
+TCGA-57-1994	NO	NA	761	NA	NA	NA	63	NA	NA	Tumor resection	NA	NA	NA	NA	NA	NO	WHITE	NA	NA	LIVING	0.5	0.5	0.4
+TCGA-59-2348	NA	NA	5480	NA	Complete Response	NA	59	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	NA	IIIC	LIVING	1	2	0.4
+TCGA-59-2350	NA	679	679	NA	Partial Response	Loco-Regional	44	Bilateral	NA	Tumor resection	NA	NA	NA	G3	NA	NO	NA	1-10 mm	IV	DECEASED	0.4	0.4	0.2
+TCGA-59-2351	NA	NA	3532	NA	Complete Response	Loco-Regional	51	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.8	2	0.4
+TCGA-59-2354	YES	1046	1046	NA	Stable Disease	NA	64	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	DECEASED	1	2.4	0.3
+TCGA-59-2355	YES	65	65	NA	NA	NA	58	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	>20 mm	IV	DECEASED	0.4	0.6	0.2
+TCGA-59-2363	YES	NA	164	NA	Complete Response	NA	40	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	ASIAN	No Macroscopic disease	IIIA	LIVING	1	1.5	0.4
+TCGA-61-1721	YES	NA	338	NA	Complete Response	NA	38	Bilateral	NOT HISPANIC OR LATINO	Excisional Biopsy	NA	NA	YES	G1	NA	YES	WHITE	NA	IV	LIVING	0.9	1	0.3
+TCGA-61-1724	YES	637	637	NA	Progressive Disease	Loco-Regional	47	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	1.2	1.2	0.3
+TCGA-61-1737	YES	NA	1364	NA	Complete Response	NA	42	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IV	LIVING	0.3	0.7	0.2
+TCGA-61-1740	NO	74	74	NA	Progressive Disease	Metastasis	71	Right	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	Pre-Adjuvant Therapy	NO	WHITE	>20 mm	IIIC	DECEASED	0.4	0.6	0.3
+TCGA-61-1900	YES	NA	176	NA	Stable Disease	NA	51	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	NO	G3	NA	NO	BLACK OR AFRICAN AMERICAN	No Macroscopic disease	IIIB	LIVING	0.9	1.5	0.6
+TCGA-61-1910	YES	NA	1126	NA	Complete Response	NA	56	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIC	LIVING	1	1.5	0.4
+TCGA-61-1917	YES	1321	1321	NA	Complete Response	NA	60	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	NA	IIIB	DECEASED	0.6	2	0.1
+TCGA-61-1995	YES	NA	60	NA	Stable Disease	NA	43	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	1.1	1.1	0.2
+TCGA-61-1998	YES	NA	168	NA	NA	NA	48	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	1-10 mm	IIIC	LIVING	0.5	1	0.1
+TCGA-61-2002	YES	NA	547	NA	Progressive Disease	NA	46	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	11-20 mm	IIIC	LIVING	0.4	1.2	0.2
+TCGA-61-2003	YES	NA	121	NA	Progressive Disease	NA	53	Bilateral	NOT HISPANIC OR LATINO	Cytology	NA	NA	YES	G2	NA	NO	WHITE	1-10 mm	IIIC	LIVING	1.4	1.5	0.2
+TCGA-61-2012	YES	NA	932	NA	NA	Metastasis	81	Left	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G2	NA	NO	WHITE	NA	IIC	LIVING	0.6	1.6	0.4
+TCGA-61-2016	YES	36	36	NA	Progressive Disease	NA	51	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	YES	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	DECEASED	0.6	1.5	0.1
+TCGA-61-2088	YES	NA	145	NA	NA	NA	51	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	1	1.4	0.4
+TCGA-61-2092	YES	NA	1573	NA	Complete Response	NA	57	Bilateral	NA	Tumor resection	NA	NA	NO	G3	NA	NO	WHITE	No Macroscopic disease	IIIC	LIVING	1.2	1.3	0.4
+TCGA-61-2094	YES	NA	2182	NA	Complete Response	NA	63	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	NA	IIIC	LIVING	1.1	2	0.3
+TCGA-61-2097	YES	NA	1844	NA	Complete Response	NA	71	Bilateral	NA	Tumor resection	NA	NA	YES	G2	NA	NO	WHITE	1-10 mm	IIC	LIVING	2	2	0.5
+TCGA-61-2098	YES	NA	1992	NA	Complete Response	NA	62	Bilateral	NA	Tumor resection	NA	NA	NA	G2	NA	NO	WHITE	11-20 mm	IIIC	LIVING	0.7	2	0.5
+TCGA-61-2101	YES	1688	1688	NA	Partial Response	NA	55	Bilateral	NOT HISPANIC OR LATINO	Tumor resection	NA	100	NA	G2	Post-Adjuvant Therapy	NO	WHITE	11-20 mm	IIIC	DECEASED	0.4	1.5	0.4
+TCGA-61-2102	YES	197	197	NA	NA	NA	74	Right	NA	Tumor resection	NA	NA	NA	G3	NA	NO	WHITE	NA	IIIC	DECEASED	0.5	1.5	0.3

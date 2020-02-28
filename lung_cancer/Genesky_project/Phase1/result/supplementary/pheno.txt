@@ -1,0 +1,301 @@
+ID	IID	Gender	Age	Smoking	type	differention	TNM	pheno
+11+	yfy001	female	57	0	ad	medium	IA	cancer
+11-	yfy002	female	57	0				normal
+15+	yfy003	male	35	0	ad	low	IB	cancer
+15-	yfy004	male	35	0				normal
+17+	yfy005	male	63	600	ad	low	IB	cancer
+17-	yfy006	male	63	600				normal
+19+	yfy007	male	29	0	mucoepidermoid	medium	IB	cancer
+19-	yfy008	male	29	0				normal
+20+	yfy009	male	50	500	sq	medium	IB	cancer
+20-	yfy010	male	50	500				normal
+22+	yfy011	male	53	1200	ad	medium	IB	cancer
+22-	yfy012	male	53	1200				normal
+23+	yfy013	female	55	0	ad	high	IB	cancer
+23-	yfy014	female	55	0				normal
+25+	yfy015	male	60	600	sq	medium	IIIB	cancer
+25-	yfy016	male	60	600				normal
+26+	yfy017	male	71	1600	sq	low	IIA	cancer
+26-	yfy018	male	71	1600				normal
+27+	yfy019	female	46	0	ad	medium	IIB	cancer
+27-	yfy020	female	46	0				normal
+28+	yfy021	male	73	900	sq	medium	IIIA	cancer
+28-	yfy022	male	73	900				normal
+29+	yfy023	male	80	1200	sq	low	IIIA	cancer
+29-	yfy024	male	80	1200				normal
+30+	yfy025	male	68	600	ad	medium	IIA	cancer
+30-	yfy026	male	68	600				normal
+31+	yfy027	male	77	1000	ad	medium	IIIA	cancer
+31-	yfy028	male	77	1000				normal
+32+	yfy029	male	47	1000	NA	low	IIIA	cancer
+32-	yfy030	male	47	1000				normal
+33+	yfy031	male	51	600	sq	medium	IIB	cancer
+33-	yfy032	male	51	600				normal
+35+	yfy033	male	66	1600	sq	low	IIA	cancer
+35-	yfy034	male	66	1600				normal
+36+	yfy035	male	63	600	big	low	IIIA	cancer
+36-	yfy036	male	63	600				normal
+37+	yfy037	male	53	400	sq	low	IIIA	cancer
+37-	yfy038	male	53	400				normal
+38+	yfy039	male	60	1200	sq	low	IIA	cancer
+38-	yfy040	male	60	1200				normal
+40+	yfy041	male	64	400	ad	low	IIIB	cancer
+40-	yfy042	male	64	400				normal
+42+	yfy043	female	43	0	ad	medium	IIIA	cancer
+42-	yfy044	female	43	0				normal
+43+	yfy045	male	54	600	sq	medium	IIA	cancer
+43-	yfy046	male	54	600				normal
+44+	yfy047	male	74	2500	ad	low	IIA	cancer
+44-	yfy048	male	74	2500				normal
+45+	yfy049	male	51	4500	sq	medium	IIA	cancer
+45-	yfy050	male	51	4500				normal
+46+	yfy051	male	55	600	sq	low	IIA	cancer
+46-	yfy052	male	55	600				normal
+47+	yfy053	male	69	800	sarcomatoid	low	IIIA	cancer
+47-	yfy054	male	69	800				normal
+49+	yfy055	female	55	75	NA	low	IIIA	cancer
+49-	yfy056	female	55	75				normal
+50+	yfy057	male	67	1600	sq	low	IIB	cancer
+50-	yfy058	male	67	1600				normal
+51+	yfy059	female	51	0	ad	medium	IIIB	cancer
+51-	yfy060	female	51	0				normal
+52+	yfy061	female	57	0	ad	medium	IIA	cancer
+52-	yfy062	female	57	0				normal
+53+	yfy063	female	54	0	ad	medium	IIA	cancer
+53-	yfy064	female	54	0				normal
+54+	yfy065	male	66	1500	sq	low	IIIA	cancer
+54-	yfy066	male	66	1500				normal
+55+	yfy067	male	60	900	sq	low	IIA	cancer
+55-	yfy068	male	60	900				normal
+56+	yfy069	male	66	1600	ad	medium	IIA	cancer
+56-	yfy070	male	66	1600				normal
+58+	yfy071	female	51	0	sq	low	IIIA	cancer
+58-	yfy072	female	51	0				normal
+59+	yfy073	male	57	300	sq	medium	IIB	cancer
+59-	yfy074	male	57	300				normal
+60+	yfy075	male	62	900	ad	medium	IIA	cancer
+60-	yfy076	male	62	900				normal
+61+	yfy077	male	71	800	ad	low	IIA	cancer
+61-	yfy078	male	71	800				normal
+62+	yfy079	male	47	400	ad	medium	IIIA	cancer
+62-	yfy080	male	47	400				normal
+63+	yfy081	male	70	800	ad	medium	IIB	cancer
+63-	yfy082	male	70	800				normal
+65+	yfy083	male	57	600	big	low	IIIA	cancer
+65-	yfy084	male	57	600				normal
+66+	yfy085	male	71	800	big	low	IIIB	cancer
+66-	yfy086	male	71	800				normal
+67+	yfy087	male	58	1800	ad	medium	IIIA	cancer
+67-	yfy088	male	58	1800				normal
+171+	yfy089	male	70	1000	sq	medium	IIB	cancer
+171-	yfy090	male	70	1000				normal
+172+	yfy091	male	65	NA	sq	medium	IIIA	cancer
+172-	yfy092	male	65	NA				normal
+173+	yfy093	male	59	800	sq	medium	IIB	cancer
+173-	yfy094	male	59	800				normal
+174+	yfy095	female	69	0	bronchioloalveolar	NA	IIB	cancer
+174-	yfy096	female	69	0				normal
+175+	yfy097	male	59	600	ad	NA	IB	cancer
+175-	yfy098	male	59	600				normal
+177+	yfy099	male	70	600	sq	medium	IIB	cancer
+177-	yfy100	male	70	600				normal
+179+	yfy101	female	52	0	ad	NA	IIIA	cancer
+179-	yfy102	female	52	0				normal
+182+	yfy103	male	71	600	ad	low	IB	cancer
+182-	yfy104	male	71	600				normal
+187+	yfy105	male	65	400	ad	medium	IIIA	cancer
+187-	yfy106	male	65	400				normal
+189+	yfy107	male	71	1600	sq	medium	IIB	cancer
+189-	yfy108	male	71	1600				normal
+191+	yfy109	male	53	440	ad	medium	IB	cancer
+191-	yfy110	male	53	440				normal
+196+	yfy111	male	57	600	sq	medium	IIB	cancer
+196-	yfy112	male	57	600				normal
+197+	yfy113	male	63	NA	sq	medium	IA	cancer
+197-	yfy114	male	63	NA				normal
+200+	yfy115	male	54	1200	ad	medium		cancer
+200-	yfy116	male	54	1200				normal
+201+	yfy117	female	53	0	sq	medium	IIIA	cancer
+201-	yfy118	female	53	0				normal
+206+	yfy119	male	64	1000	sq	NA	IIB	cancer
+206-	yfy120	male	64	1000				normal
+207+	yfy121	male	45	600	benigh	NA		cancer
+207-	yfy122	male	45	600				normal
+208+	yfy123	male	46	400	ad	medium	IIIA	cancer
+208-	yfy124	male	46	400				normal
+209+	yfy125	male	53	500	sq	medium	IIIA	cancer
+209-	yfy126	male	53	500				normal
+210+	yfy127	male	67	800	sq	medium	IB	cancer
+210-	yfy128	male	67	800				normal
+213+	yfy129	male	52	600	ad	medium	IB	cancer
+213-	yfy130	male	52	600				normal
+248+	yfy131	male	59	700	small	NA	IIA	cancer
+248-	yfy132	male	59	700				normal
+249+	yfy133	male	60	500	ad	NA	IIIA	cancer
+249-	yfy134	male	60	500				normal
+250+	yfy135	male	0	NA	benigh	NA		cancer
+250-	yfy136	male	0	NA				normal
+251+	yfy137	male	0	NA	benigh	NA		cancer
+251-	yfy138	male	0	NA				normal
+252+	yfy139	female	55	NA	ad	NA	IIIA	cancer
+252-	yfy140	female	55	NA				normal
+253+	yfy141	female	45	NA	ad	NA	IIIA	cancer
+253-	yfy142	female	45	NA				normal
+254+	yfy143	male	73	800	sq	NA	IA	cancer
+254-	yfy144	male	73	800				normal
+255+	yfy145	male	47	NA	sq	NA	IIB	cancer
+255-	yfy146	male	47	NA				normal
+256+	yfy147	male	61	400	sq	NA	IIIA	cancer
+256-	yfy148	male	61	400				normal
+257+	yfy149	female	55	NA	ad	medium	IIB	cancer
+257-	yfy150	female	55	NA				normal
+258+	yfy151	male	55	600	sarcomatoid	NA		cancer
+258-	yfy152	male	55	600				normal
+261+	yfy153	male	60	NA		NA		cancer
+261-	yfy154	male	60	NA				normal
+262+	yfy155	male	55	900	sq	NA	IIB	cancer
+262-	yfy156	male	55	900				normal
+265+	yfy157	male	59	600	sq	NA	IIB	cancer
+265-	yfy158	male	59	600				normal
+266+	yfy159	male	61	1800	sq	NA	IIB	cancer
+266-	yfy160	male	61	1800				normal
+267+	yfy161	male	65	400	sq	NA	IB	cancer
+267-	yfy162	male	65	400				normal
+268+	yfy163	female	61	NA	benigh	NA	NA	cancer
+268-	yfy164	female	61	NA				normal
+269+	yfy165	male	76	1500	sq	NA	IIIA	cancer
+269-	yfy166	male	76	1500				normal
+275+	yfy167	male	49	600	ad	NA	IIB	cancer
+275-	yfy168	male	49	600				normal
+276+	yfy169	male	45	600	sq	NA	IIIA	cancer
+276-	yfy170	male	45	600				normal
+279+	yfy171	male	60	600	sq	NA	IB	cancer
+279-	yfy172	male	60	600				normal
+280+	yfy173	male	64	600	sq	NA	IB	cancer
+280-	yfy174	male	64	600				normal
+282+	yfy175	male	62	NA	ad	NA	IIB	cancer
+282-	yfy176	male	62	NA				normal
+195+	yfy177	male	60	600	ad	medium	IIIA	cancer
+195-	yfy178	male	60	600				normal
+202+	yfy179	male	74	600	ad	medium	IB	cancer
+202-	yfy180	male	74	600				normal
+218+	yfy181	male	75	600	sq	medium	IIB	cancer
+218-	yfy182	male	75	600				normal
+219+	yfy183	male	61	0	sq	NA	IIB	cancer
+219-	yfy184	male	61	0				normal
+220+	yfy185	male	54	600	adsq	NA	IIIA	cancer
+220-	yfy186	male	54	600				normal
+222+	yfy187	male	71	0	ad	low	IB	cancer
+222-	yfy188	male	71	0				normal
+263+	yfy189	male	57	1200	NA	low	IIIA	cancer
+263-	yfy190	male	57	1200				normal
+146+	yfy191	female	73	0	NA	low	NA	cancer
+146-	yfy192	female	73	0				normal
+148+	yfy193	female	20	0	mucoepidermoid	NA	IB	cancer
+148-	yfy194	female	20	0				normal
+536781+	yfy195	female	54	0	adsq	NA	IIIA	cancer
+536781-	yfy196	female	54	0				normal
+527574+	yfy197	female	48	0	bronchioloalveolar	NA	IB	cancer
+527574-	yfy198	female	48	0				normal
+539586+	yfy199	female	72	0	sq	medium	IB	cancer
+539586-	yfy200	female	72	0				normal
+538781+	yfy201	female	49	0	ad	medium	IIIA	cancer
+538781-	yfy202	female	49	0				normal
+186+	yfy203	female	0	0	bronchioloalveolar	NA	IA	cancer
+186-	yfy204	female	0	0				normal
+190+	yfy205	female	57	0	bronchioloalveolar	NA	NA	cancer
+190-	yfy206	female	57	0				normal
+205+	yfy207	female	62	0	bronchioloalveolar	NA	IA	cancer
+205-	yfy208	female	62	0				normal
+214+	yfy209	female	60	0	bronchioloalveolar	medium	IIB	cancer
+214-	yfy210	female	60	0				normal
+216+	yfy211	female	56	0	adsq	NA	IIIA	cancer
+216-	yfy212	female	56	0				normal
+225+	yfy213	female	25	0	mucoepidermoid	NA	IB	cancer
+225-	yfy214	female	25	0				normal
+240+	yfy215	female	62	0	ad	NA	NA	cancer
+240-	yfy216	female	62	0				normal
+144+	yfy217	male	67	200	sq	medium	IIIA	cancer
+144-	yfy218	male	67	200				normal
+147+	yfy219	male	63	600	sq	medium	IIB	cancer
+147-	yfy220	male	63	600				normal
+149+	yfy221	male	53	0	bronchioloalveolar	NA	IA	cancer
+149-	yfy222	male	53	0				normal
+150+	yfy223	male	52	600	sq	medium	IIIA	cancer
+150-	yfy224	male	52	600				normal
+154+	yfy225	male	72	1800	sq	medium	IB	cancer
+154-	yfy226	male	72	1800				normal
+157+	yfy227	male	61	0	sq	high	IIB	cancer
+157-	yfy228	male	61	0				normal
+159+	yfy229	male	58	0	sq	NA	IIIA	cancer
+159-	yfy230	male	58	0				normal
+162+	yfy231	male	64	600	ad	medium	IB	cancer
+162-	yfy232	male	64	600				normal
+152+	yfy233	male	81	0	sq	high	IB	cancer
+152-	yfy234	male	81	0				normal
+164+	yfy235	male	34	200	sq	high	IIB	cancer
+164-	yfy236	male	34	200				normal
+527987+	yfy237	male	70	NA	sq	medium	IB	cancer
+527987-	yfy238	male	70	NA				normal
+529205+	yfy239	male	56	800	ad	medium	IV	cancer
+529205-	yfy240	male	56	800				normal
+165+	yfy241	female	65	0	ad	medium	IB	cancer
+165-	yfy242	female	65	0				normal
+142+	yfy243	male	69	400	sq	low	IB	cancer
+142-	yfy244	male	69	400				normal
+153+	yfy245	male	71	300	sq	medium	IIB	cancer
+153-	yfy246	male	71	300				normal
+537945+	yfy247	male	64	400	sq	medium	IIB	cancer
+537945-	yfy248	male	64	400				normal
+176+	yfy249	male	53	2100	sq	high	IIB	cancer
+176-	yfy250	male	53	2100				normal
+178+	yfy251	male	61	0	sq	medium	IB	cancer
+178-	yfy252	male	61	0				normal
+181+	yfy253	male	72	1500	ad	medium	IIIA	cancer
+181-	yfy254	male	72	1500				normal
+184+	yfy255	male	50	680	ad	low	IB	cancer
+184-	yfy256	male	50	680				normal
+193+	yfy257	male	50	4600	ad	medium	IA	cancer
+193-	yfy258	male	50	4600				normal
+194+	yfy259	male	50	300	small	NA	IIB	cancer
+194-	yfy260	male	50	300				normal
+198+	yfy261	male	46	300	bronchioloalveolar	NA	IIB	cancer
+198-	yfy262	male	46	300				normal
+199+	yfy263	male	75	0	sq	medium	IB	cancer
+199-	yfy264	male	75	0				normal
+211+	yfy265	male	55	1800	sq	medium	IIB	cancer
+211-	yfy266	male	55	1800				normal
+215+	yfy267	male	71	700	small	NA	IIIA	cancer
+215-	yfy268	male	71	700				normal
+217+	yfy269	male	73	0	ad	low	IIB	cancer
+217-	yfy270	male	73	0				normal
+221+	yfy271	male	55	0	ad	medium		cancer
+221-	yfy272	male	55	0				normal
+227+	yfy273	male	73	600	ad	medium	IIIA	cancer
+227-	yfy274	male	73	600				normal
+228+	yfy275	male	61	0	bronchioloalveolar	NA	IA	cancer
+228-	yfy276	male	61	0				normal
+229+	yfy277	male	53	0	ad	low	IV	cancer
+229-	yfy278	male	53	0				normal
+230+	yfy279	male	61	NA	ad	low	IIIA	cancer
+230-	yfy280	male	61	NA				normal
+231+	yfy281	male	65	600	ad	medium	IIIB	cancer
+231-	yfy282	male	65	600				normal
+232+	yfy283	male	68	1200	sq	medium	IIIA	cancer
+232-	yfy284	male	68	1200				normal
+233+	yfy285	male	62	1200	sq	medium	IA	cancer
+233-	yfy286	male	62	1200				normal
+234+	yfy287	male	46	0	big	NA	Ⅳ	cancer
+234-	yfy288	male	46	0				normal
+236+	yfy289	male	76	450	sq	medium	IB	cancer
+236-	yfy290	male	76	450				normal
+237+	yfy291	male	65	800	ad	medium	IB	cancer
+237-	yfy292	male	65	800				normal
+238+	yfy293	male	62	600	sq	medium	IIA	cancer
+238-	yfy294	male	62	600				normal
+239+	yfy295	male	58	900	adsq	NA	IIIA	cancer
+239-	yfy296	male	58	900				normal
+241+	yfy297	male	59	0	sq	medium	IB	cancer
+241-	yfy298	male	59	0				normal
+242+	yfy299	male	49	750	ad	medium	IA	cancer
+242-	yfy300	male	49	750				normal

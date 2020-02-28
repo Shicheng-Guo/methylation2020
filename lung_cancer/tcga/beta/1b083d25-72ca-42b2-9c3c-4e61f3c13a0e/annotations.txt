@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+6d27d89a-8fb3-5bac-81c7-96a4cff26987	11706	case	9a50e7e4-831d-489f-87d2-979e987561cc	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy rectal cancer. Prior malignancy bladder cancer. No systemic chemotherapy or radiation.

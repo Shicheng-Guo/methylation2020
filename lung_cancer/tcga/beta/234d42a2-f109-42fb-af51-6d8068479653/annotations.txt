@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+f5ab6a4b-720d-50cc-8985-f271758a7441	11763	case	ffb53b81-c1ed-473c-bdcd-b325b02e22ae	Prior malignancy	Notification	2012-10-31T00:00:00	Approved	Prior malignancy bladder cancer. No systemic chemotherapy or radiation.

@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+f7384f5c-d635-592f-85ff-bd4e5b567625	4966	case	107f6b9a-2883-4499-a40a-ec25bc834a06	Prior malignancy	Notification	2012-01-24T00:00:00	Approved	[intgen.org]: Patient had prior malignancy of basal cell carcinoma; treated surgically only.

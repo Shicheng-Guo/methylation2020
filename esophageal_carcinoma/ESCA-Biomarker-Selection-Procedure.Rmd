@@ -1,0 +1,144 @@
+---
+title: "ESCA Biomarker Selection Procedure"
+author: "Shicheng Guo"
+date: "Thursday, April 21, 2016"
+output: html_document
+---
+
+In 2016, we start the ESCA biomarker selection study. We don't have enough money to do the Genome-wide Methyaltion sequencing expriments. Therefore, we only infer some potential biomarkers from TCGA and GEO ESCA dataset. 
+
+1, ESCA hypermethylation regions
+2, PBMC hypomethyaltion regions
+3, Pan-cancer dataset to make these biomarker are ESCA specific (ESCA highest methylation)
+4, Gene Regulation regions(DNAse regions from ENCODE Project)
+
+
+```{r}
+setwd("/home/shg047/bak/esca")
+
+normal1<-read.table("/home/shg047/oasis/TCGA/Meth/Normal.PBMC.GEO.HM450K.Beta.txt",sep="\t",head=T)
+
+target<-read.table("/home/shg047/bak/esca/target.cpg.txt",sep="\t")
+rlt1<-normal[match(target[,7],normal[,1]),]
+rlt2<-cbind(target,rlt1)
+write.table(rlt2,file="target.info.txt",row.names=F,col.names=F,sep="\t",quote=F)
+
+# step 2. overlap with Dnase-cluster
+cd /home/shg047/bigwig2wig/
+wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeRegDnaseClustered/wgEncodeRegDnaseClusteredV3.bed.gz
+gunzip wgEncodeRegDnaseClusteredV3.bed.gz
+
+# 399 region if not with -f 0.5
+bedtools intersect -u -wa -a /home/shg047/bak/esca/target.info.txt -b /home/shg047/bigwig2wig/wgEncodeRegDnaseClusteredV3.bed > target.info.pbmc.dns.txt
+wc -l  target.info.pbmc.dns.txt
+
+# 378 region if with -f 0.5
+bedtools intersect -f 0.5 -u -wa -a /home/shg047/bak/esca/target.info.txt -b /home/shg047/bigwig2wig/wgEncodeRegDnaseClusteredV3.bed > target.info.pbmc.dns.txt
+
+# 122 region if with -f 0.5
+bedtools intersect -f 0.5 -u -wa -a /home/shg047/bak/esca/target.info.txt -b /home/shg047/bigwig2wig/wgEncodeRegDnaseClusteredV3.bed | awk '{print $1,$2,$3}' | sort -u | wc -l 
+
+awk '{print $8}'  target.info.pbmc.dns.txt | sort -u
+
+# remove regions without gene annotation (only CpG loci)
+# remove regions has been reported in ESCA (but we need 1-2 widely accepted ESCA methylation biomarker as our positive control)
+# remove exon and intron regions(promoter,enhancer or TSS(up and down 500bp) will be perfect)
+
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+
+PCAPlot<-function(data,pheno,output,multifigure=T){
+  print("Please be sure row is individual, column is variable")
+  pca <- prcomp(data,center=T,scale = F)  # Here, input file: row is individual and column is variable
+  outputfile=paste(output,".pdf",sep="")
+  pdf(outputfile)
+  if(multifigure){
+    par(mfrow=c(2,2),mar=c(4,4,4,4)) 
+  }
+  plot((pca$sdev[1:10])^2,type="o",xaxt="n",ylab="Variances",xlab="Principle Components",col="red",lwd=2)
+  axis(1,at=0:10,labels=paste("PC",0:10,sep=""))
+  var<-c()
+  for(i in 1:length(pca$sdev)){var[i]<-sum((pca$sdev[1:i])^2)/sum((pca$sdev)^2)}
+  plot(var,ylab="total variance",xlab="number of principle components",lwd=2,type="l")
+  abline(h=0.8,col="grey",lty=2)
+  abline(v=which(var>0.8)[1],col="grey",lty=2)
+  scores <- data.frame(pheno, pca$x[,1:3])
+  col = as.numeric(as.factor(pheno))
+  plot(x=scores$PC1,y=scores$PC2, xlim=c(min(scores$PC1),max(scores$PC1)),ylim=c(min(scores$PC2),max(scores$PC2)),type="n",xlab="PC1",ylab="PC2")
+  for(i in 1:length(scores$PC1)){
+    points(scores$PC1[i],scores$PC2[i],pch=as.numeric(as.factor(pheno))[i],col=col[i],cex=0.8,lwd=2)
+  }
+  legend("topright",legend=names(table(pheno)),pch=1:length(table(pheno)),col=1:length(table(pheno)),bty="n",cex=0.6)
+  plot(x=scores$PC1,y=scores$PC3, xlim=c(min(scores$PC1),max(scores$PC1)),ylim=c(min(scores$PC3),max(scores$PC3)),type="n",xlab="PC1",ylab="PC3")
+  for(i in 1:length(scores$PC1)){
+    points(scores$PC1[i],scores$PC3[i],pch=as.numeric(as.factor(pheno))[i],col=col[i],cex=0.9,lwd=2)
+  }
+  legend("bottomright",legend=names(table(pheno)),pch=1:length(table(pheno)),col=1:length(table(pheno)),bty="n",cex=0.6)
+  dev.off()
+}
+
+fhclust<-function(mydata,method="euclidean",cut=4,bootstrap=FALSE,plot="clust.plot"){
+  # 1, Ward Hierarchical Clustering(uni-cluster for row)  Jan 31st 2013
+  d <- dist(mydata, method = "euclidean") # distance matrix
+  fit <- hclust(d, method="ward")
+  file1=paste(plot,"nonbootstrap","pdf",sep=".")
+  file2=paste(plot,"bootstrap","pdf",sep=".")
+  
+  pdf(file1)
+  plot(fit)
+  dev.off()
+  # plot(fit) # display dendogram
+  clusters <- cutree(fit, k=cut) # cut tree into 5 clusters
+  # draw dendogram with red borders around the 5 cluster
+  # rect.hclust(fit, k=cut, border="red") 
+  if(bootstrap==TRUE){
+    library(pvclust)
+    pdf(file2)
+    # Ward Hierarchical Clustering with Bootstrapped p values
+    fit <- pvclust(mydata, method.hclust="ward",method.dist="euclidean")
+    plot(fit) # dendogram with p values
+    # add rectangles around groups highly supported by the data
+    pvrect(fit, alpha=.95)   
+  }
+  list<-names(table(clusters))
+  rlt<-list()
+  rlt<-lapply(list,function(x) names(which(clusters==x)))
+  rlt
+}
+
+HeatMap<-function(data,phen,varselect=12000,plot="heatmap.11.pdf",cexRow = 0.01,cexCol = 1.2,Colv=T,Rowv=T){
+#  subset<-order(unlist(apply(data,1,function(x) sd(x,na.rm=T))),decreasing=T)[1:4000]
+  x1<-which(phen==unique(phen)[1])
+  x2<-which(phen==unique(phen)[2])
+#  subset<-order(unlist(apply(data,1,function(x) t.test(x[x1],x[x2])$p.value)),decreasing=F)[1:varselect]  
+  subset<-order(unlist(apply(data,1,function(x) abs(mean(x[x1]-mean(x[x2]))))),decreasing=T)[1:varselect]  
+  
+  data<-data[subset,]
+  library("gplots")
+  colors <- colorpanel(75,"midnightblue","mediumseagreen","yellow") 
+  colors <-bluered(75)
+  colors <-greenred(75)
+  sidecol<-function(x){
+    x<-as.numeric(as.factor(x))
+    col<-rainbow(length(table(colnames(data))))
+    sapply(x,function(x) col[x])
+  }
+  ColSideColors=sidecol(phen)
+  pdf(plot)
+  heatmap.2(data,trace="none",cexRow = cexRow,cexCol = cexCol, ColSideColors=ColSideColors,density.info="none",col=colors,Colv=Colv,Rowv=Rowv,keysize=0.9, margins = c(5, 10))
+  dev.off()
+}
+
+
+
+```
+

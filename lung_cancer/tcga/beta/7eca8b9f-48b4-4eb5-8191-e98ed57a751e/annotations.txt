@@ -1,0 +1,2 @@
+id	submitter_id	entity_type	entity_id	category	classification	created_datetime	status	notes
+4d7d2dd5-0286-5604-8818-73f1d69030cd	5494	case	923b37e4-fcf7-46a0-8cb2-9139711fec7b	Prior malignancy	Notification	2012-03-20T00:00:00	Approved	Left eyelid CA. No chemo or radiation.

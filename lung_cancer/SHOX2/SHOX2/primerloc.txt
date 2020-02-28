@@ -1,0 +1,12 @@
+SHOX2bspf	116	20
+SHOX2bspt	359	20
+SHOX2mf	131	22
+SHOX2mt	294	22
+SHOX2uf	128	25
+SHOX2uf	299	25
+shox2_3mf	18	20
+shox2_3mt	160	18
+shox2_3uf	14	24
+shox2_3uf	163	20
+SHOX2Eurobspf	10	25
+SHOX2Eurobspt	236	22

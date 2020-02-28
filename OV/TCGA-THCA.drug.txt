@@ -1,0 +1,4 @@
+"" "Var1" "Freq"
+"1" "" 44
+"2" "Complete Response" 11
+"3" "Stable Disease" 1
