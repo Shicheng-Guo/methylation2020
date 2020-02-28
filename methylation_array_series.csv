@@ -1,0 +1,899 @@
+Accession,Title,Count
+GSE41782,A genome-wide comparative study of DNA methylation in great apes,32
+GSE951,"267B1, PC3M, LNCaP Methylation Profile vs. mRNA Expression Level",14
+GSE2138,Colon cancer profiling,40
+GSE3280,Expression profiling of leukemia cell lines,4
+GSE4717,5`aza-dC demethylation of three short term cultured glioblastomas,12
+GSE7454,Modulation of gene expression by decitabine in U-2OS cells in vitro and in vivo,4
+GSE7687,Methylation-silenced genes in colorectal cancer cell lines,4
+GSE9015,Genome-Wide Mapping of Hypomethylated Sites in Human Genomes,8
+GSE10504,Using ChIP-chip technology to reveal common principles of transcriptional repression in normal and cancer cells,47
+GSE15745,Abundant Quantitative Trait Loci for CpG Methylation and Expression Across Human Brain Tissues,1658
+GSE16559,Lung adenocarcinoma and mesothelioma DNA methylation,285
+GSE17448,Methylation Pattern of Human Mesenchymal Stromal Cells ,16
+GSE17648,Epigenomic Analysis of Aberrantly Methylated Genes in Colorectal Cancer,44
+GSE17769,An integrative multi-dimensional genetic and epigenetic strategy to identify aberrant genes and pathways in cancer: DNA methylation,10
+GSE18081,"CpG site methylation of HCV-cirrhotic, HCV-HCC, and normal liver tissues",87
+GSE18458,Genome wide DNA Methylation Study in Cornelia de Lange Syndrome,72
+GSE19033,Changes in the Pattern of DNA Methylation Associate with Twin Discordance in SLE,59
+GSE19034,EYA4 is a non-small cell lung cancer tumor suppressor located in the susceptibility locus on chromosome 6q,90
+GSE19434,DNA methylation distinguishes pathologically normal human tissues,217
+GSE19515,Illumina GoldenGate Methylation array data for X-CGD patients and healthy controls,27
+GSE19711,Genome wide DNA methylation profiling of United Kingdom Ovarian Cancer Population Study (UKOPS),540
+GSE19974,Systematic evaluation of genome-wide methylated DNA enrichment using a CpG island array,17
+GSE20067,Genome wide DNA methylation profiling of diabetic nephropathy in type 1 diabetes mellitus,195
+GSE20080,Epigenome analysis of normal and preinvasive cervical smear samples,48
+GSE20236,Human Aging-associated DNA Hypermethylation Occurs Preferentially at Bivalent Chromatin Domains,93
+GSE20242,Human Aging-associated DNA Hypermethylation Occurs Preferentially at Bivalent Chromatin Domains,50
+GSE20395,IDH1 mutation defines methylation class and survival in human glioma,138
+GSE20712,Epigenetic portraits of human breast cancers (methylation data),123
+GSE20713,Epigenetic portraits of human breast cancers,381
+GSE20742,Genetic and Epigenetic Somatic Alterations in Head and Neck Squamous Cell Carcinomas Are Globally Coordinated but Not Locally Targeted (GoldenGate methylation),30
+GSE20868,Epigenetic portraits of human breast cancers (HCT116 cell line data),6
+GSE20872,Methylation data from Down syndrome and non-Down syndrome pediatric acute lymphoblastic leukemia cases and controls,23
+GSE20873,Proof of principle of novel technique of methylation analysis,5
+GSE20945,Effects of DAC treatment,55
+GSE20989,Mesothelioma integrative genomics: DNA methylation,23
+GSE21058,Integrated profiling reveals a global correlation between epigenetic and genetic alterations in mesothelioma,115
+GSE21094,Genomic profiling in Down syndrome pediatric acute lymphoblastic leukemia,233
+GSE21181,Differential methylation profiling of colon tumors,26
+GSE21232,DNA methylation profiling of male human pancreatic islets identifies loci for type 2 diabetes,16
+GSE21282,Epigenetic and immune function profiles associated with post-traumatic stress disorder,106
+GSE21304,Aberrant global methylation patterns affect the molecular pathogenesis and prognosis of human multiple myeloma,190
+GSE21395,Global methylation profiling of lymphoblastoid cell lines reveals epigenetic contributions to autism spectrum disorders,31
+GSE21541,An integrative multi-dimensional genetic and epigenetic strategy to identify aberrant genes and pathways in cancer,45
+GSE21554,An integrated genomic and expression analysis of 7q deletion in splenic marginal zone lymphoma (Main Study),69
+GSE22091,A Novel Approach Identifies New Differentially Methylated Regions (DMRs) Associated with Imprinted Genes,26
+GSE22135,DNA methylation epigenotypes in Breast Cancer Molecular Subtypes,60
+GSE22210,Molecular subtypes of breast cancer are associated with characteristic DNA methylation patterns,193
+GSE22249,Epigenetic portraits of human breast cancers (methylation data 2),125
+GSE22281,Epigenetic portraits of human breast cancers (various cell lines methylation data),19
+GSE22290,Breast tumor DNA methylation,162
+GSE22595,Methylation Pattern of Human Dermal Fibroblasts ,15
+GSE22867,DNA Methylation Profiling of Glioblastoma: Impact on Gene Expression and Clinical Outcome (Illumina),60
+GSE22874,Prognostic Gene Expression Signature of Carcinoma Associated Fibroblasts in Non-Small Cell Lung Cancer,78
+GSE22891,DNA Methylation Profiling of Glioblastoma: Impact on Gene Expression and Clinical Outcome,106
+GSE23311,DNA Methylation Analysis in Human Chorionic Villus and Maternal Blood Cells,48
+GSE23388,DNA methylation and expression profiling study for prostate cancer,8
+GSE23638,Genome-wide analysis of autosomal sex differences in human DNA methylome,24
+GSE23693,Aberrant silencing of cancer-related genes by CpG hypermethylation occurs independently of their spatial organization in the nucleus,11
+GSE23789,DNA methylation titration data from two samples with known methylation differences,8
+GSE24087,Epigenome analysis in HPV(-) and HPV(+) squamous cell carcinoma cell lines,4
+GSE24091,Expression and methylation analyses of HPV(-) and HPV(+) squamous cell carcinoma cell lines,36
+GSE24676,DNA Methylation Dynamics in Human Induced Pluripotent Stem Cells over Time,47
+GSE24787,Promoter methylation in HNSCC tumor cell lines is significantly different from primary tumors and xenografts,22
+GSE24884,Methylation RIKEN-cohort,56
+GSE25033,Progression Free Survival in Ovarian Cancer is Reflected in Epigenetic DNA-Methylation Profiles,20
+GSE25047,Identification of DNA Methylation Markers for Lineage Commitment of in vitro Hepatogenesis [methylation profiling],9
+GSE25048,Identification of DNA Methylation Markers for Lineage Commitment of in vitro Hepatogenesis,21
+GSE25062,Genome-scale analysis of aberrant DNA methylation in colorectal cancer,154
+GSE25083,Global hypomethylation identifies loci targeted for hypermethylation in head and neck cancer: normal head and neck tissue,18
+GSE25089,Global hypomethylation identifies loci targeted for hypermethylation in head and neck cancer: HNSCC,91
+GSE25091,Global hypomethylation identifies loci targeted for hypermethylation in head and neck cancer: blood controls,213
+GSE25093,Global hypomethylation identifies loci targeted for hypermethylation in head and neck cancer,322
+GSE25283,DNA methylation profiling of somatic tissues from normal and trisomic fetuses,60
+GSE25301,Obesity related methylation changes in DNA of peripheral blood leukocytes,14
+GSE25395,Altered DNA Methylation in Leukocytes with Trisomy 21,60
+GSE25402,Adipose Tissue MicroRNAs as Regulators of CCL2 Production in Human Obesity,148
+GSE25538,EQUIVALENCE OF CONVENTIONALLY-DERIVED AND PARTHENOTE-DERIVED HUMAN EMBRYONIC STEM CELLS,39
+GSE25706,Epigenome analysis of patients with various myeloid malignancies including differential levels of 5-hydroxymethylcytosine,81
+GSE25869,DNA methylation represents one of the key regulator that transcriptional control of highly expressed genes in gastric cancer.,75
+GSE25892,Epigenetic Vestiges of Early Developmental Adversity: Child Stress Exposure and Adolescent DNA Methylation,109
+GSE25966,Genome-wide Mapping of Imprinted Genes by DNA Methylation Profiling of Human Placentas from Triploidies,20
+GSE26033,A Genome-wide Study of DNA Methylation Patterns and Gene Expression Levels in Multiple Human and Chimpanzee Tissues,71
+GSE26126,DNA methylation profiling reveals novel biomarkers and important roles for DNA methyltransferases in prostate cancer,193
+GSE26133,DNA methylation patterns associate with genetic and gene expression variation in HapMap cell lines,160
+GSE26164,Regulation of DNA methylation by CK2-mediated phosphorylation of DNMT3A (Beadchip),6
+GSE26211,The effects of EBV transformation on methylation levels,96
+GSE26212,The effects of EBV transformation on gene expression and methylation levels,192
+GSE26319,Epigenome analysis of normal and cancer tissues in prostate cancer,2
+GSE26349,Breast Cancer Methylomes Establish an Epigenomic Foundation for Metastasis,60
+GSE26433,Coordinated Chromatin Remodeling induced by Demethylation requires SRCAP mediated H2A.Z exchange [Methylation],4
+GSE26519,Replicative senescence of mesenchymal stem cells causes DNA methylation changes which correlate with repressive histone marks,8
+GSE26543,"The influence of aging, environmental exposures and local sequence features on the variation of DNA methylation in blood",205
+GSE26683,Wide ranging DNA methylation differences of primary trophoblast cell populations and derived-cell lines,15
+GSE26685,Coordinated Chromatin Remodeling induced by Demethylation requires SRCAP mediated H2A.Z exchange,12
+GSE26784,Identification of a methylome signature of esophageal squamous cell carcinoma ,24
+GSE26791,The HDAC inhibitor panobinostat (LBH589) inhibits Acute Lymphoblastic leukemia (ALL) in vitro and in vivo in a new characterized human ALL mice model (Illumina),12
+GSE26807,The HDAC inhibitor panobinostat (LBH589) inhibits Acute Lymphoblastic leukemia (ALL) in vitro and in vivo in a new characterized human ALL mice model,36
+GSE26974,Sperm DNA methylation,21
+GSE26982,Integrative DNA methylation and gene expression analyses identify DNA packaging and epigenetic regulatory genes associated with low motility sperm,39
+GSE26989,DNA methylation analysis of ovarian cancers and normal peripheral blood lymphocyte DNA by Illumina Infinium platform,53
+GSE26990,Analysis of Promoter Methylation in Breast Cancer,107
+GSE27044,Methylation Profiling of Blood DNA from Sibling Discordant for Autism,1128
+GSE27097,Pediatric age-associated DNA methylation,494
+GSE27130,Anti-cancer drug sensitive DNA methylation marker research,248
+GSE27146,Population-specificity of human DNA methylation,180
+GSE27226,HDACI and DAC induce specific epigenetic profile in DLBCL,24
+GSE27284,Prognostic Gene Expression Signature of Carcinoma Associated Fibroblasts in Non-Small Cell Lung Cancer [methylation profiling],10
+GSE27317,Correlation between maternal age and newborn DNA methylation,168
+GSE27860,Genome wide analysis reveals association of a FTO gene variant with epigenetic changes of several genes in human blood,47
+GSE27895,Global DNA methylation profiling of CD4+ T cells from patients with systemic lupus erythematosus,23
+GSE27899,Methylation profiling in Ulcerative colitis,40
+GSE27902,Non-small-cell lung tumor and normal lung tissue methylation,94
+GSE28094,"A DNA Methylation Fingerprint of  1,628 Human Samples",1628
+GSE28217,NID2 and HOXA9 promoter hypermethylation as biomarkers to prevent and detect Oral Cavity Squamous Cell Carcinoma,12
+GSE28356,DNA Methylation Profiling of Melanoma Cell Lines,12
+GSE28368,DNA methylation data from nasal epithelial cells of human smokers and nonsmokers,12
+GSE28461,Promoter methylation data from ALL diagnosis and relapse pediatric acute lymphoblastic leukemia cases,68
+GSE28462,Integrated Genomic Analysis of Relapsed Childhood Acute Lymphoblastic Leukemia reveals therapeutic strategies,166
+GSE28525,Methylation screening of reciprocal genome-wide UPDs identifies novel human specific imprinted genes,15
+GSE28647,Genome-wide Methylation Profiling Identifies Candidate DNA Methylation Drivers of Acquired Cisplatin Resistance in Ovarian Cancer.,31
+GSE28648,Genome-wide methylation and expression profiling study identifies candidate DNA methylation drivers of acquired cisplatin resistance in ovarian cancer.,46
+GSE28746,"Epigenome analysis of male identical twin pairs discordant for sexual orientation, age 21 to 55.",84
+GSE29047,CpG methylation patterns and decitabine treatment response in acute myeloid leukemia cells and normal hematopoietic precursors,208
+GSE29189,Genome-scale DNA methylation profiling of TEL/AML positive childhood acute lymphoblastic leukaemia,48
+GSE29225,Depletion of RUNX1/ETO in t(8;21) AML cells leads to genome-wide changes in chromatin structure and transcription factor binding,38
+GSE29428,A methyl-deviator epigenotype of estrogen-receptor-positive breast carcinoma is associated with malignant biology,397
+GSE29490,A Genome-wide DNA Methylation Study in Colorectal Carcinoma,48
+GSE29499,Epigenetic analysis of gastric cancer cell lines,40
+GSE29661,Cellular aging can be monitored by DNA-methylation changes at specific CpG sites,12
+GSE29872,Cancer-related epigenome changes associated with reprogramming to induced pluripotent stem cells (methylation data),32
+GSE29873,Cancer-related epigenome changes associated with reprogramming to induced pluripotent stem cells,63
+GSE29895,Global Methylation Patterns in Idiopathic Pulmonary Fibrosis,32
+GSE30090,A promoter DNA demethylation landscape of human hematopoietic differentiation,34
+GSE30229,Peripheral blood DNA methylation profiles are predictive of head and neck squamous cell carcinoma,184
+GSE30456,Maintenance of hESCs in mesenchymal stem cell-conditioned media augments hematopoietic specification,6
+GSE30601,Epigenetic analysis of gastric cancer,297
+GSE30640,Changes in DNA methylation In cultered WI-38 cells over passages,5
+GSE30653,Recurrent Variations in DNA Methylation in Human Pluripotent Stem Cells and their Differentiated Derivatives [Illumina Infinium 27K DNA Methylation],283
+GSE30654,Recurrent Variations in DNA Methylation in Human Pluripotent Stem Cells and their Differentiated Derivatives,675
+GSE30758,Epigenome analysis of normal cells from the uterine cervix in a nested prospective case control study within the ARTISTIC trial,152
+GSE30759,Epigenome analysis of normal and cancer tissue from the uterine cervix,63
+GSE30760,Cervical cancer,215
+GSE30870,DNA methylomes of Newborns and Nonagenarians,40
+GSE31133,DNA methylation alterations and transcriptional gene silencing induced by IDH1 R132H mutation [Illumina],14
+GSE31134,DNA methylation alterations and transcriptional gene silencing induced by IDH1 R132H mutation,20
+GSE31362,Androgen receptor function links human sexual dimorphism to DNA methylation,62
+GSE31438,The DNA Methylomes of a Newborn and a Centenarian,14
+GSE31600,TET2 mutations are associated with specific methylation profiles in patients with Chronic Myelomonocytic Leukemia,32
+GSE31680,Methylome of Fetal and Maternal Monocytes and Macrophages at the Feto-Maternal Interface,24
+GSE31699,Relationship between Genome-Wide DNA Methylation and Gene Expression in Uterine Leiomyoma,68
+GSE31770,Epigenetic Impact of Long-Term Shiftwork:  Poly Evidence from Cricadian Genes and Whole-Genome Methylation Analyses,20
+GSE31781,Evidence for widespread changes in promoter methylation profile in human placenta in response to increasing gestational age and environmental/stochastic factors.,42
+GSE31788,"Aberrant DNA methylation epigenotype expanding to non-polycomb target genes, induced by Epstein-Barr virus infection in human gastric cancer [Illumina Methylation]",80
+GSE31789,"DNA methylation epigenotype expanding to non-polycomb target genes, induced by Epstein-Barr virus infection in human gastric cancer",84
+GSE31826,"Methylation analysis of samples from a phase II clinical trial of decitatbine in combination with carboplatin in patients with recurrent, platinum resistant epithelial ovarian cancer",56
+GSE31835,Global methylation analysis of psoriatic (involved and uninvolved) and control skin,37
+GSE31848,Recurrent Variations in DNA Methylation in Human Pluripotent Stem Cells and their Differentiated Derivatives [Illumina Infinium 450K DNA Methylation],153
+GSE31979,Genome-wide methylation analysis detects genes specific to breast cancer hormone receptor status and risk of recurrence,124
+GSE32250,Epigenetic Disruption of Cadherin-11 in human cancer metastasis,4
+GSE32251,Prognostic DNA Methylation Patterns in Cytogenetically Normal Acute Myeloid Leukemia are predefined by Stem Cell Chromatin Marks [methylation],89
+GSE32252,Prognostic DNA Methylation Patterns in CN-AML; a genome wide methylation and gene expression study,99
+GSE32275,Analysis of DNA methylation profiles in colorectal cancer cells treated with boswellic acids,3
+GSE32276,Boswellic acid induced changes in gene expression and methylation in colorectal cancer cells,5
+GSE32393,Epigenome analysis of breast tissue from women with and without breast cancer.,137
+GSE32396,Epigenome analysis of white blood cells from healthy women with and without BRCA1 mutation.,60
+GSE32861,Genome-scale analysis of DNA methylation in lung adenocarcinoma and integration with mRNA expression,118
+GSE32866,Genome-scale DNA methylation profiling of lung adenocarcinoma: validation using Ontario Tumor Bank samples,55
+GSE32867,DNA methylation and gene expression in lung adenocarcinoma,289
+GSE32925,Using DNA methylation to detect dysplasia/early neoplasia in Barrett's carcinogenesis,48
+GSE33065,Genome-wide DNA methylation profiling of CpG islands in breast cancer,47
+GSE33181,Feasibility and Interpretation of the Genome-wide Infinium Methylation Data Derived from Ligated Formalin Fixed Paraffin Embedded Paired Tumor and Normal Tissue.,48
+GSE33202,Cancer Outlier Gene Profile Sets Elucidate Pathways and Patient-Specific Targets in Head and Neck Squamous Cell Carcinoma [Illumina HumanMethylation],77
+GSE33232,Cancer Outlier Gene Profile Sets Elucidate Pathways and Patient-Specific Targets in Head and Neck Squamous Cell Carcinoma,284
+GSE33422,Epigenome analysis of endometrium tissue from women with metastatic endometrial cancer.,18
+GSE33445,DNA hypermethylation in breast cancer: breast cancer tissues vs. normal breast tissues,20
+GSE33450,DNA hypermethylation and gene expression in breast cancer: breast cancer tissues vs. normal breast tissues,36
+GSE33510,DNA methylation analyses of urothelial carcinoma reveal distinct epigenetic subtypes and an association between gene copy number and methylation status,156
+GSE33545,DNA hypermethylation in colorectal cancer: Colorectal cancer tissues vs. Adjacent non-tumor tissues,6
+GSE33614,Methylation analysis of cancer and control samples.,158
+GSE33896,Genome-wide CpG methylation during osteogenic and myogenic differentiation from adipose- derived stem cells.,16
+GSE34008,Epigenome analysis of genomic DNA isolated from whole blood of non-diabetic control and type-2 diabetic individuals,24
+GSE34035,Epigenome analysis of saliva samples from alcohol users,197
+GSE34068,"Widespread monoallelic methylation of colorectal cancer associated tumour suppressor genes, including multiple Wnt pathway inhibitors, in Hyperplastic Polyposis Syndrome.",15
+GSE34099,Epigenome analysis of control and neurodevelopmental disorder lymphoblastoid cell lines,65
+GSE34174,Whole Genome Methylation Analysis of Metastatic Castration Resistant Prostate Cancer,30
+GSE34200,The NIH Human Pluripotent Stem Cell Database,354
+GSE34257,The effect of periconceptional micronutrient supplementation on offspring DNA methylation,84
+GSE34355,Clonal Selection Drives Genetic Divergence of Metastatic Medulloblastoma [Illumina Infinium HumanMethylation27 Beadchip v1.2],19
+GSE34356,Clonal Selection Drives Genetic Divergence of Metastatic Medulloblastoma,36
+GSE34387,Oncogenic SDH mutation underlies global epigenomic instability in gastrointestinal stromal tumor,220
+GSE34639,Methylation data from CD4+ cells at birth and 12 months from a cohort of children who were diagnosed with IgE food allergy to either egg milk or peanut at 12 months (n=12) and healthy controls (n=12).,48
+GSE34869,"The NIH Human Pluripotent Stem Cell Database (Illumina, methylation)",24
+GSE35069,Differential DNA Methylation in Purified Human Blood Cells,60
+GSE35146,Epigenome analysis of normal and IPF lung tissue samples,6
+GSE35147,Altered DNA Methylation Profile in Idiopathic Pulmonary Fibrosis,14
+GSE35222,"Prenatal smoke exposure, DNA methylation, and childhood atopic disorders",14
+GSE35245,Genistein Cooperates with the Histone Deacetylase Inhibitor Vorinostat to Induce Cell Death in Prostate Cancer Cells (methylation data),22
+GSE35246,Genistein Cooperates with the Histone Deacetylase Inhibitor Vorinostat to Induce Cell Death in Prostate Cancer Cells,58
+GSE35327,Array-based DNA-methylation profiling of fetal tissues obtained by routine invasive prenatal testing (chorionic and amniotic samples),63
+GSE35424,An integrated genomic and expression analysis of 7q deletion in SMZL (Illumina Infinium Human Methylation 27 array),24
+GSE35912,Reversal of Aberrant Cancer Methylome and Transcriptome upon Direct Reprogramming of Lung Cancer Cells [Methylation],24
+GSE35913,Reversal of Aberrant Cancer Methylome and Transcriptome upon Direct Reprogramming of Lung Cancer Cells.,48
+GSE35997,DNA hypermethylation in placental tissues: placental tissues vs. maternal peripheral bloods,8
+GSE36002,Integrative analysis reveals relationships of genetic and epigenetic alterations in osteosarcoma [methylation],25
+GSE36004,Integrative analysis reveals relationships of genetic and epigenetic alterations in osteosarcoma.,69
+GSE36054,Methylation Profiling of Blood DNA from Healthy Children,192
+GSE36064,Methylation Profiling of Blood DNA from Healthy Children (Harvard Age Study),78
+GSE36166,Epigenetic analysis of healthy young men following a control and high-fat overfeeding diet,44
+GSE36194,North American Brain Expression Consortium: DNA Methylation,724
+GSE36195,cirDNA methylome analysis in prostate cancer,118
+GSE36216,DNA Methylation Profiling Defines Clinically Relevant Biological Subsets of Non-small Cell Lung Cancer,75
+GSE36353,Genome wide DNA Methylation analysis of benign and malignant adrenocortical tumors,48
+GSE36369,DNA methylation contributes to natural human variation,322
+GSE36534,DNA methylation screening identifies driver epigenetic events of cancer cell survival.,3
+GSE36580,AcceSssIble: an array-based assay for the study of chromatin accessibility and DNA methylation using the CpG methyltransferase SssI,10
+GSE36637,Aberrant promoter methylation and expression of UTF1 during cervix carcinogenesis,9
+GSE36642,Neonatal DNA methylation profile in humans is specified by a complex interplay between intrauterine environmental/ genetic factors subject to tissue-specific influence,123
+GSE36812,Epigenome analysis of cord blood samples from newborns,48
+GSE36829,Epigenome analysis of placenta samples from newborns,48
+GSE36831,DNA methylation and gene expression differences at growth related genes correlate with birth weight.,284
+GSE36832,DNA Methylation Dynamics in Blood after Hematopoietic Cell Transplant,6
+GSE36852,Epigenome analysis of newborn placenta and cord blood samples,92
+GSE36857,Goldengate Methylation analysis: Ewing Sarcoma,146
+GSE36859,Ewing Sarcoma,158
+GSE37008,Factors underlying variable DNA methylation in a human community cohort,99
+GSE37020,Epigenome analysis of smear cells from the uterine cervix consisting of 24 normals and 24 cervical intraepithelial neoplasias (all HPV+),48
+GSE37633,Epigenome analysis of normal and DDX20 knockdown HepG2 cells,2
+GSE37722,Normal early pregnancy: a transient state of epigenetic change favoring hypomethylation,84
+GSE37740,Intermediate- and low-methylation epigenotypes do not correspond to CpG island methylator phenotype (low and -zero) in colorectal cancer.,21
+GSE37754,Molecular Profiles of Human Breast Cancer and Their Association with Tumor Subtypes and Disease Prognosis (Illumina),72
+GSE37816,DNA methylation and expression profiling study for bladder cancer [methylation],24
+GSE37817,DNA methylation and expression profiling study for bladder cancer,48
+GSE37853,"DNA Methylation Profiles of Airway Epithelial Cells and PBMCs from Healthy, Atopic and Asthmatic Children.",41
+GSE37966,Guthrie card methylomics identifies temporally stable epialleles that are present at birth in humans (Methylation BeadChip),7
+GSE37988,Methylation in Taiwanese HCC tumor and adjacent tissues,124
+GSE38128,Guthrie card methylomics identifies temporally stable epialleles that are present at birth in humans,13
+GSE38216,Dynamic changes of DNA methylome and hydroxymethylome during neural differentiation of hES cells (Methylation BeadChip),12
+GSE38217,Dynamic changes of DNA methylome and hydroxymethylome during neural differentiation of hES cells,6
+GSE38266,450k Analysis of 42 FFPE HPV+ and HPV- HNSCC samples,42
+GSE38268,450k Analysis of 3 FF HPV+ and 3 FF HPV- HNSCC samples,6
+GSE38270,450k Analysis of 24 HNSCC cell lines,24
+GSE38271,FF and FFPE HPV+ and HPV- HNSCC and HNSCC cell lines,72
+GSE38291,Genome-Wide Analysis of DNA Methylation Differences in Muscle and Fat from Monozygotic Twins Discordant for Type 2 Diabetes,32
+GSE38532,Methylation profiling of oral squamous cell carcinoma (OSCC),80
+GSE38548,Somatic cell fusions reveal extensive heterogeneity in basal-like breast cancer,106
+GSE38608,Brain transcriptional and epigenetic associations with the autistic phenotype (methylation data),36
+GSE38609,Brain transcriptional and epigenetic associations with the autistic phenotype,72
+GSE38646,DNA methylation alterations in response to pesticide exposure in vitro ,27
+GSE38791,Somatic cell fusions reveal extensive heterogeneity in basal-like breast cancer [methylation27],9
+GSE38804,Epigenome analysis of brain between human and chimpanzee,24
+GSE38858,AcceSssIble Assay to Study the Chomatin Accessibility and DNA Methylation,42
+GSE38860,Aberrant DNA methylation at genes associated with a stem cell-like phenotype in cholangiocarcinoma tumors,39
+GSE38873,Correlation between DNA methylation and gene expression in the brains of patients with bipolar disorder and schizophrenia,168
+GSE39004,Molecular Profiles of Human Breast Cancer and Their Association with Tumor Subtypes and Disease Prognosis,180
+GSE39126,The human AlkB homologue 4 interacts with proteins associated with transcription (methylation),12
+GSE39131,Stump project -- methylation whole tissue; volar versus non-volar acral skin gene expression,12
+GSE39135,The human AlkB homologue 4 interacts with proteins associated with transcription,24
+GSE39198,Genome-scale methylome profiling of pheochromocytomas and paragangliomas with Illumina Infinium 27k Human Methylation arrays,148
+GSE39446,Comprehensive profiling of DNA methylation in colorectal cancer reveals subgroups with distinct clinicopathological and molecular features,119
+GSE39451,"Genomic, transcriptomic and epigenomic characterization of multifocal breast cancer",38
+GSE39560,DNA Methylation Profiling of Human Saliva,34
+GSE39603,Diagnostic and prognostic utility of a unique epigenetic prognostic PHYMA signature in prostate cancer,111
+GSE39626,DNA hypomethylation affects cancer-related biological functions and genes relevant in neuroblastoma pathogenesis,27
+GSE39981,Purified human leukocyte subtype DNA methylation profiles,73
+GSE40055,Non-CpG island promoter hypomethylation and miR-149 regulate the expression of SRPX2 in colorectal cancer,42
+GSE40097,DNA methylation analysis of pancreatic cancer and non-malignant pancreas cell lines,21
+GSE40099,Pancreatic cancer and non-malignant pancreas cell lines,62
+GSE40105,The DNA methylomes of serous borderline tumours reveal subgroups with malignant-like or benign-like profiles,51
+GSE40279,Genome-wide Methylation Profiles Reveal Quantitative Views of Human Aging Rates,656
+GSE40360,DNA methylation differences between multiple sclerosis and controls in frontal lobe white matter,47
+GSE40576,DNA Methylation Changes and Childhood Asthma in the Inner City [methylation],194
+GSE40631,Lentiviral transduction of CD34+ cells induces genome-wide epigenetic modifications,12
+GSE40699,CpG Methylation by Methyl 450K  Bead Arrays from ENCODE/HAIB,62
+GSE40700,CpG Methylation by Illumina Methyl27 Bead Arrays from ENCODE/HAIB,63
+GSE40736,DNA Methylation Changes and Childhood Asthma in the Inner City,388
+GSE40798,Epigenetic analysis of men with low birth weight following a control and high-fat overfeeding diet,31
+GSE41037,Aging effects on DNA methylation modules in blood tissue,720
+GSE41169,Blood DNA methylation profiles in a Dutch population,95
+GSE41336,Cultured Cyto and Syncytio-trophoblast samples exposed to varying degrees of hypoxia (methylation),90
+GSE41341,Cultured Cyto and Syncytio-trophoblast samples exposed to varying degrees of hypoxia,105
+GSE41384,Methylation profiling in intraepithelial neoplasia and cervical cancer,19
+GSE41525,Combinatorial treatment of DNMT inhibitor and LSD1 inhibitor results in cell growth inhibition and reexpression of epigenetically silenced genes (methylation),8
+GSE41689,Epigenome analysis of control and KLF4-overexpressing podocytes,2
+GSE41754,Combinatorial treatment of DNMT inhibitor and LSD1 inhibitor results in cell growth inhibition and reexpression of epigenetically silenced genes,32
+GSE41826,A Cell Epigenotype Specific Model for the Correction of Cellular Heterogeneity in the Brain,145
+GSE41933,Human bone and marrow niche formation by mesenchymal progenitors in vivo is predefined by an organotypic epigenetic signature,12
+GSE41957,Use of the B cell transcription program results in hypomethylation and overexpression of key genes in EBV-mediated conversion of resting to proliferative B cells,12
+GSE42042,Aberrant DNA methylation profiling of classic Philadelphia Negative Myeloproliferative Neoplasms,92
+GSE42043,A panel of CpG methylation patterns distinguishes human embryonic stem cells and induced pluripotent stem cells,46
+GSE42079,Genome wide methylation array analysis in T-ALL,48
+GSE42080,Promoter DNA methylation pattern identifies prognostic subgroups in childhood T-cell acute lymphoblastic leukemia,68
+GSE42372,Methylation profiling classifies HIV-associated lymphoma,31
+GSE42409,Additional annotation enhances potential for biologically-relevant analysis of the Illumina Infinium HumanMethylation450 BeadChip array,12
+GSE42448,Comparison of DNA methylation profilings between hESCs and hiPSCs,70
+GSE42490,DNA methyltransferase inhibitor zebularine inhibits human hepatic carcinoma cells proliferation and induces apoptosis.,6
+GSE42510,Alterations in cardiac DNA methylation in human dilated cardiomyopathy,17
+GSE42623,Effect of cigarette smoke on gene expression in mammary epithelial cells [methylation],2
+GSE42626,Methylation profiling categorizes HIV-associated lymphomas in two distinctive groups,42
+GSE42646,Acute hypersensitivity of pluripotent testicular cancer-derived embryonal carcinoma to low-dose 5-aza deoxycytidine (part 3),12
+GSE42647,Acute hypersensitivity of pluripotent testicular cancer-derived embryonal carcinoma to low-dose 5-aza deoxycytidine,36
+GSE42668,Effect of cigarette smoke on gene expression in mammary epithelial cells,4
+GSE42700,Epigenome analysis of buccal cells from monozygotic and dizygotic twins,53
+GSE42721,Methylome profiling reveals distinct alterations in phenotypic and mutational subgroups of myeloproliferative neoplasms (MPN),29
+GSE42774,A genome-wide methylation study on essential hypertension in young African American Males,16
+GSE42861,Differential DNA methylation in Rheumatoid arthritis,689
+GSE42865,Genome-wide DNA methylation profiling of Progeria and Werner syndrome patients,16
+GSE42944,Genome-Wide Methylation Analysis of Breast Cancer Cell Lines,55
+GSE43256,DNA methylation profiling of placental villi from karyotypically normal recurrent miscarriage,20
+GSE43265,An epigenetic panel of NEFH and HS3ST2 relates to overall survival in human ovarian cancer .,31
+GSE43269,Genome wide-DNA methylation analysis of articular chondrocytes reveals a cluster of osteoarthritic patients (methylation),41
+GSE43270,Genome wide-DNA methylation analysis of articular chondrocytes reveals a cluster of osteoarthritic patients,64
+GSE43293,Genome-scale methylome profiling of pheochromocytomas and paragangliomas with Illumina HumanMethylation450 arrays,24
+GSE43298,Genome-scale methylome profiling of human pheochromocytomas and paragangliomas (Illumina methylation beadchips) and mouse chromaffin cells (RRBS),176
+GSE43369,DNA Methylation Biomarkers for Noninvasive Diagnosis of Colorectal Cancer,194
+GSE43414,A data-driven approach to preprocessing Illumina 450K methylation array data,696
+GSE43851,Functional DNA methylation is accompanied by chromatin accessibility [methylation],20
+GSE43975,Epigenome-wide analysis of monozygotic twin pairs discordant for body mass index,96
+GSE44132,Antenatal Blood DNA Methylation Profiles,55
+GSE44222,Single-cell derived clones from human adipose stem cells present different immunomodulatory properties.,5
+GSE44296,"Epigenome analysis of  primary uveal melanoma cells, normal uveal melanocytes, neural crest stem cells, embryonic stem cells and uveal melanoma cell lines",63
+GSE44299,"Primary uveal melanoma cells, normal uveal melanocytes, neural crest stem cells, embryonic stem cells and uveal melanoma cell lines",189
+GSE44390,DNA Methyltransferase inhibition reverses epigenetically embedded phenotypes in lung cancer preferentially affecting Polycomb target genes,37
+GSE44424,"Global CpG Methylation profiling of donor cells, induced pluripotent stem cells, and human embryonic stem cells",43
+GSE44430,Comprehensive microarray analysis of reprogramming fidelity in a library of non-integrated induced pluripotent stem cell lines prepared with various derivation methods,207
+GSE44446,Characterization of the DNA methylation patterns in oxaliplatin chemosensitive and chemoresistant human colorectal cancer cell lines,2
+GSE44661,DNA methylation analysis of melanoma progression to brain metastasis,40
+GSE44662,"Genome-wide DNA methylation, gene expression, and copy number integrative analysis of melanoma brain metastasis",62
+GSE44684,DNA methylation data from pilocytic astrocytoma tumor samples and normal cerebellum controls,67
+GSE44763,Genome-wide analysis reveals DNA methylation markers that varies with both age and obesity,46
+GSE44870,Epigenome analysis of primary breast cancer tumors and different types of recurrences.,96
+GSE44909,Epigenome analysis of HCC samples with paired adjacent tissue,32
+GSE44970,Genome-wide DNA methylation profiles of human hepatocellular carcinoma,102
+GSE45198,An Inhibitor of Mutant IDH1 Delays Growth and Promotes Differentiation of Glioma Cells Methylation Data for Xenograft Samples,28
+GSE45199,An Inhibitor of Mutant IDH1 Delays Growth and Promotes Differentiation of Glioma Cells Methylation Data for In Vitro Model,16
+GSE45200,An Inhibitor of Mutant IDH1 Delays Growth and Promotes Differentiation of Glioma Cells,77
+GSE45253,Epigenome analysis of primary MCL,173
+GSE45266,Genome-wide promoter methylation analysis identifies epigenetic silencing of MAPK13 in primary cutaneous melanoma,29
+GSE45353,Epigenomic Alterations Define Lethal CIMP-positive Ependymomas of Infancy,48
+GSE45459,DNA Methylation data from early human B-cell development,22
+GSE45461,A global DNA methylation and gene expression analysis of early human B-cell development reveals a demethylation signature and transcription factor network.,53
+GSE45469,Induced Pluripotency of Human Prostatic Epithelial Cells,10
+GSE45707,"Epigenome analysis of U937, U937 treated with 5mM azacytidine for 24 and 72 hours and its azacytidine-resistant derivative",4
+GSE45727,"NLRP7 promotes trophoblast lineage differentiation, YY1 binding and alters CpG methylation",18
+GSE45775,DNA methylation in Hippocampus across Alzheimer Braak Stages,20
+GSE45958,Radiation-induced epigenetic DNA methylation modification of radiation-response pathways,24
+GSE46015,DNA methylation profiling of glioblastoma cancer stem cells,6
+GSE46016,Epigenomic profiling of glioblastoma stem cells,58
+GSE46045,Synergism between Hedgehog-GLI and EGFR signaling in Hedgehog-responsive human medulloblastoma (Daoy) cells,180
+GSE46063,Age-related epigenetic drift in the pathogenesis of MDS and AML part 1,19
+GSE46067,Age-related epigenetic drift in the pathogenesis of MDS and AML,25
+GSE46168,Inactive or moderately active human promoters are enriched for inter-individual epialleles [Methylation BeadChip],14
+GSE46177,A DNA hypermethylation profile reveals new potential biomarkers for prostate cancer diagnosis and prognosis,96
+GSE46220,Inactive or moderately active human promoters are enriched for inter-individual epialleles,24
+GSE46306,Genome-wide DNA methylation in cervical tissue,44
+GSE46364,DNA methylome signature in rheumatoid arthritis,11
+GSE46394,Genome-wide DNA methylation aberrations in human atherosclerosis (450K),49
+GSE46401,Genome-wide DNA methylation aberrations in human atherosclerosis,51
+GSE46419,A novel epigenetic regulated gene and involved in phenotypic switch classifies primary melanomas depending on the aggressiveness grade (Illumina),6
+GSE46522,A novel epigenetic regulated gene and involved in phenotypic switch classifies primary melanomas depending on the aggressiveness grade,8
+GSE46802,Global analysis of DNA methylation changes during progression of oral tumorigenesis,60
+GSE47071,5-hydroxymethylcytosine marks promoters in colon that resist hypermethylation in cancer [Methylation27 Array],89
+GSE47351,Methylomic analysis identifies epigenetically silenced genes and implies an activation of β-catenin signal in cervical cancer,2
+GSE47359,Genome-wide DNA methylation profiling in cultured eutopic and ectopic endometrial stromal cells (methylation),9
+GSE47361,Genome-wide DNA methylation profiling in cultured eutopic and ectopic endometrial stromal cells,18
+GSE47592,5-hydroxymethylcytosine marks promoters in colon that resist hypermethylation in cancer,137
+GSE47637,Genome-wide DNA methylation profiling of KYSE180 cells transfected with HOTAIR vector using Illumina HumanMethylation 450 arrays,2
+GSE47639,KYSE180 cells transfected with HOTAIR compared to control cells,5
+GSE47879,A familial disorder of altered DNA-methylation,60
+GSE47880,Array-based determination of DNA methylation in children born small for gestational age,110
+GSE47915,Human Prostate Cancer Illumina Infinium Human Methylation450 (HM450K bead array) BeadChip samples (benign vs tumor),8
+GSE48300,Human DNA methylation profiles for the HBV vaccine responses study,25
+GSE48325,DNA methylation analysis in non-alcoholic fatty liver disease suggests distinct disease-specific and remodeling signatures after bariatric surgery,85
+GSE48460,MGMT-STP27 methylation status as Predictive Marker for Response to PCV in Anaplastic Oligodendrogliomas and Oligoastrocytomas. A report from EORTC study 26951 [27K],58
+GSE48461,MGMT-STP27 methylation status as Predictive Marker for Response to PCV in Anaplastic Oligodendrogliomas and Oligoastrocytomas; A report from EORTC study 26951,59
+GSE48462,MGMT-STP27 methylation status as Predictive Marker for Response to PCV in Anaplastic Oligodendrogliomas and Oligoastrocytomas. A report from EORTC study 26951,117
+GSE48988,Epigenome analysis of normal colon mucosa samples,178
+GSE49053,Differentiation defective phenotypes revealed by large scale analyses of human pluripotent stem cells,244
+GSE49064,Aging-induced differential methylation in human PBMCs occurs with but often without change in expression of the associated gene (DNA Methylation),20
+GSE49065,Aging-induced differential methylation in human PBMCs occurs with but often without change in expression of the associated gene,40
+GSE49143,The NCI60 DNA methylome,60
+GSE49343,Overlapping DNA methylation profile between placentas with trisomy 16 and early-onset preeclampsia,30
+GSE49393,Profiling Methylomic Alterations in Postmortem Prefrontal Cortex Tissues of Individuals with Alcohol Use Disorders,48
+GSE49420,Integrative analysis demonstrates widespread NOTCH pathway activation in patients with renal cancer and reveals aberrant DNA methylation that targets the regulatory regions of the kidney genome,26
+GSE49576,Methylation data from medulloblastoma tumor samples,83
+GSE49585,The regulatory landscape of osteogenic differentiation,2
+GSE49618,Sorted normal bone marrow cells from healthy volunteers at Washington University,21
+GSE49656,Distinct Mutational Patterns of Infection and Non-Infection-Related Bile Duct Cancers Revealed by Exome Sequencing,40
+GSE49667,DNA methylation differences between human regulatory T cells and conventional T cells,10
+GSE49904,Differential DNA methylation with age displays both common and dynamic features across human tissues that are influenced by CpG landscape [blood],71
+GSE49905,Differential DNA methylation with age displays both common and dynamic features across human tissues that are influenced by CpG landscape [brain],78
+GSE49907,Differential DNA methylation with age displays both common and dynamic features across human tissues that are influenced by CpG landscape [kidney],83
+GSE49908,Differential DNA methylation with age displays both common and dynamic features across human tissues that are influenced by CpG landscape [muscle],51
+GSE49909,Differential DNA methylation with age displays both common and dynamic features across human tissues that are influenced by CpG landscape,283
+GSE49996,Methylation analysis of normal and adenocarcinoma lung tissues,88
+GSE50022,Illumina Infinium 450K array data for Diffuse Intrinsic Pontine Glioma,28
+GSE50025,Diffuse Intrinsic Pontine Glioma,145
+GSE50192,DNA methylome profiling of human tissues identifies global and tissue-specific methylation patterns,70
+GSE50220,Epigenome analysis of irradiated and non-irradiated breast tumor tissue samples and normal controls,48
+GSE50222,DNA Methylation Changes in Allergic Patients Correlate with Symptom Severity [methylation],32
+GSE50387,DNA Methylation Changes in Allergic Patients Correlate with Symptom Severity,70
+GSE50409,Leukocyte-adjusted epigenome-wide association studies of blood from solid tumor patients,428
+GSE50412,Identification of CpG island methylator phenotype predicts the prognosis of small cell lung cancer,41
+GSE50475,Reprogramming of the Human Intestinal Epigenome by Surgical Tissue Transposition,45
+GSE50511,"Methylation analysis of normal lymphocytes, HCT116, RKO and SW480",4
+GSE50586,Distinct DNA methylation patterns of cognitive impairment and Trisomy 21 in Down Syndrome,20
+GSE50608,Global DNA methylation: Uncommon event in Oral Lichenoid Disease [Illumina HumanMethylation27 BeadChip],22
+GSE50660,Cigarette Smoking Reduces DNA Methylation Levels at Multiple Genomic Loci but the Effect is Partially Reversible upon Cessation,464
+GSE50774,"DNA methylation alteration and gene expression sigature in brainstem, thalamic, and supratentorial gliomas",66
+GSE50874,Methylation Profiling of Human Kidney Tubules,85
+GSE50923,Genome-wide methylation analyses in glioblastoma multiforme (GBM),78
+GSE50967,DNA Methylation profiles of benzene hematotoxicity,12
+GSE51032,EPIC-Italy at HuGeF,845
+GSE51057,Methylome Analysis and Epigenetic Changes Associated with Menarcheal Age,329
+GSE51077,The tissue is the issue: Improved methylome analysis from paraffin-embedded tissues by application of the HOPE-technique,36
+GSE51090,DNA methylation profile in well-differentiated cancer uncoves another source of diagnostic and prognostic markers,91
+GSE51196,Analysis of epigenetic changes in F-36P leukemic cells by arsenic disulfide treatment,3
+GSE51245,Array-based DNA methylation profiling in male infertility reveals allele-specific DNA methylation in PIWIL1 and PIWIL2,40
+GSE51287,Methylation profiles of esophageal squamous cell carcinoma patients and cancer-free individual in Taiwan.,288
+GSE51557,DNA methylation profiling in the Carolina Breast Cancer Study,526
+GSE51688,DNA methylation profiles of ovarian cancer cell lines,58
+GSE51747,Comparison of the molecular profiles of human embryonic and isogenic induced pluripotent stem cells. [Illumina],12
+GSE51748,Comparison of the molecular profiles of human embryonic and isogenic induced pluripotent stem cells.,34
+GSE51810,Gene Body Methylation Directly Increases Gene Expression and is a Therapeutic Target for Genes Upregulated in Cancer (methylation),22
+GSE51813,DNA Methylation in Hodgkin's and non-Hodgkin's lymphoma,4
+GSE51814,Genome-wide DNase-Seq and methylation profiles in Hodgkin's and non-Hodgkin's lymphoma,9
+GSE51815,Gene Body Methylation Directly Increases Gene Expression and is a Therapeutic Target for Genes Upregulated in Cancer,40
+GSE51921,DNA methylation analysis in idiopathic and LRRK2-associated Parkinson's disease (PD),28
+GSE51923,Idiopathic and LRRK2-associated Parkinson's disease,42
+GSE52068,Genome-wide analysis of DNA methylation between nasopharyngeal carcinoma tissues and normal nasopharyngeal epithelial tissues,48
+GSE52112,H3K4me1 marks DNA regions hypomethylated during aging in human stem and differentiated cells [MSCs],34
+GSE52113,H3K4me1 marks DNA regions hypomethylated during aging in human stem and differentiated cells [twins],24
+GSE52114,H3K4me1 marks DNA regions hypomethylated during aging in human stem and differentiated cells,58
+GSE52144,Examination of genome-wide methylation changes in lung cancer cell lines A549 (A) and HTB56 (H) [HumanMethylation27 BeadChip experiments],8
+GSE52222,Aberrant methylation of gene associated CpG sites occurs in borderline personality disorder,36
+GSE52238,Global indiscriminate methylation in cell-specific gene promoters following reprogramming into human induced pluripotent stem cells,13
+GSE52391,Integrative DNA methylation and gene expression analysis in high-grade soft tissue sarcomas [methylation],96
+GSE52392,Integrative DNA methylation and gene expression analysis in high-grade soft tissue sarcomas,190
+GSE52573,Genome-wide methylation profiling of multiple sporadic colorectal cancer,41
+GSE52588,Identification of a DNA methylation signature in blood from subjects affected by Down syndrome,87
+GSE52621,Detection of hypermethylated circulating serum DNA in metastatic breast cancer and confirmation by the cMethDNA assay,36
+GSE52793,Novel DNA methylation targets in oral rinse samples predict survival of patients with oral squamous cell carcinoma,82
+GSE52826,the whole-genome methylation profile of esophageal squamous cell carcinoma,12
+GSE52980,Epigenome analysis of human epidermal and dermal samples with aging and sun exposure.,119
+GSE53045,Epigenome analysis of smoking in peripheral blood mononuclear cells (PBMC) samples,111
+GSE53191,DNA Methylation Signature of Childhood Chronic Physical Aggression in T Cells of Both Men and Women (Illumina),12
+GSE53193,DNA Methylation Signature of Childhood Chronic Physical Aggression in T Cells of Both Men and Women,50
+GSE53227,Epigenome analysis of human brain gliomas (part 1),112
+GSE53228,Epigenome analysis of human brain gliomas (part 2),33
+GSE53229,Epigenome analysis of human brain gliomas,145
+GSE53302,Epigenome analysis of aging muscle progenitors,6
+GSE53396,Widespread Discordance of DNA Methylation Between two Accessible Human Tissues,50
+GSE53516,Genome-wide promoter methylation analysis associated with malignant melanoma progression,12
+GSE53918,Differentiation of human limbal-derived induced pluripotent stem cells into limbal-like epithelium,12
+GSE54025,Epigenome study of normal human epithelial tissues,23
+GSE54210,Global DNA Methylation: Uncommon Event in Oral Lichenoid Disease [Illumina GoldenGate Methylation Cancer Panel I array],57
+GSE54211,Global DNA Methylation: Uncommon Event in Oral Lichenoid Disease,79
+GSE54335,"A new syndrome of overgrowth, macrocephaly, hypoglycemia, enlarged ventricles, mild, and moderate intellectual disability and recurrent inflammatory disease is due to mutations in RNF125",4
+GSE54415,Genome-Scale Profiling of DNA Methylation in Sporadic Pituitary Macroadenomas: Association with Tumor Invasion and Histopathological Subtype,24
+GSE54623,DNA methylation profiles in primary cutaneous melanoma are associated with clinically significant pathologic features,47
+GSE54647,"VeraCode GoldenGate Methylation Assay microarray data for purified human leukocytes, reconstruction mixtures and human whole blood samples",158
+GSE54670,Illumina Infinium HumanMethylation450 data for human whole blood samples and for mixtures of purified white blood cells reconstructing human blood,12
+GSE54671,Quantitative reconstruction of leukocyte subsets using DNA methylation,170
+GSE54767,Tissue- and Aging-specific DNA-Methylation Patterns are erased in Mesenchymal Stromal Cells derived from Induced Pluripotent Stem Cells. [Methylation profiling],12
+GSE54769,Tissue- and Aging-specific DNA-Methylation Patterns are erased in Mesenchymal Stromal Cells derived from Induced Pluripotent Stem Cells.,20
+GSE54848,Critical role of transient activation of human endogenous retroviruses during reprogramming toward pluripotency,137
+GSE55454,Methylation profiles of COPD small airways,38
+GSE55521,Methylome of a low-grade invasive GIST,1
+GSE55734,Genome-wide profiling and validation for forensic tissue-specific DNA methylation markers,16
+GSE55763,A coherent approach for analysis of the Illumina HumanMethylation450 BeadChip improves data quality and performance in epigenome-wide association studies,2711
+GSE55888,Matrix Elasticity Does Not Affect Replicative Senescence or DNA Methylation Patterns of Mesenchymal Stem Cells [DNAm profiling],20
+GSE55889,Matrix Elasticity Does Not Affect Replicative Senescence or DNA Methylation Patterns of Mesenchymal Stem Cells,29
+GSE56074,Global DNA Methylation Levels in Lung Fibroblasts from Patients with Idiopathic Pulmonary Fibrosis Compared to Nonfibrotic Controls,12
+GSE56342,DNA Methylation is Globally Disrupted and Associated with Expression Changes in COPD Small Airways,60
+GSE56491,Genome-wide DNA methylation differences between ex vivo differentiated cells that recapitulate the fetal-to-adult hemoglobin switch,24
+GSE56553,Short-term exposure to diesel exhaust is associated with dynamic changes in DNA methylation of circulating mononuclear cells in asthmatics,96
+GSE56606,Identification of Type 1 Diabetes-Associated DNA Methylation Variable Positions That Precede Disease Diagnosis,100
+GSE57285,DNA methylation profiling of whole blood DNA samples from BRCA1 wild-types without breast cancer and BRCA1 mutants with and without breast cancer (Prague Set 1),84
+GSE57342,Immune regulation by low doses of the DNA methyltransferase inhibitor 5-azacitidine in common human epithelial cancers [methylation],338
+GSE57343,Immune regulation by low doses of the DNA methyltransferase inhibitor 5-azacitidine in common human epithelial cancers,575
+GSE57360,Genome-scale profiling of the DNA methylation landscape in human neurological disorders (BeadChip),29
+GSE57361,Genome-scale profiling of the DNA methylation landscape in human neurological disorders,33
+GSE57362,A DNA methylation atlas of the human eye and its diseases,265
+GSE57484,"Dietary fat quality, more than dietary fat quantity, impacts genome-wide DNA methylation patterns in Greek preadolescents",22
+GSE57581,Stability of gene expression and epigenetic profiles highlights the utility of patient-derived paediatric acute lymphoblastic leukaemia xenografts for investigatoing molecular mechanisms of drug resistance (methylation),20
+GSE57633,Stability of gene expression and epigenetic profiles highlights the utility of patient-derived paediatric acute lymphoblastic leukaemia xenografts for investigatoing molecular mechanisms of drug resistance,38
+GSE57767,Epigenome analysis of normal and preeclamptic placenta samples,45
+GSE57831,Profile of differential expression and DNA methylation status in choriodecidua of women affected with severe endometriosis [DNA methylation],6
+GSE57832,Expression and methylation profiles of choriodecidua from pregnant women affected with deep endometriosis,12
+GSE57869,DNA methylation in systemic lupus erythematosus patients,12
+GSE57956,Methylation profile of Hepatocellular Carcinoma,120
+GSE57958,Hepatocellular Carcinoma,198
+GSE58045,Epigenome-Wide Scans Identify Differentially Methylated Regions for Age and Age-Related Phenotypes in a Healthy Ageing Population,172
+GSE58119,DNA methylation profiling of serum DNA samples of the UKCTOCS cohort,282
+GSE58165,Harnessing Noxa Demethylation to overcome Bortezomib resistance in Mantle Cell Lymphoma,12
+GSE58250,Multi-Omic Integrated networks connect DNA methylation and miRNA with skeletal muscle plasticity to chronic exercise in type 2 diabetic obesity,102
+GSE58272,Epigenome analysis of oropharygeal squamous cell carcinoma,92
+GSE58280,Multi-Omic Integrated networks connect DNA methylation and miRNA with skeletal muscle plasticity to chronic exercise in type 2 diabetic obesity [Methylation data],34
+GSE58477,Differential methylation in CN-AML preferentially targets non-CGI regions and is dictated by DNMT3A mutational status and associated with predominant hypomethylation of HOX genes,72
+GSE58538,Genome wide DNA methylation profiles provide clues to the origin and pathogenesis of germ cell tumors,95
+GSE58622,The fat cell epigenetic signature in post-obese women is characterized by global hypomethylation and differential DNA methylation of adipogenesis genes,30
+GSE58885,Methylomic trajectories across human fetal brain development,179
+GSE59157,"Methylome analysis of normal kidney, nephrogenic rest and Wilms tumor",95
+GSE59250,DNA Methylation Analysis of Systemic Lupus Erythematosus,434
+GSE59260,DNA methylation profiles in alcohol-associated hepatocellular carcinoma,16
+GSE59274,Comprehensive Analysis of Preeclampsia-Associated DNA Methylation in the Placenta,48
+GSE59339,Characteristic DNA methylation profiles in peripheral blood monocytes are associated with inflammatory phenotypes of asthma,62
+GSE59405,DNA methylation data from hepatoma,8
+GSE59592,DNA methylome analysis in infants from The Gambia / Aflatoxin / Seasonality study,124
+GSE59685,Cross-tissue methylomic profiling implicates cortical deregulation of ANK1 in Alzheimer’s disease neuropathology,531
+GSE59724,Methylation analysis of locally advanced breast tumors treated with two drugs-doxorubicin and 5-fluorouracil,61
+GSE59796,DNA methylation dynamics during ex vivo differentiation and maturation of human dendritic cells,12
+GSE60734,DNA methylation analysis of the U937 cell line,2
+GSE60787,Genome-wide DNA methylation analysis of seminoma-like TCam-2 cells during transition into an embryonal carcinoma-like state,12
+GSE61107,Genome-wide DNA methylation analysis of human brain tissue from schizophrenia patients,48
+GSE61195,The DNA methylation signature of human TCRαβ+CD4-CD8- double negative T cells reveals CG demethylation and a unique epigenetic architecture permissive to a broad stimulatory immune response,21
+GSE61242,Epigenetic assimilation in the aging human brain,76
+GSE61256,Obesity accelerates epigenetic aging of human liver,271
+GSE61257,Human adipose Illumina Inf 450 DNA methylation data,32
+GSE61258,Human Liver Illumina Inf 450 DNA methylation data,79
+GSE61259,Human muscle Illumina Inf 450 DNA methylation data,26
+GSE61342,Generation of a Panel of Induced Pluripotent Stem Cells From Chimpanzees: a Resource for Comparative Functional Genomics (methylation array),28
+GSE61343,Generation of a Panel of Induced Pluripotent Stem Cells From Chimpanzees: a Resource for Comparative Functional Genomics,65
+GSE61431,Methylomic profiling of human brain tissue supports a neurodevelopmental origin for schizophrenia.,87
+GSE61461,Coding mutations and loss-of-imprinting in human pluripotent cells derived by nuclear transfer and defined factors [DNA methylation profiling],21
+GSE61463,Epigenome analysis of peripheral blood mononuclear cell (PBMC) samples from obstructive sleep apnea patients and healthy subjects,21
+GSE61611,Epigenetic analysis of genomic DNA isolated from whole blood of normal and leukemia individuals,12
+GSE61657,Coding mutations and loss-of-imprinting in human pluripotent cells derived by nuclear transfer and defined factors,36
+GSE61744,Genome-wide profiling of PARP1 reveals an interplay with gene regulatory regions and DNA methylation,2
+GSE62082,DNA methylation profiling in pheochromocytoma and paraganglioma reveals diagnostic and prognostic markers,10
+GSE62086,Low dose of DNA-demethylating agents target colorectal cancer-initiating cells by activation of RIG1/MAVS signaling pathway,3
+GSE62177,Mastermind-like protein 1 regulates DNA methylation and expression of early developmental gene clusters in human embryonic kidney cells (methylation),6
+GSE62178,Mastermind-like protein 1 regulates DNA methylation and expression of early developmental gene clusters in human embryonic kidney cells,16
+GSE62231,DNA Methylation in Paraganglioma,123
+GSE62298,Genome-scale profiling of the DNA methylation landscape in human AML patients,68
+GSE62303,DNA methylation landscape in AML,70
+GSE62336,Methylome study in Nasopharyngeal Carcinoma (NPC),50
+GSE62640,Analysis of sex differences in DNA methylation in human pancreatic islets,87
+GSE62670,Epigenome analysis of dnmt target sites [DKO8 cell line],8
+GSE62727,Genome-wide DNA methylation analysis in permanent atrial fibrillation,11
+GSE62867,A comparison of genome-wide DNA methylation patterns between different tissues from patients with coronary heart disease,24
+GSE62924,Prenatal arsenic exposure and the epigenome: Identifying sites of 5-methyl cytosine alterations that predict functional changes in gene expression in newborn cord blood and subsequent birth outcomes,38
+GSE62948,DNA Methylation and RNA Expression Profiles in Lung Adenocarcinomas [DNA methylation],56
+GSE62950,DNA Methylation and RNA Expression Profiles in Lung Adenocarcinomas,112
+GSE63106,Assessing transcriptionally functional CpGs in articular cartilage,62
+GSE63179,Accurate measurement of 5-methylcytosine and 5-hydroxymethylcytosine in human cerebellum DNA,8
+GSE63315,Narrow-band UVB phototherapy reverses DNA methylation changes in psoriatic epidermis,47
+GSE63347,DNA methylation profiles of brain samples from Down Syndrome subjects and controls.,71
+GSE63384,Multi-platform Characterization of Stage I Lung Adenocarcinoma (Genome-wide DNA Methylation),70
+GSE63409,"Epigenome analysis of leukemia stem, blast and normal hematopoietic stem/progenitor cells",74
+GSE63421,5-hydroxymethylcytosine marks promoters in colon that resist hypermethylation in cancer [Methylation450 Array],6
+GSE63695,Characterization of the cartilage DNA methylome in knee and hip osteoarthritis.,97
+GSE63704,"Epigenome analysis of normal and cancer, lung fibrosis and COPD fresh frozen tissue samples",129
+GSE63940,Epigenome analysis of lung adenocarcinoma cell lines,36
+GSE63977,"Molecular portraits of epithelial, mesenchymal and hybrid states in lung adenocarcinoma and their relevance to survival",72
+GSE64112,Patterns of somatic uniparental disomy identify novel tumor suppressor genes in colorectal cancer,58
+GSE64114,Patterns of somatic uniparental disomy identify novel tumor suppressor genes in colorectal cancer,148
+GSE64380,Array-based DNA-methylation analysis in individuals with developmental delay/intellectual disability and normal molecular karyotype,100
+GSE64940,DNA methylation in newborn cordblood,216
+GSE65057,Altered DNA methylation of glycolytic and lipogenic genes in liver from obese and type 2 diabetic patients [methylome analysis],24
+GSE65058,Altered DNA methylation of glycolytic and lipogenic genes in liver from obese and type 2 diabetic patients,45
+GSE65097,Epigenome profiling reveals significant DNA demethylation of interferon signature genes in lupus neutrophils,38
+GSE65163,The Nasal Methylome and Childhood Atopic Asthma,72
+GSE65205,Childhood Atopic Asthma,141
+GSE65214,"Global DNA CpG methylation profiling of human embryonic stem cells, fibroblast iPSC, and low passage stromal primed myeloid iPSC before and after conversion to the naïve state",24
+GSE66295,A DNA Hypomethylation Signature Predicts Novel Anti-Tumor Activity of LSD1 Inhibitors in SCLC (BeadChip),42
+GSE66298,A DNA Hypomethylation Signature Predicts Novel Anti-Tumor Activity of LSD1 Inhibitors in SCLC,136
+GSE66351,"DNA methylation profiling of neuron and glia for the dissection of cell type, age and Alzheimer’s disease-specific changes in the human brain",190
+GSE66555,"Formalin-fixed, paraffin-embedded (FFPE) tissue epigenomics using Infinium HumanMethylation450 BeadChip assays (HM 450K).",65
+GSE66708,NALP3 inflammasome up-regulation and CASP1 cleavage of the glucocorticoid receptor causes glucocorticoid resistance in leukemia cells,1144
+GSE66881,Insights into molecular characteristics of anaplastic large cell lymphoma by genome-wide DNA methylation profiling,15
+GSE67024,The epigenetic signature of subcutaneous fat cells is linked to altered expression of genes implicated in lipid metabolism in obese women,29
+GSE67042,NALP3 inflammasome up-regulation and CASP1 cleavage of the glucocorticoid receptor causes glucocorticoid resistance in leukemia cells [HumanMethylation450 Germline],63
+GSE67043,NALP3 inflammasome up-regulation and CASP1 cleavage of the glucocorticoid receptor causes glucocorticoid resistance in leukemia cells [HumanMethylation450 Somatic],175
+GSE67044,NALP3 inflammasome up-regulation and CASP1 cleavage of the glucocorticoid receptor causes glucocorticoid resistance in leukemia cells [HumanMethylation27],131
+GSE67097,Epigenome analysis of squamous cell carcinoma samples,13
+GSE67170,The signature of liver cancer in host peripheral blood mononuclear cells and T cells DNA methylation,89
+GSE67283,Establishment of tractable human iPSC-based models for the study and targeting of glioma initiation (Methlyation),4
+GSE67286,Establishment of human iPSC-based models for the study and targeting of glioma initiating cells,25
+GSE67349,Effect of TET1 overexpression on DNA methylation levels of HEK293 cells,6
+GSE67350,"Effect of the simultaneous knockdown of TET1, TET2 and TET3 on DNA methylation levels of HEK293 cells",6
+GSE67351,Altering TET dioxygenase levels within physiological range affects DNA methylation dynamics of HEK293 cells,30
+GSE67705,Methylome-wide analysis of chronic HIV infected patients and healthy controls,284
+GSE67816,Differentially methylated genes in human IL-7Ra high and low EM CD8+ T cells,4
+GSE68060,Methyome profiling in serrated carcinoma,120
+GSE68194,Association between genome-wide DNA methylation and all-cause mortality in nonagenarians,122
+GSE68259,DNA methylation data from cell lines originating from patients with multiple myeloma,6
+GSE68339,Interplay between promoter methylation and chromosomal loss in gene silencing at 3p11-p14 in cervical cancer,391
+GSE68342,Epigenome analysis of dnmt target sites [3BK0 cell line],24
+GSE68344,Epigenome analysis of dnmt target sites,56
+GSE68622,whole-genome SNP-CN and DNA methylation data from cell lines originating from patients with multiple myeloma,9
+GSE68747,Genome-wide DNA methylation analysis identifies novel hypomethylated non-pericentromeric genes with potential clinical implications in ICF,5
+GSE68751,caArray_EXP-550: TCGA (READ):  Analysis of DNA Methylation for rectal adenocarcinoma (READ) Using Illumina Infinium Human DNA Methylation 27 platform (HumanMethylation27)(jhu-usc),81
+GSE68825,caArray_EXP-598: TCGA (LUSC): Analysis of DNA Methylation for LUSC using Illumina Infinium HumanMethylation450 platform (jhu-usc),144
+GSE68838,caArray_EXP-620: TCGA (Coad): Analysis of DNA Methylation for COAD using Illumina Infinium HumanMethylation450 platform (Jhu-usc),302
+GSE69118,DNA methylation of estrogen regulated enhancers defines endocrine sensitivity in breast cancer,8
+GSE69138,Epigenome analysis of ischemic stroke patients,589
+GSE69176,Epigenome analysis of DNA from umbilical cord blood (UCWBC) in CCCEH birth cohort,152
+GSE69270,Aging-associated DNA methylation changes in middle-aged individuals: The Young Finns Study,184
+GSE69463,Epigenome analysis of angiogenin impact on bladder cancer,8
+GSE69502,Profiling placental and fetal DNA methylation in human neural tube defects,179
+GSE70453,Epigenome-wide and Transcriptome-wide Analyses Reveal Gestational Diabetes is Associated with Alterations in the Human Leukocyte Antigen Complex [methylation],82
+GSE70494,Epigenome-wide and Transcriptome-wide Analyses Reveal Gestational Diabetes is Associated with Alterations in the Human Leukocyte Antigen Complex,145
+GSE70782,Genome-wide methylation profiles in primary intracranial germ cell tumors indicate primordial germ cell origin of germinoma [Agilent],81
+GSE70783,Genome-wide methylation profiles in primary intracranial germ cell tumors indicate primordial germ cell origin of germinoma [Illumina],77
+GSE70787,Genome-wide methylation profiles in primary intracranial germ cell tumors indicate primordial germ cell origin of germinoma,158
+GSE70977,CpG island methylation profile in non-invasive oral rinse samples is predictive of oral and pharyngeal carcinoma,223
+GSE71398,Tumor hypoxia causes DNA hypermethylation by reducing TET activity (BeadChip),48
+GSE71403,Tumor hypoxia causes DNA hypermethylation by reducing TET activity,99
+GSE71626,"A common promoter hypomethylation signature in invasive breast, liver and prostate cancer cell lines reveals novel targets involved in cancer invasiveness (methylation)",17
+GSE71627,"A common promoter hypomethylation signature in invasive breast, liver and prostate cancer cell lines reveals novel targets involved in cancer invasiveness",29
+GSE71666,Integration analysis of three omics data using penalized regression methods: An application to bladder cancer (Methylation),46
+GSE71669,Integration analysis of three omics data using penalized regression methods: An application to bladder cancer,90
+GSE71837,"Comparison of the DNA methylation profiles of CD14+ monocytes from human peripheral blood with DCs and MACs obtained by exposure with GM-CSF/IL-4 and GM-CSF, respectively, and with mature DCs and MACs after LPS exposure",15
+GSE71841,Genome-wide DNA methylation patterns in CD4+ T from rheumatoid arthritis,24
+GSE72110,"DNA methylation and hormone receptor status in breast cancer, the BCCC study",80
+GSE72120,Epigenomic profiling of preterm infants reveals DNA methylation differences at sites associated with neural function,72
+GSE72245,DNA methylation-based immune response signature improves patient diagnosis in multiple cancers (Cohort 1),118
+GSE72251,DNA methylation-based immune response signature improves patient diagnosis in multiple cancers (Cohort 2),119
+GSE72254,DNA methylation-based immune response signature improves patient diagnosis in multiple cancers (TOP Cohort),58
+GSE72277,DNA methylation profiling to assess pathogenicity of BRCA1 unclassified variants in breast cancer,60
+GSE72308,DNA methylation-based immune response signature improves patient diagnosis in multiple cancers,295
+GSE72538,Amyloid protein-mediated differential DNA methylation status regulates gene expression in Alzheimer’s disease model cell line.,2
+GSE72556,Maternal Weight Phenotype as a Predictor of Methylation of Obesity-Related CpG Sites in Saliva Samples from Latino Children,96
+GSE72729,"Integration of miRNA, mRNA and methylation profiling reveals genes aberrantly regulated associated to RETM918T mutation in Medullary Thyroid Carcinoma [methylation component]",48
+GSE72730,"Integration of miRNA, mRNA and methylation profiling reveals genes aberrantly regulated associated to RETM918T mutation in Medullary Thyroid Carcinoma",79
+GSE72872,Methylome and transcriptome of EAC (methylation),250
+GSE72873,Methylome and transcriptome of EAC (expression),70
+GSE72874,Methylome and transcriptome of EAC,320
+GSE73003,Genome-wide DNA methylation analysis in hepatocellular carcinoma,40
+GSE73103,Many obesity-associated SNPs strongly associate with DNA methylation changes at proximal promoters and enhancers,355
+GSE73187,Aberrant epigenetic regulation in clear cell sarcoma of the kidney (CCSK),66
+GSE73412,Epigenetic Pattern on the Human Y Chromosome is Evolutionarily Conserved,74
+GSE73515,DNA methylation data from primary neuroblastoma tumors,105
+GSE73518,Primary neuroblastoma tumors,210
+GSE73745,Whole-genome saliva and blood DNA methylation patterns in individuals with a respiratory allergy,24
+GSE73747,Epigenetic Dysregulation in the Developing Down Syndrome Brain,72
+GSE73808,Luminal B breast cancer subtype displays a dichotomic epigenetic pattern,37
+GSE73832,Integrated DNA methylation and RNA expression in Small Intestinal neuroendocrine tumors,133
+GSE74167,Epigenetic Effects of Maternal Obesity on Wharton's Jelly (WJ) Mesenchymal Stromal Cells (MSCs): Implications For Cellular Therapy. (methylation study),42
+GSE74214,Genome-wide single base resolution profiling of 5-methylcytosine in human breast tissue,18
+GSE74486,Trans-effects of chromosome aneuploidies on DNA methylation patterns:  DNA methylation analysis of Down syndrome in human brain tissues and cells,131
+GSE74519,Trans-effects of chromosome aneuploidies on DNA methylation patterns in human Down syndrome and mouse models,134
+GSE74693,Genome-wide methylation analysis of esophageal squamous cell carcinoma using Infinium HumanMethylation 450 BeadChip,10
+GSE75041,Methylation profiling in predict recurrence hepatocellular carcinoma,66
+GSE75196,DNA methylation profiles in preeclampsia and healthy control placentas,24
+GSE75248,Novel Regions of Variable DNA Methylation in Human Placenta associated with Newborn Neurobehavioral Traits,335
+GSE75414,Epigenetic regulation of the homeobox gene MSX1 associates with platinum resistant disease in high grade serous epithelial ovarian cancer,86
+GSE75434,Epigenome analysis of intracranial aneurysm and superficial temporal artery samples,18
+GSE75679,DNA Methylation Patterns Associated with Fatigue in Primary Sjögren’s Syndrome,48
+GSE75729,Chronic binge alcohol administration dysregulates global regulatory gene networks associated with skeletal muscle wasting in simian immunodeficiency virus-infected macaques,8
+GSE76372,Genome-wide methylation profile of Lymphocytes and induced pluripotent stem cells,9
+GSE76401,Epigenomic study of Post-traumatic Stress Disorder among OIF/OEF veterans,101
+GSE76585,DNA methylation profiling of pediatric B lymphoblastic leukemia with KMT2A rearrangement identifies hypomethylation at enhancer sites,26
+GSE76709,Genome-wide DNA methylation analysis of Romidpesin treated GCC cell lines,8
+GSE76938,Illumina M450 profiling of human prostate cancer tissue and benign prostate tissue,136
+GSE77036,"DNA methylation analysis of HCT116 cells after PBS, 5-Aza-CdR, vitamin C and combination treatment",4
+GSE77135,Strong Components of Epigenetic Memory in Cultured Human Fibroblasts Related to Site of Origin and Donor Age (Methylation),21
+GSE77136,Strong Components of Epigenetic Memory in Cultured Human Fibroblasts Related to Site of Origin and Donor Age,43
+GSE77283,Genome-wide methylation profiles of menstrual blood and vaginal fluid,12
+GSE77696,Epigenome-wide assoication analysis of HIV infection,378
+GSE77716,Differential DNA methylation in Latino population,573
+GSE77871,Pathway implications of aberrant global methylation in adrenocortical cancer,24
+GSE78218,Epigenomics signature in X-ALD aligns with impaired oligodendrocyte differentiation,34
+GSE78277,Aberrant methylation-mediated silencing of microRNAs contributes to HPV-induced anchorage independence [methylation-Illumina],6
+GSE78279,Aberrant methylation-mediated silencing of microRNAs contributes to HPV-induced anchorage independence,66
+GSE78751,DNA methylation profile of triple negative breast cancer specific genes (study),39
+GSE78754,DNA methylation profile of triple negative breast cancer specific genes (validation),70
+GSE78758,DNA methylation profile of triple negative breast cancer specific genes,116
+GSE78940,Whole-genome DNA methylation profiles of CD4+ CD28+ and CD4+ CD28null T lymphocytes.,4
+GSE78942,Whole-genome DNA methylation and expression profiles of CD4+ CD28+ and CD4+ CD28null T lymphocytes,8
+GSE78963,"A Multicenter, First-in-Pediatrics, Randomized Study to Evaluate the Safety and Efficacy of Decitabine as Epigenetic Priming with Induction Chemotherapy in Children with Acute Myelogenous Leukemia",36
+GSE79064,DNA methylation profiling in human Huntington's Disease brain,18
+GSE79257,ASSISTED REPRODUCTIVE TECHNOLOGIES ALTER DNA METHYLATION PROFILES IN BLOODSPOTS OF NEWBORN INFANTS ,137
+GSE79648,Epigenome analysis of dnmt target sites [3ABDKO cell line],24
+GSE79695,Molecular alterations in bone marrow mesenchymal stromal cells (BM-MSC) derived from acute myeloid leukemia patients (AML),44
+GSE80377,DNA methylation profile of PBMC following decitabine therapy,4
+GSE80508,Epigenetic minicircuitry of AML1-ETO/THAP10/MIR383 contributes t(8;21) AML leukemogenesis,12
+GSE80559,Evaluating the impact of sleep on genome-wide methylation levels in college students,2
+GSE81006,Methylation data from from HCT-8 human colorectal cancer (CRC) wild type cells (HCT8/WT) and its 5-FU-induced resistant cell line (HCT8/5-FU),12
+GSE81008,HCT-8 human colorectal cancer (CRC) wild type cells (HCT8/WT) and its 5-FU-induced resistant cell line (HCT8/5-FU),30
+GSE81015,Genome-wide DNA methylation analysis of WERI-Rb-1 (retinal cells) infected with Toxoplasma gondii over time,12
+GSE81337,Methylome analysis reveals alterations in DNA methylation in the regulatory regions of left ventricle development genes in human dilated cardiomyopathy (methylation),27
+GSE81339,Methylome analysis reveals alterations in DNA methylation in the regulatory regions of left ventricle development genes in human dilated cardiomyopathy,57
+GSE81788,Potential roles of DNA methylation in the initiation and establishment of replicative senescence revealed by array-based methylome and transcriptome analyses [methylation],8
+GSE81790,Regulation of DNA methylation landscape in human somatic cell reprogramming by miR-29 family (illumina 450K),14
+GSE81794,Regulation of DNA methylation landscape in human somatic cell reprogramming by miR-29 family,50
+GSE81797,Potential roles of DNA methylation in the initiation and establishment of replicative senescence revealed by array-based methylome and transcriptome analyses [methylation 450K],2
+GSE81798,Potential roles of DNA methylation in the initiation and establishment of replicative senescence revealed by array-based methylome and transcriptome analyses,16
+GSE82234,DNA methylation profiles of human umbilical vein endothelial cells (HUVECs),6
+GSE83156,Epigenetic regulation of the transcriptional program in memory and terminally differentiated CD8+ T cells [HCAFIS_05_Methylation],6
+GSE83159,Epigenetic regulation of the transcriptional program in memory and terminally differentiated CD8+ T cells,31
+GSE83261,High-risk human papillomavirus E7 affects host keratinocyte DNA methylation,12
+GSE83320,Parallel global gene expression and DNA methylation analyses of human papillomavirus-positive normal keratinocytes,24
+GSE83379,Mapping epigenetic changes to the host cell genome induced by Burkholderia pseudomallei reveals pathogen-specific and pathogen-generic signatures of infection,18
+GSE83458,"The DNA methylation profiles of CD14+ monocytes, dendritic cells and myeloid-derived suppressor cells",18
+GSE83845,Methylation profiles of lung adenocarcinoma patients in Taiwan,39
+GSE83917,"Genomic hallmarks of localized, non-indolent prostate cancer",160
+GSE84043,"Genomic hallmarks of localized, non-indolent prostate cancer",233
+GSE84395,Endothelial DNA methalytion signature in pulmonary arterial hypertension,39
+GSE84749,Genome-wide DNA methylation profiling of prostate specimens from a clinical trial of genistein supplementation prior to prostatectomy.,24
+GSE84750,Prostate specimens from a clinical trial of genistein supplementation prior to prostatectomy,48
+GSE85212,DNA methylation profiling of primary medulloblastoma samples,763
+GSE85218,DNA methylation and gene expression profiling of primary medulloblastoma samples,1526
+GSE85506,DNA methylation analysis in women with fibromyalgia,47
+GSE85539,Radiogenomics of glioblastoma: Machine-learning based classification of molecular characteristics using multiparametric and multiregional MRI features,152
+GSE85566,DNA methylation in lung cells is a key modulator of asthma endotypes and genetic risk [DNA methylation],115
+GSE85568,DNA methylation in lung cells is a key modulator of asthma endotypes and genetic risk,200
+GSE85571,Optimization of 3-Pyrimidin-4-yl-oxazolidin-2-ones as Allosteric and Mutant Specific Inhibitors of IDH1,39
+GSE85621,The Effects of Regular Post-Exercise Cold Water Immersion on DNA methylation in Muscle Following 10-weeks of Strength Training,26
+GSE85636,The Effects of Regular Post-Exercise Cold Water Immersion in Muscle Following 10-weeks of Strength Training,52
+GSE85647,Methylation and expression profiles of monocytes in monozygotic twins: role in Myasthenia Gravis [methylation profiling],23
+GSE85649,Methylation and expression profiles of monocytes in monozygotic twins: role in Myasthenia Gravis,48
+GSE85828,"Molecular, Phenotypic, and Sample-associated Data to Describe Pluripotent Stem Cell Lines and Derivatives",114
+GSE86402,DNA methylation in human DIP2C knockout cancer cells,6
+GSE87016,Genomewide methylation profiles in coronary artery ectasia,23
+GSE87095,DNA methylation analysis of B cells in Rheumatoid Arthritis,122
+GSE88824,Deconvolution of whole blood DNA methylomes reveals immune cell type-specific differential methylation in Multiple Sclerosis,83
+GSE88883,Breast cancer risk factors are associated with DNA methylation in non-diseased breast tissue independent of cell type,100
+GSE88890,Major depression MDD suicide brain study,75
+GSE88940,Analysis of obesity-induced DNA methylation in visceral adipose tissue,20
+GSE89093,DNA methylome analysis of human peripheral blood samples in cancer discordant monozygotic twin-pairs,92
+GSE89251,Epipolymorphisms associated with the clinical outcome of autoimmune arthritis affect CD4+ T cell activation pathways (methylation),136
+GSE89253,Epipolymorphisms associated with the clinical outcome of autoimmune arthritis affect CD4+ T cell activation pathways,261
+GSE89278,Effect of prenatal DHA supplementation on the infant epigenome,369
+GSE89400,Clonal variation in drug and radiation response among glioma-initiating cells is linked to  proneural-mesenchymal transition (Methylation BeadChip),17
+GSE89401,Clonal variation in drug and radiation response among glioma-initiating cells is linked to  proneural-mesenchymal transition,199
+GSE89472,DNA methylation patterns in twins discordant for ALS reveal concordant signatures of disease [array],10
+GSE89474,DNA methylation patterns in twins discordant for ALS reveal concordant signatures of disease,20
+GSE89648,Methylation microarray data of human clear cell renal cell carcinoma,12
+GSE89649,Expression and methylation data of human clear cell renal cell carcinoma,24
+GSE89702,Schizophrenia-associated methylomic variation: molecular signatures of disease and polygenic risk burden across multiple brain regions (cerebellum DBCBB).,33
+GSE89703,Schizophrenia-associated methylomic variation: molecular signatures of disease and polygenic risk burden across multiple brain regions (hippocampus LNDBB).,27
+GSE89705,Schizophrenia-associated methylomic variation: molecular signatures of disease and polygenic risk burden across multiple brain regions (striatum DBCBB).,33
+GSE89706,Schizophrenia-associated methylomic variation: molecular signatures of disease and polygenic risk burden across multiple brain regions (striatum LNDBB).,49
+GSE89707,Schizophrenia-associated methylomic variation: molecular signatures of disease and polygenic risk burden across multiple brain regions,142
+GSE89776,Pluripotent Reprogramming of Human AML Resets Leukemic Behavior and Models Therapeutic Targeting of Subclones [methylation],48
+GSE89778,Pluripotent Reprogramming of Human AML Resets Leukemic Behavior and Models Therapeutic Targeting of Subclones,87
+GSE89895,Impact of regulatory variation across human iPSCs and differentiated cells,220
+GSE90060,Endometrial methylome of healthy women during the transition from pre-receptive to receptive phase,34
+GSE90117,Prenatal Pesticide Exposure Interacts with a Common Polymorphism in the PON1 Gene Leading to DNA Methylation Changes,48
+GSE90124,DNA methylome analysis of skin samples from punch tissue biopsy of 322 healthy female individuals and total body naevus count,322
+GSE90867,Molecular characteristics of the KCNJ5 mutated aldosterone-producing adenomas.,42
+GSE90871,In utero exposure to maternal smoking is associated with DNA methylation alterations and reduced neuronal content in the developing fetal brain,24
+GSE90933,Differential genomic-methylation profile of U937 cells transduced with WT/mutant-DNMT3A,4
+GSE90934,Differential gene expression and genomic methylation profile of U937 cells transduced with WT/mutant-DNMT3A,8
+GSE91069,DNA methylation patterns separate senescence from malignant transformation potential in human cells [methylation],31
+GSE91071,DNA methylation patterns separate senescence from malignant transformation potential in human cells,39
+GSE92462,Characterizing the epigenome of glioma stem cells (Methylation BeadChip),48
+GSE92469,Characterizing the epigenome of glioma stem cells,157
+GSE92511,DNA methylation profiling in lungs tissues of smokers and patients with COPD,24
+GSE92577,Validation of the MethylationEPIC BeadChip for fresh-frozen and formalin-fixed paraffin-embedded tumours (450K),12
+GSE92579,Validation of the MethylationEPIC BeadChip for fresh-frozen and formalin-fixed paraffin-embedded tumours (EPIC),25
+GSE92580,Validation of the MethylationEPIC BeadChip for fresh-frozen and formalin-fixed paraffin-embedded tumours,37
+GSE92767,Genome-wide methylation profiles of saliva,54
+GSE92843,Genome-wide DNA-methylation profiles of human lung cancer cell lines and normal lung cells,4
+GSE93208,DNA methylation profiling of first trimester villous cytotrophoblasts,19
+GSE93373,Epigenome analysis of B cell and  B cells infected with Epstein-Barr virus (EBV),16
+GSE93429,Comparison of ox-BS-450k 5-hydroxymethylcytosine and BS-450k 5-methylcytosine profiles in the human placenta,8
+GSE94943,Multicomponent Signatures for Predicting Epigenomic Treatment Efficacy,72
+GSE95040,"Comparative DNA methylation profiling of ICF patients supports a functional link between ZBTB24, CDCA7 and HELLS at genomic regions with heterochromatin features",25
+GSE97483,"DNA Methylation profiling in luminal breast cancer cells treated with a novel KDM5 inhibitor, 5-aza-2' Deoxycytidine, or both.",6
+GSE97484,"Breast cancer cells treated with a novel KDM5 inhibitor, 5-aza-2' Deoxycytidine, or both.",33
+GSE97686,Genome-Wide DNA Methylation Profiling of Gastric Cancer-Associated Myofibroblasts,9
+GSE97687,Genome-Wide DNA Methylation Profiling of Oesophageal Cancer-Associated Myofibroblasts,10
+GSE97853,DNA methylation profile of model breast cancer cell lines PMC42-ET and PMC42-LA,8
+GSE98807,DNA methylation analysis in head and neck cancer cells,21
+GSE98811,RNA-seq and DNA methylation analysis in head and neck cancer cells and cell lines,25
+GSE98813,Integrated time course omics analysis distinguishes immediate therapeutic response from acquired resistance. (Methylation),36
+GSE98815,Integrated time course omics analysis distinguishes immediate therapeutic response from acquired resistance.,72
+GSE99029,Genome-wide DNA methylation of ǂKhomani San,57
+GSE99091,Genome-wide DNA methylation and SNP genotyping of ǂKhomani San,105
+GSE99505,Ginsenoside Rg3 epigenetically regulates cell-mediated immune pathway to inhibit proliferation of the MCF-7 breast cancer cell,2
+GSE99511,Identification and validation of a novel 3-gene methylation classifier for HPV-based cervical screening on self-samples,68
+GSE99553,Normal gastric mucosa from gastric cancer cases and healthy controls exhibit methylome-wide changes associated with current and past Helicobacter pylori infection and cancer risk,84
+GSE99624,Primary osteoporosis is not reflected by disease-specific DNA methylation or accelerated epigenetic age in blood,48
+GSE99788,A distinct epigenetic profile distinguishes stenotic from non-inflamed fibroblasts in the ileal mucosa of Crohn's disease patients [methylation],18
+GSE99863,DNA methylation in children from The Gambia,257
+GSE100134,Gene expression analysis upon mtDNA depletion,108
+GSE100227,The Australian Mammographic Density Twins and Sisters Study - DNA methylation data,479
+GSE100249,Gene expression analysis upon mtDNA depletion [methylation],24
+GSE100503,Concordance of DNA methylation profiles between breast core biopsy and surgical excision specimens containing ductal carcinoma in situ (DCIS),13
+GSE100653,Genome-wide single base resolution profiling of 5-hydroxymethylcytosine in human breast tissue,18
+GSE100825,Genome-wide DNA methylation analysis in blood cells from patients with Werner Syndrome,6
+GSE100940,Potential forensic application of DNA methylation profiling for identical twin identification,24
+GSE101443,Genome-wide DNA methylation pattern changes in basal-like breast cancer patients,8
+GSE101445,Genome-wide methylation and hydroxymethylcytosine pattern changes in basal-like breast cancer patients,16
+GSE101658,DNA methylation in demyelinated multiple sclerosis hippocampus,15
+GSE101764,ColoCare Project: Epigenome-wide analysis of DNA methylation in colorectal cancer and adjacent mucosa tissues,261
+GSE102177,DNA methylation profiles in sibling pairs discordant for intrauterine exposure to maternal gestational diabetes,36
+GSE102468,DNA Methylation signatures in Panic Disorder,165
+GSE102504,DNA methylome modifications and subtyping in ME/CFS,25
+GSE102952,DNA methylation profiles in the retina of AMD patients,18
+GSE103006,Variants of DNMT3A cause transcript-specific DNA methylation changes,24
+GSE103008,Variants of DNMT3A cause transcript-specific DNA methylation and gene expression changes,48
+GSE103010,Epigenetic modifications of hematopoietic differentiation are recapitulated in humanized mice,5
+GSE103186,Genomic and Epigenomic Profiling of High-Risk Intestinal Metaplasia Reveals Molecular Determinants of Gastric Cancer Progression,191
+GSE103189,Cord blood buffy coat DNA methylation is comparable to whole cord blood methylation,16
+GSE103498,Whole genome bisulphite sequencing using the Illumina X system [Infinium MethylationEPIC],7
+GSE103502,Whole genome bisulphite sequencing using the Illumina X system [Illumina HumanMethylation450 BeadChip],8
+GSE103505,Whole genome bisulphite sequencing using the Illumina X system,19
+GSE103541,DNA methylation profiles of Purified Blood Cell types,145
+GSE103659,"Radiomic subtyping improves disease stratification beyond key molecular, clinical and standard imaging characteristics in patients with glioblastoma.",181
+GSE104087,Nasal DNA methylation differentiates corticosteroid treatment response in pediatric asthma: A pilot study,40
+GSE104210,Clinical and genetic diversity and recurrent CXorf67 mutations across distinct molecular subgroups of posterior fossa type A (PFA) ependymoma.,675
+GSE104271,FIBP maintains colorectal cancer cells stemness via demethylation of stemness genes,6
+GSE104287,Anti-mycobacterial activity correlates with altered DNA methylation pattern in immune cells from BCG-vaccinated subjects,48
+GSE104293,The methylome of DDR genes and benefit from RT or TMZ in IDH mutant low grade glioma treated in EORTC 22033,132
+GSE104812,Epigenome analysis of whole blood samples in Chinese children,48
+GSE105018,Whole blood DNA methylation profiles in participants of the Environmental Risk (E-Risk) Longitudinal Twin Study at age 18.,1658
+GSE105066,Integrative Epigenetic Analysis Reveals Therapeutic Targets to the DNA Methyltransferase Inhibitor SGI-110 in Hepatocellular Carcinoma Cells [methylation],34
+GSE105067,Integrative Epigenetic Analysis Reveals Therapeutic Targets to the DNA Methyltransferase Inhibitor SGI-110 in Hepatocellular Carcinoma Cells,68
+GSE105123,AltitudeOmics methylation data,108
+GSE105124,AltitudeOmics,318
+GSE105420,"DNA methylation profile in chronic myelomonocytic leukemia associates with distinct clinical, biological and genetic features",76
+GSE105798,Genome-wide analysis of DNA methylation profile provides clinical implication of Crohn’s Disease,11
+GSE106648,Differential DNA methylation in Multiple Sclerosis,279
+GSE107215,Epigenetic Effects of Maternal Obesity on Wharton's Jelly (WJ) Mesenchymal Stromal Cells (MSCs): Implications For Cellular Therapy.,84
+GSE107226,Global DNA methylation pattern of fibroblasts in idiopathic pulmonary fibrosis: relationship to gene expression,12
+GSE107737,Epigenome-wide association study of the whole blood DNA in men with congenital hypopituitarism disease,24
+GSE107946,Malignant rhabdoid tumors originating within and outside the central nervous system are clinically and molecularly heterogeneous,26
+GSE108213,Hormone Therapy Use and Breast Tissue DNA Methylation: Analysis of Epigenome Wide Data from the Normal Breast Study,85
+GSE108576,DNA methylation analysis of brain metastasis,89
+GSE109446,Nasal DNA methylation is associated with childhood asthma,58
+GSE109507,DNA methylation analysis in familial adenomatous polyposis,23
+GSE109914,Genome wide DNA methylation analysis of arsenic exposure and non-exposure population and patients with skin lesions,119
+GSE110007,Epigenetic Signatures of Salivary Gland Inflammation in Sjögren's Syndrome.,31
+GSE110544,Impact of regulatory variation across human iPSCs and differentiated cells [methylation],58
+GSE110600,Profiling DNA Methylation Differences Between Inbred Mouse Strains on the Illumina Human Infinium MethylationEPIC Microarray,11
+GSE110697,DNA methylation data comparing Wilms tumor primary samples to patient-derived xenografts,78
+GSE110699,Comparing Wilms tumor primary samples to patient-derived xenografts,113
+GSE111183,Identification of Myalgic Encephalomyelitis/Chronic Fatigue Syndrome-associated DNA methylation patterns,25
+GSE111200,Integrated genetic and epigenetic analysis of myxofibrosarcoma,41
+GSE111336,Epigenome analysis of pheochromocytoma/paraganglioma samples,31
+GSE111428,Epigenome analysis of ependymoma cell lines,6
+GSE111681,ZBTB24 is a transcriptional regulator that coordinates with DNMT3B to control DNA methylation [Infinium],7
+GSE111689,ZBTB24 is a transcriptional regulator that coordinates with DNMT3B to control DNA methylation,33
+GSE111942,Rheumatoid arthritis associated DNA methylation sites in peripheral blood mononuclear cells,43
+GSE112012,Epigenomics analysis of a fibrosarcoma with ESCC case,2
+GSE112047,Genome-Wide DNA methylation analysis of tumor and adjacent normal prostate tissues,47
+GSE112179,DNA methylation in neurons from post-mortem brains in schizophrenia and bipolar disorder (Methylation),100
+GSE112308,BCAT1 and miR-2504: novel methylome signature distinguishes spindle/desmoplastic melanoma from superficial malignant peripheral nerve sheath tumor,30
+GSE112525,DNA methylation in neurons from post-mortem brains in schizophrenia and bipolar disorder,332
+GSE112596,Epigenome analysis of CD4 T cells from treated and untreated patients with multiple sclerosis (MS),112
+GSE112611,DNA Methylation Signatures of Crohn's disease Largely a Consequence of Inflammation,402
+GSE112696,Epigenome analysis of normal and T cells from patients with myasthenia gravis,12
+GSE112791,Comprehensive molecular characterization of liver cancer and inheritance of the phenotypic traits during tumor recurrence,329
+GSE112812,Genetic and epigenetic changes in clonal descendants of irradiated human fibroblasts [strain 1],48
+GSE112873,Genetic and epigenetic changes in clonal descendants of irradiated human fibroblasts [strain 2],48
+GSE112877,Genetic and epigenetic changes in clonal descendants of irradiated human fibroblasts,96
+GSE112905,Changes in DNA methylation patterns associated with Gulf War Illness,20
+GSE112987,Epigenetic profiling of Fetal Alcohol Spectrum Disorder (FASD) Discovery,103
+GSE113012,Epigenetic profiling of Fetal Alcohol Spectrum Disorder (FASD) Replication,35
+GSE113017,Comprehensive molecular characterization of liver cancer and inheritance of the phenotypic traits during tumor recurrence [methylation - classification],60
+GSE113018,Epigenetic profiling of Fetal Alcohol Spectrum Disorder (FASD),138
+GSE113019,Comprehensive molecular characterization of liver cancer and inheritance of the phenotypic traits during tumor recurrence [methylation - recurrence],55
+GSE113308,DNA methylation analysis of AR24Q and AR97Q SH-SY5Y cell culture samples with dihydrotestosterone,6
+GSE113501,DNA methylation status predicts survival in metastasis free clear cell renal cell carcinoma,144
+GSE113527,Epigenetic changes in umbilical cord mesenchymal stromal cells upon stimulation and culture expansion,32
+GSE113775,Epigenomics analysis of an esophageal NEC case,2
+GSE113779,Expression and methylation profiling of esophageal NEC,6
+GSE114134,Methylomes from naïve CD4+ T-cells from infants and children with and without food allergy [methylation],205
+GSE114135,Transcriptomes and methylomes from naïve CD4+ T-cells from infants and children with and without food allergy,342
+GSE114210,IG-MYC-positive neoplasms with precursor B-cell phenotype are molecularly distinct from Burkitt lymphomas,7
+GSE114534,Genome-wide DNA methylation of survival outliers of glioblastoma,44
+GSE114683,Global methylation analysis of highly motility cells,2
+GSE114753,Cigarette smoking significantly alters sperm DNA methylation patterns,156
+GSE115278,Epigenome-wide association study in peripheral white blood cells: Methyl Epigenome Network Association (MENA) project,474
+GSE115508,DNA methylation profiling of acute chorioamnionitis-associated placentas and fetal membranes : insights into epigenetic variation in spontaneous preterm births,79
+GSE115777,Comparative global methylation profile in DMS114 cells before and after acquired resistance to PD173074,4
+GSE115797,Genome wide DNA methylation of Psoriasis patients from disease and adjacent Normal skin skin tissue samples,48
+GSE116298,Intra-Tumor DNA Methylation Heterogeneity in Glioblastoma; Implications for DNA Methylation-based Classification,47
+GSE116754,"Methylation analysis of human embryonic stem cells (hESCs), hESC-derived splanchnic mesoderm and hESC-derived mesothelium (mesenchymal form)",38
+GSE117852,Methylation Heterogeneity within Human non-functional Pancreatic neuroendocrine tumors (PanNETs),32
+GSE117853,Gene expression and methylation profile of Human non-functional Pancreatic neuroendocrine tumors (PanNETs),112
+GSE117929,Integration of genome-wide DNA methylation and transcription uncovered aberrant methylation-regulated genes and pathways in the peripheral blood mononuclear cells of systemic sclerosis [methylation],37
+GSE117931,Integration of genome-wide DNA methylation and transcription uncovered aberrant methylation-regulated genes and pathways in the peripheral blood mononuclear cells of systemic sclerosis,74
+GSE118872,Methylation profile of ewing sarcoma cell lines,24
+GSE118940,Epigenome analysis of cohorts infants and toddlers: children raised in orphanages and children raised in biological families,58
+GSE118970,Defining UHRF1 Domains That Support Maintenance of Human Colon Cancer DNA Methylation and Oncogenic Properties [methylation],30
+GSE118972,Defining UHRF1 Domains That Support Maintenance of Human Colon Cancer DNA Methylation and Oncogenic Properties,50
+GSE119684,A Trio Based Approach to Epilepsy Methylome,45
+GSE119774,CHROMATIN LANDSCAPES REVEAL DEVELOPMENTALLY ENCODED TRANSCRIPTIONAL STATES THAT DEFINE GLIOBLASTOMA [HumanMethylation850 BeadChip],90
+GSE119776,CHROMATIN LANDSCAPES REVEAL DEVELOPMENTALLY ENCODED TRANSCRIPTIONAL STATES THAT DEFINE GLIOBLASTOMA,384
+GSE120122,ETMR-like infantile cerebellar embryonal tumors in the extended morphologic spectrum of DICER1-related tumors,2
+GSE120250,"Impact of Assisted Reproduction, Infertility, Sex, and Paternal Factors on the Placental DNA Methylome",88
+GSE120307,Genome-wide DNA methylation analysis in peripheral blood of monozygotic twins informative for psychopathology,34
+GSE120610,Exploring the Genetic Basis of Human Population Differences in DNA Methylation and their Causal Impact on Immune Gene Regulation,156
+GSE120650,DNA methylation data from 58 primary neuroblastomas,58
+GSE120854,"Integrated epigenome, exome and transcriptome analyses reveal molecular subtypes and homeotic transformation in uterine fibroids [DNA methylation]",34
+GSE121056,Placenta-specific DMRs maintain methylation across gestation.,12
+GSE121483,Competitive repopulation of an empty microglial niche gives rise to functionally distinct subsets of microglia-like cells,25
+GSE122126,Comprehensive human cell-type methylation atlas reveals origins of circulating cell-free DNA in health and disease,101
+GSE123914,Variation in DNA methylation of human blood over a 1-year period using the Illumina MethylationEPIC array,69
+GSE124366,Integration of DNA methylation patterns and genetic variation in human pediatric tissues help inform EWAS design and interpretation,215
+GSE124565,Genome-wide DNA methylation analysis in primary antiphospholipid syndrome neutrophils,22
+GSE125399,Putative Biomarkers of malignant transformation of sinonasal inverted papilloma into squamous cell carcinoma,11
+GSE126545,TCF4 germline mutation and adult-onset SHH medulloblastoma,1
+GSE128235,Epigenome analysis of depressed and control subjects. [subset],537
